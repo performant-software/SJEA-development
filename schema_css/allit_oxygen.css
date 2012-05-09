@@ -1,0 +1,365 @@
+@import "allit_tei.css";
+@import "links.css";
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------
+----- Oxygen and Stalin Digital Archive modifications to the TEI css available at  http://tei.svn.sourceforge.net/viewvc/tei/trunk/TEICSS/  -----
+----- A modified version of tei.css named sda_tei.css should accompany this file with complementary changes -----
+----- Updated by John Ivor Carlson, Digital Production Editor, Yale University, August 2008 -----
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+TEI, TEI\.2 {
+    display:block;
+}
+
+div > head,
+body > div > head,
+body > div > div > head,
+body > div > div > div > head,
+body > div > div > div > div > head{
+    padding-top:0.6em;
+    padding-bottom:0.2em;
+    padding-left:0.2em;
+    padding-right:0em;
+    background-color:inherit;
+    color:#004477;
+    border-bottom:1px solid #004477;
+}
+
+head {
+    display:block;
+}
+
+div0 {
+  display: block;
+  margin-bottom: 1em;
+  counter-increment: div0;
+  counter-reset: div1;
+}
+
+quote {
+  display: block;
+  margin-left: 1em;
+}
+
+text {
+  display: block;
+}
+
+div,
+body > div,
+body > div > div,
+body > div > div > div,
+body > div > div > div > div{
+    margin-bottom:0.2em;
+}
+
+cell[role='label'],
+row[role='label']{
+   color: inherit;
+   background-color: #CCEEFF;
+}
+
+table {
+  border: 1px solid #EEEFEE;
+}
+
+graphic{
+    content: attr(url, url);
+}
+
+teiHeader{
+  display:none;
+  }
+
+/*
+ * Support for displaying unparsed entity images.
+*/
+figure[entity]{
+     content: url(unparsed-entity-uri(attr(entity))); 
+}
+
+hi[rend="sc"] {
+  display: inline;
+  text-decoration:overline;
+}
+
+*[rendition="#alignRight"]{
+text-align:right;
+}
+
+*[rendition="#italics"]{
+font-style:italic;
+}
+
+epigraph > p{
+margin-left:35em;
+margin-right:35em;
+text-align:left;
+}
+
+epigraph > bibl{
+text-align:right;
+margin-right:35em;
+margin-left:35em;
+}
+
+docTitle{
+font-size:x-large;
+}
+
+docAuthor{
+font-style:normal;
+}
+
+*[rendition="#bold"]{
+font-weight:bold;
+}
+
+*[rendition="#alignCenter"]{
+text-align:center;
+}
+
+*[rendition="#alignLeft"]{
+text-align:left;
+text-indent:0em;
+}
+
+*[rendition="#smallcaps"]{
+font-variant:small-caps;
+}
+
+*[rendition="#large"]{
+font-size:large;
+}
+
+*[rendition="#small"]{
+font-size:smaller;
+}
+
+*[rendition="#strikethrough"]{
+text-decoration:line-through;
+}
+
+*[rendition="#underline"]{
+text-decoration:underline;
+}
+
+*[rendition="#double-underline"]{
+text-decoration:underline;
+border-bottom:1px solid black;
+}
+
+head{
+font-size:14pt;
+text-align:center;
+}
+
+opener{
+text-align:left;
+text-indent:0em;
+}
+
+hi{
+color:black;
+background-color:white;
+}
+
+closer{
+margin-left:20em;
+margin-right:35em;
+}
+
+dateline{
+text-align:right;
+}
+
+note[type="editorialHead"]{
+font-size:11pt;
+text-align:center;
+margin-left:20em;
+margin-right:20em;
+}
+
+note[type="editorial"]{
+text-align:left;
+background:inherit;
+color:red;
+display:none;
+}
+
+*[rendition="#hanging"]{
+text-indent: -5em;
+margin-left: 5em;
+}
+
+p{
+text-indent: 5em;
+}
+
+note{
+display:none
+}
+
+note > p{
+display:none;
+}
+
+*[rendition="#borderAll"]{
+border: thin solid black;
+}
+
+*[rendition="#borderNone"]{
+border: thin none black;
+}
+
+*[rendition="#borderAllDouble"]{
+border: 3px double black;
+}
+
+*[rendition="#borderLeft"]{
+border-left: thin solid black;
+}
+
+*[rendition="#borderLeftDouble"]{
+border-left: 3px double black;
+}
+
+*[rendition="#borderRight"]{
+border-right: thin solid black;
+}
+
+*[rendition="#borderRightDouble"]{
+border-right: 3px double black;
+}
+
+*[rendition="#borderHBoth"]{
+border-left: thin solid black;
+border-right: thin solid black;
+}
+
+*[rendition="#borderHBothDouble"]{
+border-left: 3px double black;
+border-right: 3px double black;
+}
+
+*[rendition="#borderTop"]{
+border-top: thin solid black;
+}
+
+*[rendition="#borderTopDouble"]{
+border-top: 3px double black;
+}
+
+*[rendition="#borderBottom"]{
+border-bottom: thin solid black;
+}
+
+*[rendition="#borderBottomDouble"]{
+border-bottom: 3px double black;
+}
+
+*[rendition="#borderVBoth"]{
+border-top: thin solid black;
+border-bottom: thin solid black;
+}
+
+*[rendition="#borderVBothDouble"]{
+border-top: 3px double black;
+border-bottom: 3px double black;
+}
+
+*[rendition="#rb"]{
+    background-color:inherit;
+color: #8B0000
+}
+
+*[rendition="#tr"]{
+    background-color:inherit;
+color: #FF0000
+}
+
+*[rendition="#BinR"]{
+border: thin solid #FF0000
+}
+
+*[rendition="#boxed"]{
+border: thin solid black
+}
+
+*[rendition="#o2"]{
+font-size: large
+}
+
+*[rendition="#o3"]{
+font-size: large
+}
+
+*[rendition="#o4"]{
+font-size: large
+}
+
+*[rendition="#o5"]{
+font-size: large
+}
+
+*[rendition="#o6"]{
+font-size: x-large
+}
+
+*[rendition="#o7"]{
+font-size: x-large
+}
+
+*[rendition="#o8"]{
+font-size: x-large
+}
+
+*[rendition="#o9"]{
+font-size: xx-large
+}
+
+*[rendition="#o10"]{
+font-size: xx-large
+}
+
+*[rendition="#crossedthrough"]{
+text-decoration: line-through
+}
+
+*[rendition="#overwritten"]{
+text-decoration: line-through
+}
+
+*[rendition="#crossedthroughSubpuncted"]{
+text-decoration: line-through
+}
+
+*[rendition="#erasure"]{
+text-decoration: line-through
+}
+
+*[rendition="#subpuncted"]{
+text-decoration: line-through
+}
+
+/*
+    Foldable elements
+*/
+div, 
+div0, 
+div1, 
+div2, 
+div3, 
+div4, 
+div5, 
+div6, 
+div7 {
+    foldable:true;
+    not-foldable-child: head;
+}
+
+
+/*Avoids displaying the empty element placeholder.*/
+lb:before{
+    content:"";
+}
+
