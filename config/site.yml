@@ -1,0 +1,53 @@
+# This contains all the site specific information (outside of database.yml) that should not be checked into version control.
+# It is read in by environment.rb.
+
+#
+# It must contain the following fields:
+#
+
+##########################
+### EMAIL
+##########################
+
+# For getting automatic emails when an error occurs
+# exception_recipients: List of all emails that should receive the notification
+# sender_address: Who the notification email will be from
+# email_prefix: What each email should be prefixed with
+exception_notifier:
+  exception_recipients: "edward@performantsoftware.com"
+  sender_address: '"Application Error" <edward@performantsoftware.com>'
+  email_prefix: "[AES:Dev] "
+
+# For setting up email - this example uses sendgrid
+smtp_settings:
+  address: "smtp.sendgrid.net"
+  port: 587
+  user_name: 'performantsoftware'
+  domain: 'sendgrid.net'
+  password: 'super-secret'
+  authentication: :plain
+  return_path: "dataentry.performantsoftware.com"
+  enable_starttls_auto: false
+
+email_recipients:
+  sign_up: "edward@performantsoftware.com"
+
+# Intercepting email delivery - primarily for test purposes
+# deliver_email of 'true' means it will send email as expect.
+# deliver_email of 'false' means it will send to the specified email list.
+mail_intercept:
+  deliver_email: false
+  email_list: 'aes-emails@performantsoftware.com'
+
+##########################
+### SOLR
+##########################
+
+# Where the solr index has been set up
+# Set the core to be unique on a particular server. That is, if there are two installations of
+# this on the same server, use "aes" for one and "aes_edge" for the other.
+# If you don't want bother with solr, then set enable to false.
+solr:
+  url: "http://localhost:8983/solr"
+  path: "/Users/dave/Sandboxes/SJEA_solr"
+  core: "sjea"
