@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--mjc: Seige of Jerusalem Project File Structure      -->
+<!--     =========================================      -->
+<!-- SjEA/                                  -->
+<!--    <SJEAListforHTML.xml> (this file)   -->
+<!--    <SJEAXMLtoHTML.xsl>                 -->
+<!--    A&M SJEA files/                     -->
+<!--        Manuscript transcriptions/      -->
+<!--            <xml files for input>       -->
+<!--        MS A images/                    -->
+<!--            <jpeg & tif page imgs>      -->
+<!--          . . .                         -->
+<!--        MS V images/                    -->
+<!--    XML/                                -->
+<!--        ruskin/...(same as above        -->
+
+<SJEA xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <!--XML/ruskin/apparatuses/-->
+    <part code="Manuscript transcriptions/SJA.xml"/>
+    <part code="Manuscript transcriptions/SJC.xml/"/>
+    <part code="Manuscript transcriptions/SJD.xml"/>
+    <part code="Manuscript transcriptions/SJE.xml"/>
+    <part code="Manuscript transcriptions/SJEx.xml"/>
+    <part code="Manuscript transcriptions/SJL.xml"/>
+    <part code="Manuscript transcriptions/SJP.xml"/>
+    <part code="Manuscript transcriptions/SJU.xml"/>
+    <part code="Manuscript transcriptions/SJV.xml"/>
+
+</SJEA>
+
