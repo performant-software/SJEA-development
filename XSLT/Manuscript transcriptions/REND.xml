@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="file:/Y:/jc/Stalin/2008_AOCtemplates/support/SDA_RNC.rnc" type="compact"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Middle English Alliterative Poetry Archive Metadata File</title>
+                <editor>
+                    <persName xml:id="Carlson">
+                        <surname>Carlson</surname>
+                        <forename sort="1">John</forename>
+                        <forename sort="2">Ivor</forename>
+                    </persName>
+                </editor>
+            </titleStmt>
+            <extent>xxkb</extent>
+            <publicationStmt>
+                <publisher>The Society for Early English and Norse Electronic Texts</publisher>
+                <pubPlace>
+                    <settlement/>
+                    <country>United States</country>
+                </pubPlace>
+                <date when="2008"/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Information culled from morteArthure(2008).xml.</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <tagsDecl xmlns="http://www.tei-c.org/ns/1.0" xml:id="REND-data">
+                <rendition xml:id="italics" scheme="css">font-style: italic</rendition>
+                <rendition xml:id="verso" scheme="css"/>
+                <rendition xml:id="recto" scheme="css"/>
+                <rendition xml:id="rb" scheme="css">color: #8B0000</rendition>
+                <rendition xml:id="tr" scheme="css">color: #FF0000</rendition>
+                <rendition xml:id="BinR" scheme="css">border: thin solid #FF0000</rendition>
+                <rendition xml:id="boxed" scheme="css">border: thin solid black</rendition>
+                <rendition xml:id="o2" scheme="css">font-size: large</rendition>
+                <rendition xml:id="o3" scheme="css">font-size: large</rendition>
+                <rendition xml:id="o4" scheme="css">font-size: large</rendition>
+                <rendition xml:id="o5" scheme="css">font-size: large</rendition>
+                <rendition xml:id="o6" scheme="css">font-size: x-large</rendition>
+                <rendition xml:id="o7" scheme="css">font-size: x-large</rendition>
+                <rendition xml:id="o8" scheme="css">font-size: x-large</rendition>
+                <rendition xml:id="o9" scheme="css">font-size: xx-large</rendition>
+                <rendition xml:id="o10" scheme="css">font-size: xx-large</rendition>
+                <rendition xml:id="crossedthrough" scheme="css">text-decoration: line-through</rendition>
+                <rendition xml:id="overwritten" scheme="css">text-decoration: line-through</rendition>
+                <rendition xml:id="crossedthroughSubpuncted" scheme="css">text-decoration: line-through</rendition>
+                <rendition xml:id="erasure" scheme="css">text-decoration: line-through</rendition>
+                <rendition xml:id="subpuncted" scheme="css">text-decoration: line-through</rendition>
+                <!-- Here is a placeholder for a dot-leader solution (we will need a gif with a transparent background):
+                <rendition xml:id="dots" scheme="css">background: transparent url(dots.gif) bottom left repeat-x; width: 95%; vertical-align: bottom; text-align: left</rendition> -->
+                <namespace name="http://www.tei-c.org/ns/1.0">
+                    <tagUsage gi="p" occurs="29" render="#alignIndent"/>
+                </namespace>
+            </tagsDecl>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Please see teiHeader content for rendering definitions.</p>
+        </body>
+    </text>
+</TEI>
