@@ -1,0 +1,224 @@
+/* MJC: This stylesheet was taken from the Pier Plowman SEENET CD and altered for use on the Siege of Jerusalem project */
+/*		May, 2012 */
+
+.orig, .lime { color:lime }
+
+.origDivider { color:lime ; display:none }
+
+.highlightorigDivider { visibility:hidden ; display:none }
+
+.reg { color:olive ; display:none }
+
+.olive { color:olive }
+
+.sic, .violet { color:violet }
+
+.sicDivider { color:violet ; display:none }
+
+.highlightsicDivider { visibility:hidden ; display:none }
+
+.corr, .purple { color:purple }
+
+.supplied { display:none }
+
+.highlightSupplied { display:none }
+
+.damage, .aqua { color:aqua }
+
+.highlightSuppliedMarkup { visibility:hidden }
+
+.unclear, .fuchsia { color:fuchsia }
+
+.redHighlight { color:red ; position:absolute ; left:1 ; top:1 ; z-index:-1 }
+
+.blueHighlight { color:blue ; position:absolute ; left:1 ; top:1 ; z-index:-1 }
+
+.greenHighlight { color:green ; position:absolute ; left:1 ; top:1 ; z-index:-1 }
+
+.highlightParent { position:relative ; height:0 }
+
+.largeRedHighlight { color:red ; position:absolute ; left:2 ; top:2 ; z-index:-1 }
+
+.largeBlueHighlight { color:blue ; position:absolute ; left:2 ; top:2 ; z-index:-1 }
+
+.largeGreenHighlight { color:green ; position:absolute ; left:2 ; top:2 ; z-index:-1 }
+
+.largeHighlightParent { position:relative }
+
+.ulr .largeRedHighlight, .ulb .largeRedHighlight, .ulg .largeRedHighlight, .ulr .largeGreenHighlight, .ulb .largeGreenHighlight, .ulg .largeGreenHighlight, .ulr .largeBlueHighlight, .ulb .largeBlueHighlight, .ulg .largeBlueHighlight, .olr .largeRedHighlight, .olb .largeRedHighlight, .olg .largeRedHighlight, .olr .largeGreenHighlight, .olb .largeGreenHighlight, .olg .largeGreenHighlight, .olr .largeBlueHighlight, .olb .largeBlueHighlight, .olg .largeBlueHighlight, .ur .largeRedHighlight, .ub .largeRedHighlight, .ug .largeRedHighlight, .ur .largeGreenHighlight, .ub .largeGreenHighlight, .ug .largeGreenHighlight, .ur .largeBlueHighlight, .ub .largeBlueHighlight, .ug .largeBlueHighlight, .or .largeRedHighlight, .ol .largeRedHighlight, .ob .largeRedHighlight, .og .largeRedHighlight, .or .largeGreenHighlight, .ol .largeGreenHighlight, .ob .largeGreenHighlight, .og .largeGreenHighlight, .or .largeBlueHighlight, .ol .largeBlueHighlight, .ob .largeBlueHighlight, .og .largeBlueHighlight, .redBox .largeRedHighlight, .redBox .largeGreenHighlight, .redBox .largeBlueHighlight, .boxed .largeRedHighlight, .boxed .largeGreenHighlight, .boxed .largeBlueHighlight { display:none }
+
+.redBox, .binr { position:relative ; border:1 solid red }
+
+.boxed { position:relative ; border:1 solid black }
+
+.tr { background-Color: red }
+
+.rb, .shadowhyphen { color:red }
+
+.bl { color:blue }
+
+.gr { color:green }
+
+.bold,.highlightbold { font-weight:bold }
+
+.ul { position:relative ; border-bottom:1 solid black }
+
+.ol { position:relative ; border-top:1 solid black }
+
+.ub, .ulb { position:relative ; border-bottom:1 solid blue }
+
+.ob, .olb { position:relative ; border-top:1 solid blue }
+
+.ur, .ulr { position:relative ; border-bottom:1 solid red }
+
+.or, .olr { position:relative ; border-top:1 solid red }
+
+.ug, .ulg { position:relative ; border-bottom:1 solid green }
+
+.og, .olg { position:relative ; border-top:1 solid green }
+
+.o2 { font-size:3.2em ; text-transform:uppercase ; float:left ; position:relative }
+
+.o3 { font-size:4.8em ; text-transform:uppercase ; float:left ; position:relative }
+
+.o4 { font-size:6.4em ; text-transform:uppercase ; float:left ; position:relative }
+
+.o5 { font-size:8em ; text-transform:uppercase ; float:left ; position:relative }
+
+.o6 { font-size:9.6em ; text-transform:uppercase ; float:left ; position:relative }
+
+.o7 { font-size:11.2em ; text-transform:uppercase ; float:left ; position:relative }
+
+.o8 { font-size:12.8em ; text-transform:uppercase ; float:left ; position:relative }
+
+.o9 { font-size:14.4em ; text-transform:uppercase ; float:left ; position:relative }
+
+.o10 { font-size:16em ; text-transform:uppercase ; float:left ; position:relative }
+
+.o11 { font-size:17.6em ; text-transform:uppercase ; float:left ; position:relative }
+
+.o12 { font-size:19.2em ; text-transform:uppercase ; float:left ; position:relative }
+
+.lc,.highlightlc { font-size:1.4em ; line-height:.75em ; text-transform:uppercase }
+
+.sup, .highlightsup, { vertical-align:super ; font-size:.7em }
+
+.supNote { vertical-align:super ; font-size:.7em ; color: red ; font-family:Verdana, Geneva, sans-serif ; font-weight: bold}
+
+.foreign, .expan, .title, .it, .txExpan, .bastardExpan, .bastardtxExpan { font-style:italic }
+
+.titleOff, .foreignOff, .itOff, .bastardforeignittitletxExpan, .bastardforeignittitleExpan, .bastardforeignittxExpan, .bastardforeigntitletxExpan, .bastardittitletxExpan, .foreignittitletxExpan, .bastardforeignitExpan, .bastardforeigntitleExpan, .bastardforeigntxExpan, .bastardittitleExpan, .bastardittxExpan, .bastardtitletxExpan, .bastardforeignExpan, .bastarditExpan, .bastardtitleExpan, .foreignitExpan, .foreigntitleExpan, .foreigntxExpan, .ittitleExpan, .ittxExpan, .titletxExpan, .foreignExpan, .itExpan, .titleExpan { font-style:normal }
+
+.bastardOff, .txOff, .tx, .bastard {  }
+
+.add, .darkgray { color:darkgray }
+
+.addclick { color:darkgray ; cursor:hand }
+
+.del-legible { text-decoration:line-through }
+
+.delMarkup { display:none }
+
+.highlightDel { display:none }
+
+.highlightDelMarkup { display:none ; visiblity:hidden }
+
+.textBody { margin:0 ; background-color:transparent }
+
+.milestone { font-family:Times New Roman }
+
+.icon { border:0 ; cursor:hand }
+
+.note, .notaNote, .editorialNote, .linguisticNote, .codicologicalNote, .paleographicNote, .lexicalNote, .textualNote {  }
+
+.noteImg { cursor:hand }
+
+.noteContent { display:none }
+
+.kdMarker { display:none }
+
+.lineMarker { position:absolute ; left:30 ; font-size:9pt ; font-family:Times New Roman ; line-height:1.8em }
+
+.line { position:relative ; left:100 }
+
+.contentArea { cursor:default ; height:100% ; width:700px ; padding:30 ; font-family:Junicode; background-color:#FDEAAA ; position: absolute }
+
+.image { position: absolute ; right: 100 }
+
+.margin-topCenter, .add-topCenter { position: relative ; left: 50% ; right: 50% ; text-align: center ; color: gray}
+
+.add-supralinear, .margin-supralinear { vertical-align:super ; font-size:.7em ; color: gray}
+
+.add-bottomCenter, .margin-bottomCenter { position: relative ; left: 50% ; right: 50% ; text-align: center ; color: gray }
+
+.add-bottomLeft, .add-marginLeft { position: absolute ; left: -60 ; color: gray }
+
+.margin-bottomLeft, .margin-marginLeft { position: absolute ; left: 70 ; color: gray }
+
+.add-marginRight, .margin-margRight { position: absolute ; right: 100 ; color: gray }
+
+.topCenter, .center, .bottomCenter { position: relative ; left: 50% ; right: 50% ; text-align: center}
+
+.marginLeft { position: absolute ; left: -60 }
+
+.topLeft, .bottomLeft { position: relative ; left: 70 }
+
+.topRight, .bottomRight { position: absolute ; right: 100 }
+
+.deldescription, .placedescription { display:none }
+
+.head1 { font-size:1.6em ; text-align:center }
+
+.head2 { font-size:1.5em ; text-align:center }
+
+.head3 { font-size:1.4em }
+
+.head4 { font-size:1.3em }
+
+.head5 { font-size:1.2em }
+
+.head6 { font-size:1.1em }
+
+.head7 { font-size:1.0em }
+
+.hiddenHead { display:none }
+
+.punctuselevatus, .yogh { font-family:Junicode }
+
+.cell, .celldata, .celllabel, .celllabel1, .celllabel2, .celllabel3, .celletym, .cellforms, .cellcollation, .cellfols\., .cellleafnumber { vertical-align:top ; padding-left:5 ; padding-right:5 }
+
+.list { list-style-type:none }
+
+.ref:active, .xref:active, .ref:link, .xref:link, .ref:visited, .xref:visited { color:steelblue }
+
+.ref:hover, .xref:hover { color:plum }
+
+.mainTitle, .mainTitle245 { font-size:1.6em ; text-align:center ; color:steelblue }
+
+.mainTitlesubtitle, .mainTitlesubtitle2 { font-size:1.2em ; text-align:center ; color:steelblue }
+
+.author { font-size:1.4em ; text-align:center ; color:steelblue }
+
+.editor, .editoreditor { font-size:1.3em }
+
+.editorassociate, .editortechnical { font-size:1.2em }
+
+.publisher, .date { font-size:1.3em ; text-align:center }
+
+.pubPlace { font-size:1.1em ; text-align:center }
+
+.respStmt, .idno, .availability, .biblFull { font-size:0.8em }
+
+.bibl { margin-left:2em ; text-indent:-2em }
+
+.bverse { padding-left: 16 }
+
+.del-legible { text-decoration: line-through }
+
+.xmlButton { position: absolute; right: 0 }
+
+.puncelev { line-height: 1.2 }
+
+
+
+
