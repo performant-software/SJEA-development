@@ -123,7 +123,7 @@
         <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
                 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-                <link href="../manuscript.css" rel="stylesheet" type="text/css"/>
+                <link href="../stylesheets/manuscript.css" rel="stylesheet" type="text/css"/>
                 <title>
                     <xsl:value-of select="concat($pagetitle, '-', $view)"/>
                 </title>
@@ -340,14 +340,8 @@
     <xsl:template match="tei:milestone">
         <xsl:param name="id" tunnel="yes"/>
         
-        <xsl:variable name="fileName">
-            <xsl:value-of select="substring-after(substring-before($id, '.xml'), 'Manuscript transcriptions/')"/>
-        </xsl:variable>
-        <xsl:variable name="manuscriptNum">
-            <xsl:value-of select="substring-after($fileName, 'SJ')"/>
-        </xsl:variable>
         <xsl:variable name="imgPath">
-            <xsl:value-of select="concat('./MS ', $manuscriptNum, ' jpeg files/', @entity, '.jpg')"/>
+            <xsl:value-of select="concat('../images/', @entity, '.jpg')"/>
         </xsl:variable>
         
         <a href='{$imgPath}' class="image">image</a>
