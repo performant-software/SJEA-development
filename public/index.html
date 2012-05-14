@@ -6,7 +6,10 @@
 
     <link href="stylesheets/mainsite.css" media="screen" rel="stylesheet" type="text/css" />
 
-    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">  <!-- DEVELOPMENT ONLY -->
+    <script src="javascripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="javascripts/add-manuscript.js" type="text/javascript"></script>
+
+    <!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">  <!-- DEVELOPMENT ONLY -->
 
   </head>
 
@@ -33,15 +36,15 @@
         <ul id="sidebar-items">
             <h3>The Manuscripts</h3>
             <br/>
-            <li><a href="SJA-MS-alltags.html" class="active">British Library, MS Additional 31042</a></li>
-            <li><a href="SJC-MS-alltags.html">British Library, MS Cotton Caligula A.ii</a></li>
-            <li><a href="SJD-MS-alltags.html">Lambeth Palace Library, MS MS 491, Part I</a></li>
-            <li><a href="SJE-MS-alltags.html">The Huntington Library, MS MS Hm 128</a></li>
-            <li><a href="SJEx-MS-alltags.html">Devon Record Office, MS Deposit 2507</a></li>
-            <li><a href="SJL-MS-alltags.html">Bodleian Library, MS Laud Misc. 656</a></li>
-            <li><a href="SJP-MS-alltags.html">Princeton University Library, MS MS Taylor Medieval 11</a></li>
-            <li><a href="SJU-MS-alltags.html">Cambridge University Library, MS MS Mm.v.14</a></li>
-            <li><a href="SJV-MS-alltags.html">British Library, MS Cotton Vespasian E.xvi</a></li>
+            <li><a id="SJA-manuscript" class="active">British Library, MS Additional 31042</a></li>
+            <li><a id="SJC-manuscript">British Library, MS Cotton Caligula A.ii</a></li>
+            <li><a id="SJD-manuscript">Lambeth Palace Library, MS MS 491, Part I</a></li>
+            <li><a id="SJE-manuscript">The Huntington Library, MS MS Hm 128</a></li>
+            <li><a id="SJEx-manuscript">Devon Record Office, MS Deposit 2507</a></li>
+            <li><a id="SJL-manuscript">Bodleian Library, MS Laud Misc. 656</a></li>
+            <li><a id="SJP-manuscript">Princeton University Library, MS MS Taylor Medieval 11</a></li>
+            <li><a id="SJU-manuscript">Cambridge University Library, MS MS Mm.v.14</a></li>
+            <li><a id="SJV-manuscript">British Library, MS Cotton Vespasian E.xvi</a></li>
 
             <!--
             <li><a href="SJA-MS-critical.html">SJA-MS-critical.html</a></li>
