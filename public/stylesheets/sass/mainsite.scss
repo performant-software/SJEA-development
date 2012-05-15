@@ -1,0 +1,95 @@
+
+// color definitions
+$title_background: #B3B3B3;
+
+// location definitions
+$navbox_width: 180px;   // width of the main navigation box
+$navbox_height: 350px;  // hight of the main navigation box
+
+* {
+margin: 0;
+padding: 0;
+}
+
+#main-header {
+
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    background-color: $title_background;
+    padding: 25px;
+
+    #header-list {
+       padding: 20px 0 0 0;
+       li {
+          list-style-type: none;
+          display: inline;
+          margin: 25px;
+
+          a {
+             position: relative;
+             text-decoration: none;
+             padding: 25px 0 0 0;
+
+          }
+
+          a:hover {
+             color: red;
+          }
+       }
+
+       .active {
+          color: red;
+       }
+    }
+}
+
+#main-sidebar {
+   float: left;
+   padding: 10px 0 0 40px;
+   height: $navbox_height;
+   width: $navbox_width;
+}
+
+#sidebar-items {
+    li {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       height: 70px;
+	   cursor: pointer;
+       a {
+          position: relative;
+          text-decoration: none;
+       }
+    }
+
+    .active {
+       color: red;
+    }
+}
+
+#active-title {
+
+      width: 100%;
+      height: 30px;
+      text-align: center;
+      padding: 25px 0 0 0;
+}
+
+#main-content {
+
+   width: 750px;
+   padding: 10px 0 0 250px;
+
+   #view-control {
+      position: relative;
+      background-color: $title_background;
+   }
+
+   #manuscript {
+      position: relative;
+      padding: 25px 0 0 0;
+      text-align: justify;
+   }
+}

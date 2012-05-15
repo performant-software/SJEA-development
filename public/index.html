@@ -2,61 +2,118 @@
 <html>
 
   <head>
-    <title>The Siege of Jerusalem Electronic Archive</title>
+    <title> Siege of Jerusalem Electronic Archive</title>
+
+    <link href="stylesheets/mainsite.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <script src="javascripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="javascripts/add-manuscript.js" type="text/javascript"></script>
+
+    <!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">  <!-- DEVELOPMENT ONLY -->
+
   </head>
 
   <body>
 
     <div id="page">
 
+      <div id="main-header">
+          <h1>The Siege of Jerusalem Electronic Archive</h1>
+          <ul id="header-list">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="index.html" class="active">Manuscripts</a></li>
+              <li><a href="search.html">Search</a></li>
+              <li><a href="comparison.html">Comparison</a></li>
+          </ul>
+      </div> <!-- main-header -->
+
+      <div id="active-title">
+          <h2>Active title here</h2>
+      </div>  <!-- active-title -->
+
       <div id="main-sidebar">
-        <ul id="sidebar-item">
-            <li><a href="SJA-MS-alltags.html">SJA-MS-alltags.html</a></li>
+
+        <ul id="sidebar-items">
+            <h3>The Manuscripts</h3>
+            <br/>
+            <li><a id="SJA-manuscript" class="active">British Library, MS Additional 31042</a></li>
+            <li><a id="SJC-manuscript">British Library, MS Cotton Caligula A.ii</a></li>
+            <li><a id="SJD-manuscript">Lambeth Palace Library, MS MS 491, Part I</a></li>
+            <li><a id="SJE-manuscript">The Huntington Library, MS MS Hm 128</a></li>
+            <li><a id="SJEx-manuscript">Devon Record Office, MS Deposit 2507</a></li>
+            <li><a id="SJL-manuscript">Bodleian Library, MS Laud Misc. 656</a></li>
+            <li><a id="SJP-manuscript">Princeton University Library, MS MS Taylor Medieval 11</a></li>
+            <li><a id="SJU-manuscript">Cambridge University Library, MS MS Mm.v.14</a></li>
+            <li><a id="SJV-manuscript">British Library, MS Cotton Vespasian E.xvi</a></li>
+
+            <!--
             <li><a href="SJA-MS-critical.html">SJA-MS-critical.html</a></li>
             <li><a href="SJA-MS-diplomatic.html">SJA-MS-diplomatic.html</a></li>
             <li><a href="SJA-MS-scribal.html">SJA-MS-scribal.html</a></li>
-            <li><a href="SJC-MS-alltags.html">SJC-MS-alltags.html</a></li>
+
             <li><a href="SJC-MS-critical.html">SJC-MS-critical.html</a></li>
             <li><a href="SJC-MS-diplomatic.html">SJC-MS-diplomatic.html</a></li>
             <li><a href="SJC-MS-scribal.html">SJC-MS-scribal.html</a></li>
-            <li><a href="SJD-MS-alltags.html">SJD-MS-alltags.html</a></li>
+
             <li><a href="SJD-MS-critical.html">SJD-MS-critical.html</a></li>
             <li><a href="SJD-MS-diplomatic.html">SJD-MS-diplomatic.html</a></li>
             <li><a href="SJD-MS-scribal.html">SJD-MS-scribal.html</a></li>
-            <li><a href="SJE-MS-alltags.html">SJE-MS-alltags.html</a></li>
+
             <li><a href="SJE-MS-critical.html">SJE-MS-critical.html</a></li>
             <li><a href="SJE-MS-diplomatic.html">SJE-MS-diplomatic.html</a></li>
             <li><a href="SJE-MS-scribal.html">SJE-MS-scribal.html</a></li>
-            <li><a href="SJEx-MS-alltags.html">SJEx-MS-alltags.html</a></li>
+
             <li><a href="SJEx-MS-critical.html">SJEx-MS-critical.html</a></li>
             <li><a href="SJEx-MS-diplomatic.html">SJEx-MS-diplomatic.html</a></li>
             <li><a href="SJEx-MS-scribal.html">SJEx-MS-scribal.html</a></li>
-            <li><a href="SJL-MS-alltags.html">SJL-MS-alltags.html</a></li>
+
             <li><a href="SJL-MS-critical.html">SJL-MS-critical.html</a></li>
             <li><a href="SJL-MS-diplomatic.html">SJL-MS-diplomatic.html</a></li>
             <li><a href="SJL-MS-scribal.html">SJL-MS-scribal.html</a></li>
-            <li><a href="SJP-MS-alltags.html">SJP-MS-alltags.html</a></li>
+
             <li><a href="SJP-MS-critical.html">SJP-MS-critical.html</a></li>
             <li><a href="SJP-MS-diplomatic.html">SJP-MS-diplomatic.html</a></li>
             <li><a href="SJP-MS-scribal.html">SJP-MS-scribal.html</a></li>
-            <li><a href="SJU-MS-alltags.html">SJU-MS-alltags.html</a></li>
+
             <li><a href="SJU-MS-critical.html">SJU-MS-critical.html</a></li>
             <li><a href="SJU-MS-diplomatic.html">SJU-MS-diplomatic.html</a></li>
             <li><a href="SJU-MS-scribal.html">SJU-MS-scribal.html</a></li>
-            <li><a href="SJV-MS-alltags.html">SJV-MS-alltags.html</a></li>
+
+
             <li><a href="SJV-MS-critical.html">SJV-MS-critical.html</a></li>
             <li><a href="SJV-MS-diplomatic.html">SJV-MS-diplomatic.html</a></li>
             <li><a href="SJV-MS-scribal.html">SJV-MS-scribal.html</a></li>
-        </ul>
-      </div>
+
+            -->
+        </ul>  <!-- sidebar-items -->
+
+      </div>  <!-- main-sidebar -->
 
       <div id="main-content">
-        <div id="main-header">
-          <h1>The Siege of Jerusalem Electronic Archive</h1>
-        </div>
-      </div>
 
-      <div id="main-footer">&nbsp;</div>
+          <div id="view-control">
+             <select>
+                <option value="volvo">All Tags</option>
+                <option value="saab">Critical</option>
+                <option value="mercedes">Diplomatic</option>
+                <option value="audi">Scribal</option>
+             </select>
+             <a>Transcription</a>
+          </div>  <!-- view-control -->
+
+          <div id="manuscript">
+
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere ultrices laoreet. Maecenas lacus sapien, tristique ultrices ultrices eu, vestibulum et sem. Nunc eu augue neque, eu congue turpis. Cras vulputate lacus iaculis eros vehicula tincidunt. Suspendisse viverra accumsan ipsum et suscipit. Cras eu tellus nunc. Nam blandit congue lorem vitae faucibus. Nunc at congue libero. Nam et lorem nisl. In laoreet sodales nunc. Quisque egestas, urna et commodo posuere, turpis diam ultricies mauris, id condimentum dui tortor fermentum ante.
+              Vestibulum vel ipsum dolor, id convallis risus. Aenean lacus purus, tristique at condimentum non, scelerisque eget erat. Morbi libero nibh, pulvinar sit amet tincidunt id, iaculis quis ipsum. Vivamus congue ipsum dui, eget ornare mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc justo felis, porttitor id varius quis, dignissim dictum lectus. Quisque imperdiet rutrum sapien in pulvinar. Etiam dolor enim, vulputate at tincidunt ac, vestibulum eget est. Suspendisse lacinia ullamcorper sem ut sollicitudin. Mauris pellentesque varius odio, nec consectetur ligula porta et. Nunc condimentum orci vel nisi molestie id facilisis dolor vulputate. Suspendisse rutrum magna eu ligula tincidunt id consectetur sem fringilla. Cras volutpat sodales dui, ut rhoncus felis egestas quis. Etiam consequat tincidunt nisl, a tempus ante egestas vitae.
+              Suspendisse tortor elit, sagittis in accumsan ac, tempus eu velit. Duis libero purus, vestibulum a pharetra volutpat, dictum sit amet enim. Nunc dolor nulla, bibendum sit amet ullamcorper non, pretium a massa. Proin lobortis, sem at malesuada laoreet, elit eros dignissim ligula, eget blandit nulla neque sit amet purus. Phasellus non diam ac arcu ultricies fermentum sit amet sed ante. Cras condimentum cursus orci, quis volutpat turpis varius eu. Phasellus mollis pretium magna, id adipiscing sapien consectetur eu. Cras tempus faucibus est quis commodo. Nullam luctus odio a enim vehicula sed tempus est eleifend. Aliquam erat volutpat.
+              Aenean interdum augue gravida dolor placerat ut laoreet diam tempus. Nulla ut dolor lacus. Nam ut purus sit amet justo consequat fringilla vulputate sed arcu. Suspendisse pulvinar nulla sed augue ullamcorper eu faucibus magna porttitor. Ut vitae ornare sem. Nam vehicula sollicitudin dictum. Suspendisse condimentum justo eu nulla interdum id sodales ante sollicitudin. Nam tortor sem, vehicula eget lobortis eleifend, consequat ut ante. Mauris et erat nibh, sit amet volutpat turpis. Vestibulum aliquam dictum consequat.
+              Mauris egestas consectetur dolor quis imperdiet. Cras ultrices rutrum imperdiet. Mauris quis arcu quis lorem mollis laoreet. Donec rutrum elit in nunc ultrices a accumsan orci pellentesque. Aliquam adipiscing aliquam augue, sed suscipit erat iaculis id. Nullam faucibus iaculis posuere. Vivamus lacinia, risus in eleifend aliquet, ligula est elementum augue, et viverra turpis mauris sed tortor. Sed id risus risus, et molestie diam. Maecenas tempus magna sed sem molestie in porta odio molestie. Mauris at purus nisl. Cras auctor, sapien sit amet sollicitudin eleifend, nisi arcu egestas nunc, a molestie sem nunc a nunc.
+
+          </div>  <!-- manuscript -->
+      </div>  <!-- main-content -->
+
+      <div id="main-footer">&nbsp;
+      </div> <!-- main-footer -->
     </div>
 
   </body>
