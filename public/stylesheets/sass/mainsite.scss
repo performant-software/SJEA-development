@@ -1,6 +1,7 @@
 
 // color definitions
 $title_background: #B3B3B3;
+$footer_background: #B3B3B3;
 
 // location definitions
 $navbox_width: 180px;   // width of the main navigation box
@@ -92,4 +93,16 @@ padding: 0;
       padding: 25px 0 0 0;
       text-align: justify;
    }
+}
+
+#main-footer {
+   width: 100%;
+   height: 50px;
+   margin: 0;
+   text-align: center;
+   font-size: 11px;
+   background-color: $footer_background;
+   position: fixed;
+   bottom: 0;
+   z-index: 999999;
 }
