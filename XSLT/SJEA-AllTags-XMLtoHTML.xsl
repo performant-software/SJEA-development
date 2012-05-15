@@ -20,7 +20,15 @@
 
     <!--mjc: Variables-->
     <!--     =========-->
-
+    <xsl:variable name="xmlpath">
+        <xsl:value-of>xml/</xsl:value-of>
+    </xsl:variable>
+    <xsl:variable name="imgpath">
+        <xsl:value-of>images/</xsl:value-of>
+    </xsl:variable>
+    <xsl:variable name="csspath">
+        <xsl:value-of>stylesheets/</xsl:value-of>
+    </xsl:variable>
 
         
         
@@ -49,14 +57,14 @@
         <!--mjc: the path/filename to output to-->
         <xsl:variable name="idno">
             <xsl:value-of
-                select="substring-after(substring-before($id, '.xml'), 'Manuscript transcriptions/SJ')"
+                select="substring-after(substring-before($id, '.xml'), concat($xmlpath, 'SJ'))"
             />
         </xsl:variable>
 
         <!--mjc: get the path of the file for this output-->
         <xsl:variable name="filename">
             <xsl:value-of
-                select="concat('MS ', $idno, ' images/', 'MS', $idno)"
+                select="concat('MS', $idno)"
             > </xsl:value-of>
         </xsl:variable>
 
@@ -67,6 +75,7 @@
         <xsl:result-document href="{concat($filename, '-alltags.html')}" format="html">
             <xsl:call-template name="generateHTML">
                 <xsl:with-param name="view" select="string('alltags')" tunnel="yes"/>
+                <xsl:with-param name="idno" select="$idno" tunnel="yes"/>
             </xsl:call-template>
         </xsl:result-document>
         
@@ -76,6 +85,7 @@
         <xsl:result-document href="{concat($filename, '-critical.html')}" format="html">
             <xsl:call-template name="generateHTML">
                 <xsl:with-param name="view" select="string('critical')" tunnel="yes"/>
+                <xsl:with-param name="idno" select="$idno" tunnel="yes"/>
             </xsl:call-template>
         </xsl:result-document>
         
@@ -85,6 +95,7 @@
         <xsl:result-document href="{concat($filename, '-scribal.html')}" format="html">
             <xsl:call-template name="generateHTML">
                 <xsl:with-param name="view" select="string('scribal')" tunnel="yes"/>
+                <xsl:with-param name="idno" select="$idno" tunnel="yes"/>
             </xsl:call-template>
         </xsl:result-document>
         
@@ -94,6 +105,7 @@
         <xsl:result-document href="{concat($filename, '-diplomatic.html')}" format="html">
             <xsl:call-template name="generateHTML">
                 <xsl:with-param name="view" select="string('diplomatic')" tunnel="yes"/>
+                <xsl:with-param name="idno" select="$idno" tunnel="yes"/>
             </xsl:call-template>
         </xsl:result-document>
     </xsl:template>
@@ -109,21 +121,19 @@
     <!--        view is being built                 -->
     <!--**************************-->
     <xsl:template name="generateHTML">
-        <xsl:param name="view" tunnel="yes"/>
         <xsl:param name="id" tunnel="yes"/>
+        <xsl:param name="view" tunnel="yes"/>
+        <xsl:param name="idno" tunnel="yes"/>
         
         <xsl:variable name="pagetitle">
             <xsl:call-template name="generateTitle"/>
         </xsl:variable>
-        <xsl:variable name="idlett">
-            <xsl:value-of select="substring-after(substring-before($id, '.xml'), 'Manuscript transcriptions/SJ')"/>
-        </xsl:variable> 
         
         <!--mjc: layout the main structure of the HTML output doc -->
         <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
                 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-                <link href="../stylesheets/manuscript.css" rel="stylesheet" type="text/css"/>
+                <link href="{concat($csspath, 'manuscript.css')}" rel="stylesheet" type="text/css"/>
                 <title>
                     <xsl:value-of select="concat($pagetitle, '-', $view)"/>
                 </title>
@@ -136,9 +146,10 @@
             </head>
             
             <body class="contentArea">
-                <h1><xsl:value-of select="concat(//tei:sourceDesc//tei:repository, ', MS ', //tei:sourceDesc//tei:idno, ' (', $idlett, ')')"/></h1>
                 <!--add a button to view XML copy of document-->
-                <span class="xmlButton"><a href="../{$id}"><img src="../xmlbutton.jpg" height="14" width="36"/></a></span>
+                <span class="xmlButton"><a href="../{$id}"><img src="{concat($imgpath, 'xmlbutton.jpg')}" height="14" width="36"/></a></span>
+
+                <h1><xsl:value-of select="concat(//tei:sourceDesc//tei:repository, ', MS ', //tei:sourceDesc//tei:idno, ' (', $idno, ')')"/></h1>
 
                 <xsl:call-template name="processBody"/>
             </body>
@@ -149,20 +160,18 @@
     <!--***************************-->
     <!--mjc: generateTitle template-->
     <!--     =============         -->
-    <!--     create a title for the <title>-->
+    <!--     create a <head>/<title>                                          -->
     <!--     use the value in teiHeader/fileDesc/titleStmt/title[@type='main']-->
     <!--***************************-->
     <xsl:template name="generateTitle">
         <xsl:param name="id" tunnel="yes"/>
+        <xsl:param name="idno" tunnel="yes"/>
         
         <xsl:variable name="repos">
             <xsl:value-of select="//tei:sourceDesc//tei:repository"/>
         </xsl:variable>
-        <xsl:variable name="idlett">
-            <xsl:value-of select="substring-after(substring-before($id, '.xml'), 'Manuscript transcriptions/SJ')"/>
-        </xsl:variable> 
         
-        <xsl:value-of select="concat($repos, ', MS ', $idlett)"/>
+        <xsl:value-of select="concat($repos, ', MS ', $idno)"/>
     </xsl:template>
     
     
@@ -340,11 +349,11 @@
     <xsl:template match="tei:milestone">
         <xsl:param name="id" tunnel="yes"/>
         
-        <xsl:variable name="imgPath">
-            <xsl:value-of select="concat('../images/', @entity, '.jpg')"/>
+        <xsl:variable name="imgName">
+            <xsl:value-of select="concat($imgpath, @entity, '.jpg')"/>
         </xsl:variable>
         
-        <a href='{$imgPath}' class="image">image</a>
+        <a href='{$imgName}' class="image">image</a>
     </xsl:template>
     
     
@@ -354,21 +363,16 @@
     <!--mjc: format the lines (<l>s) of the file-->
     <!--*************************-->
     <xsl:template match="tei:l">
-        <xsl:param name="view" tunnel="yes"/>
         <xsl:param name="id" tunnel="yes"/>
+        <xsl:param name="view" tunnel="yes"/>
+        <xsl:param name="idno" tunnel="yes"/>
         
         <xsl:variable name="manLine" select="substring-after(@xml:id, '.')"/>
         <xsl:variable name="HLLine" as="xs:double" select="number(substring-after(@n, '.'))"/>
-        <xsl:variable name="fileName">
-            <xsl:value-of select="substring-after(substring-before($id, '.xml'), 'Manuscript transcriptions/')"/>
-        </xsl:variable>
-        <xsl:variable name="manuscriptNum">
-            <xsl:value-of select="substring-after($fileName, 'SJ')"/>
-        </xsl:variable>
 
         <xsl:if test="(number($manLine) mod 4) = 0">
             <span class="lineMarker">
-                <xsl:value-of select="concat($manuscriptNum, ' ', number($manLine))"/>
+                <xsl:value-of select="concat($idno, ' ', number($manLine))"/>
                 <xsl:if test="$view = 'critical' or $view = 'alltags'">
                     <xsl:value-of select="concat(' (HL ', $HLLine, ')')"/>
                 </xsl:if>

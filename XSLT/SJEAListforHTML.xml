@@ -5,25 +5,24 @@
 <!--    <SJEAListforHTML.xml> (this file)   -->
 <!--    <SJEAXMLtoHTML.xsl>                 -->
 <!--    A&M SJEA files/                     -->
-<!--        Manuscript transcriptions/      -->
+<!--        xml/      -->
 <!--            <xml files for input>       -->
-<!--        MS A images/                    -->
+<!--        images/                         -->
 <!--            <jpeg & tif page imgs>      -->
+<!--        stylesheets/                    -->
+<!--            manuscript.css              -->
 <!--          . . .                         -->
-<!--        MS V images/                    -->
-<!--    XML/                                -->
-<!--        ruskin/...(same as above        -->
 
 <SJEA xmlns:tei="http://www.tei-c.org/ns/1.0">
-    <part code="Manuscript transcriptions/SJA.xml"/>
-    <part code="Manuscript transcriptions/SJC.xml/"/>
-    <part code="Manuscript transcriptions/SJD.xml"/>
-    <part code="Manuscript transcriptions/SJE.xml"/>
-    <part code="Manuscript transcriptions/SJEx.xml"/>
-    <part code="Manuscript transcriptions/SJL.xml"/>
-    <part code="Manuscript transcriptions/SJP.xml"/>
-    <part code="Manuscript transcriptions/SJU.xml"/>
-    <part code="Manuscript transcriptions/SJV.xml"/>
+    <part code="xml/SJA.xml"/>
+    <part code="xml/SJC.xml/"/>
+    <part code="xml/SJD.xml"/>
+    <part code="xml/SJE.xml"/>
+    <part code="xml/SJEx.xml"/>
+    <part code="xml/SJL.xml"/>
+    <part code="xml/SJP.xml"/>
+    <part code="xml/SJU.xml"/>
+    <part code="xml/SJV.xml"/>
 
 </SJEA>
 
