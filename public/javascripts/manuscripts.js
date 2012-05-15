@@ -3,20 +3,23 @@ $(document).ready(function() {
     // hide all the sub menu's
     $( ".sublist").hide()
 
-	$(".mainlist").toggle(function(){
-        $( ".sublist").slideUp(500);
-        $(this).parent().next().slideDown(500);
-		//return false;
+	$(".mainlist-item").toggle(function(){
+        $( ".sublist").slideUp(300);
+        $(this).parent().next().slideDown(300);
 	},
 	function(){
-		$(this).parent().next().slideUp(500);
-		//return false;
+		$(this).parent().next().slideUp(300);
 	});
 
-	$("#SJA-manuscript").click(function() {
+    $("#overview").click(function() {
+        $( ".sublist").slideUp(300);
         highliteElement( $(this) )
-	    showManuscriptContent( 'SJA');
-	});
+    });
+
+    $("#SJA-manuscript").click(function() {
+        highliteElement( $(this) )
+        showManuscriptContent( 'SJA');
+    });
 
     $("#SJA-description").click(function() {
         highliteElement( $(this) )
@@ -114,20 +117,36 @@ $(document).ready(function() {
 
 function highliteElement( element ) {
     $( ".sublist-item").removeClass( "active");
+    $("#overview").removeClass( "active");
     element.addClass( "active");
 }
 
-function showManuscriptContent( manuscript ) {
+function showManuscriptContent( manuscript_prefix ) {
 
-   var resource_name = manuscript + "-MS-alltags.html"
-   var main_title = $( "#" + manuscript + "-title").text()
-   $("#manuscript").empty();
+   var resource_name = manuscript_prefix + "-MS-alltags.html"
+   var main_title = $( "#" + manuscript_prefix + "-title").text()
+   $("#content-display").empty();
    $("#active-title").html( "<h2>" + main_title + "</h2>")
 
-   $("#manuscript").load(resource_name, function(response, status, xhr) {
+   $("#content-display").load(resource_name, function(response, status, xhr) {
       if (status == "error") {
          var msg = "Sorry but there was an error: ";
          alert(msg + xhr.status + " " + xhr.statusText);
       }
    });
+}
+
+function showManuscriptDescription( manuscript_prefix ) {
+
+    var resource_name = manuscript_prefix + "-Description.html"
+    var main_title = $( "#" + manuscript_prefix + "-title").text()
+    $("#content-display").empty();
+    $("#active-title").html( "<h2>" + main_title + "</h2>")
+
+    $("#content-display").load(resource_name, function(response, status, xhr) {
+       if (status == "error") {
+          var msg = "Sorry but there was an error: ";
+          alert(msg + xhr.status + " " + xhr.statusText);
+       }
+    });
 }

@@ -31,13 +31,13 @@
 
 #sidebar-items li {
   list-style-type: none;
-  margin: 0;
+  cursor: pointer;
+  margin: 10px 0 10px 0;
   padding: 0;
-  height: 70px;
-  cursor: pointer; }
-  #sidebar-items li a {
-    position: relative;
-    text-decoration: none; }
+  font-size: 16px; }
+  #sidebar-items li .sublist-item {
+    padding: 0 0 0 30px;
+    font-size: 14px; }
 #sidebar-items .active {
   color: red; }
 
@@ -50,10 +50,10 @@
 #main-content {
   width: 750px;
   padding: 10px 0 0 250px; }
-  #main-content #view-control {
+  #main-content #content-type {
     position: relative;
     background-color: #b3b3b3; }
-  #main-content #manuscript {
+  #main-content #content-display {
     position: relative;
     padding: 25px 0 0 0;
     text-align: justify; }

@@ -46,6 +46,7 @@ padding: 0;
 }
 
 #main-sidebar {
+
    float: left;
    padding: 10px 0 0 40px;
    height: $navbox_height;
@@ -53,19 +54,22 @@ padding: 0;
 }
 
 #sidebar-items {
-    li {
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-       height: 70px;
-	   cursor: pointer;
-       a {
-          position: relative;
-          text-decoration: none;
-       }
-    }
 
-    .active {
+     li {
+
+        list-style-type: none;
+	    cursor: pointer;
+        margin: 10px 0 10px 0;
+        padding: 0;
+        font-size: 16px;
+
+        .sublist-item {
+            padding: 0 0 0 30px;
+            font-size: 14px;
+        }
+     }
+
+   .active {
        color: red;
     }
 }
@@ -83,12 +87,12 @@ padding: 0;
    width: 750px;
    padding: 10px 0 0 250px;
 
-   #view-control {
+   #content-type {
       position: relative;
       background-color: $title_background;
    }
 
-   #manuscript {
+   #content-display {
       position: relative;
       padding: 25px 0 0 0;
       text-align: justify;
