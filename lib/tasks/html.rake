@@ -34,7 +34,10 @@ namespace :html do
       puts output.chomp
     end
 
-		puts ""
+    puts "copying stylesheet..."
+    output = `cp #{xsltdir}/stylesheets/manuscript.css #{targetdir}/stylesheets/manuscript.css`
+    puts output.chomp
+
 		finish_line(start_time)
 	end
 
