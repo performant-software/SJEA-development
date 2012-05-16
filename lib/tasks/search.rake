@@ -18,7 +18,7 @@ namespace :search do
 
        begin
          puts "loading #{xmlfile}..."
-         xmldoc = Nokogiri::XML( File.open( "XSLT/Manuscript transcriptions/#{xmlfile}" ) ) { |config| config.strict }
+         xmldoc = Nokogiri::XML( File.open( "XSLT/xml/#{xmlfile}" ) ) { |config| config.strict }
          rescue Nokogiri::XML::SyntaxError => e
          puts "caught exception: #{e}"
        end
