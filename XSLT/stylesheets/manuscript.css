@@ -155,7 +155,7 @@
 
 .margin-bottomLeft, .margin-marginLeft { position: absolute ; left: 70 ; color: gray }
 
-.add-marginRight, .margin-margRight { position: absolute ; right: 100 ; color: gray }
+.add-marginRight, .margin-marginRight { position: absolute ; right: -100 ; color: gray }
 
 .topCenter, .center, .bottomCenter { position: relative ; left: 50% ; right: 50% ; text-align: center}
 
@@ -220,6 +220,8 @@
 .puncelev { line-height: 1.2 }
 
 div { padding-bottom: 12px }
+
+.descTab { border: 1px solid black ; }
 
 
 

@@ -5,19 +5,19 @@
 <!--    <SJEADescrListforHTML.xml> (this file)   -->
 <!--    <SJEADescriptions-XMLtoHTML.xsl>                 -->
 <!--    A&M SJEA files/                     -->
-<!--        Manuscript descriptions/        -->
+<!--        xml/        -->
 <!--            <xml files for input>       -->
 
 <SJEA xmlns:tei="http://www.tei-c.org/ns/1.0">
-<!--    <part code="Manuscript descriptions/SJA.xml"/>
-    <part code="Manuscript descriptions/SJC.xml/"/>
-    <part code="Manuscript descriptions/SJD.xml"/>
-    <part code="Manuscript descriptions/SJE.xml"/>
-    <part code="Manuscript descriptions/SJEx.xml"/>-->
-    <part code="Manuscript descriptions/LDescription.xml"/>
-<!--    <part code="Manuscript descriptions/SJP.xml"/>
-    <part code="Manuscript descriptions/SJU.xml"/>
-    <part code="Manuscript descriptions/SJV.xml"/>-->
+<!--    <part code="xml/SJA.xml"/>
+    <part code="xml/SJC.xml/"/>
+    <part code="xml/SJD.xml"/>
+    <part code="xml/SJE.xml"/>
+    <part code="xml/SJEx.xml"/>-->
+    <part code="xml/L Description.xml"/>
+<!--    <part code="xml/SJP.xml"/>
+    <part code="xml/SJU.xml"/>
+    <part code="xml/SJV.xml"/>-->
     
 </SJEA>
 
