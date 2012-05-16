@@ -13,6 +13,8 @@
   width: 100px;
   height: 18px;
   float: right; }
+#content #content-display {
+  text-align: justify; }
 #content .compare-box {
   position: relative;
   padding: 10px 0 40px 48px;
