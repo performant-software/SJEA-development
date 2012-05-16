@@ -5,6 +5,8 @@
     <title>The Siege of Jerusalem Electronic Archive</title>
 
     <link href="stylesheets/sjea-common.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/sjea-search.css" media="screen" rel="stylesheet" type="text/css" />
+
   </head>
 
   <body>
@@ -20,6 +22,89 @@
               <li><a href="comparison.html">Comparison</a></li>
           </ul>
       </div> <!-- main-header -->
+
+      <div id="main-title">
+          <h2>Search.</h2>
+      </div>  <!-- main-title -->
+
+      <div id="sidebar">
+
+      </div>  <!-- sidebar -->
+
+      <div id="content">
+
+          <div id="content-header">
+
+          </div>  <!-- content-header -->
+
+          <div id="search-controls">
+
+              <div id="textbox-div">
+                 <span>Search for: </span>
+                 <textarea id="search-text" rows="3" cols="50">
+                 </textarea>
+              </div>
+
+              <div id="searchin-div">
+                 <span>Search in:</span>
+                 <select>
+                    <option value="facet-all">Everything</option>
+                    <option value="facet-transcriptions">Transcriptions</option>
+                    <option value="facet-descriptions">Descriptions</option>
+                    <option value="facet-annotations">Annotations</option>
+                 </select>
+              </div>
+
+              <div id="manuscripts-div">
+                  <span>Which manuscript(s):</span>
+                  <select>
+                     <option value="transcription-all">All of them</option>
+                     <option value="transcription-SJA">British Library, MS Additional 31042 (A)</option>
+                     <option value="transcription-SJC">British Library, MS Cotton Caligula A.ii, part I (C)</option>
+                     <option value="transcription-SJD">Lambeth Palace Library, MS 491 (D)</option>
+                     <option value="transcription-SJE">Huntington Library, MS HM 128 (E)</option>
+                     <option value="transcription-SJEx">Devon Record Office, Deposit 2507 (Ex)</option>
+                     <option value="transcription-SJL">Bodleian Library, MS Laud Misc. 656 (L)</option>
+                     <option value="transcription-SJP">Princeton University Library, MS Taylor Medieval 11 (P)</option>
+                     <option value="transcription-SJU">Cambridge University Library, MS Mm.v.14 (U)</option>
+                     <option value="transcription-SJV">British Library, MS Cotton Vespasian E.xvi (V)</option>
+                  </select>
+              </div>
+
+              <div id="submit-div">
+                  <button class="search-button" type="button">Search</button>
+              </div>  <!-- submit-div -->
+
+          </div>  <!-- search-controls -->
+
+          <div id="search-instructions">
+
+              </br>
+              <p><b>Keyword Searching</b> The Search For field can be used to enter one or more words to search for.
+                    By default, the web site will return text containing <b>any</b> of the words included in the field.
+                    By using the plus sign (+), you can make the site return only entries where <b>all</b> of the words are present.</p>
+              </br>
+
+              <p><b>Phrase Searching</b> Quotes (") can be used to find phrases.</p>
+              </br>
+
+              <p><b>Proximity Searching</b> A word between double quotation marks (") immediately followed by a tilde (~) can be input to find words situated within a specific distance of one another.
+                    A digit after the tilde indicates the desired proximity.</p>
+              </br>
+
+              <p><b>Wild Cards</b> The asterisk (*) and question mark (?) can be used as wild cards. The asterisk stands for zero or more letters; the question mark stands for exactly one letter.
+                 Wild cards cannot be used as the first letter of a word.</p>
+              </br>
+
+              <p><b>Fuzzy Searching</b> A tilde (~) without quotes will return words which are statistically similar to the specified word, based on the Levenshtein Distance, or Edit Distance algorithm.
+                    An additional, optional number after the tilde can specify the required similarity. The value is between 0 and 1. The higher the value, the higher the required similarity.</p>
+              </br>
+
+              <p><b>Excluding words</b> The subtraction symbol (-) can be used to exclude words from a search.</p>
+
+          </div>  <!-- search-instructions -->
+
+      </div>  <!-- content -->
 
       <div id="main-footer">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere ultrices laoreet. Maecenas lacus sapien, tristique ultrices ultrices eu, vestibulum et sem. Nunc eu augue neque, eu congue turpis. Cras vulputate lacus iaculis eros vehicula tincidunt. Suspendisse viverra accumsan ipsum et suscipit. Cras eu tellus nunc. Nam blandit congue lorem vitae faucibus. Nunc at congue libero. Nam et lorem nisl. In laoreet sodales nunc. Quisque egestas, urna et commodo posuere, turpis diam ultricies mauris, id condimentum dui tortor fermentum ante.</p>
