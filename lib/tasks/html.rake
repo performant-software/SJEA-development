@@ -14,18 +14,23 @@ namespace :html do
 
     tooldir = "tools/saxonhe-9-4-0-3j"
     jarfile = "#{tooldir}/saxon9he.jar"
-    outputdir = "MS\\ \\ images"
+    outputdir = "."
     xsltdir = "XSLT"
     xsl = "#{xsltdir}/SJEA-AllTags-XMLtoHTML.xsl"
-    xmldir = "#{xsltdir}/Manuscript\\ transcriptions"
+    xmldir = "#{xsltdir}/xml"
     targetdir = "public"
 
     transcripts.each do |xmlfile|
 
+      output = ""
+
+      views.each do |view|
+        output << `rm -fr #{outputdir}/#{view}`
+      end
+
       basename = xmlfile.gsub(/^(.*).xml$/, '\1')
       puts "processing #{xmlfile}..."
 
-      output = `rm -fr #{outputdir}`
       output << `java -jar #{jarfile} -s:#{xmldir}/#{xmlfile} -xsl:#{xsl}`
       views.each do |view|
         output << `cp #{outputdir}/#{view} #{targetdir}/#{basename}-#{view}`
