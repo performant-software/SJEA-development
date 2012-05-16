@@ -138,7 +138,7 @@ function showManuscriptContent( manuscript_prefix ) {
 
 function showManuscriptDescription( manuscript_prefix ) {
 
-    var resource_name = manuscript_prefix + "-Description"
+    var resource_name = manuscript_prefix + "-description"
     var main_title = $( "#" + manuscript_prefix + "-title").text()
     $("#content-display").empty();
     $("#active-title").html( "<h2>" + main_title + "</h2>")
