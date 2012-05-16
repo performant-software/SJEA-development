@@ -23,6 +23,42 @@
     #main-header #header-list .active {
       color: red; }
 
+#main-title {
+  width: 100%;
+  height: 30px;
+  text-align: left;
+  padding: 25px 0 0 250px; }
+
+#sidebar {
+  float: left;
+  padding: 10px 0 0 40px;
+  height: 350px;
+  width: 180px; }
+
+#sidebar-items li {
+  list-style-type: none;
+  cursor: pointer;
+  margin: 15px 0 15px 0;
+  padding: 0;
+  font-size: 17px; }
+  #sidebar-items li .sublist-item {
+    padding: 0 0 0 30px;
+    font-size: 14px; }
+#sidebar-items .active {
+  color: red; }
+
+#content {
+  width: 950px;
+  padding: 10px 0 0 250px; }
+  #content #content-header {
+    position: relative;
+    background-color: #b3b3b3;
+    width: 100%;
+    height: 30px; }
+  #content #content-display {
+    position: relative;
+    padding: 25px 0 0 0; }
+
 #main-footer {
   width: 100%;
   height: 50px;

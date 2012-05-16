@@ -1,0 +1,24 @@
+#content #content-header .previous-button {
+  width: 100px;
+  height: 18px;
+  float: left; }
+#content #content-header .next-button {
+  width: 100px;
+  height: 18px;
+  float: right; }
+#content .compare-box {
+  position: relative;
+  padding: 10px 0 40px 48px;
+  text-align: left; }
+
+#sidebar-items li a {
+  cursor: default; }
+
+.compare-box {
+  width: 90%;
+  height: 11px;
+  background-color: B3B3B3; }
+
+#compare-spacer {
+  width: 100%;
+  height: 30px; }

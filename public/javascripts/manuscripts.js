@@ -124,9 +124,7 @@ function highliteElement( element ) {
 function showManuscriptContent( manuscript_prefix ) {
 
    var resource_name = manuscript_prefix + "-MS-alltags"
-   var main_title = $( "#" + manuscript_prefix + "-title").text()
    $("#content-display").empty();
-   $("#active-title").html( "<h2>" + main_title + "</h2>")
 
    $("#content-display").load(resource_name, function(response, status, xhr) {
       if (status == "error") {
@@ -139,9 +137,7 @@ function showManuscriptContent( manuscript_prefix ) {
 function showManuscriptDescription( manuscript_prefix ) {
 
     var resource_name = manuscript_prefix + "-description"
-    var main_title = $( "#" + manuscript_prefix + "-title").text()
     $("#content-display").empty();
-    $("#active-title").html( "<h2>" + main_title + "</h2>")
 
     $("#content-display").load(resource_name, function(response, status, xhr) {
        if (status == "error") {
