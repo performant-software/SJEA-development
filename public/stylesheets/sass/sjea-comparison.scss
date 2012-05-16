@@ -11,13 +11,19 @@ $contentheader_background: #B3B3B3;
 #content {
 
    #content-header {
-     .previous-button {
+
+      #compare-page {
+          padding: 0 0 0 325px;
+          text-align: right;
+      }
+
+      #previous-button {
           width: 100px;
           height: 18px;
           float: left;
       }
 
-      .next-button {
+      #next-button {
           width: 100px;
           height: 18px;
           float: right;
@@ -28,6 +34,8 @@ $contentheader_background: #B3B3B3;
       position: relative;
       padding: 10px 0 40px 48px;
       text-align: left;
+      border-top-style: solid;
+      border-width: 1px;
    }
 }
 
@@ -39,12 +47,11 @@ $contentheader_background: #B3B3B3;
 }
 
 .compare-box {
-   width: 90%;
-   height: 11px;
-   background-color: B3B3B3;
+   width: 95%;
+   height: 9px;
 }
 
 #compare-spacer {
    width: 100%;
-   height: 30px;
+   height: 20px;
 }
