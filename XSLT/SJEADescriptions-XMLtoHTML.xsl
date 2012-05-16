@@ -53,7 +53,7 @@
             <xsl:value-of select="substring-before($id, '.xml')"/>
         </xsl:variable>
         
-        <xsl:result-document href="{concat(idno, '.html')}" format="html">
+        <xsl:result-document href="{concat($idno, '.html')}" format="html">
             <xsl:call-template name="generateHTML"/>
         </xsl:result-document>
     </xsl:template>
@@ -88,28 +88,163 @@
             </head>
             
             <body class="contentArea">
-                <h1><xsl:value-of select="//tei:titleStmt/tei:title"/></h1>
                 <!--add a button to view XML copy of document-->
                 <span class="xmlButton"><a href="../{$id}"><img src="../xmlbutton.jpg" height="14" width="36"/></a></span>
                 
-                <xsl:call-template name="processBody"/>
+                <h2><xsl:value-of select="//tei:titleStmt/tei:title"/></h2>
+
+                <xsl:apply-templates/>
             </body>
         </html>
     </xsl:template>
     
     
     <!--*************************-->
-    <!--mjc: processBody template-->
-    <!--     ===========         -->
-    <!--mjc: format the body of the file-->
+    <!--mjc: origdate template-->
+    <!--     ========         -->
+    <!--mjc: format the <origdate> of the file-->
     <!--*************************-->
-    <xsl:template name="processBody">
-        <!-- main text -->
-        <xsl:for-each select="//tei:text/tei:body/tei:div1">
-            <span id="div1">
+    <xsl:template match="//tei:sourceDesc">
+        <xsl:for-each select="//tei:origDate">
+            <div class="origdate">
+                <b>Date: </b>
                 <xsl:apply-templates/>
-            </span>
+            </div>
+
         </xsl:for-each>
+        
+        <xsl:for-each select="//tei:physDesc">
+            <xsl:for-each select="//tei:support">
+                <div class="support">
+                    <b>Support: </b>
+                    <xsl:value-of select="text()"/>
+                </div>
+            </xsl:for-each>
+            
+            <xsl:for-each select="//tei:extent/tei:measure">
+                <xsl:if test="@type='leavesCount'">
+                    <div class="extent">
+                        <b>Extent: </b>
+                        <xsl:value-of select="text()"/>
+                    </div>
+                </xsl:if>
+                
+                <xsl:if test="@type='pageDimensions'">
+                    <div class="format">
+                        <b>Format: </b>
+                        <xsl:value-of select="text()"/>
+                    </div>
+                </xsl:if>
+            </xsl:for-each>
+            
+            <xsl:for-each select="//tei:foliation">
+                <div class="foliation">
+                    <b>Foliation: </b>
+                    <xsl:value-of select="text()"/>
+                </div>
+            </xsl:for-each>
+            
+            <xsl:for-each select="//tei:collation">
+                <div class="foliation">
+                    <b>Collation: </b>
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:for-each>
+            
+            <xsl:for-each select="//tei:condition">
+                <div class="foliation">
+                    <b>Condition: </b>
+                    <xsl:value-of select="text()"/>
+                </div>
+            </xsl:for-each>
+            
+            <xsl:for-each select="//tei:layout">
+                <div class="foliation">
+                    <b>Page layout: </b>
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:for-each>
+            
+            <xsl:for-each select="//tei:handNote">
+                <div class="handnote">
+                    <b>The scribe: Script and dialect: </b>
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:for-each>
+            
+            <xsl:for-each select="//tei:decoNote">
+                <div class="handnote">
+                    <b>Decoration: </b>
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:for-each>
+            
+            <xsl:for-each select="//tei:binding">
+                <div class="handnote">
+                    <b>Binding: </b>
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:for-each>
+            
+            <xsl:for-each select="//tei:provenance">
+                <div class="handnote">
+                    <b>Provenance: </b>
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:for-each>
+            <xsl:for-each select="//tei:listBibl">
+                <div class="handnote">
+                    <b>Bibliography: </b>
+                    <!--mjc: tell parser not to turn <br/> into <br></br>-->
+                    <xsl:value-of disable-output-escaping="yes">&lt;br /&gt;</xsl:value-of>
+                    <xsl:value-of disable-output-escaping="yes">&lt;br /&gt;</xsl:value-of>
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:for-each>
+        </xsl:for-each>
+        
+        
+    </xsl:template>
+    
+    <xsl:template match="//tei:sourceDesc//tei:title">
+        <i><xsl:value-of select="text()"/></i>
+    </xsl:template>
+    
+    
+    <xsl:template match="//tei:collation//tei:item">
+        <div class="collItem"><xsl:apply-templates/></div>
+    </xsl:template>
+    
+    <xsl:template match="tei:p">
+        <div class="p">
+            <xsl:apply-templates/>
+        </div>
+
+    </xsl:template>
+    
+    <xsl:template match="tei:table">
+        <table class="descTab">
+            <xsl:apply-templates/>
+        </table>
+
+    </xsl:template>
+    
+    <xsl:template match="tei:row">
+        <tr>
+            <xsl:apply-templates/>
+        </tr>
+    </xsl:template>
+    
+    <xsl:template match="tei:cell">
+        <td>
+            <xsl:apply-templates/>
+        </td>
+    </xsl:template>
+    
+    <xsl:template match="tei:bibl">
+        <div class="bibEntry">
+            <xsl:apply-templates/>
+        </div>
     </xsl:template>
     
     

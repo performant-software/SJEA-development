@@ -215,9 +215,11 @@
 
 .del-legible { text-decoration: line-through }
 
-.xmlButton { position: absolute; right: 0 }
+.xmlButton { position: absolute; right: 0; top: 0 }
 
 .puncelev { line-height: 1.2 }
+
+div { padding-bottom: 12px }
 
 
 
