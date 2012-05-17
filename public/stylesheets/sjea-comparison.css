@@ -22,8 +22,10 @@
   border-top-style: solid;
   border-width: 1px; }
 
-#sidebar-items li a {
+#sidebar-items li {
   cursor: default; }
+#sidebar-items li a:hover {
+  color: black; }
 
 .compare-box {
   width: 95%;

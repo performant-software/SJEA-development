@@ -4,11 +4,11 @@ $(document).ready(function() {
     $( ".sublist").hide()
 
 	$(".mainlist-item").toggle(function(){
-        $( ".sublist").slideUp(300);
-        $(this).parent().next().slideDown(300);
+        $( ".sublist").slideUp(400);
+        $(this).parent().next().slideDown(400);
 	},
 	function(){
-		$(this).parent().next().slideUp(300);
+		$(this).parent().next().slideUp(400);
 	});
 
     $("#overview").click(function() {

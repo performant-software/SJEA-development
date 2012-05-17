@@ -74,15 +74,20 @@ $navbox_height: 350px;  // hight of the main navigation box
         padding: 0;
         font-size: 17px;
 
-        .sublist-item {
-            padding: 0 0 0 30px;
-            font-size: 14px;
+        a:hover {
+           color: red;
         }
      }
 
-   .active {
+     .sublist {
+        padding: 0 0 0 20px;
+        font-size: 14px;
+	    cursor: pointer;
+     }
+
+     .active {
        color: red;
-    }
+     }
 }
 
 #content {

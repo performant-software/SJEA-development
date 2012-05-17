@@ -41,9 +41,12 @@
   margin: 15px 0 15px 0;
   padding: 0;
   font-size: 17px; }
-  #sidebar-items li .sublist-item {
-    padding: 0 0 0 30px;
-    font-size: 14px; }
+  #sidebar-items li a:hover {
+    color: red; }
+#sidebar-items .sublist {
+  padding: 0 0 0 20px;
+  font-size: 14px;
+  cursor: pointer; }
 #sidebar-items .active {
   color: red; }
 

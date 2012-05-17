@@ -45,9 +45,16 @@ $contentheader_background: #B3B3B3;
 
 #sidebar-items {
 
-     li a {
+     li {
 	    cursor: default;
+	    a {
+	    }
 	 }
+
+     li a:hover {
+         color: black;
+     }
+
 }
 
 .compare-box {
