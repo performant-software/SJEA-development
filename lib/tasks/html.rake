@@ -1,5 +1,6 @@
 # encoding: UTF-8
 
+require "cgi"
 require "#{Rails.root}/lib/tasks/task_utilities"
 
 namespace :html do
@@ -10,6 +11,10 @@ namespace :html do
   xsltdir = "XSLT"
   xmldir = "#{xsltdir}/xml"
   targetdir = "public"
+
+  #
+  # Regenerates the transcription HTML content
+  #
 
 	desc "Regenerate the HTML transcription content from the XML/XSL"
 	task :regencontent => :environment do
@@ -23,29 +28,30 @@ namespace :html do
 
     transcripts.each do |xmlfile|
 
-      output = ""
-
       views.each do |view|
-        output << `rm -fr #{outputdir}/#{view}`
+        delete_file( "#{outputdir}/#{view}" )
       end
 
-      basename = xmlfile.gsub(/^(.*).xml$/, '\1')
       puts "processing #{xmlfile}..."
 
-      output << `java -jar #{jarfile} -s:#{xmldir}/#{xmlfile} -xsl:#{xsl}`
+      cmd_line( "java -jar #{jarfile} -s:#{xmldir}/#{xmlfile} -xsl:#{xsl}" )
+
+      basename = xmlfile.gsub(/^(.*).xml$/, '\1')
       views.each do |view|
-        output << `cp #{outputdir}/#{view} #{targetdir}/#{basename}-#{view}`
+        copy_file( "#{outputdir}/#{view}", "#{targetdir}/#{basename}-#{view}" )
       end
 
-      puts output.chomp
     end
 
     puts "copying stylesheet..."
-    output = `cp #{xsltdir}/stylesheets/manuscript.css #{targetdir}/stylesheets/manuscript.css`
-    puts output.chomp
+    copy_file( "#{xsltdir}/stylesheets/manuscript.css", "#{targetdir}/stylesheets/manuscript.css" )
 
 		finish_line(start_time)
 	end
+
+  #
+  # Regenerates the description HTML content
+  #
 
   desc "Regenerate the HTML description content from the XML/XSL"
   task :regendesc => :environment do
@@ -63,9 +69,111 @@ namespace :html do
     finish_line(start_time)
   end
 
+  #
+  # Regenerates the comparison HTML content
+  #
+
   desc "Regenerate the HTML comparison content from the XML/XSL"
   task :regencomp => :environment do
     start_time = start_line("Regenerate the HTML comparison content from the XML/XSL.")
+
+    transcripts = [ "SJA.xml", "SJC.xml", "SJD.xml", "SJE.xml", "SJEx.xml", "SJL.xml", "SJP.xml", "SJU.xml", "SJV.xml" ]
+    #transcripts = [ "SJA.xml" ]
+
+    workdir = "tmp/comp"
+    delete_dir( workdir )
+    make_dir( workdir )
+
+    transcripts.each do |xmlfile|
+
+      basename = xmlfile.gsub(/^(.*).xml$/, '\1')
+      puts "processing #{xmlfile}..."
+
+      begin
+        xmldoc = Nokogiri::XML( File.open( "XSLT/xml/#{xmlfile}" ) ) { |config| config.strict }
+        rescue Nokogiri::XML::SyntaxError => e
+        abort "caught exception processing #{xmlfile}: #{e}"
+      end
+
+      xml_lines = xmldoc.css('l')
+      xml_lines.each do |xml_line|
+
+        hl_number = xml_line.attribute('n')
+        text_line = CGI::escapeHTML( xml_line.content.split.join(" ") )
+        fname = "#{workdir}/#{hl_number}.xml"
+        output = "<l attr=\'#{basename}\'>#{text_line}</l>\n"
+
+        # add a div tag if necessary... required for the subsequent XML parsing !!!
+        if file_exists( fname ) == false
+           append_to_file( fname, "<div>" )
+        end
+        append_to_file( fname, output )
+
+      end
+
+    end
+
+    # close the div for each file
+    files = Dir.glob( "#{workdir}/*.xml" )
+    files.each do |fname|
+       append_to_file( fname, "</div>" )
+    end
+
+    puts "rolling up comparisons..."
+
+    files = Dir.glob( "#{workdir}/*.xml" ).sort! { |a, b| a.split( ".")[ 1 ].to_i <=> b.split( ".")[ 1 ].to_i }
+
+    ix = 0
+    ixend = files.size() - 1
+
+    files.each do |fname|
+
+       begin
+         complist = Nokogiri::XML( File.open( fname ) ) { |config| config.strict }
+         rescue Nokogiri::XML::SyntaxError => e
+         abort "caught exception processing #{fname}: #{e}"
+       end
+
+       outfile = targetdir + "/" + fname.split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1') + ".html"
+
+       if ix == 0  # first page of comparisons
+          prevpage = "HL.0001.html"
+          nextpage = files[ ix + 1 ].split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1') + ".html"
+       elsif ix == ixend    # last page of comparisons
+         prevpage = files[ ix - 1 ].split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1') + ".html"
+         nextpage = files[ ix ].split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1') + ".html"
+       else
+          prevpage = files[ ix - 1 ].split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1') + ".html"
+          nextpage = files[ ix + 1 ].split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1') + ".html"
+       end
+
+       append_to_file( outfile, "<div id=\"previous-page\" href=\"#{prevpage}\"></div><div id=\"next-page\" href=\"#{nextpage}\"></div><div id=\"compare-spacer\"></div>\n" )
+
+       comparisons = complist.css('l')
+       compare_set = Hash.new( )
+       comparisons.each do |compare|
+          compare_set[ compare.attribute('attr').to_s() ] = compare.content
+       end
+
+       transcripts.each do |xmlfile|
+
+         tname = xmlfile.gsub(/^(.*).xml$/, '\1')
+         compline = "<div id=\"#{tname}-compare\" class=\"compare-box\">"
+
+         if compare_set.key?( tname )
+           compline << compare_set[ tname ]
+         else
+            compline << "---- NOTHING ----"
+         end
+
+         compline << "</div>\n"
+         append_to_file( outfile, compline )
+
+       end
+
+       ix += 1
+
+    end
 
     finish_line(start_time)
   end
