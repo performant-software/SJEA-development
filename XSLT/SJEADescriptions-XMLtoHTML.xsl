@@ -88,6 +88,9 @@
                 <title>
                     <xsl:value-of select="//tei:titleStmt/tei:title"/>
                 </title>
+                <style>
+                    div { padding-bottom: 12px }
+                </style>
             </head>
 
             <body class="contentArea">
@@ -175,7 +178,7 @@
 
             <xsl:for-each select="//tei:handNote">
                 <div class="handnote">
-                    <b>The scribe &#x2014; Script and dialect: </b>
+                    <b>The scribe &#x2014; script and dialect: </b>
                     <xsl:apply-templates/>
                 </div>
             </xsl:for-each>
