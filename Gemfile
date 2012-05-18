@@ -40,3 +40,6 @@ gem 'ruby-debug19', :require => 'ruby-debug'
 gem 'rsolr'
 gem 'nokogiri'
 gem 'sass'
+
+gem 'execjs'
+gem 'therubyracer'
