@@ -1,4 +1,6 @@
 Sjsearch::Application.routes.draw do
+  get "solrsearch/dosearch"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
