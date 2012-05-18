@@ -103,7 +103,7 @@
 
 .sup, .highlightsup, { vertical-align:super ; font-size:.7em }
 
-.supNote { vertical-align:super ; font-size:.7em ; color: red ; font-family:Verdana, Geneva, sans-serif ; font-weight: bold}
+.supNote, .graphic { vertical-align:super ; font-size:.7em ; color: red ; font-family:Verdana, Geneva, sans-serif ; font-weight: bold}
 
 .foreign, .expan, .title, .it, .txExpan, .bastardExpan, .bastardtxExpan { font-style:italic }
 
@@ -148,6 +148,8 @@
 .margin-topCenter, .add-topCenter { position: relative ; left: 50% ; right: 50% ; text-align: center ; color: gray}
 
 .add-supralinear, .margin-supralinear { vertical-align:super ; font-size:.7em ; color: gray}
+
+.sup { vertical-align:super ; font-size:.7em }
 
 .add-bottomCenter, .margin-bottomCenter { position: relative ; left: 50% ; right: 50% ; text-align: center ; color: gray }
 
@@ -218,8 +220,6 @@
 .xmlButton { position: absolute; right: 0; top: 0 }
 
 .puncelev { line-height: 1.2 }
-
-div { padding-bottom: 12px }
 
 .descTab { border: 1px solid black ; }
 
