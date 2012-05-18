@@ -60,7 +60,7 @@ namespace :html do
     start_time = start_line("Regenerate the HTML description content from the XML/XSL.")
 
     #descriptions = [ "A Description.xml", "C Description.xml", "D Description.xml", "E Description.xml", "Ex Description.xml", "L Description.xml", "P Description.xml", "U Description.xml", "V Description.xml" ]
-    descriptions = [ "SJA-description.xml", "SJL-description.xml" ]
+    descriptions = [ "ADescription.xml", "LDescription.xml" ]
 
     targetdir = "public"
 
