@@ -181,12 +181,12 @@ function showManuscriptDescription( manuscript_prefix ) {
     var resource_name = manuscript_prefix + "-description"
     $("#content-display").empty();
 
-    //$("#content-display").load(resource_name, function(response, status, xhr) {
-    //   if (status == "error") {
-    //      var msg = "Sorry but there was an error: ";
-    //      alert(msg + xhr.status + " " + xhr.statusText);
-    //   }
-    //});
+    $("#content-display").load(resource_name, function(response, status, xhr) {
+       if (status == "error") {
+          var msg = "Sorry but there was an error: ";
+          alert(msg + xhr.status + " " + xhr.statusText);
+       }
+    });
 }
 
 function showOverviewContent( ) {

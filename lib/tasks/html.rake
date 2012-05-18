@@ -58,12 +58,22 @@ namespace :html do
     start_time = start_line("Regenerate the HTML description content from the XML/XSL.")
 
     #descriptions = [ "A Description.xml", "C Description.xml", "D Description.xml", "E Description.xml", "Ex Description.xml", "L Description.xml", "P Description.xml", "U Description.xml", "V Description.xml" ]
-    descriptions = [ "L Description.xml" ]
+    descriptions = [ "SJA-description.xml", "SJL-description.xml" ]
+
+    targetdir = "public"
+
+    outputfile = "./.html"
+    xsl = "#{xsltdir}/SJEADescriptions-XMLtoHTML.xsl"
 
     descriptions.each do |xmlfile|
 
-      basename = xmlfile.gsub(/^(.*).xml$/, '\1')
+      targetname = xmlfile.gsub(/^(.*).xml$/, '\1') + ".html"
       puts "processing #{xmlfile}..."
+
+      delete_file( "#{outputfile}" )
+
+      cmd_line( "java -jar #{jarfile} -s:#{xmldir}/#{xmlfile} -xsl:#{xsl}" )
+      copy_file( outputfile, "#{targetdir}/#{targetname}" )
 
     end
 
