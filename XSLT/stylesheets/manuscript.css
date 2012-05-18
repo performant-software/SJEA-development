@@ -137,13 +137,13 @@
 
 .kdMarker { display:none }
 
-.lineMarker { position:absolute ; left:30 ; font-size:9pt ; font-family:Times New Roman ; line-height:1.8em }
+.lineMarker { position:absolute ; left:30px ; font-size:9pt ; font-family:Times New Roman ; line-height:1.8em }
 
-.line { position:relative ; left:100 }
+.line { position:relative ; left:120px }
 
 .contentArea { cursor:default ; height:100% ; width:700px ; padding:30 ; font-family:Junicode; background-color:#FDEAAA ; position: absolute }
 
-.image { position: absolute ; right: 100 }
+.image { float: right; clear: right; width: 175px; height: 225px; }
 
 .margin-topCenter, .add-topCenter { position: relative ; left: 50% ; right: 50% ; text-align: center ; color: gray}
 
@@ -157,7 +157,7 @@
 
 .margin-bottomLeft, .margin-marginLeft { position: absolute ; left: 70 ; color: gray }
 
-.add-marginRight, .margin-marginRight { position: absolute ; right: -100 ; color: gray }
+.add-marginRight, .margin-marginRight { position: absolute ; right: -100px ; color: gray }
 
 .topCenter, .center, .bottomCenter { position: relative ; left: 50% ; right: 50% ; text-align: center}
 
