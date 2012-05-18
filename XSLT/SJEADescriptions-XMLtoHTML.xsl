@@ -200,7 +200,7 @@
             <xsl:for-each select="../tei:msContents">
                 <div class="contents">
                     <b>Contents: </b>
-                    <xsl:apply-templates select="."/>
+                    <xsl:apply-templates/>
                 </div>
             </xsl:for-each>
     
@@ -259,15 +259,15 @@
 
     <xsl:template match="tei:cell">
         <xsl:choose>
-            <xsl:when test="./tei:title">
+            <xsl:when test="@role='label'">
                 <th>
-                    <xsl:apply-templates select="./tei:title/tei:hi"/>
+                    <xsl:apply-templates/>
                 </th>
             </xsl:when>
             
             <xsl:otherwise>
                 <td>
-                    <xsl:apply-templates/>
+                    <i><xsl:apply-templates/></i>
                 </td>
             </xsl:otherwise>
         </xsl:choose>
@@ -279,8 +279,7 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="//tei:msContents">
-        <xsl:for-each select="./tei:msItem">
+    <xsl:template match="//tei:msContents/tei:msItem">
             <div class="msitem">
                 <xsl:for-each select="./tei:title">
                     <xsl:value-of select="concat(text(), ':')"/>
@@ -288,13 +287,11 @@
                     <xsl:value-of disable-output-escaping="yes">&lt;br /&gt;</xsl:value-of>
                 </xsl:for-each>
                 
-                <xsl:for-each select="./tei:msItem">
-    
-                        <xsl:apply-templates/>
+                <xsl:for-each select="./tei:msItem | ./tei:p">
+                    <xsl:apply-templates/>
                     <xsl:value-of disable-output-escaping="yes">&lt;br /&gt;</xsl:value-of>
                 </xsl:for-each>
             </div>
-        </xsl:for-each>
     </xsl:template>
     
     <xsl:template match="tei:locus">
@@ -309,9 +306,45 @@
         <xsl:if test="@rend ='bold'">
             <b><xsl:apply-templates/></b>
         </xsl:if>
+        
+        <xsl:if test="@rend='supralinear'">
+            <sup><xsl:apply-templates/></sup>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="tei:titleStmt | tei:editionStmt | tei:publicationStmt"/>
+    
+    <xsl:template match="tei:locus">
+        <xsl:param name="id" tunnel="yes"/>
+        
+        <!--mjc: grab par tof the input filename to build the output filename-->
+        <xsl:variable name="idno">
+            <xsl:value-of select="substring(substring-after($id, $xmlpath), 1, 1)"/>
+        </xsl:variable>
+        
+        <xsl:choose>
+            <xsl:when test="@to">
+                <xsl:apply-templates/>
+            </xsl:when>
+            
+            <xsl:otherwise>
+                <a href="{concat('images/', $idno, @from, '.jpeg')}"><xsl:apply-templates/></a>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <!--*************************-->
+    <!--mjc: graphic template-->
+    <!--     ====         -->
+    <!--mjc: format <notes>: create red, super-script   -->
+    <!--     capital T, with link to something. for now -->
+    <!--     put the text of the note in a @title       -->
+    <!--*************************-->
+    <xsl:template match="tei:graphic">
+        <xsl:param name="view" tunnel="yes"/>
+        
+        <span class="graphic">I</span>
+    </xsl:template>
 
 
 </xsl:stylesheet>

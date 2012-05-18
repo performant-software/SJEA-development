@@ -735,7 +735,7 @@
             <xsl:when test="$view = 'diplomatic'"/>
                 
             <xsl:otherwise>
-                <span class="supNote" title="{./text()}" alt="{./text()}">T</span>
+                <span class="supNote" title="{./text()}" alt="{./text()}">N</span>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>

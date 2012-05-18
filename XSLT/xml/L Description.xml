@@ -4,7 +4,7 @@
         <fileDesc>
 
             <titleStmt>
-                <title>Descritpion of Bodleian Library, MS Laud Misc.656 (L)</title>
+                <title>Descritpion of Bodleian Library, MS Laud Misc. 656 (L)</title>
                 <author>Timothy L. Stinson</author>
             </titleStmt>
 
@@ -33,12 +33,12 @@
                         <origPlace>England</origPlace>
                         <origDate notBefore="1375" notAfter="1400">Laud Misc. 656 is likely the
                             oldest of the manuscripts in the <title>Siege of Jerusalem</title>
-                            corpus, rivaled only by perhaps the Princeton Taylor MS (P), as
-                                <persName>Doyle</persName> notes when he attributes the poem "to the
-                            fourteenth century with confidence, from the earliest-looking copy, in
-                            Bodleian Laud misc. 656" (93). Hanna-Lawton concur, dating the
-                            manuscript to the end of that century. Guddat-Figge erroneously dates it
-                            to the middle of the fifteenth century.</origDate>
+                            corpus, rivaled only by perhaps the Princeton University Library, MS
+                            Taylor 11 (P), as <persName>Doyle</persName> notes when he attributes
+                            the poem "to the fourteenth century with confidence, from the
+                            earliest-looking copy, in Bodleian Laud misc. 656" (93). Hanna-Lawton
+                            concur, dating the manuscript to the end of that century. Guddat-Figge
+                            erroneously dates it to the middle of the fifteenth century.</origDate>
                     </head>
 
                     <msContents>
@@ -53,17 +53,16 @@
                             <msItem>
                                 <locus from="19v" to="114r">Fol. 19v-114r</locus>
                                 <title>Piers Plowman</title>
-                                <author>William Langland</author>
                             </msItem>
 
                             <msItem>
                                 <locus from="114v" to="116v">Fol. 114v-116v</locus>
-                                <title>Mostly blank</title>
+                                <bibl>Mostly blank</bibl>
                             </msItem>
                         </msItem>
 
                         <msItem>
-                            <title>Booklet I</title>
+                            <title>Booklet II</title>
 
                             <msItem>
                                 <locus from="117r" to="118r">Fol. 117r-118r</locus>
@@ -87,7 +86,7 @@
 
                         <objectDesc form="codex">
 
-                            <supportDesc material="perg">
+                            <supportDesc material="parch">
 
                                 <support>Parchment</support>
 
@@ -100,7 +99,7 @@
 
                                 <foliation>Foliation in both ink and pencil, both rather early. The
                                     foliation in ink numbers each leaf 1-5 and thereafter in
-                                    intervals of 10 (i.e. ,10, 20, 30, etc.). At a later date,
+                                    intervals of 10 (i.e., 10, 20, 30, etc.). At a later date,
                                     numbers were added in pencil to the unfoliated leaves by a
                                     second hand. In quire X, the second hand corrects an error in
                                     counting by his predecessor, striking through “110” and
@@ -117,6 +116,7 @@
                                     fols. 1-116 and the second comprising fol. 117 to the end. The
                                     following collation refers to the extant modern pencil
                                     foliation. <list>
+
                                         <item>Booklet I</item>
                                         <item> I <locus from="ii" to="13">ii-13</locus> (quire of 14
                                             leaves; a single parchment leaf precedes this quire) </item>
@@ -126,7 +126,7 @@
                                         </item>
                                         <item> IV <locus from="38" to="49">38-49</locus>
                                         </item>
-                                        <item> V <locus from="50" to="61">50-61</locus>) </item>
+                                        <item> V <locus from="50" to="61">50-61</locus></item>
                                         <item> VI <locus from="62" to="73">62-73</locus>
                                         </item>
                                         <item> VII <locus from="74" to="85">74-85</locus>
@@ -181,7 +181,7 @@
                         <handDesc>
                             <handNote>
                                 <p>The text is in an anglicana script using brown ink throughout,
-                                    and is likely the work on one scribe. Russell-Kane believe the
+                                    and is likely the work of one scribe. Russell-Kane believe the
                                     entire manuscript to be the work of the same scribe, whereas
                                     Hanna-Lawton note that one scribe copied <title>Siege of
                                         Jerusalem</title> with "perhaps a second for the remainder."
@@ -195,6 +195,13 @@
                                         >9r</locus>, and a few supralinear additions by the main
                                     scribe (e.g., folios <locus from="3v">3v</locus>, <locus
                                         from="7v">7v</locus>, <locus from="9r">9r</locus>).</p>
+                                <p>Lines generally begin with capital letter forms; initial letters
+                                    that do not have a distinct lower case are likely intended as
+                                    capitals. The caesura is marked throughout with a punctus
+                                    elevatus. Note that the scribe frequently adds a backwards curl
+                                    to final <hi rend="italic">–r</hi><graphic
+                                        url="images/Lrcurl.jpg"/> to form the suspension <hi
+                                        rend="italic">-re</hi>.</p>
                                 <p>Kellogg's dissertation is an especially useful tool for the study
                                     of the dialect of Laud Misc. 656; whereas the dialect features
                                     of the other manuscripts are documented in appendices, the
@@ -205,9 +212,9 @@
                                     did not know of P or the Exeter fragment):</p>
                                 <p><quote>"On the whole the MSS are pretty consistent in displaying
                                         East Midland traits. Western features are mainly limited to
-                                        one MS: L. It alone shows any retention of OE. eo as a
+                                        one MS: L. It alone shows any retention of OE. ēo as a
                                         rounded vowel. It alone has <hi rend="italic">ȝo</hi> for
-                                        'she' or preserves OE. y as a rounded vowel in more than a
+                                        'she' or preserves OE. ȳ as a rounded vowel in more than a
                                         score of instances. U has seventeen instances of this last;
                                         E had nine" (61).</quote></p>
                                 <p>Although Kellogg's documentation and characterization of L's
@@ -237,8 +244,8 @@
                                     three out of six instances:</p>
                                 <table>
                                     <row>
-                                        <cell><title><hi rend="bold">Piers</hi></title></cell>
-                                        <cell><title><hi rend="bold">Siege</hi></title></cell>
+                                        <cell role="label">Piers</cell>
+                                        <cell role="label">Siege</cell>
                                     </row>
                                     <row>
                                         <cell><hi rend="italic">hure</hi></cell>
@@ -284,10 +291,12 @@
                                     <title>Siege of Jerusalem</title> has rubricated initials 3-5
                                 lines in height at fols. <locus from="1v">1v</locus>, <locus
                                     from="7v">7v</locus>, <locus from="13v">13v</locus>, and <locus
-                                    from="16r">16r</locus>. <title>Piers</title> has spaces and
-                                guideletters for rubricated initials, e.g., 19v, 25r, but these have
-                                not been realized; the same is true in Booklet II, e.g., fol. 119v.
-                            </decoNote>
+                                    from="16r">16r</locus>; there are no passus divisions marked
+                                with paraphs or marginalia, but these multiline capitals correspond
+                                to passus divisions recognized by Hanna-Lawton as authorial.
+                                    <title>Piers</title> has spaces and guideletters for rubricated
+                                initials, e.g., 19v, 25r, but these have not been realized; the same
+                                is true in Booklet II, e.g., fol. 119v. </decoNote>
                         </decoDesc>
 
 
@@ -296,8 +305,8 @@
 
                                 <p>15th c., English. Binding is <measure type="written">215
                                         mm</measure> in height and <measure type="written">170
-                                        mm</measure> in width as measured center of spine to the
-                                    fore edge. Bound in reddish brown calfskin, rebacked but
+                                        mm</measure> in width as measured from center of spine to
+                                    the fore edge. Bound in reddish brown calfskin, rebacked but
                                     otherwise original. Wooden boards, sloped at edges. Four raised
                                     bands as bound, rebacked spine utilizing original bands.
                                     Additionally, two slightly raised sewing structures, one at top
@@ -319,7 +328,7 @@
 
                                 <p>Paper label, inside front cover, top left: <hi rend="italic">S.C.
                                         1059</hi> (a reference to the Bodleian’s <title>Summary
-                                        Catalogue</title> entry.</p>
+                                        Catalogue</title> entry).</p>
 
                                 <p>Written in ink on binding turn-in, inside front cover: <hi
                                         rend="italic">F. 22</hi> and <hi rend="italic">Laud /
@@ -415,21 +424,6 @@
                                 Early English Text Society, o.s. 54. <pubPlace>London</pubPlace>:
                                 Trübner &amp; Co., <date when="1880">1880</date>.</bibl>
 
-                            <bibl>Hanna-Lawton and Russell-Kane give accurate and thorough
-                                descriptions of L, including information on its physical condition,
-                                contents, collation, and hand. <persName>Guddat-Figge</persName>
-                                gives a similar description, but notes that she wrote her entry
-                                through reliance upon Coxe and Skeat and that she had not seen the
-                                manuscript in person. <persName>Hopper</persName> and
-                                    <persName>Zetterson</persName> offer descriptions in the context
-                                of studies of other poems appearing in the manuscript, and their
-                                descriptions are much less detailed than those of Hanna-Lawton and
-                                    <persName>Guddat-Figge</persName>. <persName>Doyle</persName>
-                                and <persName>Millar</persName> discuss the manuscript briefly. The
-                                dialect of the manuscript is the focus of
-                                    <persName>Kellogg</persName>'s dissertation. Where it would
-                                merely be redundant to repeat these works, I briefly summarize them
-                                below.</bibl>
 
                         </listBibl>
 

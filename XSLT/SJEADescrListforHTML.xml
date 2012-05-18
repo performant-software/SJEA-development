@@ -9,15 +9,15 @@
 <!--            <xml files for input>       -->
 
 <SJEA xmlns:tei="http://www.tei-c.org/ns/1.0">
-<!--    <part code="xml/SJA.xml"/>
-    <part code="xml/SJC.xml/"/>
-    <part code="xml/SJD.xml"/>
-    <part code="xml/SJE.xml"/>
-    <part code="xml/SJEx.xml"/>-->
+    <part code="xml/A Description.xml"/>
+    <!--    <part code="xml/C Description.xml/"/>
+    <part code="xml/D Description.xml"/>
+    <part code="xml/E Description.xml"/>
+    <part code="xml/Ex Description.xml"/>-->
     <part code="xml/L Description.xml"/>
-<!--    <part code="xml/SJP.xml"/>
-    <part code="xml/SJU.xml"/>
-    <part code="xml/SJV.xml"/>-->
+    <!--    <part code="xml/P Description.xml"/>
+    <part code="xml/U Description.xml"/>
+    <part code="xml/V Description.xml"/>-->
     
 </SJEA>
 
