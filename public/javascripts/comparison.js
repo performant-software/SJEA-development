@@ -37,7 +37,9 @@ function showNextComparison( ) {
 function loadComparison( resource_name ) {
 
     $("#content-display").empty();
-    $("#compare-page").text( resource_name )
+
+    var title = resource_name.replace(/%20/g, " ").replace(/comparisons\//g, "" ).replace(/.html/g, "" );
+    $("#compare-page").text( title )
 
     $("#content-display").load(resource_name, function(response, status, xhr) {
        if (status == "error") {

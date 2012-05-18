@@ -152,11 +152,11 @@ namespace :html do
        outfile = targetdir + "/" + fname.split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1') + ".html"
 
        if ix == 0  # first page of comparisons
-          prevpage = "HL.0001.html"
+          prevpage = "HL.2147.html"
           nextpage = files[ ix + 1 ].split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1') + ".html"
        elsif ix == ixend    # last page of comparisons
          prevpage = files[ ix - 1 ].split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1') + ".html"
-         nextpage = files[ ix ].split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1') + ".html"
+         nextpage = "HL.0001.html"
        else
           prevpage = files[ ix - 1 ].split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1') + ".html"
           nextpage = files[ ix + 1 ].split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1') + ".html"
