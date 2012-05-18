@@ -6,7 +6,9 @@ require "#{Rails.root}/lib/tasks/task_utilities"
 namespace :html do
 	include TaskUtilities
 
-  tooldir = "tools/saxonhe-9-4-0-3j"
+  #tooldir = "tools/saxonhe-9-4-0-3j"
+  tooldir = "tools/saxonhe-9-3-0-5j"
+
   jarfile = "#{tooldir}/saxon9he.jar"
   xsltdir = "XSLT"
   xmldir = "#{xsltdir}/xml"
