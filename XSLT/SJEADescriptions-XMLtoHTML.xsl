@@ -294,10 +294,6 @@
             </div>
     </xsl:template>
     
-    <xsl:template match="tei:locus">
-        <xsl:value-of select="text()"/>
-    </xsl:template>
-    
     <xsl:template match="tei:hi">
         <xsl:if test="@rend='italic'">
             <i><xsl:apply-templates/></i>
