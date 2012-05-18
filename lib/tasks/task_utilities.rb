@@ -61,4 +61,27 @@ module TaskUtilities
     end
   end
 
+  def filename_sort_helper( aname, bname )
+
+    anumS = aname.split( "/" )[ 2 ].slice( 3..-1 )
+    anum = anumS.to_f
+    bnumS = bname.split( "/" )[ 2 ].slice( 3..-1 )
+    bnum = bnumS.to_f
+
+    # standard spaceship op behavior until they are ==. Then sort by length.
+    if anum < bnum
+      return -1
+    elsif anum > bnum
+      return 1
+    else
+      if anumS.length < bnumS.length
+        return -1
+      elsif anumS.length > bnumS.length
+        return 1
+      else
+        return 0
+      end
+    end
+  end
+
 end

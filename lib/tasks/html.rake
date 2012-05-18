@@ -136,7 +136,7 @@ namespace :html do
 
     puts "rolling up comparisons..."
 
-    files = Dir.glob( "#{workdir}/*.xml" ).sort! { |a, b| a.split( ".")[ 1 ].to_i <=> b.split( ".")[ 1 ].to_i }
+    files = Dir.glob( "#{workdir}/*.xml" ).sort! { |a, b| filename_sort_helper( a, b ) }
 
     ix = 0
     ixend = files.size() - 1
