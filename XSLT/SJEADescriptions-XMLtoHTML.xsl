@@ -59,10 +59,10 @@
 
         <!--mjc: grab par tof the input filename to build the output filename-->
         <xsl:variable name="idno">
-            <xsl:value-of select="substring-after(substring-before($id, '.xml'), $xmlpath)"/>
+            <xsl:value-of select="substring(substring-after($id, $xmlpath), 1, 1)"/>
         </xsl:variable>
 
-        <xsl:result-document href="{concat($idno, '.html')}" format="html">
+        <xsl:result-document href="{concat('SJ', $idno, '-description.html')}" format="html">
             <xsl:call-template name="generateHTML"/>
         </xsl:result-document>
     </xsl:template>
