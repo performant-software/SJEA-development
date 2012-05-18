@@ -10,7 +10,6 @@ namespace :html do
   jarfile = "#{tooldir}/saxon9he.jar"
   xsltdir = "XSLT"
   xmldir = "#{xsltdir}/xml"
-  targetdir = "public"
 
   #
   # Regenerates the transcription HTML content
@@ -22,6 +21,7 @@ namespace :html do
 
     transcripts = [ "SJA.xml", "SJC.xml", "SJD.xml", "SJE.xml", "SJEx.xml", "SJL.xml", "SJP.xml", "SJU.xml", "SJV.xml" ]
     views = [ "MS-alltags.html", "MS-critical.html", "MS-diplomatic.html", "MS-scribal.html" ]
+    targetdir = "public"
 
     outputdir = "."
     xsl = "#{xsltdir}/SJEA-AllTags-XMLtoHTML.xsl"
@@ -57,7 +57,8 @@ namespace :html do
   task :regendesc => :environment do
     start_time = start_line("Regenerate the HTML description content from the XML/XSL.")
 
-    descriptions = [ "A Description.xml", "C Description.xml", "D Description.xml", "E Description.xml", "Ex Description.xml", "L Description.xml", "P Description.xml", "U Description.xml", "V Description.xml" ]
+    #descriptions = [ "A Description.xml", "C Description.xml", "D Description.xml", "E Description.xml", "Ex Description.xml", "L Description.xml", "P Description.xml", "U Description.xml", "V Description.xml" ]
+    descriptions = [ "L Description.xml" ]
 
     descriptions.each do |xmlfile|
 
@@ -78,7 +79,9 @@ namespace :html do
     start_time = start_line("Regenerate the HTML comparison content from the XML/XSL.")
 
     transcripts = [ "SJA.xml", "SJC.xml", "SJD.xml", "SJE.xml", "SJEx.xml", "SJL.xml", "SJP.xml", "SJU.xml", "SJV.xml" ]
-    #transcripts = [ "SJA.xml" ]
+    targetdir = "public/comparisons"
+    delete_dir( targetdir )
+    make_dir( targetdir )
 
     workdir = "tmp/comp"
     delete_dir( workdir )
