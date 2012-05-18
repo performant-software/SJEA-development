@@ -353,7 +353,7 @@
             <xsl:value-of select="concat($imgpath, @entity, '.jpg')"/>
         </xsl:variable>
         
-        <a href='{$imgName}' class="image"><xsl:value-of select="@entity"/></a>
+        <img src='{$imgName}' class="image"></img>
     </xsl:template>
     
     

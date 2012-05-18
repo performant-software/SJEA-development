@@ -141,7 +141,7 @@
 
 .line { position:relative ; left:120px }
 
-.contentArea { cursor:default ; height:100% ; width:700px ; padding:30 ; font-family:Junicode; background-color:#FDEAAA ; position: absolute }
+.contentArea { cursor:default ; height:100% ; width:700px ; padding:30px ; font-family:Junicode; background-color:#FDEAAA ; position: absolute }
 
 .image { float: right; clear: right; width: 175px; height: 225px; }
 
