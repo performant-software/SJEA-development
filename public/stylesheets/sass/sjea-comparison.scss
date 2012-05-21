@@ -35,11 +35,16 @@ $contentheader_background: #B3B3B3;
    }
 
    .compare-box {
+      font-family: Courier New;
       position: relative;
-      padding: 10px 0 40px 48px;
+      padding: 0 0 0 10px;
+      height: 61px;
       text-align: left;
       border-top-style: solid;
       border-width: 1px;
+      span {
+         vertical-align: bottom;
+      }
    }
 }
 
@@ -64,5 +69,5 @@ $contentheader_background: #B3B3B3;
 
 #compare-spacer {
    width: 100%;
-   height: 20px;
+   height: 22px;
 }
