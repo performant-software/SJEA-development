@@ -14,13 +14,13 @@ namespace :sjea do
 
     transcription_file_list( ).each do |fname|
 
-       xmlfile = fname + ".xml"
+       xmlfile = "XSLT/xml/#{fname}.xml"
 
        begin
-         puts "loading #{xmlfile}..."
-         xmldoc = Nokogiri::XML( File.open( "XSLT/xml/#{xmlfile}" ) ) { |config| config.strict }
+         puts "loading #{fname}..."
+         xmldoc = Nokogiri::XML( File.open( xmlfile ) ) { |config| config.strict }
          rescue Nokogiri::XML::SyntaxError => e
-         puts "caught exception: #{e}"
+         puts "caught exception processing #{xmlfile}: #{e}"
        end
 
        # get the div with the stuff we want
