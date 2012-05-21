@@ -84,4 +84,23 @@ module TaskUtilities
     end
   end
 
+  def transcription_file_list( )
+
+    return %w{ SJA SJC SJD SJE SJEx SJL SJP SJU SJV }
+
+  end
+
+  def manuscript_view_list( )
+
+    return %w{ MS-alltags MS-critical MS-diplomatic MS-scribal }
+
+  end
+
+  def description_file_list( )
+
+    #return [ "A Description", "C Description", "D Description", "E Description", "Ex Description", "L Description", "P Description", "U Description", "V Description" ]
+    return [ "ADescription", "LDescription" ]
+
+  end
+
 end

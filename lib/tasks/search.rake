@@ -2,19 +2,19 @@
 
 require "#{Rails.root}/lib/tasks/task_utilities"
 
-namespace :search do
+namespace :sjea do
 	include TaskUtilities
 
-	desc "Completely reindex everything with solr"
-	task :recreate => :environment do
-		start_time = start_line("Recreate solr index using all data in the database.")
+	desc "Regenerate the solr index."
+	task :regensearch => :environment do
+		start_time = start_line("Regenerate the solr index.")
 
     solr = Solr.factory({ testing: false, force: true })
     solr.clear_all(false)
 
-    transcripts = %w{ SJA.xml SJC.xml SJD.xml SJE.xml SJEx.xml SJL.xml SJP.xml SJU.xml SJV.xml }
+    transcription_file_list( ).each do |fname|
 
-    transcripts.each do |xmlfile|
+       xmlfile = fname + ".xml"
 
        begin
          puts "loading #{xmlfile}..."

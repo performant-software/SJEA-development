@@ -3,7 +3,7 @@
 require "cgi"
 require "#{Rails.root}/lib/tasks/task_utilities"
 
-namespace :html do
+namespace :sjea do
 	include TaskUtilities
 
   #tooldir = "tools/saxonhe-9-4-0-3j"
