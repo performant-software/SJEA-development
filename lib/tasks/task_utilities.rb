@@ -85,22 +85,20 @@ module TaskUtilities
   end
 
   def transcription_file_list( )
-
     return %w{ SJA SJC SJD SJE SJEx SJL SJP SJU SJV }
-
   end
 
   def manuscript_view_list( )
-
     return %w{ MS-alltags MS-critical MS-diplomatic MS-scribal }
-
   end
 
   def description_file_list( )
-
     #return [ "A Description", "C Description", "D Description", "E Description", "Ex Description", "L Description", "P Description", "U Description", "V Description" ]
     return [ "ADescription", "LDescription" ]
+  end
 
+  def xsl_transform_cmd( xmlfile, xslfile )
+    return "java -jar tools/saxonhe-9-3-0-5j/saxon9he.jar -s:#{xmlfile} -xsl:#{xslfile}"
   end
 
 end
