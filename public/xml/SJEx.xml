@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="../allitSeenet.rnc" type="compact"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+     <teiHeader>
+          <fileDesc>
+               <titleStmt>
+                    <title>The Siege of Jerusalem Electronic Archive</title>
+                    <title>MsA</title>
+                    <author>Anonymous</author>
+                    <editor>
+                         <persName xml:id="stinson">
+                              <surname>Stinson</surname>
+                              <forename sort="1">Timothy</forename>
+                              <forename sort="2">Linwood</forename>
+                         </persName>
+                    </editor>
+                    <respStmt><resp>Encoding revisions and addition of verse divisions</resp><name><persName xml:id="carlson">John Ivor Carlson</persName></name></respStmt>
+               </titleStmt>
+               <extent>xxx kb</extent>
+               <publicationStmt>
+                    <publisher/>
+                    <pubPlace/>
+                    <date/>
+                    <availability status="unknown">
+                         <p>No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means, electronic, mechanical, or otherwise, without the written permission of the publisher.</p>
+                    </availability>
+                    <date/>
+               </publicationStmt>
+               <sourceDesc>
+                    <msDesc>
+                         <!-- Check Tim's CD for this information. -->
+                         <msIdentifier>
+                              <country>United Kingdom</country>
+                              <settlement>Exeter</settlement>
+                              <repository>Devon Record Office</repository>
+                              <idno>Deposit 2507</idno>
+                              <msName>Ex</msName>
+                         </msIdentifier>
+                         <msContents>
+                              <msItemStruct xml:id="SJ">
+                                   <title>[The Siege of Jerusalem]</title>
+                                   <incipit/>
+                                   <explicit/>
+                                   <decoNote/>
+                                   <filiation/>
+                                   <textLang/>
+                              </msItemStruct>
+                              <msItemStruct>
+                                   <title>etc.</title>
+                              </msItemStruct>
+                         </msContents>
+                         <physDesc>
+                              <handDesc>
+                                   <handNote/>
+                              </handDesc>
+                              <decoDesc>
+                                   <p/>
+                              </decoDesc>
+                              <bindingDesc>
+                                   <binding>
+                                        <p/>
+                                   </binding>
+                              </bindingDesc>
+                         </physDesc>
+                         <history/>
+                    </msDesc>
+               </sourceDesc>
+          </fileDesc>
+          <encodingDesc>
+               <!--<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../CHAR.xml" xpointer="CHAR-data"/>
+               <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../REND.xml" xpointer="REND-data"/>
+               <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../CLAS.xml" xpointer="CLAS-data"/>-->
+          </encodingDesc>
+          <profileDesc>
+               <langUsage>
+                    <language ident="lat">Latin</language>
+                    <language ident="fre">French</language>
+                    <language ident="ger">German</language>
+               </langUsage>
+               <handNotes>
+                    <handNote xml:id="hand1"/>
+                    <!-- main text hand -->
+                    <handNote xml:id="handx"/>
+                    <!-- various unidentified scribal hands other than those identified.  -->
+               </handNotes>
+          </profileDesc>
+          <revisionDesc>
+               <change when="2010-04" who="#stinson">Created new header and reorganized structure to match P5 standards.</change>
+               <change when="2011" who="#stinson">Proofread and made corrections to transcription.</change>
+          </revisionDesc>
+     </teiHeader>
+     <text ana="#SJ">
+          <body>
+               <div1 n="MsEx" type="fitt" org="uniform" sample="complete">
+                    
+                    <milestone n="01ra" unit="fol." entity="Ex001r"/>
+
+                    <l xml:id="Ex.0001" n="HL.0984">For y . . .</l>
+
+                    <l xml:id="Ex.0002" n="HL.0985"><hi rend="rb">¶</hi> than . . .</l>
+
+                    <l xml:id="Ex.0003" n="HL.0986">we be . . .</l>
+
+                    <l xml:id="Ex.0004" n="HL.0987">Of long tyme be<seg type="shadowHyphen">-</seg>left &amp; . . .</l>
+
+                    <l xml:id="Ex.0005" n="HL.0988">That we done is thy de?. . .</l>
+
+                    <l xml:id="Ex.0006" n="HL.0989">The dome demed was . . .</l>
+
+                    <l xml:id="Ex.0007" n="HL.0990">Shałł sou<expan>er</expan>ayne hym . . .</l>
+
+                    <l xml:id="Ex.0008" n="HL.0991">For as Ferre ys the F. . .</l>
+
+                    <l xml:id="Ex.0009" n="HL.0992">That of Flayes the F. . .</l>
+
+                    <l xml:id="Ex.0010" n="HL.993">be<seg type="shadowHyphen">-</seg>take tytus thy son . . .</l>
+
+                    <l xml:id="Ex.0011" n="HL.0994">And to the doughty du. . .</l>
+
+                    <l xml:id="Ex.0012" n="HL.0995">here y hold vp my ho. . .</l>
+
+                    <l xml:id="Ex.0013" n="HL.0996">wytħ ałł the herre . . . </l>
+
+                    <l xml:id="Ex.0014" n="HL.0997">And thu shalt ryde to . . .</l>
+
+                    <l xml:id="Ex.0015" n="HL.0998">yn honoure Emp<expan>er</expan>oure . . .</l>
+
+                    <l xml:id="Ex.0016" n="HL.999">So may the Couenant . . .</l>
+
+                    <l xml:id="Ex.0017" n="HL.1000">Thy<seg type="shadowHyphen">-</seg>self dose that thy . . . </l>
+
+                    <l xml:id="Ex.0018" n="HL.1001">Than w<expan>i</expan>t<expan>h</expan> a lyons late . . .</l>
+
+                    <l xml:id="Ex.0019" n="HL.1002">Turnes to tytus ano? . . .</l>
+
+                    <l xml:id="Ex.0020" n="HL.1003">And as sir sabbyn . . .</l>
+
+                    <l xml:id="Ex.0021" n="HL.1004">w<expan>i</expan>t<expan>h</expan> his brother &amp; the ?. . .</l>
+
+                    <l xml:id="Ex.0022" n="HL.1005">y shałł tary at this . . .</l>
+
+                    <l xml:id="Ex.0023" n="HL.1006">Made wayes thurw . . .</l>
+
+                    <l xml:id="Ex.0024" n="HL.1007">Oure brother hestes . . .</l>
+
+                    <l xml:id="Ex.0025" n="HL.1008">Or here to<seg type="shadowHyphen">-</seg>hewen be o? . . .</l>
+
+                    <l xml:id="Ex.0026" n="HL.1009">A boke on a brode she?. . .</l>
+
+                    <l xml:id="Ex.0027" n="HL.1010">bernes byden the hon. . .</l>
+
+                    <l xml:id="Ex.0028" n="HL.1011">To be leue to that lo. . .</l>
+
+                    <l xml:id="Ex.0029" n="HL.1012">Sur tytus the trewe . . .</l>
+
+                    <l xml:id="Ex.0030" n="HL.1013">Fayne as Foule w<expan>i</expan>t<expan>h</expan> t. . .</l>
+
+                    <l xml:id="Ex.0031" n="HL.1014">he kyssed his knyght<expan>es</expan> . . .</l>
+
+                    <l xml:id="Ex.0032" n="HL.1015">My wele &amp; my worsh. . .</l>
+
+                    <l xml:id="Ex.0033" n="HL.1016">For the tresoure of ?. . .</l>
+
+                    <l xml:id="Ex.0034" n="HL.1017">y nold this towne ?. . .</l>
+
+                    <milestone n="01vb" unit="fol." entity="Ex001v"/>
+                    
+                    <l xml:id="Ex.0035" n="HL.1106">. . . tho g???? thougħt</l>
+
+                    <l xml:id="Ex.0036" n="HL.1107">. . . wo happen</l>
+
+                    <l xml:id="Ex.0037" n="HL.1108">. . . ?s Fayrest to dele</l>
+
+                    <l xml:id="Ex.0038" n="HL.1109">. . .s to cast</l>
+
+                    <l xml:id="Ex.0039" n="HL.1110">. . . to þ<expan>e</expan> towne g<expan>ra</expan>unt</l>
+
+                    <l xml:id="Ex.0040" n="HL.1111">. . .yne thay begynne</l>
+
+                    <l xml:id="Ex.0041" n="HL.1112">. . .?d &amp; god geue vs Ioye</l>
+
+                    <l xml:id="Ex.0042" n="HL.1113">. . .boute þ<expan>e</expan> towne rydes</l>
+
+                    <l xml:id="Ex.0043" n="HL.1114">. . .?iege segges a Fewe</l>
+
+                    <l xml:id="Ex.0044" n="HL.1115">. . . Caue</l>
+
+                    <l xml:id="Ex.0045" n="HL.1116">. . .ł of brygħt hedes</l>
+
+                    <l xml:id="Ex.0046" n="HL.1117">. . .? Felle hym a<seg type="shadowHyphen">-</seg>boute</l>
+
+                    <l xml:id="Ex.0047" n="HL.1118">. . .?ay weren</l>
+
+                    <l xml:id="Ex.0048" n="HL.1119">. . . he wałł myned</l>
+
+                    <l xml:id="Ex.0049" n="HL.1120">. . . w<expan>i</expan>t<expan>h</expan>oute tale more</l>
+
+                    <l xml:id="Ex.0050" n="HL.1121">. . . was Thrylled</l>
+
+                    <l xml:id="Ex.0051" n="HL.1122">. . . w<expan>i</expan>t<expan>h</expan> the sharp end</l>
+
+                    <l xml:id="Ex.0052" n="HL.1123">. . .?onne</l>
+
+                    <l xml:id="Ex.0053" n="HL.1196">. . .de brusyd to detħ</l>
+
+                    <l xml:id="Ex.0054" n="HL.1125">. . . w<expan>i</expan>t<expan>h</expan> so herter wylle</l>
+
+                    <l xml:id="Ex.0055" n="HL.1126">. . . of the Flynt stonys</l>
+
+                    <l xml:id="Ex.0056" n="HL.1127">. . .? at<seg type="shadowHyphen">-</seg>onys</l>
+
+                    <l xml:id="Ex.0057" n="HL.1128">. . .? the stede laft</l>
+
+                    <l xml:id="Ex.0058" n="HL.1129">. . . dyn herd</l>
+
+                    <l xml:id="Ex.0059" n="HL.1130">. . . viij<add place="supralinear">C</add> sperys</l>
+
+                    <l xml:id="Ex.0060" n="HL.1131">. . .ldes them sone</l>
+
+                    <l xml:id="Ex.0061" n="HL.1132">. . .s his brother holpen</l>
+
+                    <l xml:id="Ex.0062" n="HL.1133">. . . turnes blyue</l>
+
+                    <l xml:id="Ex.0063" n="HL.1134">. . .?e forto stoppe</l>
+
+                    <l xml:id="Ex.0064" n="HL.1135">. . . that he hadde</l>
+
+                    <l xml:id="Ex.0065" n="HL.1136">. . . wythynne Closed</l>
+
+                    <l xml:id="Ex.0066" n="HL.1137">. . .?łł the Iewes ladde</l>
+
+                    <l xml:id="Ex.0067" n="HL.1138">. . . forsoke þ<expan>e</expan> p<expan>ro</expan>fer</l>
+               </div1>
+          </body>
+     </text>
+</TEI>
