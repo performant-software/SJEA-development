@@ -6,7 +6,11 @@ $(document).ready(function() {
     // sub menu toggle behavior handlers
 	$(".mainlist-item").toggle(function(){
         $( ".sublist").slideUp(100);
-        $(this).parent().next().slideDown(400);
+        $(this).parent().next().slideDown(400, function(){
+           var item = $(this).children('.sublist-item').first();
+           highliteElement( item );
+           showManuscriptContent ( item.attr("id").slice(0,3) );
+        });
 	},
 	function(){
 		$(this).parent().next().slideUp(100);
