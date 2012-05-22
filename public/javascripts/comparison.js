@@ -8,6 +8,7 @@ $(document).ready(function() {
         showNextComparison();
     });
 
+    showNextComparison();
 });
 
 function showPreviousComparison( ) {
