@@ -17,16 +17,19 @@ $contentheader_background: #B3B3B3;
           text-align: right;
       }
 
-      #previous-button {
+      #previous-button, #next-button {
           width: 100px;
           height: 18px;
+      }
+
+      #previous-button {
           float: left;
+          margin: 6px 0 0 6px;
       }
 
       #next-button {
-          width: 100px;
-          height: 18px;
           float: right;
+          margin: 6px 6px 0 0;
       }
    }
 

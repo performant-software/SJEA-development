@@ -5,14 +5,15 @@
 #content #content-header #compare-page {
   padding: 0 0 0 325px;
   text-align: right; }
+#content #content-header #previous-button, #content #content-header #next-button {
+  width: 100px;
+  height: 18px; }
 #content #content-header #previous-button {
-  width: 100px;
-  height: 18px;
-  float: left; }
+  float: left;
+  margin: 6px 0 0 6px; }
 #content #content-header #next-button {
-  width: 100px;
-  height: 18px;
-  float: right; }
+  float: right;
+  margin: 6px 6px 0 0; }
 #content #content-display {
   text-align: justify; }
 #content .compare-box {

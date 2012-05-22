@@ -2,10 +2,17 @@
   margin: 0;
   padding: 0; }
 
-#content #content-header #controls {
-  float: right; }
+#content #content-header #view-control {
+  float: left;
+  width: 100px;
+  margin: 6px 0 0 6px; }
 #content #content-header span {
+  float: left;
+  margin: 6px 0 0 6px; }
+#content #content-header #xml-button {
   float: right;
-  padding: 0 10px 0 0; }
+  width: 100px;
+  height: 18px;
+  margin: 6px 6px 0 0; }
 #content #content-display {
   text-align: justify; }
