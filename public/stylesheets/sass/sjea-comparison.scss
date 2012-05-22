@@ -2,6 +2,8 @@
 // color definitions
 //
 $contentheader_background: #B3B3B3;
+$altrow_background: #EDEDED;
+$table_lines: #9F9F9F;
 
 * {
    margin: 0;
@@ -13,8 +15,8 @@ $contentheader_background: #B3B3B3;
    #content-header {
 
       #compare-page {
-          padding: 0 0 0 325px;
           text-align: right;
+          padding: 0 0 0 330px;
       }
 
       #previous-button, #next-button {
@@ -33,44 +35,25 @@ $contentheader_background: #B3B3B3;
       }
    }
 
-   #content-display {
-      text-align: justify;
-   }
+   #compare-results {
+      width: 100%;
+      height: 500px;
+      border-collapse: collapse;
+      text-align: center;
+      td, th {
+         width: 8%;
+         border: 2px solid $table_lines;
+      }
 
-   .compare-box {
-      font-family: Courier New;
-      position: relative;
-      padding: 0 0 0 10px;
-      height: 61px;
-      text-align: left;
-      border-top-style: solid;
-      border-width: 1px;
-      span {
-         vertical-align: bottom;
+      .textline {
+         text-align: left;
+         padding: 0 0 0 10px;
+         height: 75px;
+         width: 84%;
+      }
+
+      .alt {
+         background: $altrow_background;
       }
    }
-}
-
-#sidebar-items {
-
-     li {
-	    cursor: default;
-	    a {
-	    }
-	 }
-
-     li a:hover {
-         color: black;
-     }
-
-}
-
-.compare-box {
-   width: 95%;
-   height: 9px;
-}
-
-#compare-spacer {
-   width: 100%;
-   height: 22px;
 }

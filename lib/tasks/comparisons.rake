@@ -84,7 +84,7 @@ namespace :sjea do
           nextpage = files[ ix + 1 ].split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1') + ".html"
        end
 
-       append_to_file( outfile, "<div id=\"previous-page\" href=\"#{prevpage}\"></div><div id=\"next-page\" href=\"#{nextpage}\"></div><div id=\"compare-spacer\"></div>\n" )
+       append_to_file( outfile, "<div id=\"previous-page\" href=\"#{prevpage}\"></div><div id=\"next-page\" href=\"#{nextpage}\"></div>\n<table id=\"compare-results\">\n" )
 
        comparisons = complist.css('l')
        compare_set = Hash.new( )
@@ -92,21 +92,30 @@ namespace :sjea do
           compare_set[ compare.attribute('attr').to_s() ] = compare.content
        end
 
+       alt = 0
        transcription_file_list( ).each do |tname|
 
-         compline = "<div id=\"#{tname}-compare\" class=\"compare-box\">"
+         # row shading...
+         if alt % 2 == 0
+            compline = "<tr class=\"alt\">"
+         else
+            compline = "<tr>"
+         end
+         alt += 1
 
          if compare_set.key?( tname )
+           compline << "<td>xx</td><td>(#{tname})</td><td class=\"textline\">"
            compline << compare_set[ tname ]
+           compline << "</td>\n"
          else
-            compline << "---- NOTHING ----"
+            compline << "<td>xx</td><td>(#{tname})</td><td class=\"textline\">---- NOTHING ----</td>\n"
          end
 
-         compline << "</div>\n"
          append_to_file( outfile, compline )
 
        end
 
+       append_to_file( outfile, "</table>\n" )
        ix += 1
 
     end
