@@ -350,7 +350,7 @@
         <xsl:param name="id" tunnel="yes"/>
         
         <xsl:variable name="imgName">
-            <xsl:value-of select="concat($imgpath, @entity, '.jpg')"/>
+            <xsl:value-of select="concat($imgpath, @entity, '-175x225.jpg')"/>
         </xsl:variable>
         
         <img src='{$imgName}' class="image"></img>
