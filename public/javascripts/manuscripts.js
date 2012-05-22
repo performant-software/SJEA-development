@@ -26,6 +26,17 @@ $(document).ready(function() {
         }
     });
 
+    // XML button
+    $("#xml-button").click(function () {
+
+        // are we currently showing a manuscript?
+        var current_manuscript = $("#transcription-name").attr("href");
+        if (current_manuscript.length != 0 ) {
+            var newURL = "xml/" + current_manuscript + ".xml"
+           window.location.replace( newURL );
+        }
+    });
+
     //
     // menu item handlers
     //
