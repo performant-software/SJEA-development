@@ -36,6 +36,11 @@ namespace :sjea do
         delete_file( viewfile )
       end
 
+
+      make_dir( "#{targetdir}/xml")
+      publicxmlname = "#{targetdir}/xml/#{fname}.xml"
+      copy_file( xmlfile, publicxmlname )
+
     end
 
     puts "copying stylesheet..."
