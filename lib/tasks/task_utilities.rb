@@ -93,8 +93,7 @@ module TaskUtilities
   end
 
   def description_file_list( )
-    #return [ "A Description", "C Description", "D Description", "E Description", "Ex Description", "L Description", "P Description", "U Description", "V Description" ]
-    return [ "ADescription", "LDescription" ]
+    return %w{ ADescription CDescription DDescription EDescription ExDescription LDescription PDescription UDescription VDescription }
   end
 
   def xsl_transform_cmd( xmlfile, xslfile )

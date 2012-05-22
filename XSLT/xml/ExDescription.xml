@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+
+            <titleStmt>
+                <title>Transcript (Ex) Description</title>
+                <author>Timothy L. Stinson</author>
+            </titleStmt>
+
+            <editionStmt>
+                <edition>Siege of Jerusalem Electronic Archive</edition>
+            </editionStmt>
+
+            <publicationStmt>
+                <publisher>Society for Early English and Norse Electronic Texts</publisher>
+            </publicationStmt>
+
+        </fileDesc>
+        <!--
+<revisionDesc> <change who="" when=""></change> </revisionDesc>
+-->
+    </teiHeader>
+    <text>
+        <body>
+            <p/>
+        </body>
+    </text>
+</TEI>

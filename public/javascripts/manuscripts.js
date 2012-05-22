@@ -39,7 +39,7 @@ $(document).ready(function() {
 
     $("#SJA-description").click(function() {
         highliteElement( $(this) );
-        showManuscriptDescription( 'SJA');
+        showManuscriptDescription( 'A');
     });
 
 
@@ -50,7 +50,7 @@ $(document).ready(function() {
 
     $("#SJC-description").click(function() {
         highliteElement( $(this) );
-        showManuscriptDescription( 'SJC');
+        showManuscriptDescription( 'C');
     });
 
 
@@ -61,7 +61,7 @@ $(document).ready(function() {
 
     $("#SJD-description").click(function() {
         highliteElement( $(this) );
-        showManuscriptDescription( 'SJD');
+        showManuscriptDescription( 'D');
     });
 
 
@@ -72,7 +72,7 @@ $(document).ready(function() {
 
     $("#SJE-description").click(function() {
         highliteElement( $(this) );
-        showManuscriptDescription( 'SJE');
+        showManuscriptDescription( 'E');
     });
 
 
@@ -83,7 +83,7 @@ $(document).ready(function() {
 
     $("#SJEx-description").click(function() {
         highliteElement( $(this) );
-        showManuscriptDescription( 'SJEx');
+        showManuscriptDescription( 'Ex');
     });
 
 
@@ -94,7 +94,7 @@ $(document).ready(function() {
 
     $("#SJL-description").click(function() {
         highliteElement( $(this) );
-        showManuscriptDescription( 'SJL');
+        showManuscriptDescription( 'L');
     });
 
 
@@ -105,7 +105,7 @@ $(document).ready(function() {
 
     $("#SJP-description").click(function() {
         highliteElement( $(this) );
-        showManuscriptDescription( 'SJP');
+        showManuscriptDescription( 'P');
     });
 
 
@@ -116,7 +116,7 @@ $(document).ready(function() {
 
     $("#SJU-description").click(function() {
         highliteElement( $(this) );
-        showManuscriptDescription( 'SJU');
+        showManuscriptDescription( 'U');
     });
 
 
@@ -127,7 +127,7 @@ $(document).ready(function() {
 
     $("#SJV-description").click(function() {
         highliteElement( $(this) );
-        showManuscriptDescription( 'SJV');
+        showManuscriptDescription( 'V');
     });
 });
 
@@ -178,7 +178,7 @@ function showManuscriptDescription( manuscript_prefix ) {
     // clear the manuscript name as we are not displaying one
     $("#transcription-name").attr("href", "");
 
-    var resource_name = manuscript_prefix + "-description"
+    var resource_name = manuscript_prefix + "Description"
     $("#content-display").empty();
 
     $("#content-display").load(resource_name, function(response, status, xhr) {
