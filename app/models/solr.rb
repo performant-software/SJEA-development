@@ -43,12 +43,13 @@ class Solr
 		#fields = overrides[:field_list] ? overrides[:field_list] : @field_list
 		#options = add_field_list_param(options, fields)
 		##options[:q] = "(#{options[:q]}) OR ((#{options[:q]}) AND status:expert)^10"
-		#if options[:q].blank?
-		#	options[:q] = "*:*"
+		if options[:q].blank?
+		   options[:q] = "*:*"
 		#	options[:q] = "section:#{overrides[:section]}" if !overrides[:section].blank?
-		#else
-		#	options[:q] += " AND section:#{overrides[:section]}" if !overrides[:section].blank?
-		#end
+		else
+			options[:q] += " +section:#{options[:f]}" if !options[:f].blank?
+      options[:q] += " +title:#{options[:t]}" if !options[:t].blank?
+		end
 		options = add_highlighting(options)
 		return options
 	end
