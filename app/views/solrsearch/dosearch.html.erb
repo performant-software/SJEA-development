@@ -33,7 +33,7 @@
 
        <div class="result-header">
          <%- facetname = ( @inparams[:facet] == "" )? "everything" : @inparams[:facet] -%>
-         <%- docname = ( @inparams[:transcription] == "" )? "all transcriptions" : @inparams[:transcription] -%>
+         <%- docname = ( @inparams[:transcription] == "" )? "all manuscripts" : @inparams[:transcription] -%>
 
           <%- if @results[:total].to_i != 0 -%>
              <%= "Showing results for \"#{@inparams[:searchfor]}\" in #{facetname}, #{docname}:" -%>
