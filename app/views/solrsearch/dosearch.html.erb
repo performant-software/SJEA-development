@@ -36,9 +36,9 @@
          <%- docname = ( @inparams[:transcription] == "" )? "all transcriptions" : @inparams[:transcription] -%>
 
           <%- if @results[:total].to_i != 0 -%>
-             <%= "Showing results for \"#{@inparams[:searchfor]}\" in #{facetname} for #{docname}:" -%>
+             <%= "Showing results for \"#{@inparams[:searchfor]}\" in #{facetname}, #{docname}:" -%>
           <%- else -%>
-             <%= "No results found for \"#{@inparams[:searchfor]}\" in #{facetname} for #{docname}" -%>
+             <%= "No results found for \"#{@inparams[:searchfor]}\" in #{facetname}, #{docname}" -%>
           <%- end -%>
        </div>
 
