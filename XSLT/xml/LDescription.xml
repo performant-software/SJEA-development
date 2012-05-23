@@ -45,19 +45,20 @@
 
                         <msItem>
                             <title>Booklet I</title>
-                            <msItem>
-                                <locus from="1v" to="19r">Fol. 1v- 19r</locus>
-                                <title>The Siege of Jerusalem</title>
+                        
+                        
+                        <msItem>
+                            
+                            <p>1. <locus from="1v" to="19r">Fol. 1v- 19r</locus> <title>The Siege of Jerusalem</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1583">IMEV 1583</ref></p>
+                                
                             </msItem>
 
                             <msItem>
-                                <locus from="19v" to="114r">Fol. 19v-114r</locus>
-                                <title>Piers Plowman</title>
+                                <p>2. <locus from="19v" to="114r">Fol. 19v-114r</locus> <title>Piers Plowman</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1459">IMEV 1459</ref></p>
                             </msItem>
 
                             <msItem>
-                                <locus from="114v" to="116v">Fol. 114v-116v</locus>
-                                <bibl>Mostly blank</bibl>
+                                <p>3. <locus from="114v" to="116v">Fol. 114v-116v</locus> mostly blank leaves</p>
                             </msItem>
                         </msItem>
 
@@ -65,18 +66,15 @@
                             <title>Booklet II</title>
 
                             <msItem>
-                                <locus from="117r" to="118r">Fol. 117r-118r</locus>
-                                <title>Exposition of the Creed concerning Genesis 15</title>
+                                <p>4. <locus from="117r" to="118r">Fol. 117r-118r</locus> an exposition of the Creed concerning Genesis 15</p>
                             </msItem>
 
                             <msItem>
-                                <locus from="118r" to="124v">Fol. 118r-124v </locus>
-                                <title>Exposition of the Decalogue</title>
+                                <p>5. <locus from="118r" to="124v">Fol. 118r-124v </locus> an exposition of the Decalogue</p>
                             </msItem>
 
                             <msItem>
-                                <locus from="124v" to="125v">Fol. 124v-125v </locus>
-                                <title>Biblical excerpts</title>
+                                <p>6. <locus from="124v" to="125v">Fol. 124v-125v </locus> Biblical excerpts</p>
                             </msItem>
                         </msItem>
 
@@ -161,8 +159,8 @@
                                     top, left, and bottom of text blocks; no rulings for individual
                                     lines. A few prickings, usually one hole at the juncture of the
                                     bounding lines, remain (e.g., fols. <locus from="11r"
-                                    >11</locus>, <locus from="15r">15</locus>, <locus from="39r"
-                                        >39</locus>, and <locus from="51r">51</locus>). No ruling or
+                                    >11</locus>, <locus from="15r">15</locus>, <locus from="39r" to="39r"
+                                        >39</locus>, and <locus from="51r" to="51r">51</locus>). No ruling or
                                     prickings in Booklet II. Ruled for 33-41 lines per leaf in
                                         <title>Siege of Jerusalem</title>, 37-46 lines per leaf in
                                         <title>Piers Plowman</title>, and 38-40 lines in Booklet II.
@@ -347,9 +345,9 @@
 
                     <history>
                         <provenance> Contains signature of <persName>John Cempe</persName> of
-                                <placeName>Ticehurst</placeName>, on <locus from="126v">fol.
+                                <placeName>Ticehurst</placeName>, on <locus from="126v" to="126v">fol.
                                 126v</locus>, which Hanna-Lawton date to the end of the 15th
-                            century. On <locus from="131v">fol. 131v</locus>, the signature
+                            century. On <locus from="131v" to="131v">fol. 131v</locus>, the signature
                                     <persName><hi rend="italic">John naseby
                                 hemyngford</hi></persName>. <locus from="2r">Fol. 2r</locus>
                             contains the <hi rend="italic">ex libris</hi> of <persName>William
@@ -374,7 +372,7 @@
                                     hodie adservantur</title>. <pubPlace>Oxonii</pubPlace>, e
                                 Typographeo academico, <date when="1852">1852</date>.</bibl>
 
-                            <bibl><author>Doyle, A. I.</author> "The Manuscripts." In <title>Middle
+                            <bibl><author>Doyle, A. I.</author> "The Manuscripts." <title>Middle
                                     English Alliterative Poetry and its Literary Background: Seven
                                     Essays</title>. Ed. <editor>David Lawton</editor>.
                                     <pubPlace>Woodbridge, UK</pubPlace>: <publisher>D. S.

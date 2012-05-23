@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
 
             <titleStmt>
-                <title>Transcript (C) Description</title>
+                <title>Descritpion of British Library, MS Cotton Caligula A.ii, Part I (C)</title>
                 <author>Timothy L. Stinson</author>
             </titleStmt>
 
@@ -16,6 +17,405 @@
                 <publisher>Society for Early English and Norse Electronic Texts</publisher>
             </publicationStmt>
 
+            <sourceDesc>
+                <msDesc>
+
+                    <msIdentifier>
+                        <country>United Kingdom</country>
+                        <settlement>London</settlement>
+                        <repository>British Library</repository>
+                        <idno>Cotton Caligula A.ii</idno>
+                        <msName>C</msName>
+                    </msIdentifier>
+
+                    <head>
+                        <title></title>
+                        <origPlace>England</origPlace>
+                        <origDate notBefore="1446" notAfter="1461">Second half of fifteenth century. <persName>Rickert</persName> argues for a <hi rend="italic">terminus a quo</hi> of <date when="1446">1446</date> based on the presence of <persName>Lydgate</persName>'s “The nyghtyngale.” The presence of <hi rend="italic">O mors quam amara est memoria tua</hi> on <locus from="57v" to="58r">fols. 57v-58r</locus> has also been considered in efforts to date the manuscript, as another copy of that poem in Harley 116 adds a verse memorializing <persName>Lord Cromwell</persName>, whose death in <date when="1454">1454</date> might thus suggest a later <hi rend="italic">terminus a quo</hi>. But as <persName>Woolf</persName> (p. 340) and <persName>Foster</persName> (pp. 147-48) have argued, the added stanza in the Harley manuscript is likely not original to the poem, and consequently the poem cannot be used for dating Cotton Caligula A.ii. The list of kings found on <locus from="109r" to="110v">fols. 109r-110v</locus> suggests a <hi rend="italic">terminus ad quem</hi>, as the main “scribe has written only the first section, which ends before the reign of <persName>Edward IV</persName>, suggesting that the book was completed in 1460/1” (<persName>Foster</persName> 148). (Two additional hands continued to add to this list through as late as <date when="1485">1485</date>, although their additions appear to have occurred after the book was complete.)  As Foster argues, the fact that one scribe is responsible for the book and worked on it until <date from="1460" to="1461">1460/1</date> suggests that it was likely completed towards the end of the possible spectrum of 1446-1460/1 since the chronicle could not have been written all at once until a later date and “the manuscript seems to be a continuous production” (148). The present volume comprises two formerly separate books in the Cotton Library, Vespasian D. VIII and Vespasian D. XXI. The two books were bound together as Cotton Caligula A.ii by the end of the seventeenth century, as they appear as such in the <date when="1696">1696</date> catalogue of the Cotton collection. This description primarily concerns part I, i.e., the former Vespasian D. VIII. </origDate>
+                    </head>
+
+                    <msContents>
+                        
+                        <summary>This list is based upon and has been checked against that of <persName>Guddat-Figge</persName>, pp. 170-171, and shares her numbering of the contents.</summary>
+                            
+                        <msItem>
+                            <p>1. <locus from="3r" to="5r">Fols. 3r-5r</locus> <title>The Pistill of Susan</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=3553">IMEV 3553</ref>. Imperfect - lacks first 104 lines. (i.e., one leaf).</p>
+                        </msItem>
+                                 
+                     
+                        <msItem>
+                            <p>2. <locus from="5v" to="13r">Fols. 5v-13r</locus> <title>Eglamour of Artas</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1725">IMEV 1725</ref></p>
+                        </msItem>
+
+                        <msItem>
+                            <p>3. <locus from="13v" to="13v">Fol. 13v</locus> four medicinal recipes, inserted later by another scribe taking advantage of the presence of a blank leaf</p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>4-5. <locus from="14r" to="16v">Fols. 14r-16v</locus> excerpts from <persName>John Lydgate</persName>, <hi rend="italic">Stans puer ad mensam</hi> and "Dietary." These are written contiguously as one work with <hi rend="italic">Stans puer ad mensam</hi> beginning on 14r and leading directly into "Dietary" on 15v. <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=2233">IMEV 2233</ref> and <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=824">824</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>6. <locus from="17r" to="22r">Fols, 17r-22r</locus> <persName>Lydgate</persName>, "Churl and Bird" <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=2784">IMEV 2784</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>7. <locus from="22v" to="35r">Fols. 22v-35r</locus> <title>Octovian Imperator</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1774">IMEV 1774</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>8. <locus from="35v" to="42v">Fols. 35v-42v</locus> <title>Launfal Miles</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=567">IMEV 567</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>9. <locus from="42v" to="57r">Fols. 42v-57r</locus> <title>Lybeaus Disconus</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1690">IMEV 1690</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>10. <locus from="57v" to="58r">Fols. 57v-58r</locus> <title>O mors quam amara est memoria tua</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=2411">IMEV 2411</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>11. <locus from="58v" to="58v">Fol. 58v</locus> a Middle English poem on the Ten Commandments, incipit <hi rend="italic">The ferst yntroyte of sapyens / ys to drede god yn eu[er]y op[er]acyon</hi> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=3345">IMEV 3345</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>12. <locus from="59r" to="64r">Fols. 59r-64r</locus> <persName>Lydgate</persName>, “The Nightingale” <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=931">IMEV 931</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>13. <locus from="64v" to="65r">Fols. 64v-65r</locus> <persName>Lydgate</persName>, <title>Deus in nomine tuo salvum me fac</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=951">IMEV 951</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>14. <locus from="65v" to="66v">Fols. 65v-66v</locus> a prose treatise on medicine for the pestilence </p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>15. <locus from="67r" to="67v">Fols. 67r-67v</locus> "For þe better abyde" <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1355">IMEV 1355</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>16. <locus from="68r" to="68r">Fol. 68r</locus> "All way fond to say þe best" <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=3371">IMEV 3371</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>17. <locus from="68v" to="68v">Fol. 68v</locus> "Þonke god of all" <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=562">IMEV 562</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>18. <locus from="69r" to="69r">Fol. 69r</locus> "Make amendes" <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=563">IMEV 563</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>19. <locus from="69v" to="70r">Fols. 69v-70r</locus> a prose confessional text, incipit <hi rend="italic">I Crye god mercy and owre lady seynt Marye / and alle þe company of heuen</hi></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>20. <locus from="70v" to="70v">Fol. 70v</locus> Orisoun to Christ of the Wounds <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1701">IMEV 1701</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>21. <locus from="71r" to="76v">Fols. 71r-76v</locus> <title>Emaré</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1766">IMEV 1766</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>22. <locus from="77r" to="79r">Fols. 77r-79r</locus> <title>Carta Ihesu Christi</title> (B Text) <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=4154">IMEV 4154</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>23. <locus from="79v" to="83r">Fols. 79v-83r</locus> <title>Ypotis</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=220">IMEV 220</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>24. <locus from="83r" to="86v">Fols. 83r-86v</locus> <title>Stacyones of Rome</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1172">IMEV 1172</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>25. <locus from="86v" to="88r">Fols. 86v-88r</locus> <title>Trentale sancti gregorij</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=83">IMEV 83</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>26. <locus from="88r" to="88v">Fols. 88r-88v</locus> <title>Urbanitatis</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=4153">IMEV 4153</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>27-28. <locus from="89r" to="91r">Fols. 89r-91r</locus> <title>Quindecim signa</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1823">IMEV 1823</ref>, here preceded by a prayer of thanksgiving, incipit <hi rend="italic">Almyȝty god þat all hath wroght</hi> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=256">IMEV 256</ref>. These seem to be intended as once text entitled <title>Quindecum signa</title> in this manuscript, but in other manuscripts occur as independent texts.</p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>29. <locus from="91r" to="91r">Fol. 91r</locus> a love song to the <persName>Virgin Mary</persName>, incipit <hi rend="italic">Vpon a lady my loue ys lente</hi> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=3836">IMEV 3836</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>30. <locus from="91v" to="95r">Fols. 91v-95r</locus> <title>Owayne myles</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=982">IMEV 982</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>31. <locus from="95v" to="107v">Fols. 95v-107v</locus> <title>Tundale</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1724">IMEV 1724</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>32. <locus from="107v" to="108r">Fols. 107v-108r</locus> song of Christ to the Virgin Mary, incipit <hi rend="italic">Surge mea sponsa so swete in sight</hi> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=3225">IMEV 3225</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>33. <locus from="108r" to="108v">Fols. 108r-108v</locus> "Myn owene woo" <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1511">IMEV 1511</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>34. <locus from="109r" to="110v">Fols. 109r-110v</locus> a listing of kings of England from <persName>Brutus</persName> to <persName>Henry VI</persName>. The text by the main scribe of the manuscript ends at the bottom of 110v during the reign of <persName>Henry VI</persName>, which is consistent with the dating of the manuscript suggested by item 10. A later hand has added the extent and end of <persName>Henry VI</persName>'s reign as well as <persName>Edward IV</persName>'s reign: <hi rend="italic">&amp; Regnant xxxix et Iacet apud Wyndesore / Edwardus quartus Regnant xxiiii . Annos &amp; Iacet apud Wydesore.</hi> The Readeption of <persName>Henry VI</persName> is not specifically mentioned. Another hand added a final entry, presumably for <persName>Edward V</persName>'s brief reign, but this has been partially erased and is not fully legible, although the name <persName>Edward</persName> is visible.</p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>35. <locus from="111r" to="125r">Fols. 111r-125r</locus> <title>The Siege of Jerusalem</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1583">IMEV 1583</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>36. <locus from="125v" to="129v">Fols. 125v-129v</locus> <title>Chevelere Assigne</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=272">IMEV 272</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>37. <locus from="130r" to="134r">Fols. 130r-134r</locus> <title>Isumbras</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1184">IMEV 1184</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>38. <locus from="134v" to="134v">Fol. 134v</locus> <persName>Lydgate</persName>, "Quinque winera" <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=3845">IMEV 3845</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>39. <locus from="135r" to="135r">Fol. 135r</locus> "Quinque Gaudia," incipit <hi rend="italic">Heyl gloryous virgyne ground of all our grace</hi> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1046">IMEV 1046</ref>. Ascribed in Bodleian, Ashmole 59 to "an ankaresse of <placeName>Maunsffeld</placeName>" and in BL additional 29729 to <persName>Lydagte</persName>.</p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>40. <locus from="135v" to="137r">Fols. 135v-137r</locus> <title>Jerome</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=2922">IMEV 2922</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>41. <locus from="137v" to="139v">Fols. 137v-139v</locus> <title>Eustahce</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=2894">IMEV 2894</ref></p>
+                        </msItem>
+                        
+                        <msItem><p>Hanna-Lawton summarize the contents of part II, i.e., the former Vespasian D. XXI, as “constitutions of the Carthusian order from <date from="1411" to="1504">1411-1504</date>.”</p></msItem>   
+
+                    </msContents>
+
+                    <physDesc>
+
+                        <objectDesc form="codex">
+
+                            <supportDesc material="paper">
+
+                                <support>Paper</support>
+
+
+                                <extent>
+                                    <measure type="leavesCount" n="137">137 folios</measure>
+                                    <measure type="pageDimensions" n="21 x 14.5 cm">210 x 145 mm, quarto format</measure>
+                                </extent>
+
+                                <foliation>Current foliation, in ink, upper right corners, includes two flyleaves at the beginning of the book. An earlier correct foliation has been struck through. The foliation continues consecutively through parts I and II, i.e., what were formerly Vespasian D. VIII and Vespasian D. XXI. Two flyleaves at the end of part I are numbered 140-141, and a parchment bifolium – presumably formerly serving as a pair of flyleaves preceding part II – is numbered 142-143. The foliation ends with <locus from="210r" to="210r">fol. 210</locus> at the end of part II. <hi rend="italic">Vespasian.D.8</hi> is written and struck through on <locus from="3r" to="3r">fol. 3</locus>, and <hi rend="italic">Vespasian D.21</hi> written and struck through on <locus from="140r" to="140r">fol. 140</locus>. Although the former foliation is preferable for part I, the new foliation is used here and throughout the electronic archive, as it is standard in editions and criticism of the poem.</foliation>
+
+
+                                <collation>A definitive collation is hindered by the fact that the manuscript is currently mounted as a series of singletons, and no catchwords or quire marks survive. Hanna-Lawton propose a tentative collation based upon the surviving watermarks, but are at best able to offer partial suggestions due to the presence of unwatermarked groups of leaves and at least one stretch of folios in which “no coherent sequence of watermarks emerges” (xxv).</collation>
+
+                                <condition>Paper in good, if worn, condition throughout.</condition>
+
+                            </supportDesc>
+
+
+                            <layoutDesc>
+
+                                <layout columns="1"><title>Siege of Jerusalem</title> bounded in brown ink, with a range of 39-46 lines per leaf. Not ruled. Writing area within <title>SJ</title> approximately <measure type="written">175 x 120 mm</measure>. Prickings survive along the bottom edge of the manuscript only. Layout is similar throughout the manuscript, although many of the texts are bounded for two columns. 
+                                </layout>
+
+                            </layoutDesc>
+                        </objectDesc>
+
+
+                        <handDesc>
+                            <handNote>
+                                <p>One scribe throughout, except for a few later additions noted in list of texts below. A small script mixing anglicana and secretary forms. Running heads by the scribe throughout, frequently featuring title of text with an obelus on either side. Brown ink.</p> 
+                                
+                                <p>Marginalia appear in only a few instances and serve to call attention to important details in the texts, usually proper names as at l. 903, <locus from="120v">fol. 120v</locus>, where we find <hi rend="italic">no[ta]</hi> in the left margin and <hi rend="italic">GABAA</hi> in the right margin. The scribe uses a slightly more formal book hand for these than for the text of the poem. The text is not heavily corrected, although there are examples of overwriting, erasure, and deletion, all of which appear to be the work of the original scribe.</p>
+                                
+                                <p>The scribe has a number of peculiar or problematic tendencies that are worth noting, some of which create problems of interpretation or consistency in transcriptional policy:</p>
+                                
+                                <p><hi rend="underline">Otiose macrons</hi>: On occasion, the scribe uses macrons that seem to have no bearing upon the spelling of the words they decorate. For example, <hi rend="italic">euen</hi><graphic url="images/C440euen.jpg"/> at l. 440, <locus from="115r">fol. 115r</locus>, has a macron over the second vowel, but it is difficult to think that the scribe intended to expand to <hi rend="italic">eue[n]n</hi> given that he spells the word <hi rend="italic">euen</hi> with no macron elsewhere.</p>
+                                
+                                <p><hi rend="underline">Otiose flourishes on <hi rend="italic">–t</hi></hi>: In a few instances, e.g. lines 3<graphic url="images/C3flourisht.jpg"/> and 22<graphic url="images/C22flourish22.jpg"/> on <locus from="111r">fol. 111r</locus>, the letter <hi rend="italic">t</hi> features an otiose flourish on the end.</p>
+                                
+                                <p><hi rend="underline">Final <hi rend="italic">–n</hi></hi>: The scribe usually adds a large flourish on the letter <hi rend="italic">n</hi> when it is the last letter in a word. The flourish curves up and back to the left, as in the words <hi rend="italic">downn</hi> and <hi rend="italic">bowndon</hi><graphic url="images/Cdownnbowndon.jpg"/> on adjacent lines on <locus from="111r">fol. 111r</locus>. At times this can cause confusion because it seems as if the tail may be functioning as a macron, thus, for example, altering the spelling in the example above to <hi rend="italic">bowndou[n]</hi>. The evidence points towards the scribe intending nothing other than a flourish, and thus these features are ignored in the transcription. This can be particularly tricky in instances where the ink has faded from part of the tail, making it appear as if there is a free-floating macron above the word.</p>
+                                
+                                <p><hi rend="underline">Barred letters</hi>: The scribe frequently bars <hi rend="italic">-l</hi>, <hi rend="italic">-ll</hi>, and <hi rend="italic">-h</hi>, but there is ample evidence that he does not do so to alter spelling. For example, the word <hi rend="italic">all</hi> appears as <hi rend="italic">all</hi> and <hi rend="italic">alle</hi> both with and without barred <hi rend="italic">-ll</hi>.</p>
+                                
+                                <p><hi rend="underline">Thorn and <hi rend="italic">–d</hi></hi>: Thorn or <hi rend="italic">th</hi> are sometimes used where one would expect the letter <hi rend="italic">d</hi> and vice versa. Examples of this include <hi rend="italic">þefende</hi> for <hi rend="italic">defende</hi> (306), <hi rend="italic">brothe</hi> for <hi rend="italic">brode</hi> (434), <hi rend="italic">founþen</hi> for <hi rend="italic">founden</hi> (448), <hi rend="italic">de</hi> for <hi rend="italic">þe</hi> (473), <hi rend="italic">þonnther</hi> for <hi rend="italic">þonnder</hi> (519), and <hi rend="italic">shede</hi> for <hi rend="italic">sheþe</hi> (541). </p>
+                                
+                                <p><hi rend="underline">Capital forms</hi>: Some letters, particularly <hi rend="italic">s</hi> and <hi rend="italic">v</hi>, have no distinct capital forms and instead rely upon relative size of the letters to distinguish between capitals and lower cases. This presents a problem throughout, especially with the letter <hi rend="italic">s</hi>, where there is a spectrum of letter sizes rather than a clear upper and lower case. In many cases, the decision of how to transcribe these forms – upper or lower case – could go either way.</p>
+                                
+                                <p><hi rend="underline">Suspended <hi rend="italic">–ur</hi></hi>: The scribe often uses suspended <hi rend="italic">-ur</hi> where <hi rend="italic">-er</hi> would be expected, e.g., <hi rend="italic">ou[ur]</hi> and <hi rend="italic">Eu[ur]</hi>.</p>
+                                
+                                <p><hi rend="underline">Distinguishing <hi rend="italic">v</hi> from <hi rend="italic">u</hi></hi>: At l. 468, <locus from="115v">fol. 115v</locus>, the scribe uses an internal <hi rend="italic">v</hi> where he would usually use <hi rend="italic">u</hi>, apparently to clarify the potential minim confusion of <hi rend="italic">mened</hi> versus <hi rend="italic">meued</hi>:</p>
+                                
+                                <p><hi rend="italic">And myche of moyses lawe . he meved þat tyme</hi></p>
+                                
+                                <p><persName>Foster</persName> offers a detailed discussion of the manuscript’s dialectal evidence, which poses what he characterizes as a “challenging linguistic puzzle that has yet to be solved” (148). Forms from a wide variety of dialect areas – <placeName>Yorkshire</placeName>, the <placeName>East Midlands</placeName>, the <placeName>West Midlands</placeName>, <placeName>East Anglia</placeName>, <placeName>Kent</placeName> – may be found in the manuscript. <persName>Foster</persName> concludes that “the scribe employed a <hi rend="italic">Mischsprache</hi>, and his dialect cannot be distinguished from the many dialects of his exemplars, many of which he may have transcribed with little dialectical alteration” (148). </p>
+                                
+                                <p>Hanna-Lawton, responding to <persName>McSparran</persName>’s report (pp. 24-5) that <persName>M. L. Samuels</persName> believed "that C's language is very mixed but shows strongest evidence of Kentish provenance," disagree based on an assessment of dialect within <title>Siege of Jerusalem</title>:"[O]ur experience with the forms of <title>The Siege</title> would suggest that <persName>Samuels</persName> has in fact identified a substrate peculiar to the transmission of <title>Octavian</title>, perhaps a London-Essex text: within <title>The Siege</title> scarcely any form occurs that one would associate with <placeName>Kent</placeName>. Here rather, the scribe seems to have assimilated, probably from relicts in his archetype, a melange of various East Anglian forms, focused in no single area" (xxvi). <persName>Kellogg</persName> also evaluated C on a list of thirty dialect features and concluded that it was an East Midland dialect.</p>
+                                
+                                <p>While there are many features of an Eastern dialect present within <title>Siege of Jerusalem</title>, there are also dialect features that point elsewhere, as well as a few unusual features within the corpus of <title>SJ</title> manuscripts that are worth noting and have not yet been noted elsewhere:</p>
+                                
+                                <p><hi rend="italic">Use of <hi rend="italic">mon</hi></hi>: Although C usually has the spelling <hi rend="italic">man</hi>, the spelling <hi rend="italic">mon</hi> is found three times (lines 150, 338, 1157), a spelling that is found elsewhere only twice in P (lines 286 and 288). The rounding of OE <hi rend="italic">a</hi> before nasals is a West Midlands trait, and thus does not fit with the preponderance of evidence placing C’s copy of <title>SJ</title> in East Anglia or the East Midlands. (Kellogg noted the appearance of mon in C, but did not know of the existence of P, and thus was unaware of this agreement.)</p>
+                                
+                                <p><hi rend="underline">Alliteration on <hi rend="italic">f</hi> and <hi rend="italic">v</hi></hi>: There are no examples of initial <hi rend="italic">v</hi> for OE initial <hi rend="italic">f</hi>, the presence of which would support <persName>Samuels</persName>' argument for a Kentish provenance. C is unique among the <title>SJ</title> manuscripts, however, in alliterating <hi rend="italic">f</hi> with <hi rend="italic">v</hi>, as it does at lines 31, 243, 253, and 1328:</p>
+                                
+                                <p>31 - <hi rend="italic">His fader vaspasiane ferly bytydde</hi></p>
+                                
+                                <p>243 - <hi rend="italic">The pope a-valed his vayle . &amp; his face towched</hi></p>
+                                
+                                <p>253 - <hi rend="italic">Ȝyt is þe face in þe vayle . as veronica hit browȝte</hi></p>
+                                
+                                <p>1328 - <hi rend="italic">At vyane a fowle detħ . &amp; vengeaunce he suffredde</hi></p>
+                                
+                                <p>At line 31, C is in agreement with UDE, but the group replaces <hi rend="italic">fadere of flesche</hi>, which is found in other manuscripts, with <hi rend="italic">fader vaspasiane</hi>. This might have been motivated by the fact that Vespasian had not yet been mentioned by name in the poem, and thus the introduction of the proper name here can be explained as a scribal effort – inherited by the UDEC group – to clarify the identity of Titus’s father. Given that there is no other alliteration of <hi rend="italic">f</hi> with <hi rend="italic">v</hi> in UDE, this might be explained as a failure of alliteration caused by an effort to clarify the text within this group.</p>
+                                
+                                <p>Both E and C appear to alliterate <hi rend="italic">f</hi> and <hi rend="italic">v</hi> by replacing <hi rend="italic">visage</hi> with <hi rend="italic">face</hi> at l. 253, but in the case of E this is not reliable evidence since E's alliteration is highly inconsistent (e.g., ten lines earlier at 243 C also has <hi rend="italic">face</hi> against <hi rend="italic">visage</hi> in all other manuscripts except E, but E reads <hi rend="italic">nose</hi>).</p>
+                                
+                                <p><hi rend="italic">Dialect and the shift of exemplar</hi>: Hanna-Lawton have demonstrated that the scribe switched between two exemplars, using one throughout the process of copying and switching freely between it and a second from line 603 (HL line 621) to the end. No analysis of the effect of this shift on dialect analysis has yet been put forth, and thus it is of interest to note one dialect feature exclusive to the portion of the manuscript prior to line 603, as well as two features found only after line 603:</p>
+                                
+                                <p>a. The only examples of the present indicative plural inflection <hi rend="italic">-eth</hi> occur prior to the introduction of the second exemplar: l. 304 <hi rend="italic">assayleth</hi> and l. 329 <hi rend="italic">seyþe</hi>.</p>
+                                
+                                <p>b. After the introduction of the second exemplar, the sole example of the third person plural pronoun spelled <hi rend="italic">þem</hi> occurs at l. 632. In addition, the only examples of third person singular, present indicative <hi rend="italic">-es</hi> occur at l. 1102, <hi rend="italic">leues</hi>, and at l. 1260, <hi rend="italic">proferes</hi>.</p>
+                                
+                                <p>The present indicative plural <hi rend="italic">-eth</hi> is a trait of Southern, Kentish, and West Midland dialects, whereas both the spelling <hi rend="italic">þem</hi> and the present indicative <hi rend="italic">-es</hi> are traits of Northern and Northeast Midland dialects. This suggests the possibility that the second exemplar was of a more northern dialect, albeit with the caveat that this evidence is slight and should be taken into account against the wide admixture of forms found throughout the manuscript.</p>
+                                
+                            </handNote>
+                        </handDesc>
+
+
+
+
+
+                        <decoDesc>
+                            <decoNote>
+                                
+                                <p>A space two lines in height at the beginning of <title>Siege of Jerusalem</title> was left for an initial capital <hi rend="italic">I</hi>, but the letter was never rendered (cf. <locus from="17r" to="17r">fol. 17r</locus>, where the initial is also missing). The first letter of each line was touched in yellow, now almost entirely faded away.</p>
+                                
+                                <p>Passus divisions occur as marginalia in the main scribal hand, sometimes accompanied by one or more obeli. The text of <title>SJ</title> is divided into quatrains, each of which is marked with a paraph. The scribe has seven passus divisions, but only the last five of them are numbered; the first would not be marked since it coincides with the beginning of the poem and the second almost certainly occurred on the missing folio that contained HL lines 167-248. In addition to these divisions, there are three points where an unusually large and ornate capital in C coincides with a textual division in one or more other manuscripts. At l. 1000 (HL 1025), a large initial <hi rend="italic">N</hi> corresponds with a four-line capital in V. There are also large initial capitals at lines 930 (HL 953) and 1150 (HL 1177) (again an <hi rend="italic">N</hi> in each case). The first corresponds to a three-line capital in E, and the latter to both a three-line capital in E and a paraph marker in D. This is of particular interest because of the decision of Hanna-Lawton to omit lines 953 and 1177 of E and l. 1025 of V, along with all paraph markers from D, from consideration in determining textual divisions for their critical text on the grounds that they occur only in single manuscripts. These capitals in C present us with the difficult task of determining whether they are meant to indicate further textual subdivisions in C (in addition to the scribe's clearly marked passus headings), or simply to reflect breaks in the continuity of the narrative. In each case these large initials introduce the word <hi rend="italic">Now(e)</hi> at a moment suggesting a turn in the narrative:</p>
+                                
+                                <p>953 - <hi rend="italic">Nowe of þe kynge of surry . wyll I seye more</hi></p>
+                                
+                                <p>1000 - <hi rend="italic">Nowe is vaspasiane I-gone . ou[ur] þe bygge stremes</hi></p>
+                                
+                                <p>1150 - <hi rend="italic">Now tytus counceyle hatħ take . þe town to assayle</hi></p>
+                                
+                                <p>Although the presence of these initial capitals in C may lend weight to the textual divisions signaled in the other manuscripts, the evidence for relying upon those divisions found in E, V, and D remains murky, as C tends to use large initials at other points where there are no corresponding textual divisions found in the other manuscripts:</p>
+                                
+                                <p>41 - <hi rend="italic">Now was þer on nathan . naymes sone of greeke</hi></p>
+                                
+                                <p>288 - <hi rend="italic">Now mykyll woo wortħ wrogħt þe . in þy welthy townes</hi></p>
+                                
+                                <p>Furthermore, the scribe has a tendency towards making an elaborate, unusually large initial <hi rend="italic">N</hi> in other environments on occasion where there is no discernible reason for doing so, e.g. <hi rend="italic">Nowgħt</hi> in l.152 and <hi rend="italic">Nor</hi> in l. 294. It is clear that these are more elaborate than his usual capital <hi rend="italic">N</hi> in, for example <hi rend="italic">Nathan</hi> and <hi rend="italic">Not</hi> on f. <locus from="112r">112r</locus>, but unclear why they are so. Because of this uncertainty, none of these points are treated as textual divisions within the transcription, but they are noted here as a puzzling and potentially significant feature of this manuscript.</p>
+                                
+                                <p>Elsewhere in the manuscript, decorative features are also sparse:</p>
+                                
+                                <p>Items 1-2, no decoration apart from running heads</p>
+                                
+                                <p>Item 3 (a recipe added later), no decoration </p>
+                                
+                                <p>Items 4-13, 15-18, first letter of each line touched in red, paraphs touched in red, first occurrence of some running heads touched in red; some texts with explicit slashed with red </p>
+                                
+                                <p>Item 14, paraphs and first letter of some sentences touched in red; explicit slashed with red</p>
+                                
+                                <p>Item 19, no decoration</p>
+                                
+                                <p>Items 20-37, 40-41, paraphs in scribal ink, obeli acompany running heads and some explicits, but no rubrication used; many first letters formerly touched in yellow, but now badly faded away.</p>
+                                
+                                <p>Items 38-39, first letter of each line touched in red and paraphs touched in red; explicit slashed in red; first letter of each word in title touched in red and obeli touched in red</p>
+                                
+                            </decoNote>
+                        </decoDesc>
+
+
+                        <bindingDesc>
+                            <binding when="1957">
+
+                                <p>The present binding was completed in August 1957 by the British Museum, and measures <measure type="written">222 mm</measure> in height, and <measure type="written">210 mm</measure> from the center of the spine to the fore edge. Half bound with brown leather spine and corners, brown bookboards. Five raised bands. Headband and tailband in red and yellow thread. A pair of thin, parallel gold-tooled lines run the length of the spine on either side, and similar lines define the top and bottom edge of each compartment on the spine. The bottom compartment, which is larger than the others, is further subdivided by another set of these lines so that there are two areas, one <measure type="written">26mm</measure> in height, and the other <measure type="written">11 mm</measure> in height. Compartments 1, 5, and 6 decorated with gold-tooled leaf and vine designs around outer edges. Compartments 2, 3, and 4 have gold-tooled text stamped on a green morocco field (other compartments are the same brown leather as rest of binding). </p>
+                                
+                                <p>Compartment 2: <hi rend="italic">MIDDLE ENGLISH / METRICAL / ROMANCES, / ETC.</hi></p>
+                                
+                                <p>Compartment 3: <hi rend="italic">BRIT. MUS.</hi></p>
+                                
+                                <p>Compartment 4: <hi rend="italic">COTTON MS. / CALIGULA / A. II.</hi></p>
+                                
+                                <p>In top compartment, a white oval sticker reading <hi rend="italic">691</hi>. In bottom compartment, a similar sticker, but the text has been torn away. Where the leather from the spine and corners meets the bookboard, a pair of thin, parallel blind-tooled lines. Cotton's coat of arms stamped on front and back.</p>
+                                
+                                <p>There are several sets of flyleaves, some of which are apparently relics of earlier bindings. In the front, a pastedown and single flyleaf from the twentieth-century binding, plus five additional flyleaves, the innermost of which seem to be fairly early in date and are counted in the foliation. There are only two flyleaves at the back, the outermost of which is part of the modern binding and the innermost apparently from an earlier binding. Between the formerly separate manuscripts, and now numbered as <locus from="140r" to="143r">folios 140-143</locus>, are what were formerly two paper and two parchment flyleaves, probably belonging originally to Vespasian D. XXI.</p>
+
+                            </binding>
+                        </bindingDesc>
+
+                    </physDesc>
+
+
+                    <history>
+                        <provenance><persName>Guddat-Figge</persName> notes that "[h]ardly anything is known about the provenance of the MS, "aside from the note Donum <persName>Jo. Rogers</persName> on <locus from="3r" to="3r">fol. 3r</locus>. On <locus from="144v" to="144v">fol. 144v</locus>, i.e., the former Vespasian D. XXI, <persName>Thomas Cooke</persName> is written, but there is no way to know if this was written before or after the two halves were joined. As a group, the famous Cotton manuscripts were owned by <persName>Sir Robert Bruce Cotton</persName> (1571-1631) and presented as a gift to the nation of Great Britain by his grandson, <persName>Sir John Cotton</persName>, in 1700. They were initially housed in Ashburnham House, <placeName>Westminster</placeName>, where a fire destroyed or damaged about twenty-five percent of them in 1731. 
+                        </provenance>
+                    </history>
+
+                    <additional>
+                        <adminInfo>
+                            <recordHist>
+                                <source>
+                                    <bibl> </bibl>
+                                </source>
+                            </recordHist>
+                        </adminInfo>
+
+                        <listBibl>
+                            
+                            <bibl><author>Doyle, A. I.</author> "The Manuscripts." <title>Middle English Alliterative Poetry and its Literary Background: Seven Essays</title> Ed. <editor>David Lawton</editor>. <pubPlace>Woodbridge, UK</pubPlace>: <publisher>D. S. Brewer</publisher>, <date when="1982">1982</date>. 88-100 (96).
+                            </bibl>
+
+                            <bibl><author>Foster, Michael</author>. “Scribal Editing in Tundale as Theological Rhetoric in the Age of Romance.” <title>Spiritual Temporalities in Late-Medieval Europe</title>. <pubPlace>Newcastle upon Tyne</pubPlace>: <publisher>Cambridge Scholars Publishing</publisher>, <date when="2010">2010</date>. 139-64.
+                            </bibl>
+                            
+                            <bibl><author>Guddat-Figge, Gisela</author>. <title>Catalogue of the Manuscripts Containing Middle English Romances</title>. <pubPlace>Munich</pubPlace>: <publisher>W. Fink</publisher>, <date when="1976">1976</date>. 159-63.
+                            </bibl>
+
+                            <bibl><editor>Hanna, Ralph</editor> and <editor>David Lawton</editor>,
+                                eds. <title>The Siege of Jerusalem</title>. EETS o.s. 320.
+                                <pubPlace>London</pubPlace>: <publisher>Oxford UP</publisher>,
+                                <date when="2003">2003</date>.</bibl>
+                            
+                            <bibl><author>Kellogg, Allen Bond</author>. <title>The Language of the
+                                Alliterative Siege of Jerusalem</title>. Diss. U of Chicago,
+                                <date when="1943">1943</date>.</bibl>
+                            
+                            <bibl><editor>Kölbing, E</editor>. and <editor>Mabel Day</editor>, eds.
+                                <title>Siege of Jerusalem</title>. EETS o.s. 188.
+                                <pubPlace>London</pubPlace>: <publisher>Oxford UP</publisher>,
+                                <date when="1932">1932</date>. (Reprinted <date when="2001"
+                                    >2001</date>)</bibl>
+                            
+                            <bibl><editor>McSparran, Frances</editor>. <title>Octovian Imerpator</title>. Middle English Texts 11. <pubPlace>Heidelberg</pubPlace>: <publisher>Carl Winter</publisher>, <date when="1979">1979</date>.
+                            </bibl>
+                            
+                            <bibl><author>Millar, Bonnie</author>. <title>The Siege of Jerusalem in
+                                its Physical, Literary, and Historical Contexts</title>.
+                                <pubPlace>Dublin</pubPlace>: <publisher>Four Courts
+                                    Press</publisher>, <date when="2000">2000</date>. 26-7.</bibl>
+                            
+                            <bibl><editor>Rickert, Edith</editor>. <title>The Romance of Emaré</title>. EETS e.s. 99. <pubPlace>London</pubPlace>: <publisher>Trübner &amp; Co.</publisher>, <date when="1906">1906</date> (issued 1908).</bibl>
+                            
+                            <bibl><author>Woolf, Rosemary</author>. <title>The English Religious Lyric in the Middle Ages</title>. <pubPlace>Oxford</pubPlace>:<publisher> Clarendon Press</publisher>, <date when="1968">1968</date>.
+                            </bibl>
+                            
+                        </listBibl>
+
+
+                    </additional>
+                </msDesc>
+            </sourceDesc>
         </fileDesc>
         <!--
 <revisionDesc> <change who="" when=""></change> </revisionDesc>
