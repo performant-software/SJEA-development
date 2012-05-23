@@ -86,6 +86,7 @@ module TaskUtilities
 
   def transcription_file_list( )
     return %w{ SJA SJC SJD SJE SJEx SJL SJP SJU SJV }
+    #return %w{ SJE }
   end
 
   def manuscript_view_list( )
@@ -94,6 +95,18 @@ module TaskUtilities
 
   def description_file_list( )
     return %w{ ADescription CDescription DDescription EDescription ExDescription LDescription PDescription UDescription VDescription }
+  end
+
+  def transcript_title_list()
+    return [ "British Library, MS Additional 31042 (A)",
+             "British Library, MS Cotton Caligula A.ii, part I (C)",
+             "Lambeth Palace Library, MS 491 (D)",
+             "Huntington Library, MS HM 128 (E)",
+             "Devon Record Office, Deposit 2507 (Ex)",
+             "Bodleian Library, MS Laud Misc. 656 (L)",
+             "Princeton University Library, MS Taylor Medieval 11 (P)",
+             "Cambridge University Library, MS Mm.v.14 (U)",
+             "British Library, MS Cotton Vespasian E.xvi (V)" ]
   end
 
   def xsl_transform_cmd( xmlfile, xslfile )

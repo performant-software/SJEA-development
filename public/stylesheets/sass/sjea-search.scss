@@ -25,4 +25,22 @@
        border-left-style: solid;
        border-width: 2px;
    }
+
+   #content-display {
+
+      .result-header {
+         padding: 0 0 10px 0;
+         font-size: 22px;
+      }
+
+      .result-title {
+         padding: 10px 0 0 0;
+         font-size: 16px;
+      }
+
+      .result-snippet {
+         padding: 10px 0 0 0;
+         font-size: 15px;
+      }
+   }
 }

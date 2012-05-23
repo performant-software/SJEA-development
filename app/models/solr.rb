@@ -30,7 +30,7 @@ class Solr
 		end
 		@core = "#{SOLR_CORE_PREFIX}/#{core}"
 		@solr = RSolr.connect( :url=>"#{SOLR_URL}/#{core}" )
-		@field_list = [ "uri", "section", "url", "content" ]
+		@field_list = [ "uri", "url", "title", "section" ]
 		@highlight_field_list = [ "content" ]
 		@facet_fields = ['section']
 	end
@@ -49,7 +49,7 @@ class Solr
 		#else
 		#	options[:q] += " AND section:#{overrides[:section]}" if !overrides[:section].blank?
 		#end
-		#options = add_highlighting(options)
+		options = add_highlighting(options)
 		return options
 	end
 

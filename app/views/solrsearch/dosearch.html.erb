@@ -29,11 +29,28 @@
 
      <div id="content-display">
 
-       <h3>
-       <%= "params = [#{@params}]" -%>
-       </h3>
+       <!-- <%= @inparams -%> -->
 
-       <%= @results -%>
+       <div class="result-header">
+         <%- facetname = ( @inparams[:facet] == "" )? "everything" : @inparams[:facet] -%>
+         <%- docname = ( @inparams[:transcription] == "" )? "all transcriptions" : @inparams[:transcription] -%>
+
+          <%- if @results[:total].to_i != 0 -%>
+             <%= "Showing results for \"#{@inparams[:searchfor]}\" in #{facetname} for #{docname}:" -%>
+          <%- else -%>
+             <%= "No results found for \"#{@inparams[:searchfor]}\" in #{facetname} for #{docname}" -%>
+          <%- end -%>
+       </div>
+
+       <%- hits = @results[:hits] -%>
+       <%- hits.each do |hit| -%>
+          <div class="result-title">
+             <%= hit["title"] -%>
+          </div>
+          <div class="result-snippet">
+             <%= hit["highlighting"][0] -%>
+          </div>
+       <%- end -%>
 
      </div>  <!-- content-display -->
 
