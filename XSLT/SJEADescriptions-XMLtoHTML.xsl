@@ -289,7 +289,6 @@
                 
                 <xsl:for-each select="./tei:msItem | ./tei:p">
                     <xsl:apply-templates/>
-                    <xsl:value-of disable-output-escaping="yes">&lt;br /&gt;</xsl:value-of>
                 </xsl:for-each>
             </div>
     </xsl:template>
@@ -306,6 +305,10 @@
         <xsl:if test="@rend='supralinear'">
             <sup><xsl:apply-templates/></sup>
         </xsl:if>
+        
+        <xsl:if test="@rend='underline'">
+            <u><xsl:apply-templates/></u>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="tei:titleStmt | tei:editionStmt | tei:publicationStmt"/>
@@ -313,9 +316,21 @@
     <xsl:template match="tei:locus">
         <xsl:param name="id" tunnel="yes"/>
         
-        <!--mjc: grab par tof the input filename to build the output filename-->
+        <!--mjc: grab part of the input filename to build the output filename-->
         <xsl:variable name="idno">
             <xsl:value-of select="substring(substring-after($id, $xmlpath), 1, 1)"/>
+        </xsl:variable>
+        
+        <!--mjc: check the value of @from to see how many digits it contains.       -->
+        <!--     image filenames should start with a letter and contain 3 digits    -->
+        <xsl:variable name="numdigs" select="string-length(@from)"/>
+        <xsl:variable name="fill" select="4-$numdigs"/>
+        
+        <xsl:variable name="zeros">
+            <xsl:call-template name="RepeatString">
+                <xsl:with-param name="string" select="0"/>
+                <xsl:with-param name="times" select="$fill"></xsl:with-param>
+            </xsl:call-template>
         </xsl:variable>
         
         <xsl:choose>
@@ -324,22 +339,46 @@
             </xsl:when>
             
             <xsl:otherwise>
-                <a href="{concat('images/', $idno, @from, '.jpeg')}"><xsl:apply-templates/></a>
+                <a href="{concat('images/', $idno, $zeros, @from, '.jpg')}"><xsl:apply-templates/></a>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
     
+    <xsl:template name="RepeatString">
+        <xsl:param name="string"/>
+        <xsl:param name="times"/>
+        
+        <xsl:if test="number($times) &gt; 0">
+            <xsl:value-of select="$string" />
+            <xsl:call-template name="RepeatString">
+                <xsl:with-param name="string" select="$string" />
+                <xsl:with-param name="times"  select="$times - 1" />
+            </xsl:call-template>
+        </xsl:if>
+    </xsl:template>
+    
     <!--*************************-->
     <!--mjc: graphic template-->
-    <!--     ====         -->
-    <!--mjc: format <notes>: create red, super-script   -->
-    <!--     capital T, with link to something. for now -->
-    <!--     put the text of the note in a @title       -->
+    <!--     =======         -->
+    <!--mjc: format <graphic>: creat a superscript 'I'                      -->
+    <!--     Performant will add code to create a popup of the icon here    -->
     <!--*************************-->
     <xsl:template match="tei:graphic">
         <xsl:param name="view" tunnel="yes"/>
         
         <span class="graphic">I</span>
+    </xsl:template>
+    
+    
+    <!--*************************-->
+    <!--mjc: ref template-->
+    <!--     ===         -->
+    <!--mjc: format <ref>: create a link to the IMEV    -->
+    <!--     Index of Middle English Verse, use text()  -->
+    <!--     as the link text                           -->
+    <!--*************************-->
+    <xsl:template match="tei:ref">
+        <a href="{@target}" target="_blank"><xsl:apply-templates/></a>
     </xsl:template>
 
 

@@ -353,6 +353,22 @@
             <xsl:value-of select="concat($imgpath, @entity, '-175x225.jpg')"/>
         </xsl:variable>
         
+        <!--mjc: if the <milestone> is immediately followed by a <marginalia>   -->
+        <!--      with @place='top...' then put a <span> here for the text      -->
+        <xsl:if test="name(./following-sibling::*[1])='marginalia'">
+            <xsl:variable name="pos" select="substring(./following-sibling::*[1]/@place, 1, 3)"/>
+            
+            <xsl:if test="$pos='top'">
+                <xsl:call-template name="generateMarginalia">
+                    <xsl:with-param name="margin" select="./following-sibling::tei:marginalia[1]"/>
+                </xsl:call-template>
+                <!--mjc: tell parser not to turn <br/> into <br></br>-->
+                <xsl:value-of disable-output-escaping="yes">&lt;br /&gt;</xsl:value-of>
+            </xsl:if>
+        </xsl:if>
+        
+        <!--dg: create <img> tags instead of <a> tags for the images. This shows the manuscript page -->
+        <!--    as a thumbnail and matches the wireframes we have provided Tim for review.           -->
         <img src='{$imgName}' class="image"></img>
     </xsl:template>
     
@@ -380,25 +396,21 @@
             </span>
         </xsl:if>
         
-        <!--mjc: if the line is followed by s <marginalia>, then display it on this line-->
+        <!--mjc: if the line is followed by a <marginalia> with @place of left or right,    -->
+        <!--     then display it with this line.                                            -->
+        <!--     if @place is bottom then display it on another line                        -->
         <xsl:choose>
             <xsl:when test="name(./following-sibling::*[1])='marginalia'">
+                <xsl:variable name="pos" select="substring(@place, 1, 3)"/>
+                
                 <span class="line">
-                    <xsl:apply-templates/>
-                    <xsl:call-template name="generateMarginalia">
-                        <xsl:with-param name="margin" select="./following-sibling::tei:marginalia[1]"/>
-                    </xsl:call-template>
+                    <xsl:if test="$pos!='top'">
+                        <xsl:apply-templates/>
+                        <xsl:call-template name="generateMarginalia">
+                            <xsl:with-param name="margin" select="./following-sibling::tei:marginalia[1]"/>
+                        </xsl:call-template>
+                    </xsl:if>
                 </span>
-            </xsl:when>
-            
-            <!--mjc: sometimes there is a <milestone> in between the <l> & <marginalia> tags-->
-            <xsl:when test="name(./following-sibling::*[1])='milestone'">
-                <xsl:if test="name(./following-sibling::*[2])='marginalia'">
-                    <xsl:apply-templates/>
-                    <xsl:call-template name="generateMarginalia">
-                        <xsl:with-param name="margin" select="./following-sibling::tei:marginalia[1]"/>
-                    </xsl:call-template>
-                </xsl:if>
             </xsl:when>
             
             <xsl:otherwise>
@@ -492,17 +504,13 @@
         
         <xsl:if test="$view = 'diplomatic' or $view = 'alltags'">
             <xsl:choose>
-                <xsl:when test="substring(text()[1], 1, 1) = '.'">
-                    {<span class="del-illegible">
+                <xsl:when test="substring(text()[1], 1, 1) = '.'">{<span class="del-illegible">
                         <xsl:apply-templates/>
-                    </span>}
-                </xsl:when>
+                    </span>}</xsl:when>
                 
-                <xsl:otherwise>
-                    {<span class="del-legible">
+                <xsl:otherwise>{<span class="del-legible">
                         <xsl:apply-templates/>
-                    </span>}
-                </xsl:otherwise>
+                    </span>}</xsl:otherwise>
             </xsl:choose>
         </xsl:if>
     </xsl:template>
@@ -591,7 +599,7 @@
             <xsl:when test="$view = 'critical'">
                 <xsl:choose>
                     <xsl:when test="./descendant::tei:orig">
-                        <span><xsl:value-of select="./descendant::tei:reg"/></span>
+                        <span><xsl:apply-templates select="./descendant::tei:reg"/></span>
                     </xsl:when>
                     <xsl:when test="./descendant::tei:sic">
                         <span><xsl:value-of select="./descendant::tei:corr"/></span>
@@ -605,7 +613,7 @@
             <xsl:when test="$view = 'scribal'">
                 <xsl:choose>
                     <xsl:when test="./descendant::tei:orig">
-                        <span class="orig"><xsl:value-of select="./descendant::tei:orig"/></span>
+                        <span class="orig"><xsl:apply-templates select="./descendant::tei:orig"/>&#xA0;</span> 
                     </xsl:when>
                     <xsl:when test="./descendant::tei:sic">
                         <span class="sic"><xsl:value-of select="./descendant::tei:sic"/></span>
@@ -619,7 +627,7 @@
             <xsl:when test="$view = 'diplomatic'">
                 <xsl:choose>
                     <xsl:when test="./descendant::tei:orig">
-                        <span><xsl:value-of select="./descendant::tei:orig"/></span>
+                        <span><xsl:apply-templates select="./descendant::tei:orig"/>&#xA0;</span>
                     </xsl:when>
                     <xsl:when test="./descendant::tei:sic">
                         <span><xsl:value-of select="./descendant::tei:sic"/></span>
@@ -633,7 +641,7 @@
             <xsl:when test="$view = 'alltags'">
                 <xsl:choose>
                     <xsl:when test="./descendant::tei:orig">
-                        <span class="orig"><xsl:value-of select="./descendant::tei:orig"/> / </span><span class="reg"><xsl:value-of select="./descendant::tei:reg"/></span>
+                        <span class="orig"><xsl:value-of select="./descendant::tei:orig"/> / </span><span class="reg"><xsl:apply-templates select="./descendant::tei:reg"/></span>
                     </xsl:when>
                     <xsl:when test="./descendant::tei:sic">
                         <span class="sic"><xsl:value-of select="./descendant::tei:corr"/> / </span><span class="corr"><xsl:value-of select="./descendant::tei:corr"/></span>
@@ -648,6 +656,8 @@
     </xsl:template>
     
     
+    
+    
     <!--*************************-->
     <!--mjc: add template-->
     <!--     ===         -->
@@ -658,7 +668,7 @@
         <xsl:param name="view" tunnel="yes"/>
         
         <xsl:choose>
-            <xsl:when test="$view = 'alltags'">
+            <xsl:when test="$view = 'alltags' or $view = 'scribal'">
                 <span class="add-{@place}" title="{@hand}" alt="{@hand}"><xsl:apply-templates/></span>
             </xsl:when>
             
@@ -713,6 +723,15 @@
                 <xsl:for-each select="$margin">
                     <span class="margin-{@place}" title="{@hand}" alt="{@hand}"><xsl:apply-templates/></span>
                 </xsl:for-each>
+                
+                <!--mjc: in some cases there can be multiple <marginalia> tags in a row  -->
+                <!--     handle that special condition here                              -->
+                <xsl:if test="name($margin/following-sibling::*[1])='marginalia'">
+                    
+                    <xsl:call-template name="generateMarginalia">
+                        <xsl:with-param name="margin" select="$margin/following-sibling::tei:marginalia[1]"/>
+                    </xsl:call-template>
+                </xsl:if>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -731,16 +750,39 @@
     <xsl:template match="tei:note">
         <xsl:param name="view" tunnel="yes"/>
         
+        <xsl:variable name="noteBody">
+            <xsl:apply-templates/>
+        </xsl:variable>
+        
         <xsl:choose>
             <xsl:when test="$view = 'diplomatic'"/>
                 
             <xsl:otherwise>
-                <span class="supNote" title="{./text()}" alt="{./text()}">N</span>
+                <span class="supNote" title="{$noteBody}" alt="{$noteBody}">N</span>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
     
     
+    <!--*************************-->
+    <!--mjc: supplied template-->
+    <!--     ========         -->
+    <!--mjc: format <supplied>: put text in [],   -->
+    <!--     except for Diplomatic view.          -->
+    <!--*************************-->
+    <xsl:template match="tei:supplied">
+        <xsl:param name="view" tunnel="yes"/>
+        
+        <xsl:choose>
+            <xsl:when test="$view = 'diplomatic'"/>
+            
+            <xsl:otherwise>
+                [<span class="supplied"><xsl:apply-templates/></span>]
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+
     <xsl:template match="text()">
         <xsl:value-of select="normalize-space()" />
     </xsl:template>
