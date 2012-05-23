@@ -35,10 +35,11 @@ namespace :sjea do
       xml_lines = xmldoc.css('l')
       xml_lines.each do |xml_line|
 
-        hl_number = xml_line.attribute('n')
+        local_lnumber = xml_line.attribute('id')
+        hl_lnumber = xml_line.attribute('n')
         text_line = CGI::escapeHTML( xml_line.content.split.join(" ") )
-        fname = "#{workdir}/#{hl_number}.xml"
-        output = "<l attr=\'#{tfilename}\'>#{text_line}</l>\n"
+        fname = "#{workdir}/#{hl_lnumber}.xml"
+        output = "<l attr=\'#{tfilename}\' line=\'#{local_lnumber}'>#{text_line}</l>\n"
 
         # add a div tag if necessary... required for the subsequent XML parsing !!!
         if file_exists( fname ) == false
@@ -89,7 +90,7 @@ namespace :sjea do
        comparisons = complist.css('l')
        compare_set = Hash.new( )
        comparisons.each do |compare|
-          compare_set[ compare.attribute('attr').to_s() ] = compare.content
+          compare_set[ compare.attribute('attr').to_s() ] = { :line => compare.attribute('line').to_s(), :content => compare.content }
        end
 
        alt = 0
@@ -104,11 +105,11 @@ namespace :sjea do
          alt += 1
 
          if compare_set.key?( tname )
-           compline << "<td>xx</td><td>(#{tname})</td><td class=\"textline\">"
-           compline << compare_set[ tname ]
-           compline << "</td>\n"
+            compline << "<td>#{compare_set[ tname ][:line]}</td><td>(#{tname})</td><td class=\"textline\">"
+            compline << compare_set[ tname ][:content]
+            compline << "</td>\n"
          else
-            compline << "<td>xx</td><td>(#{tname})</td><td class=\"textline\">---- NOTHING ----</td>\n"
+            compline << "<td></td><td>(#{tname})</td><td class=\"textline\">---- no text ----</td>\n"
          end
 
          append_to_file( outfile, compline )
