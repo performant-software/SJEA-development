@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     // hide all the sub menu's
-    $( ".sublist").hide()
+    $( ".sublist").hide();
 
     // sub menu toggle behavior handlers
 	$(".mainlist-item").toggle(function(){
@@ -17,7 +17,7 @@ $(document).ready(function() {
 	});
 
     // selection box changes
-    $("select").change(function () {
+    $("#view-control").change(function () {
 
         // are we currently showing a manuscript?
         var current_manuscript = $("#transcription-name").attr("href");
@@ -33,7 +33,7 @@ $(document).ready(function() {
         var current_manuscript = $("#transcription-name").attr("href");
         if (current_manuscript.length != 0 ) {
             var newURL = "xml/" + current_manuscript + ".xml"
-           window.location.replace( newURL );
+            window.location.replace( newURL );
         }
     });
 
@@ -154,7 +154,7 @@ function highliteElement( element ) {
 
 function showManuscriptContent( manuscript_prefix ) {
 
-    var transcript_type = $("select option:selected").text();
+    var transcript_type = $("#view-control option:selected").text();
     var resource_name = manuscript_prefix + "-MS-"
     switch( transcript_type ) {
         case "All Tags":
