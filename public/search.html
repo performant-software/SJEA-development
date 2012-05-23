@@ -46,7 +46,7 @@
 
               <div id="textbox-div">
                  <span>Search for: </span>
-                 <textarea id="search-text" name="searchfor" rows="3" cols="50"></textarea>
+                 <textarea id="search-text" name="searchfor" rows="3" cols="48"></textarea>
               </div>
 
               <div id="special-keys-div">
@@ -93,27 +93,27 @@
           <div id="search-instructions">
 
               </br>
-              <p><b>Keyword Searching</b> The Search For field can be used to enter one or more words to search for.
-                    By default, the web site will return text containing <b>any</b> of the words included in the field.
-                    By using the plus sign (+), you can make the site return only entries where <b>all</b> of the words are present.</p>
+              <p><b>rayne water stremys</b> finds texts with any or all of the words</p>
               </br>
 
-              <p><b>Phrase Searching</b> Quotes (") can be used to find phrases.</p>
+              <p><b>+ rayne water stremys</b> finds only texts with all of the words</p>
               </br>
 
-              <p><b>Proximity Searching</b> A word between double quotation marks (") immediately followed by a tilde (~) can be input to find words situated within a specific distance of one another.
-                    A digit after the tilde indicates the desired proximity.</p>
+              <p><b>"rayne in the street"</b> finds that exact phrase</p>
               </br>
 
-              <p><b>Wild Cards</b> The asterisk (*) and question mark (?) can be used as wild cards. The asterisk stands for zero or more letters; the question mark stands for exactly one letter.
-                 Wild cards cannot be used as the first letter of a word.</p>
+              <p><b>"rayne street"~4</b> finds the word rayne and the word street no farther than four words apart</p>
               </br>
 
-              <p><b>Fuzzy Searching</b> A tilde (~) without quotes will return words which are statistically similar to the specified word, based on the Levenshtein Distance, or Edit Distance algorithm.
-                    An additional, optional number after the tilde can specify the required similarity. The value is between 0 and 1. The higher the value, the higher the required similarity.</p>
+              <p><b>ray?e</b> finds rayne and rayse</p>
               </br>
 
-              <p><b>Excluding words</b> The subtraction symbol (-) can be used to exclude words from a search.</p>
+              <p><b>ray*e</b> finds raykande, raylede, rayne, rayse, raysede, and rayssede</p>
+              </br>
+
+              <p><b>rayne~</b> finds words similar to rayne according to the Levenshtein distance algorithm (fuzzy matching). By putting a number between zero and one
+                    immediately after the tilde, you can control the Levenshtein distance (degree of fuzziness). For example, <b>rayne~.05</b> finds words very similar to rayne while
+                    <b>rayne~.95</b> finds words remotely similar to rayne.</p>
 
           </div>  <!-- search-instructions -->
 
