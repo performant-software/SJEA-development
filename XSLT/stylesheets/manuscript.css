@@ -1,13 +1,13 @@
 /* MJC: This stylesheet was taken from the Pier Plowman SEENET CD and altered for use on the Siege of Jerusalem project */
 /*		May, 2012 */
 
-.orig, .lime { color:lime }
+.orig, .lime { color:green }
 
-.origDivider { color:lime ; display:none }
+.origDivider { color:green ; display:none }
 
 .highlightorigDivider { visibility:hidden ; display:none }
 
-.reg { color:olive ; display:none }
+.reg { color:olive }
 
 .olive { color:olive }
 
@@ -19,7 +19,7 @@
 
 .corr, .purple { color:purple }
 
-.supplied { display:none }
+.supplied {  }
 
 .highlightSupplied { display:none }
 
@@ -145,19 +145,23 @@
 
 .image { float: right; clear: right; width: 175px; height: 225px; }
 
-.margin-topCenter, .add-topCenter { position: relative ; left: 50% ; right: 50% ; text-align: center ; color: gray}
+.add-topCenter { position: relative ; left: 50% ; right: 50% ; text-align: center ; color: gray }
+.margin-topCenter { position: relative ; left: 50% ; right: 50% ; text-align: center }
 
-.add-supralinear, .margin-supralinear { vertical-align:super ; font-size:.7em ; color: gray}
+.add-supralinear, .margin-supralinear { color: gray}
 
-.sup { vertical-align:super ; font-size:.7em }
+.sup, .supralinear { vertical-align:super ; font-size:.7em }
 
-.add-bottomCenter, .margin-bottomCenter { position: relative ; left: 50% ; right: 50% ; text-align: center ; color: gray }
+.add-bottomCenter { position: relative ; left: 50% ; right: 50% ; text-align: center ; color: gray }
+.margin-bottomCenter { position: relative ; left: 50% ; right: 50% ; text-align: center }
 
-.add-bottomLeft, .add-marginLeft { position: absolute ; left: -60 ; color: gray }
+.add-bottomLeft { position: absolute ; left: -60 ; color: gray }
+.add-marginLeft { position: absolute ; left: -60 }
 
-.margin-bottomLeft, .margin-marginLeft { position: absolute ; left: 70 ; color: gray }
+.margin-bottomLeft, .margin-marginLeft { position: absolute ; left: 70 }
 
-.add-marginRight, .margin-marginRight { position: absolute ; right: -100px ; color: gray }
+.add-marginRight { position: absolute ; right: -100px ; color: gray }
+.margin-marginRight { position: absolute ; right: -100px }
 
 .topCenter, .center, .bottomCenter { position: relative ; left: 50% ; right: 50% ; text-align: center}
 
@@ -222,7 +226,6 @@
 .puncelev { line-height: 1.2 }
 
 .descTab { border: 1px solid black ; }
-
 
 
 
