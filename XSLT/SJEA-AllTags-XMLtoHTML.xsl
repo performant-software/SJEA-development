@@ -369,7 +369,7 @@
         
         <!--dg: create <img> tags instead of <a> tags for the images. This shows the manuscript page -->
         <!--    as a thumbnail and matches the wireframes we have provided Tim for review.           -->
-        <img src='{$imgName}' class="image"></img>
+        <a href="{concat('/',concat(@entity, '-image.html'))}" target="_blank"><img src='{$imgName}' class="image"></img></a>
     </xsl:template>
     
     
