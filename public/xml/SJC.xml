@@ -5,7 +5,7 @@
         <fileDesc>
             <titleStmt>
                 <title>The Siege of Jerusalem Electronic Archive</title>
-                <title>MsA</title>
+                <title>MS C</title>
                 <author>Anonymous</author>
                 <editor>
                     <persName xml:id="stinson">
@@ -28,7 +28,7 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <!-- Check Tim's CD for this information. -->
+                    
                     <msIdentifier>
                         <country>United Kingdom</country>
                         <settlement>London</settlement>
@@ -99,7 +99,7 @@
                     <fw type="runningHead" place="topCenter">† The Sege of ier<expan>usa</expan>l<expan>e</expan>m †</fw>
                     <l xml:id="C.0001" n="HL.0001">
                         <seg type="averse">
-                            <seg ana="#Xn">?n</seg>
+                            <seg ana="#In"><supplied reason="guideletter">I</supplied>n<note>A guideletter for an initial <hi rend="italic">I</hi> is in the left margin, and a space two lines in height was left for it, but the letter was never realized.</note></seg>
                             <seg ana="#tyberyus">Tyberyus</seg>
                             <seg ana="#tyme">tyme</seg>
                         </seg>
@@ -2558,7 +2558,7 @@
                             <seg ana="#iudas">Iudas</seg>
                             <seg ana="#that">that</seg>
                             <choice>
-                                <abbr>Ihu˜</abbr>
+                                <abbr>Ihu&#x02DC;</abbr>
                                 <expan>
                                     <seg ana="#iesu">Iesu</seg>
                                 </expan>
@@ -2781,10 +2781,11 @@
                     </l>
                     
                     <milestone n="113r" unit="fol." entity="C113r"/>
-                    <note place="unspecified">Although the foliation numbering is continuous, i.e. 113r follows 112v, a leaf is missing between these two folios.  This leaf contained the portion of the text covered in HL lines 167-248.</note>
+                    
                     <fw type="runningHead" place="topCenter">† Of <seg type="punct">.</seg> Ier<expan>usa</expan>l<expan>e</expan>m †</fw>
                     <l xml:id="C.0239" n="HL.0249">
                         <seg type="averse">
+                            <note place="unspecified">Although the foliation numbering is continuous, i.e., 113r follows 112v, a leaf is missing between these two folios. This leaf contained the portion of the text covered in HL lines 167-248. The line numbering for MS C here jumps from line 166 to line 239 to account for the missing leaf. Although HL contains 82 lines in this section, only 80 lines have been skipped in numbering MS C, as this is the number of lines attested by MSS UDE through the same portion of the poem and MS C agrees strongly with UDE in HL lines 1-166 and 249-82 (see HL pp. lx-lxii).</note>
                             <seg ana="#loo">Loo</seg>
                             <seg ana="#lordynges">lordynges</seg>
                             <seg ana="#here">here</seg>
@@ -2795,7 +2796,6 @@
                             <seg ana="#lykenes">lykenes</seg>
                             <seg ana="#of">of</seg>
                             <seg ana="#cryste">cryste</seg>
-                            <note place="unspecified">The line numbering for MS C here jumps from line 166 to line 239.  This is to account for the missing leaf containg HL lines 167-248.  Although HL contains 82 lines in this section, I only skip 80 lines in numbering MS C, as this is the number of lines attested by MSS UDE through the same portion of the poem.  Because MS C agrees strongly with UDE in HL lines 1-166 and 249-82 (see HL pp. lx-lxii), this seems the best guideline for numbering the missing lines from MS C.</note>
                         </seg>
                     </l>
 
@@ -3725,7 +3725,7 @@
                             <seg ana="#iewe">Iewe</seg>
                             <seg ana="#for">for</seg>
                             <choice>
-                                <abbr>Ihc˜</abbr>
+                                <abbr>Ihc&#x02DC;</abbr>
                                 <expan>
                                     <seg ana="#iesus">Iesus</seg>
                                 </expan>
@@ -4501,7 +4501,7 @@
                             <seg ana="#iewes">Iewes</seg>
                             <seg ana="#for">for</seg>
                             <choice>
-                                <abbr>Ihu˜</abbr>
+                                <abbr>Ihu&#x02DC;</abbr>
                                 <expan>
                                     <seg ana="#iesu">Iesu</seg>
                                 </expan>
@@ -5832,7 +5832,7 @@
                             <seg ana="#iosaphat">Iosaphat</seg>
                             <seg ana="#þer">þer</seg>
                             <choice>
-                                <abbr>Ihc˜</abbr>
+                                <abbr>Ihc&#x02DC;</abbr>
                                 <expan>
                                     <seg ana="#iesus">Iesus</seg>
                                 </expan>
@@ -10861,7 +10861,7 @@
                             <seg ana="#þey">þey</seg>
                             <seg ana="#to">to</seg>
                             <choice>
-                                <abbr>Ihu˜</abbr>
+                                <abbr>Ihu&#x02DC;</abbr>
                                 <expan>
                                     <seg ana="#iesu">Iesu</seg>
                                 </expan>
@@ -21154,7 +21154,7 @@
                     <l xml:id="C.1292" n="HL.1340.1">
                         <seg type="averse">
                             <choice>
-                                <abbr>Ihu˜</abbr>
+                                <abbr>Ihu&#x02DC;</abbr>
                                 <expan>
                                     <seg ana="#iesu">Iesu</seg>
                                 </expan>

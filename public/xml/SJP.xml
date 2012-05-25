@@ -4,7 +4,7 @@
         <fileDesc>
             <titleStmt>
                 <title>The Siege of Jerusalem Electronic Archive</title>
-                <title>MsA</title>
+                <title>MS P</title>
                 <author>Anonymous</author>
                 <editor>
                     <persName xml:id="stinson">
@@ -27,7 +27,7 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <!-- Check Tim's CD for this information. -->
+                    
                     <msIdentifier>
                         <country>United States</country>
                         <settlement>Princeton</settlement>
@@ -2364,8 +2364,10 @@
                             <seg ana="#iudas"><hi rend="tr">I</hi>udas</seg>
                             <seg ana="#þat">þat</seg>
                             <choice>
-                                <abbr>Ihu˜</abbr>
-                                <seg ana="#iesu"/>
+                                <abbr>Ihu&#x02DC;</abbr>
+                                <expan>
+                                    <seg ana="#iesu">Iesu</seg>
+                                </expan>
                             </choice>
                         </seg>
                         <seg type="bverse">
@@ -4197,14 +4199,15 @@
                             <seg ana="#þai">þai</seg>
                             <seg ana="#on">on</seg>
                             <seg ana="#crosse">crosse</seg>
-                            <seg ana="#slyuyg">slyuyg</seg>
-                            <note type="textual" place="unspecified">It is difficult to make sense of <hi rend="it">slyuyg</hi>; it is not only nonsensical, but the final <hi rend="it">g</hi> seems ill-formed.  HL have <hi rend="it">slynge?</hi>, but this does not seem possible.  All other MSS read <hi rend="it">slowen</hi>.</note>
+                            <seg ana="#slyuyg">slyuyg<note>It is difficult to make sense of <hi rend="it">slyuyg</hi>; it is not only nonsensical, but the final <hi rend="it">g</hi> seems ill-formed.  HL have <hi rend="it">slynge?</hi>, but this does not seem possible.  All other MSS read <hi rend="it">slowen</hi>.</note></seg>
                         </seg></l>
 
                     <l xml:id="P.0261" n="HL.0273"><seg type="averse">
-                            <seg ana="#þe"><hi rend="tr">þ</hi>e</seg>
-                            <seg ana="#tane">tane</seg>
-                            <note type="lexical" place="unspecified">This should be read <hi rend="it">þet ane</hi></note>
+                           <choice> 
+                               <orig><hi rend="tr">þ</hi>e tane</orig>
+                               <reg><seg ana="#þet"><hi rend="tr">þ</hi>et</seg>
+                               <seg ana="#ane">ane</seg></reg>
+                           </choice>
                             <seg ana="#waspasian">waspasian</seg>
                             <seg ana="#was">was</seg>
                         </seg> ·̒ <seg type="bverse">
@@ -4689,8 +4692,10 @@
                             <seg ana="#þe">þe</seg>
                             <seg ana="#for">for</seg>
                             <choice>
-                                <abbr>Ihu˜</abbr>
-                                <seg ana="#iesu"/>
+                                <abbr>Ihu&#x02DC;</abbr>
+                                <expan>
+                                    <seg ana="#iesu">Iesu</seg>
+                                </expan>
                             </choice>
                             <seg ana="#sake">sake</seg>
                         </seg>
@@ -5346,8 +5351,10 @@
                             <seg ana="#iues"><hi rend="tr">I</hi>ues</seg>
                             <seg ana="#for">for</seg>
                             <choice>
-                                <abbr>Ihu˜</abbr>
-                                <seg ana="#iesu"/>
+                                <abbr>Ihu&#x02DC;</abbr>
+                                <expan>
+                                    <seg ana="#iesu">Iesu</seg>
+                                </expan>
                             </choice>
                         </seg>
                         <seg type="bverse">
@@ -6333,8 +6340,10 @@
                             <seg ana="#iosaphath">Iosaphath</seg>
                             <seg ana="#þar">þar</seg>
                             <choice>
-                                <abbr>Ihu˜</abbr>
-                                <seg ana="#iesu"/>
+                                <abbr>Ihu&#x02DC;</abbr>
+                                <expan>
+                                    <seg ana="#iesu">Iesu</seg>
+                                </expan>
                             </choice>
                         </seg>
                         <seg type="bverse">

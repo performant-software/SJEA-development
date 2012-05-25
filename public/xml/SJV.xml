@@ -4,7 +4,7 @@
         <fileDesc>
             <titleStmt>
                 <title>The Siege of Jerusalem Electronic Archive</title>
-                <title>MsA</title>
+                <title>MS V</title>
                 <author>Anonymous</author>
                 <editor>
                     <persName xml:id="stinson">
@@ -27,7 +27,7 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <!-- Check Tim's CD for this information. -->
+                    
                     <msIdentifier>
                         <country>United Kingdom</country>
                         <settlement>London</settlement>
@@ -2650,7 +2650,7 @@
 
                     <l xml:id="V.0152" n="HL.1117">
                         <seg type="averse">
-                            <seg ana="#vc">v<add place="supralinear">C</add></seg>
+                            <seg ana="#vc">v<hi rend="supralinear">C</hi></seg>
                             <seg ana="#fightande">fightande</seg>
                             <seg ana="#men">men</seg>
                         </seg>
@@ -3611,7 +3611,7 @@
 
                     <l xml:id="V.0209" n="HL.1175">
                         <seg type="averse">
-                            <seg ana="#xic">xi<add place="supralinear">C</add></seg>
+                            <seg ana="#xic">xi<hi rend="supralinear">C</hi></seg>
                             <seg ana="#thousande">thousande</seg>
                             <seg ana="#of">of</seg>
                             <seg ana="#iewes">Iewes</seg>
@@ -4061,7 +4061,7 @@
                     <l xml:id="V.0236" n="HL.1202">
                         <seg type="averse">
                             <seg ana="#þe">þ<expan>e</expan></seg>
-                            <seg ana="#vije">vij<add place="supralinear">e</add></seg>
+                            <seg ana="#vije">vij<hi rend="supralinear">e</hi></seg>
                         </seg>
                         <seg type="punct">.</seg>
                         <seg type="bverse">
@@ -5754,7 +5754,7 @@
                     <l xml:id="V.0337" n="HL.1307">
                         <seg type="averse">
                             <seg ana="#for">For</seg>
-                            <seg ana="#xxxti">xxx<add place="supralinear">ti</add></seg>
+                            <seg ana="#xxxti">xxx<hi rend="supralinear">ti</hi></seg>
                             <seg ana="#pens">pens</seg>
                             <seg ana="#in">in</seg>
                             <seg ana="#a">a</seg>
@@ -5963,7 +5963,9 @@
                         <seg type="averse">
                             <seg ana="#ay">Ay</seg>
                             <seg ana="#for">for</seg>
-                            <seg ana="#id">I<add place="supralinear">d</add></seg>
+                            <seg ana="#i">I</seg>
+                            <seg ana="d">d</seg>
+                            <seg type="punct">.</seg>
                             <seg ana="#of">of</seg>
                             <seg ana="#price">price</seg>
                         </seg>
@@ -5977,7 +5979,7 @@
 
                     <l xml:id="V.0350" n="HL.1320">
                         <seg type="averse">
-                            <seg ana="#xxxti">xxx<add place="supralinear">ti</add></seg>
+                            <seg ana="#xxxti">xxx<hi rend="supralinear">ti</hi></seg>
                             <seg ana="#iewes">Iewes</seg>
                             <seg ana="#in">in</seg>
                             <orig>athrume</orig>

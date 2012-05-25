@@ -4,7 +4,7 @@
         <fileDesc>
             <titleStmt>
                 <title>The Siege of Jerusalem Electronic Archive</title>
-                <title>MsA</title>
+                <title>MS U</title>
                 <author>Anonymous</author>
                 <editor>
                     <persName xml:id="stinson">
@@ -27,7 +27,7 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <!-- Check Tim's CD for this information. -->
+                    
                     <msIdentifier>
                         <country>United Kingdom</country>
                         <settlement>Cambridge</settlement>
@@ -5118,10 +5118,10 @@
                             <seg ana="#iew">iew</seg>
                             <seg ana="#for">for</seg>
                             <choice>
-                                <abbr>Ihu&#732;</abbr>
-                                <seg ana="#iesu">
-                                    <expan>Iesu</expan>
-                                </seg>
+                                <abbr>Ihu&#x02DC;</abbr>
+                                <expan>
+                                    <seg ana="#iesu">Iesu</seg>
+                                </expan>
                             </choice>
                             <seg ana="#sake">sake</seg>
                         </seg>
@@ -5860,10 +5860,10 @@
                             <seg ana="#iewes">Iewes</seg>
                             <seg ana="#for">for</seg>
                             <choice>
-                                <abbr>ihu&#732;</abbr>
-                                <seg ana="#iesu">
-                                    <expan>iesu</expan>
-                                </seg>
+                                <abbr>Ihu&#x02DC;</abbr>
+                                <expan>
+                                    <seg ana="#iesu">Iesu</seg>
+                                </expan>
                             </choice>
                         </seg>
                         <seg type="punct">/</seg>
@@ -5887,10 +5887,10 @@
                         <seg type="bverse">
                             <seg ana="#that">that</seg>
                             <choice>
-                                <abbr>ihu&#732;</abbr>
-                                <seg ana="#iesu">
-                                    <expan>iesu</expan>
-                                </seg>
+                                <abbr>Ihu&#x02DC;</abbr>
+                                <expan>
+                                    <seg ana="#iesu">Iesu</seg>
+                                </expan>
                             </choice>
                             <seg ana="#betraied">betraied</seg>
                         </seg>
@@ -7189,7 +7189,12 @@
                             <seg ana="#of">Of</seg>
                             <seg ana="#iosaphat">Iosaphat</seg>
                             <seg ana="#ther">ther</seg>
-                            <seg ana="#ihciesus">ihc<expan>Iesus</expan></seg>
+                            <choice>
+                                <abbr>Ihc&#x02DC;</abbr>
+                                <expan>
+                                    <seg ana="#iesus">Iesus</seg>
+                                </expan>
+                            </choice>
                         </seg>
                         <seg type="punct">/</seg>
                         <seg type="bverse">
@@ -19844,7 +19849,7 @@
                         </seg>
                     </l>
 
-                    <l xml:id="U.1142" n="HL.1201">
+                    <l xml:id="U.1142" n="HL1201">
                         <seg type="averse">
                             <seg ana="#he">he</seg>
                             <seg ana="#slougħ">slougħ</seg>
@@ -21956,7 +21961,12 @@
                 </div2>
                     
                     <trailer place="bottomCenter">
-                        <hi rend="BinR"><choice><abbr>ihu&#732;</abbr><expan>iesu</expan></choice> ioyne hem and vs / witħ ioye in his blisse</hi>
+                        <hi rend="BinR"><choice>
+                            <abbr>Ihu&#x02DC;</abbr>
+                            <expan>
+                                <seg ana="#iesu">Iesu</seg>
+                            </expan>
+                        </choice> ioyne hem and vs / witħ ioye in his blisse</hi>
                     </trailer>
                     <trailer place="bottomCenter">
                         <hi rend="BinR">And to wele hem wysse / that reden this geste</hi>

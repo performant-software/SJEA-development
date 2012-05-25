@@ -5,7 +5,7 @@
         <fileDesc>
             <titleStmt>
                 <title>The Siege of Jerusalem Electronic Archive</title>
-                <title>MsA</title>
+                <title>MS A</title>
                 <author>Anonymous</author>
                 <editor>
                     <persName xml:id="stinson">
@@ -1236,8 +1236,7 @@
 
                     <l xml:id="A.0077" n="HL.0081">
                         <seg type="averse">
-                            <seg ana="#titt">Titt</seg>
-                            <note place="unspecified">Hanna-Lawton record this in their apparatus as <hi rend="it">Till</hi>.</note>
+                            <seg ana="#titt">Titt<note place="unspecified">Hanna-Lawton record this in their apparatus as <hi rend="it">Till</hi>.</note></seg>
                             <seg ana="#þay">þay</seg>
                             <seg ana="#tuke">tuke</seg>
                             <seg ana="#thaym">thaym</seg>
@@ -1372,8 +1371,7 @@
 
                     <l xml:id="A.0085" n="HL.0088">
                         <seg type="averse">
-                            <seg ana="#than">than</seg>
-                            <note place="unspecified"><hi rend="it">than</hi> has been altered, but it is unclear exactly what was done to it or the motivation for the changes.  The <hi rend="it">n</hi> appears to have been struck through and then a macron placed above it and the <hi rend="it">a</hi> adjacent to it, which would then simply expand back to <hi rend="it">tha<expan>n</expan></hi>.</note>
+                            <seg ana="#than">than<note place="unspecified"><hi rend="it">than</hi> has been altered, but it is unclear exactly what was done to it or the motivation for the changes.  The <hi rend="it">n</hi> appears to have been struck through and then a macron placed above it and the <hi rend="it">a</hi> adjacent to it, which would then simply expand back to <hi rend="it">tha<expan>n</expan></hi>.</note></seg>
                             <seg ana="#ałłe">ałłe</seg>
                             <seg ana="#the">the</seg>
                             <seg ana="#golde">golde</seg>
@@ -1837,7 +1835,9 @@
                             <seg type="punct">.</seg>
                             <seg ana="#ne">ne</seg>
                             <seg ana="#made">made</seg>
-                        </seg> : <seg type="bverse">
+                        </seg>
+                        <seg type="punct">:</seg>
+                        <seg type="bverse">
                             <seg ana="#bot">bot</seg>
                             <seg ana="#mene">mene</seg>
                             <seg ana="#fro">fro</seg>
@@ -1883,7 +1883,9 @@
                             <seg ana="#was">was</seg>
                             <seg ana="#the">the</seg>
                             <seg ana="#sone">sone</seg>
-                        </seg> : <seg type="bverse">
+                        </seg>
+                        <seg type="punct">:</seg>
+                        <seg type="bverse">
                             <seg ana="#als">als</seg>
                             <seg ana="#was">was</seg>
                             <seg ana="#the">the</seg>
@@ -1914,7 +1916,9 @@
                             <seg ana="#es">es</seg>
                             <seg ana="#the">the</seg>
                             <seg ana="#sonne">so<expan>n</expan>ne</seg>
-                        </seg> . <seg type="bverse">
+                        </seg>
+                        <seg type="punct">.</seg>
+                        <seg type="bverse">
                             <seg ana="#that">that</seg>
                             <seg ana="#sent">sent</seg>
                             <seg ana="#was">was</seg>
@@ -1928,7 +1932,9 @@
                             <seg ana="#carefułł">carefułł</seg>
                             <seg ana="#manes">manes</seg>
                             <seg ana="#kynde">kynde</seg>
-                        </seg> . <seg type="bverse">
+                        </seg>
+                        <seg type="punct">.</seg>
+                        <seg type="bverse">
                             <seg ana="#of">of</seg>
                             <seg ana="#a">a</seg>
                             <seg ana="#clene">clene</seg>
@@ -2074,7 +2080,9 @@
                             <seg ana="#he">he</seg>
                             <seg ana="#mirakiłłs">Mirakiłłs</seg>
                             <seg ana="#maa">maa</seg>
-                        </seg> . <seg type="bverse">
+                        </seg>
+                        <seg type="punct">.</seg>
+                        <seg type="bverse">
                             <seg ana="#than">than</seg>
                             <seg ana="#i">I</seg>
                             <seg ana="#in">in</seg>
@@ -2103,8 +2111,7 @@
                     <l xml:id="A.0130" n="HL.0133">
                         <seg type="averse">
                             <seg ana="#fyve">Fyve</seg>
-                            <seg ana="#thowsaundez">thowsau<expan>n</expan>dez</seg>
-                            <note place="unspecified"><hi rend="it">thowsau<expan>n</expan>dez</hi> seems to be the original scribal spelling, but it looks as if someone, perhaps Thornton himself, later altered the first minim in the <hi rend="it">u</hi> to create a poorly formed <hi rend="it">a</hi>, which would result in a nonsensical spelling.</note>
+                            <seg ana="#thowsaundez">thowsau<expan>n</expan>dez<note place="unspecified"><hi rend="it">thowsau<expan>n</expan>dez</hi> seems to be the original scribal spelling, but it looks as if someone, perhaps Thornton himself, later altered the first minim in the <hi rend="it">u</hi> to create a poorly formed <hi rend="it">a</hi>, which would result in a nonsensical spelling.</note></seg>
                             <seg ana="#of">of</seg>
                             <seg ana="#folke">folke</seg>
                         </seg>
@@ -2306,7 +2313,9 @@
                             <seg type="punct">:</seg>
                             <seg ana="#and">and</seg>
                             <seg ana="#ioħn">Ioħn</seg>
-                        </seg> : <seg type="bverse">
+                        <seg type="punct">:</seg>
+                        </seg>
+                        <seg type="bverse">
                             <seg ana="#and">and</seg>
                             <seg ana="#iacob">Iacob</seg>
                             <seg ana="#the">the</seg>
@@ -2444,7 +2453,7 @@
                             </seg>
                             <seg ana="#þat">þat</seg>
                             <choice>
-                                <abbr>Ihu˜</abbr>
+                                <abbr>Ihu&#x02DC;</abbr>
                                 <expan>
                                     <seg ana="#iesu">Iesu</seg>
                                 </expan>
@@ -3157,8 +3166,7 @@
                         </seg>
                         <seg type="bverse">
                             <seg ana="#to">to</seg>
-                            <seg ana="#buredieux">buredieux</seg>
-                            <note place="unspecified">The <hi rend="it">u</hi> in <hi rend="it">buredieux</hi> is oddly written.  It appears that Thornton began to write <hi rend="it">x</hi>, then corrected the letter to <hi rend="it">u</hi></note>
+                            <seg ana="#buredieux">buredieux<note place="unspecified">The <hi rend="it">u</hi> in <hi rend="it">buredieux</hi> is oddly written.  It appears that Thornton began to write <hi rend="it">x</hi>, then corrected the letter to <hi rend="it">u</hi></note></seg>
                             <seg ana="#anone">anone</seg>
                         </seg>
                     </l>
@@ -4654,8 +4662,7 @@
                             <seg ana="#flete">flete</seg>
                         </seg>
                         <seg type="bverse">
-                            <seg ana="#fercostes">Fercostes</seg>
-                            <note place="unspecified">There is an apostrophe above <hi rend="it">Fercostes</hi>, but it is unclear what is intended by it.</note>
+                            <seg ana="#fercostes">Fercostes<note place="unspecified">There is an apostrophe above <hi rend="it">Fercostes</hi>, but it is unclear what is intended by it.</note></seg>
                             <seg ana="#fułł">fułł</seg>
                             <seg ana="#many">many</seg>
                         </seg>
@@ -4692,8 +4699,7 @@
                     <l xml:id="A.0287" n="HL.0292">
                         <seg type="averse">
                             <seg ana="#alle">alle</seg>
-                            <seg ana="#abowtte">abowtte</seg>
-                            <note place="unspecified">The first <hi rend="it">t</hi> in <hi rend="it">abowtte</hi> seems written over an <hi rend="it">o</hi> or vice versa.  It is impossible to tell which was written first, but <hi rend="it">abowtte</hi> is the more plausible of the two possible spellings from this alteration.</note>
+                            <seg ana="#abowtte">abowtte<note place="unspecified">The first <hi rend="it">t</hi> in <hi rend="it">abowtte</hi> seems written over an <hi rend="it">o</hi> or vice versa.  It is impossible to tell which was written first, but <hi rend="it">abowtte</hi> is the more plausible of the two possible spellings from this alteration.</note></seg>
                             <seg ana="#one">one</seg>
                             <seg ana="#the">the</seg>
                             <seg ana="#brode">brode</seg>
@@ -4707,10 +4713,11 @@
                     </l>
 
                     <milestone n="54r" unit="fol." entity="A054r"/>
-                    <note place="unspecified">Although the foliation numbering is continuous, i.e. 54r follows 53v, a leaf is missing between these two folios.  This leaf contained the portion of the text covered in HL lines 293-369.</note>
+                    
 
                     <l xml:id="A.0361" n="HL.0370">
                         <seg type="averse">
+                            <note place="unspecified">Although the foliation numbering is continuous, i.e., 54r follows 53v, a leaf is missing between these two folios. This leaf contained the portion of the text covered in HL lines 293-369. The line numbering for MS A here jumps from line 288 to line 365 to account for the estimated number of missing lines.</note>
                             <seg ana="#ne">Ne</seg>
                             <seg ana="#noghte">noghte</seg>
                             <seg ana="#drede">drede</seg>
@@ -4723,8 +4730,7 @@
                             <seg ana="#dede">dede</seg>
                             <seg ana="#hafe">hafe</seg>
                             <seg ana="#thaye">thaye</seg>
-                            <seg ana="#ettyllede">Ettyllede</seg>
-                            <note place="unspecified">The line numbering for MS A here jumps from line 288 to line 365.  This is to account for the missing leaf containg HL lines 293-369.  There is, of course, no way to be certain of the exact number of lines that the missing leaf contained, but assuming that the passage in MS A was complete through this portion of the poem with the exception of HL 317-320, lines unique to MS L, 73 lines would be missing.  I have therefore chosen to skip this number of lines in my numeration.</note>
+                            <seg ana="#ettyllede">Ettyllede</seg> 
                         </seg>
                     </l>
 
@@ -5563,7 +5569,7 @@
                             <seg ana="#iosaphat">Iosaphat</seg>
                             <seg ana="#there">there</seg>
                             <choice>
-                                <abbr>Ihu˜</abbr>
+                                <abbr>Ihu&#x02DC;</abbr>
                                 <expan>
                                     <seg ana="#iesu">Iesu</seg>
                                 </expan>
@@ -6577,8 +6583,7 @@
                             <seg ana="#appon">appon</seg>
                             <seg ana="#ӡone">ӡone</seg>
                             <seg ana="#faytheles">faytheles</seg>
-                            <del rend="linedThrough" status="unremarkable">ferl</del>
-                            <note place="unspecified">This word is difficult to make out due to it being lined through; the spelling may be <hi rend="it">forl</hi>.</note>
+                            <del rend="linedThrough" status="unremarkable">ferl<note place="unspecified">This word is difficult to make out due to it being lined through; the spelling may be <hi rend="it">forl</hi>.</note></del>
                             <seg ana="#folke">folke</seg>
                         </seg>
                         <seg type="bverse">
@@ -7035,7 +7040,9 @@
                             <seg ana="#lowttede">lowttede</seg>
                             <seg ana="#hym">hym</seg>
                             <seg ana="#ałłe">ałłe</seg>
-                        </seg> . <seg type="bverse">
+                        </seg> 
+                        <seg type="punct">.</seg>
+                        <seg type="bverse">
                             <seg ana="#and">and</seg>
                             <seg ana="#one">one</seg>
                             <seg ana="#lowde">lowde</seg>
@@ -7291,8 +7298,7 @@
                     <l xml:id="A.0520" n="HL.0540">
                         <seg type="averse">
                             <seg ana="#downe">downe</seg>
-                            <seg ana="#sweyande">sweyande</seg>
-                            <note place="unspecified">A mark shaped like the letter <hi rend="it">c</hi> appears above the <hi rend="it">y</hi> in <hi rend="it">sweyande</hi>.  Hanna-Lawton suggest that the word may be altered from <hi rend="it">swew-</hi>, but it is difficult to see how a second <hi rend="it">w</hi> could be interoreted from this.  Cf. line 667, where there is a similar mark above the word <hi rend="it">care</hi>.</note>
+                            <seg ana="#sweyande">sweyande<note place="unspecified">A mark shaped like the letter <hi rend="it">c</hi> appears above the <hi rend="it">y</hi> in <hi rend="it">sweyande</hi>.  Hanna-Lawton suggest that the word may be altered from <hi rend="it">swew-</hi>, but it is difficult to see how a second <hi rend="it">w</hi> could be interoreted from this.  Cf. line 667, where there is a similar mark above the word <hi rend="it">care</hi>.</note></seg>
                             <seg ana="#one">one</seg>
                             <seg ana="#swelte">swelte</seg>
                         </seg>
@@ -8256,8 +8262,7 @@
                         <seg type="bverse">
                             <seg ana="#ware">ware</seg>
                             <seg ana="#fallyn">fallyn</seg>
-                            <seg ana="#so">so</seg>
-                            <note place="unspecified">It appears that Thornton began another letter form, perhaps a <hi rend="it">t</hi> in anticipation of the next word, <hi rend="it">thikke</hi>, and then converted it to a sigma <hi rend="it">s</hi>.</note>
+                            <seg ana="#so">so<note place="unspecified">It appears that Thornton began another letter form, perhaps a <hi rend="it">t</hi> in anticipation of the next word, <hi rend="it">thikke</hi>, and then converted it to a sigma <hi rend="it">s</hi>.</note></seg>
                             <seg ana="#thikke">thikke</seg>
                         </seg>
                     </l>
@@ -8501,8 +8506,7 @@
                         </seg>
                         <seg type="bverse">
                             <seg ana="#and">and</seg>
-                            <seg ana="#loukes">l<add place="inline">o</add>ukes</seg>
-                            <note place="unspecified">The <hi rend="it">o</hi> is added by means of a carat below the line and a small letter <hi rend="it">o</hi> squeezed into the lobe of the <hi rend="it">l</hi>.</note>
+                            <seg ana="#loukes">l<add place="inline">o</add>ukes<note place="unspecified">The <hi rend="it">o</hi> is added by means of a carat below the line and a small letter <hi rend="it">o</hi> squeezed into the lobe of the <hi rend="it">l</hi>.</note></seg>
                             <seg ana="#to">to</seg>
                             <seg ana="#the">the</seg>
                             <seg ana="#ӡatis">ӡatis</seg>
@@ -9612,8 +9616,7 @@
                             <seg ana="#cursede">cursede</seg>
                             <seg ana="#folke">folke</seg>
                             <seg ana="#for-to">for<seg type="shadowHyphen">-</seg>to</seg>
-                            <seg ana="#care">care</seg>
-                            <note place="unspecified">A mark shaped like the letter <hi rend="it">c</hi> appears above the <hi rend="it">c</hi> in <hi rend="it">care</hi>.  Cf. line 520, where there is a similar mark above the word <hi rend="it">sweyande</hi>.</note>
+                            <seg ana="#care">care<note place="unspecified">A mark shaped like the letter <hi rend="it">c</hi> appears above the <hi rend="it">c</hi> in <hi rend="it">care</hi>.  Cf. line 520, where there is a similar mark above the word <hi rend="it">sweyande</hi>.</note></seg>
                         </seg>
                         <seg type="bverse">
                             <seg ana="#þat">þat</seg>
@@ -9865,8 +9868,7 @@
                         </seg>
                         <seg type="bverse">
                             <seg ana="#tiłł">tiłł</seg>
-                            <del rend="linedThrough" status="unremarkable">ch</del>
-                            <note place="unspecified">The <hi rend="it">h</hi> was not fully formed before the letters were lined through.</note>
+                            <del rend="linedThrough" status="unremarkable">ch<note place="unspecified">The <hi rend="it">h</hi> was not fully formed before the letters were lined through.</note></del>
                             <seg ana="#cayphas">cayphas</seg>
                             <seg ana="#thees">thees</seg>
                         </seg>
@@ -11649,8 +11651,7 @@
                         <seg type="averse">
                             <seg ana="#waspasyane">waspasyane</seg>
                             <seg ana="#was">was</seg>
-                            <del rend="subpunction" hand="hand1">wo</del>
-                            <note place="unspecified">In addition to being subpuncted, it appears that perhaps <hi rend="it">wo</hi> is writen over another character.</note>
+                            <del rend="subpunction" hand="hand1">wo<note place="unspecified">In addition to being subpuncted, it appears that perhaps <hi rend="it">wo</hi> is writen over another character.</note></del>
                             <seg ana="#wondyde">wondyde</seg>
                         </seg>
                         <seg type="bverse">
@@ -12407,8 +12408,7 @@
                             <seg ana="#one">one</seg>
                             <seg ana="#his">his</seg>
                             <seg ana="#beste">beste</seg>
-                            <seg ana="#wiesse">wiesse</seg>
-                            <note place="unspecified">The first <hi rend="it">s</hi> in <hi rend="it">wiesse</hi> is written over another character, perhaps an <hi rend="it">e</hi> or a sigma <hi rend="it">s</hi>.</note>
+                            <seg ana="#wiesse">wiesse<note place="unspecified">The first <hi rend="it">s</hi> in <hi rend="it">wiesse</hi> is written over another character, perhaps an <hi rend="it">e</hi> or a sigma <hi rend="it">s</hi>.</note></seg>
                         </seg>
                         <seg type="bverse">
                             <seg ana="#scholde">scholde</seg>
@@ -15218,8 +15218,7 @@
                         </seg>
                         <seg type="bverse">
                             <seg ana="#that">that</seg>
-                            <seg ana="#surgoone">Surgoone</seg>
-                            <note place="unspecified">A ligature has been drawn connected the two <hi rend="it">o</hi>'s in <hi rend="it">Surgoone</hi>.</note>
+                            <seg ana="#surgoone">Surgoone<note place="unspecified">A ligature has been drawn connected the two <hi rend="it">o</hi>'s in <hi rend="it">Surgoone</hi>.</note></seg>
                             <seg ana="#was">was</seg>
                             <seg ana="#nobiłłe">nobiłłe</seg>
                         </seg>
@@ -15406,8 +15405,7 @@
                             <seg ana="#ire">Ire</seg>
                         </seg>
                         <seg type="bverse">
-                            <del rend="linedThrough" hand="hand1">E</del>
-                            <note place="unspecified">It looks as if Thornton first wrote an <hi rend="it">r</hi> and then wrote an <hi rend="it">E</hi> over it before giving up, striking the characters through, and starting the word over.</note>
+                            <del rend="linedThrough" hand="hand1">E<note place="unspecified">It looks as if Thornton first wrote an <hi rend="it">r</hi> and then wrote an <hi rend="it">E</hi> over it before giving up, striking the characters through, and starting the word over.</note></del>
                             <seg ana="#etterly">Etterly</seg>
                             <seg ana="#ryses">ryses</seg>
                         </seg>
@@ -17507,9 +17505,8 @@
                             <seg ana="#now">Now</seg>
                             <seg ana="#tuke">tuke</seg>
                             <seg ana="#to">
-                                <add place="supralinear" hand="hand1"><del rend="erasure" hand="hand1">to</del></add>
+                                <add place="supralinear" hand="hand1"><del rend="erasure" hand="hand1">to<note place="unspecified">Thornton first added <hi rend="it">to</hi> between <hi rend="it">tuke</hi> and <hi rend="it">Titus</hi>, then erased it and rewrote it after <hi rend="it">Titus</hi>.</note></del></add>
                             </seg>
-                            <note place="unspecified">Thornton first added <hi rend="it">to</hi> between <hi rend="it">tuke</hi> and <hi rend="it">Titus</hi>, then erased it and rewrote it after <hi rend="it">Titus</hi>.</note>
                             <seg ana="#titus">Titus</seg>
                             <seg ana="#to">
                                 <add place="supralinear" hand="hand1">to</add>
