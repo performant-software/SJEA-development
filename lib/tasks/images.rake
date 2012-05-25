@@ -14,6 +14,9 @@ namespace :sjea do
     srcdir = "public/images"
     dstdir = "public/images"
 
+    thumb_x = 140
+    thumb_y = 165
+
     files = Dir.glob( "#{srcdir}/*.jpg" )
 
     files.each do |fname|
@@ -21,12 +24,12 @@ namespace :sjea do
       basename = fname.split( "/" )[ 2 ].gsub(/^(.*).jpg$/, '\1')
 
       # if this is not already a thumbnail...
-      if not basename =~ /175x225/
+      if not basename =~ /thumbnail/
 
-        outfile = "#{dstdir}/#{basename}-175x225.jpg"
+        outfile = "#{dstdir}/#{basename}-thumbnail.jpg"
         delete_file( outfile )
 
-        cmd = "sips -z 225 175 #{fname} --out #{outfile}"
+        cmd = "sips -z #{thumb_y} #{thumb_x} #{fname} --out #{outfile}"
         cmd_line( cmd )
 
       end
