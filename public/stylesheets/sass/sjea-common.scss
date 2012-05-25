@@ -11,6 +11,8 @@ $contentheader_background: #B3B3B3;
 $navbox_width: 180px;   // width of the main navigation box
 $navbox_height: 350px;  // hight of the main navigation box
 
+$screen_width: 1350px;
+
 * {
    margin: 0;
    padding: 0;
@@ -18,7 +20,7 @@ $navbox_height: 350px;  // hight of the main navigation box
 
 #main-header {
 
-    width: 100%;
+    width: $screen_width - 50px; // dont forget the padding...
     height: 60px;
     text-align: center;
     background-color: $title_background;
@@ -50,7 +52,7 @@ $navbox_height: 350px;  // hight of the main navigation box
 }
 
 #main-title {
-   width: 100%;
+   width: $screen_width - 250px;
    height: 30px;
    text-align: left;
    padding: 20px 0 0 250px;
@@ -109,7 +111,7 @@ $navbox_height: 350px;  // hight of the main navigation box
 }
 
 #main-footer {
-   width: 100%;
+   width: $screen_width;
    height: 50px;
    margin: 0;
    text-align: center;
