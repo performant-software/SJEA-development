@@ -350,7 +350,7 @@
         <xsl:param name="id" tunnel="yes"/>
         
         <xsl:variable name="imgName">
-            <xsl:value-of select="concat($imgpath, @entity, '-175x225.jpg')"/>
+            <xsl:value-of select="concat($imgpath, @entity, '-thumbnail.jpg')"/>
         </xsl:variable>
         
         <!--mjc: if the <milestone> is immediately followed by a <marginalia>   -->
