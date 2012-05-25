@@ -48,7 +48,7 @@
              <%= hit["title"] -%>
           </div>
           <div class="result-snippet">
-             <%= hit["highlighting"][0] -%>
+             <%= CGI::unescapeHTML(hit["highlighting"][0]) -%>
           </div>
        <%- end -%>
 
