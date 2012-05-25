@@ -4,8 +4,7 @@ gem 'rails', '3.2.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'mysql2'
+#gem 'mysql2'
 
 
 # Gems used only for assets and not required
@@ -38,8 +37,8 @@ gem 'capistrano'
 gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem 'rsolr'
-gem 'nokogiri'
 gem 'sass'
 
 gem 'execjs'
 gem 'therubyracer'
+gem 'libxml-ruby'

@@ -1,3 +1,5 @@
+require "xml"
+
 module TaskUtilities
 
 	def cmd_line(str)
@@ -111,6 +113,133 @@ module TaskUtilities
 
   def xsl_transform_cmd( xmlfile, xslfile )
     return "java -jar tools/saxonhe-9-3-0-5j/saxon9he.jar -s:#{xmlfile} -xsl:#{xslfile}"
+  end
+
+
+  def load_transcription_from_file( xmlfile )
+
+     xmldoc = XML::Reader.file( xmlfile, :options => XML::Parser::Options::NOBLANKS | XML::Parser::Options::PEDANTIC )
+
+     linecount = 0
+     pagecount = 0
+     seqtags = 0
+     pending_line_content = ""
+     hl_line = ""
+     loc_line = ""
+     page_image_file = ""
+     result = []
+
+     while xmldoc.read
+        unless xmldoc.node_type == XML::Reader::TYPE_END_ELEMENT
+
+           case xmldoc.name
+
+             # the initial tag for the start of a new page
+             when "milestone"
+
+               # always flush any pending data...
+               if pending_line_content.empty? == false
+                   abort( "hl_line empty!") unless hl_line.empty? == false
+                   abort( "loc_line empty!") unless loc_line.empty? == false
+                   abour( "page_image_file empty!") unless page_image_file.empty? == false
+
+                   result[ linecount ] = { :pageimg => page_image_file, :loc_line => loc_line, :hl_line => hl_line, :content => pending_line_content }
+                   pending_line_content = ""
+                   linecount += 1
+               end
+
+               page_image_file = xmldoc[ "entity" ]
+               pagecount += 1
+
+             when "l"
+
+               # always flush any pending data...
+               if pending_line_content.empty? == false
+                 abort( "hl_line empty!") unless hl_line.empty? == false
+                 abort( "loc_line empty!") unless loc_line.empty? == false
+                 abour( "page_image_file empty!") unless page_image_file.empty? == false
+                   result[ linecount ] = { :pageimg => page_image_file, :loc_line => loc_line, :hl_line => hl_line, :content => pending_line_content }
+                   linecount += 1
+               end
+
+                pending_line_content = xmldoc.node.content
+
+                # TODO: fix me...
+                if pending_line_content.empty? == true
+                   #puts "*********** ALERT line #{linecount} should not be empty ***********"
+                end
+
+                loc_line = xmldoc[ "xml:id" ]
+                hl_line = xmldoc[ "n" ]
+
+             # we are in a line and this is a bit of content
+             when "seg"
+
+                # sometimes there is a parent <seq> tag with no content so ignore those; they have a "type" attribute
+                if xmldoc[ "type" ] == nil
+                  pending_line_content << xmldoc.read_string << " "
+                end
+           end
+        end
+     end
+
+     # gets any remaining content that has not already been processed
+     if pending_line_content.empty? == false
+       abort( "hl_line empty!") unless hl_line.empty? == false
+       abort( "loc_line empty!") unless loc_line.empty? == false
+       abour( "page_image_file empty!") unless page_image_file.empty? == false
+        result[ linecount ] = { :pageimg => page_image_file, :loc_line => loc_line, :hl_line => hl_line, :content => pending_line_content }
+        linecount += 1
+     end
+
+     xmldoc.close
+     #puts "processed #{pagecount} pages and #{linecount} lines"
+
+     return result
+  end
+
+  def load_comparison_from_file( xmlfile )
+
+    result = []
+    linecount = 0
+    xmldoc = XML::Reader.file( xmlfile, :options => XML::Parser::Options::NOBLANKS | XML::Parser::Options::PEDANTIC )
+
+    while xmldoc.read
+       unless xmldoc.node_type == XML::Reader::TYPE_END_ELEMENT
+
+          case xmldoc.name
+            when "l"
+               trans = xmldoc[ "attr" ]
+               loc_line = xmldoc[ "line" ]
+               line_content = xmldoc.node.content
+               result[ linecount] = { :trans => trans, :loc_line => loc_line, :content => line_content }
+               linecount += 1
+
+          end
+       end
+    end
+
+    puts "processed #{linecount} lines"
+
+    xmldoc.close
+    return result
+
+  end
+
+  def load_description_from_file( xmlfile )
+
+    # TODO: implement me
+    result = []
+    return result
+
+  end
+
+  def load_annotation_from_file( xmlfile )
+
+    # TODO: implement me
+    result = []
+    return result
+
   end
 
 end

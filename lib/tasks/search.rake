@@ -1,5 +1,3 @@
-# encoding: UTF-8
-
 require "#{Rails.root}/lib/tasks/task_utilities"
 
 namespace :sjea do
@@ -12,64 +10,53 @@ namespace :sjea do
     solr = Solr.factory({ testing: false, force: true })
     solr.clear_all(false)
 
-    docname_ix = 0
-    docnames = transcript_title_list( )
+    # create a hash of names
+    docnames = Hash.new
+    filenames = transcription_file_list( )
+    titles = transcript_title_list( )
+    filenames.size.times { |ix| docnames[filenames[ix]] = titles[ix] }
 
     transcription_file_list( ).each do |fname|
 
-       puts "processing #{fname}..."
-       page_count = 0
-
        xmlfile = "XSLT/xml/#{fname}.xml"
 
-       begin
-         xmldoc = Nokogiri::XML( File.open( xmlfile ) ) { |config| config.strict }
-         rescue Nokogiri::XML::SyntaxError => e
-         puts "caught exception processing #{xmlfile}: #{e}"
-       end
-
-       # get the div with the stuff we want
-       div = xmldoc.at('div2')
-       if !div.nil?
-          nodes = div.element_children
-          #puts "standard: #{nodes.size} nodes"
-       end
-
-       # special case for one of the files
-       if div.nil?
-          nodes = xmldoc.at('div1').element_children
-         #puts "special: #{nodes.size} nodes"
-       end
+       lines = load_transcription_from_file( xmlfile )
+       puts "#{fname}: #{lines.size} lines loaded"
 
        content = ""
+       current_img_file_name = ""
+       pageuri = ""
+       imgurl = ""
+       page_count = 0
 
-       nodes.each do |xml_node|
-         #puts xml_node.name
-          case xml_node.name
-          when "l"
-             content << xml_node.content.split.join(" ") << "\n"
+       lines.each do |line|
 
-          when "milestone"
-             if !content.empty?
+          # a new page...
+          if current_img_file_name != line[:pageimg]
+            if content.empty? == false
+              solrdoc = { uri: pageuri, url: imgurl, title: docnames[fname], section: "transcriptions", content: content }
+              solr.add_object( solrdoc, 1, false )
+              page_count += 1
+            end
 
-               entity = xml_node.attribute('entity')
-               pageuri = "#{fname}-#{entity}"
-               imgurl = "/images/#{entity}"
-
-               solrdoc = { uri: pageuri, url: imgurl, title: docnames[docname_ix], section: "transcriptions", content: content }
-               solr.add_object( solrdoc, 1, false )
-               #puts "Added: [#{imgurl}]: [#{content}]"
-               #puts "***********************************************************************"
-               content = ""
-               page_count += 1
-             end
+            current_img_file_name = line[:pageimg]
+            pageuri = "#{fname}-#{current_img_file_name}"
+            imgurl = "/images/#{current_img_file_name}"
+            content = line[:content]
+          else
+            content << " " << line[:content]
           end
+
+       end
+
+       if content.empty? == false
+         solrdoc = { uri: pageuri, url: imgurl, title: docnames[fname], section: "transcriptions", content: content }
+         solr.add_object( solrdoc, 1, false )
+         page_count += 1
        end
 
        solr.commit( )
-       puts "loaded #{page_count} pages."
-       docname_ix += 1
-
+       puts "#{fname}: #{page_count} pages loaded"
     end
 
 		puts ""
