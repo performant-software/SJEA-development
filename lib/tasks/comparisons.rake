@@ -24,26 +24,21 @@ namespace :sjea do
 
       xmlfile = "XSLT/xml/#{tfilename}.xml"
 
-      puts "processing #{tfilename}..."
+      lines = load_transcription_from_file( xmlfile )
+      puts "#{tfilename}: #{lines.size} lines loaded"
 
-      begin
-        xmldoc = Nokogiri::XML( File.open( xmlfile ) ) { |config| config.strict }
-        rescue Nokogiri::XML::SyntaxError => e
-        abort "caught exception processing #{xmlfile}: #{e}"
-      end
+      lines.each do |line|
 
-      xml_lines = xmldoc.css('l')
-      xml_lines.each do |xml_line|
+        local_lnumber = line[:loc_line]
+        hl_lnumber = line[:hl_line]
+        text_line = CGI::escapeHTML( line[:content] )
 
-        local_lnumber = xml_line.attribute('id')
-        hl_lnumber = xml_line.attribute('n')
-        text_line = CGI::escapeHTML( xml_line.content.split.join(" ") )
         fname = "#{workdir}/#{hl_lnumber}.xml"
         output = "<l attr=\'#{tfilename}\' line=\'#{local_lnumber}'>#{text_line}</l>\n"
 
         # add a div tag if necessary... required for the subsequent XML parsing !!!
         if file_exists( fname ) == false
-           append_to_file( fname, "<div>" )
+           append_to_file( fname, "<div>\n" )
         end
         append_to_file( fname, output )
 
@@ -54,26 +49,21 @@ namespace :sjea do
     # close the div for each file
     files = Dir.glob( "#{workdir}/*.xml" )
     files.each do |fname|
-       append_to_file( fname, "</div>" )
+       append_to_file( fname, "</div>\n" )
     end
 
-    puts "rolling up comparisons..."
-
     files = Dir.glob( "#{workdir}/*.xml" ).sort! { |a, b| filename_sort_helper( a, b ) }
+    puts "rolling up comparisons: #{files.size} files to process..."
 
     ix = 0
     ixend = files.size() - 1
 
     files.each do |fname|
 
-       begin
-         complist = Nokogiri::XML( File.open( fname ) ) { |config| config.strict }
-         rescue Nokogiri::XML::SyntaxError => e
-         abort "caught exception processing #{fname}: #{e}"
-       end
-
+       lines = load_comparison_from_file( fname )
        outfile = targetdir + "/" + fname.split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1') + ".html"
 
+       # generate the previous and next page tags...
        if ix == 0  # first page of comparisons
           prevpage = "HL.2147.html"
           nextpage = files[ ix + 1 ].split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1') + ".html"
@@ -87,12 +77,6 @@ namespace :sjea do
 
        append_to_file( outfile, "<div id=\"previous-page\" href=\"#{prevpage}\"></div><div id=\"next-page\" href=\"#{nextpage}\"></div>\n<table id=\"compare-results\">\n" )
 
-       comparisons = complist.css('l')
-       compare_set = Hash.new( )
-       comparisons.each do |compare|
-          compare_set[ compare.attribute('attr').to_s() ] = { :line => compare.attribute('line').to_s(), :content => compare.content }
-       end
-
        alt = 0
        transcription_file_list( ).each do |tname|
 
@@ -104,10 +88,11 @@ namespace :sjea do
          end
          alt += 1
 
-         if compare_set.key?( tname )
-            compline << "<td>#{compare_set[ tname ][:line]}</td><td>(#{tname})</td><td class=\"textline\">"
-            compline << compare_set[ tname ][:content]
-            compline << "</td>\n"
+         # do we have this particular transcript
+         tx = lines.index{|l| l[:trans] == tname}
+
+         if tx != nil
+            compline << "<td>#{lines[tx][:loc_line]}</td><td>(#{tname})</td><td class=\"textline\">#{lines[tx][:content]}</td>\n"
          else
             compline << "<td></td><td>(#{tname})</td><td class=\"textline\">---- no text ----</td>\n"
          end

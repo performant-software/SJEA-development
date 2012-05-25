@@ -219,8 +219,6 @@ module TaskUtilities
        end
     end
 
-    puts "processed #{linecount} lines"
-
     xmldoc.close
     return result
 
