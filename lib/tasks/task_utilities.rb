@@ -158,16 +158,16 @@ module TaskUtilities
                  abort( "hl_line empty!") unless hl_line.empty? == false
                  abort( "loc_line empty!") unless loc_line.empty? == false
                  abour( "page_image_file empty!") unless page_image_file.empty? == false
-                   result[ linecount ] = { :pageimg => page_image_file, :loc_line => loc_line, :hl_line => hl_line, :content => pending_line_content }
-                   linecount += 1
+                 result[ linecount ] = { :pageimg => page_image_file, :loc_line => loc_line, :hl_line => hl_line, :content => pending_line_content }
+                 pending_line_content = ""
+                 linecount += 1
                end
 
-                pending_line_content = xmldoc.node.content
-
-                # TODO: fix me...
-                if pending_line_content.empty? == true
+               # TODO: fix me...
+               #pending_line_content = xmldoc.node.content
+               # if pending_line_content.empty? == true
                    #puts "*********** ALERT line #{linecount} should not be empty ***********"
-                end
+               # end
 
                 loc_line = xmldoc[ "xml:id" ]
                 hl_line = xmldoc[ "n" ]
