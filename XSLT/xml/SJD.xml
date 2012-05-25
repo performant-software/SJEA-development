@@ -4,7 +4,7 @@
         <fileDesc>
             <titleStmt>
                 <title>The Siege of Jerusalem Electronic Archive</title>
-                <title>MsA</title>
+                <title>MS D</title>
                 <author>Anonymous</author>
                 <editor>
                     <persName xml:id="stinson">
@@ -27,7 +27,7 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <!-- Check Tim's CD for this information. -->
+                    
                     <msIdentifier>
                         <country>United Kingdom</country>
                         <settlement>London</settlement>
@@ -4853,7 +4853,7 @@
                             <seg ana="#iewe">iewe</seg>
                             <seg ana="#for">for</seg>
                             <choice>
-                                <abbr>Ihu˜</abbr>
+                                <abbr>Ihu&#x02DC;</abbr>
                                 <expan>
                                     <seg ana="#iesu">Iesu</seg>
                                 </expan>
@@ -5559,7 +5559,7 @@
                             <seg ana="#iewis">Iewis</seg>
                             <seg ana="#for">for</seg>
                             <choice>
-                                <abbr>Ihs˜</abbr>
+                                <abbr>Ihs&#x02DC;</abbr>
                                 <expan>
                                     <seg ana="#iesus">Iesus</seg>
                                 </expan>
@@ -6783,7 +6783,7 @@
                             <seg ana="#iosaphatħ">Iosaphatħ</seg>
                             <seg ana="#þere">þ<expan>er</expan>e</seg>
                             <choice>
-                                <abbr>Ihu˜</abbr>
+                                <abbr>Ihu&#x02DC;</abbr>
                                 <expan>
                                     <seg ana="#iesu">Iesu</seg>
                                 </expan>
@@ -11381,9 +11381,8 @@
                     <l xml:id="D.0711" n="HL.0738">
                         <seg type="averse">
                             <seg type="punct">
-                                <supplied source="C U E">¶</supplied>
+                                <supplied source="C U E">¶<note>As described in the description for MS D, it is likely that a paraph marking indicating a passus division was present at this point and has been lost due to the drastically cropeed margin on the left side of 218v. This point corresponds to paraph markers in MSS C, U, and E, and thus a paraph marker has been supplied here.</note></supplied>
                             </seg>
-                            <note type="textual"><ref>D.711:</ref> </note>
                             <seg ana="#vaspasian">vaspasian</seg>
                             <seg ana="#liggith">liggith</seg>
                             <seg ana="#in">in</seg>
@@ -17166,7 +17165,7 @@
                 <div2 type="passus" n="8">
                     <l xml:id="D.1070" n="HL.1113">
                         <seg type="averse">
-                            <seg type="punct">¶</seg>
+                            <seg type="punct">¶<note>As noted in the manuscript description, the scribe marked this line with a passus division, but no paraph was added later.</note></seg>
                             <seg ana="#as">As</seg>
                             <seg ana="#tytus">tytus</seg>
                             <seg ana="#aftir">aftir</seg>
@@ -17421,9 +17420,7 @@
                         <seg type="bverse">
                             <seg ana="#wiþ">wiþ</seg>
                             <seg ana="#viij">viij.</seg>
-                            <seg ana="#c">
-                                <add place="supralinear">C</add>
-                            </seg>
+                            <seg ana="#c"><hi rend="supralinear">C</hi></seg>
                             <seg ana="#speris">speris</seg>
                         </seg>
                     </l>
@@ -18150,9 +18147,7 @@
                     <l xml:id="D.1131" n="HL.1175">
                         <seg type="averse">
                             <seg ana="#xj">xj</seg>
-                            <seg ana="#c">
-                                <add place="supralinear">C</add>
-                            </seg>
+                            <seg ana="#c"><hi rend="supralinear">C</hi></seg>
                             <seg ana="#mille">M<expan>i</expan>l<expan>le</expan></seg>
                         </seg>
                         <seg type="bverse">
@@ -20597,9 +20592,9 @@
                     <l xml:id="D.1285" n="HL.1340.1">
                         <seg type="averse">
                             <choice>
-                                <abbr>Ihu˜</abbr>
+                                <abbr>Ihu&#x02DC;</abbr>
                                 <expan>
-                                    <seg ana="#iesu"><hi rend="tr">I</hi>esu</seg>
+                                    <seg ana="#iesu">Iesu</seg>
                                 </expan>
                             </choice>
                             <seg ana="#ioyne">Ioyne</seg>

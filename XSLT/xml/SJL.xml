@@ -4,7 +4,7 @@
         <fileDesc>
             <titleStmt>
                 <title>The Siege of Jerusalem Electronic Archive</title>
-                <title>MsA</title>
+                <title>MS L</title>
                 <author>Anonymous</author>
                 <editor>
                     <persName xml:id="stinson">
@@ -26,7 +26,7 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <!-- Check Tim's CD for this information. -->
+                    
                     <msIdentifier>
                         <country>United Kingdom</country>
                         <settlement>Oxford</settlement>
@@ -2631,12 +2631,10 @@
                             <seg ana="#iudas">Iudas</seg>
                             <seg ana="#þat">þ<expan>a</expan>t</seg>
                             <choice>
-                                <seg ana="#ihesu">
-                                                                                <abbr>ihu˜</abbr>
-                                                                      </seg>
-                                <seg ana="#iesu">
-                                                                                <expan>iesu</expan>
-                                                                      </seg>
+                                <abbr>Ihu&#x02DC;</abbr>
+                                <expan>
+                                    <seg ana="#iesu">Iesu</seg>
+                                </expan>
                             </choice>
                             <seg ana="#crist">c<expan>ri</expan>st</seg>
                         </seg>
@@ -5146,7 +5144,12 @@
                             <seg ana="#ne">Ne</seg>
                             <seg ana="#iewe">Iewe</seg>
                             <seg ana="#for">for</seg>
-                            <seg ana="#ihciesu">ihc<expan>Iesu</expan></seg>
+                            <choice>
+                                <abbr>Ihc&#x02DC;</abbr>
+                                <expan>
+                                    <seg ana="#iesus">Iesus</seg>
+                                </expan>
+                            </choice>
                             <seg ana="#sake">sake</seg>
                         </seg>
                         <g ref="#puncelev"/>
@@ -5945,8 +5948,10 @@
                             <seg ana="#iewyse">Iewyse</seg>
                             <seg ana="#for">for</seg>
                             <choice>
-                                <abbr>ihu</abbr>
-                                <expan>iesu</expan>
+                                <abbr>Ihu&#x02DC;</abbr>
+                                <expan>
+                                    <seg ana="#iesu">Iesu</seg>
+                                </expan>
                             </choice>
                             <seg ana="#crist">c<expan>ri</expan>st</seg>
                             <seg ana="#to">to</seg>
@@ -5969,8 +5974,10 @@
                             <seg ana="#come">come</seg>
                             <seg ana="#þat">þ<expan>a</expan>t</seg>
                             <choice>
-                                <abbr>ihu</abbr>
-                                <expan>iesu</expan>
+                                <abbr>Ihu&#x02DC;</abbr>
+                                <expan>
+                                    <seg ana="#iesu">Iesu</seg>
+                                </expan>
                             </choice>
                             <seg ana="#crist">c<expan>ri</expan>st</seg>
                         </seg>
@@ -7291,7 +7298,12 @@
                             <seg ana="#of">Of</seg>
                             <seg ana="#iosophat">Iosophat</seg>
                             <seg ana="#þer">þ<expan>er</expan></seg>
-                            <seg ana="#ihuiesu">ihu<expan>iesu</expan></seg>
+                            <choice>
+                                <abbr>Ihu&#x02DC;</abbr>
+                                <expan>
+                                    <seg ana="#iesu">Iesu</seg>
+                                </expan>
+                            </choice>
                             <seg ana="#crist">c<expan>ri</expan>st</seg>
                         </seg>
                         <g ref="#puncelev"/>

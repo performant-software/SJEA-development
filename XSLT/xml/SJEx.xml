@@ -5,7 +5,7 @@
           <fileDesc>
                <titleStmt>
                     <title>The Siege of Jerusalem Electronic Archive</title>
-                    <title>MsA</title>
+                    <title>MS Ex</title>
                     <author>Anonymous</author>
                     <editor>
                          <persName xml:id="stinson">
@@ -28,7 +28,7 @@
                </publicationStmt>
                <sourceDesc>
                     <msDesc>
-                         <!-- Check Tim's CD for this information. -->
+                         
                          <msIdentifier>
                               <country>United Kingdom</country>
                               <settlement>Exeter</settlement>
@@ -213,7 +213,7 @@
 
                     <l xml:id="Ex.0058" n="HL.1129">. . . dyn herd</l>
 
-                    <l xml:id="Ex.0059" n="HL.1130">. . . viij<add place="supralinear">C</add> sperys</l>
+                    <l xml:id="Ex.0059" n="HL.1130">. . . viij<hi rend="supralinear">C</hi> sperys</l>
 
                     <l xml:id="Ex.0060" n="HL.1131">. . .ldes them sone</l>
 

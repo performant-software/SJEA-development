@@ -4,7 +4,7 @@
         <fileDesc>
             <titleStmt>
                 <title>The Siege of Jerusalem Electronic Archive</title>
-                <title>MsA</title>
+                <title>MS E</title>
                 <author>Anonymous</author>
                 <editor>
                     <persName xml:id="stinson">
@@ -27,7 +27,7 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <!-- Check Tim's CD for this information. -->
+                   
                     <msIdentifier>
                         <country>United States</country>
                         <settlement>San Marino</settlement>
@@ -2765,9 +2765,9 @@
                                 <seg ana="#iudas">iudas</seg>
                                 <seg ana="#þat">þat</seg>
                                 <choice>
-                                    <abbr>ihu&#732;</abbr>
+                                    <abbr>Ihu&#x02DC;</abbr>
                                     <expan>
-                                        <seg ana="#iesu">iesu</seg>
+                                        <seg ana="#iesu">Iesu</seg>
                                     </expan>
                                 </choice>
                                 <seg ana="#crist">crist</seg>
@@ -3615,9 +3615,9 @@
                             <seg type="bverse">
                                 <seg ana="#and">&amp;</seg>
                                 <choice>
-                                    <abbr>ihu&#732;</abbr>
+                                    <abbr>Ihu&#x02DC;</abbr>
                                     <expan>
-                                        <seg ana="#iesu">iesu</seg>
+                                        <seg ana="#iesu">Iesu</seg>
                                     </expan>
                                 </choice>
                                 <seg ana="#crist">crist</seg>
