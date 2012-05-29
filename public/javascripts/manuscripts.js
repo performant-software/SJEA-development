@@ -14,7 +14,7 @@ $(document).ready(function() {
         $(this).parent().next().slideDown(450, function(){
            var item = $(this).children('.sublist-item').first();
            highliteElement( item );
-           showManuscriptContent ( item.attr("id").slice(0,3) );
+           showManuscriptContent ( item.attr("id").split("-")[0] );
         });
 	},
 	function(){
