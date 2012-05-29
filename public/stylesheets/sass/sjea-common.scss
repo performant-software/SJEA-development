@@ -12,10 +12,18 @@ $navbox_width: 180px;   // width of the main navigation box
 $navbox_height: 350px;  // hight of the main navigation box
 
 $screen_width: 1350px;
+$screen_height: 1050px;
+
+$footer_height: 50px;
 
 * {
    margin: 0;
    padding: 0;
+}
+
+#page {
+    min-height: $screen_height;
+    margin-bottom: 10px;
 }
 
 #main-header {
@@ -110,14 +118,15 @@ $screen_width: 1350px;
    }
 }
 
+#footer-spacer {
+   height: 10px;
+}
+
 #main-footer {
    width: $screen_width;
-   height: 50px;
+   height: $footer_height;
    margin: 0;
    text-align: center;
    font-size: 11px;
    background-color: $footer_background;
-   position: fixed;
-   bottom: 0;
-   z-index: 999999;
 }

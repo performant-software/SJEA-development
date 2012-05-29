@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0; }
 
+#page {
+  min-height: 1050px;
+  margin-bottom: 10px; }
+
 #main-header {
   width: 1300px;
   height: 60px;
@@ -62,13 +66,13 @@
     position: relative;
     padding: 25px 0 0 0; }
 
+#footer-spacer {
+  height: 10px; }
+
 #main-footer {
   width: 1350px;
   height: 50px;
   margin: 0;
   text-align: center;
   font-size: 11px;
-  background-color: #b3b3b3;
-  position: fixed;
-  bottom: 0;
-  z-index: 999999; }
+  background-color: #b3b3b3; }
