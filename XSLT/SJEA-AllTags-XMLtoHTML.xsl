@@ -151,9 +151,6 @@
             </head>
             
             <body class="contentArea">
-                <!--add a button to view XML copy of document-->
-                <span class="xmlButton"><a href="{$id}"><img src="{concat($imgpath, 'xmlbutton.jpg')}" height="14" width="36"/></a></span>
-
                 <h1><xsl:value-of select="concat(//tei:sourceDesc//tei:repository, ', MS ', //tei:sourceDesc//tei:idno, ' (', $idno, ')')"/></h1>
 
                 <xsl:call-template name="processBody"/>
