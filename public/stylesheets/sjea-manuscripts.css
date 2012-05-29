@@ -9,6 +9,26 @@
 #content #content-header span {
   float: left;
   margin: 6px 0 0 6px; }
+#content #content-header .color-key {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin: 5px 5px 5px 5px; }
+#content #content-header #key-text {
+  float: right;
+  margin: 8px 0 0 0; }
+#content #content-header #color-key-1 {
+  background-color: green; }
+#content #content-header #color-key-2 {
+  background-color: olive; }
+#content #content-header #color-key-3 {
+  background-color: violet; }
+#content #content-header #color-key-4 {
+  background-color: purple; }
+#content #content-header #color-key-5 {
+  background-color: aqua; }
+#content #content-header #color-key-6 {
+  background-color: fuchsia; }
 #content #content-header #xml-button {
   float: right;
   width: 50px;

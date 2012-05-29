@@ -3,9 +3,10 @@ $(document).ready(function() {
     // hide all the sub menu's
     $( ".sublist").hide();
 
-    // hide the transcript selector and XML button
+    // hide the transcript selector, color key and XML button
     $("#view-control").hide();
     $("#view-control-title").hide();
+    $("#color-key-div").hide();
     $("#xml-button").hide();
 
     // sub menu toggle behavior handlers
@@ -192,10 +193,12 @@ function showManuscriptContent( manuscript_prefix ) {
 
     $("#content-display").empty();
 
-    // show the transcript selector and XML button
+    // show the transcript selector, color key and XML button
     $("#view-control").show();
     $("#view-control-title").show();
+    $("#color-key-div").show();
     $("#xml-button").show();
+
     var xml_href = "/xml/" + manuscript_prefix + ".xml"
     $("#xml-button").attr("href", xml_href );
     $("#xml-button").attr("target", "_blank" );
@@ -213,9 +216,10 @@ function showManuscriptDescription( manuscript_prefix ) {
     // clear the manuscript name as we are not displaying one
     $("#transcription-name").attr("href", "");
 
-    // hide the transcript selector and XML button
+    // hide the transcript selector, color key and XML button
     $("#view-control").hide();
     $("#view-control-title").hide();
+    $("#color-key-div").hide();
     $("#xml-button").hide();
 
     var resource_name = manuscript_prefix + "Description"

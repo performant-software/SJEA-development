@@ -79,3 +79,30 @@
   font-size: 11px;
   background-color: #b3b3b3;
   font-family: "Ariel", sans-serif; }
+
+.standard-tooltip {
+  color: #000;
+  cursor: pointer; }
+
+.standard-tooltip:hover {
+  background-position: 0;
+  background-color: transparent;
+  color: #000;
+  text-decoration: none; }
+
+.tooltip {
+  background: #FDEAAA;
+  border-radius: 10px;
+  /* rounded-corners for CSS3 browsers */
+  -moz-border-radius: 10px;
+  /* rounded-corners for Firefox */
+  -webkit-border-radius: 10px;
+  /* rounded-corners for Safari */
+  color: #000;
+  display: none;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 12px;
+  position: relative;
+  text-align: left;
+  border: 1px solid #000; }
