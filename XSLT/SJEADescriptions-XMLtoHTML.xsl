@@ -94,13 +94,6 @@
             </head>
 
             <body class="contentArea">
-                <!--add a button to view XML copy of document-->
-                <span class="xmlButton">
-                    <a href="{$id}">
-                        <img src="{concat($imgpath, 'xmlbutton.jpg')}" height="14" width="36"/>
-                    </a>
-                </span>
-
                 <h2>
                     <xsl:value-of select="//tei:titleStmt/tei:title"/>
                 </h2>
