@@ -10,15 +10,15 @@ $(document).ready(function() {
 
     // sub menu toggle behavior handlers
 	$(".mainlist-item").toggle(function(){
-        $( ".sublist").slideUp(100);
-        $(this).parent().next().slideDown(400, function(){
+        $( ".sublist").slideUp(75);
+        $(this).parent().next().slideDown(450, function(){
            var item = $(this).children('.sublist-item').first();
            highliteElement( item );
            showManuscriptContent ( item.attr("id").slice(0,3) );
         });
 	},
 	function(){
-		$(this).parent().next().slideUp(100);
+		$(this).parent().next().slideUp(75);
 	});
 
     // selection box changes
@@ -50,7 +50,7 @@ $(document).ready(function() {
     $("#overview").click(function() {
 
        // clear any current drop down's
-       $( ".sublist").slideUp(300);
+       $( ".sublist").slideUp(75);
 
         highliteElement( $(this) );
         showOverviewContent( );
