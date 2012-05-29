@@ -17165,7 +17165,7 @@
                 <div2 type="passus" n="8">
                     <l xml:id="D.1070" n="HL.1113">
                         <seg type="averse">
-                            <seg type="punct">¶<note>As noted in the manuscript description, the scribe marked this line with a passus division, but no paraph was added later.</note></seg>
+                            <seg type="punct">¶</seg>
                             <seg ana="#as">As</seg>
                             <seg ana="#tytus">tytus</seg>
                             <seg ana="#aftir">aftir</seg>
