@@ -3,6 +3,11 @@ $(document).ready(function() {
     // hide all the sub menu's
     $( ".sublist").hide();
 
+    // hide the transcript selector and XML button
+    $("#view-control").hide();
+    $("#view-control-title").hide();
+    $("#xml-button").hide();
+
     // sub menu toggle behavior handlers
 	$(".mainlist-item").toggle(function(){
         $( ".sublist").slideUp(100);
@@ -27,22 +32,26 @@ $(document).ready(function() {
     });
 
     // XML button
-    $("#xml-button").click(function () {
-
-        // are we currently showing a manuscript?
-        var current_manuscript = $("#transcription-name").attr("href");
-        if (current_manuscript.length != 0 ) {
-            var newURL = "xml/" + current_manuscript + ".xml"
-            window.location.replace( newURL );
-        }
-    });
+    //$("#xml-button").click(function () {
+    //
+    //    // are we currently showing a manuscript?
+    //    var current_manuscript = $("#transcription-name").attr("href");
+    //    if (current_manuscript.length != 0 ) {
+    //        var newURL = "xml/" + current_manuscript + ".xml"
+    //        //document.forms[0].target = "_blank";
+    //        window.location.replace( newURL );
+    //    }
+    //});
 
     //
     // menu item handlers
     //
 
     $("#overview").click(function() {
-        $( ".sublist").slideUp(300);
+
+       // clear any current drop down's
+       $( ".sublist").slideUp(300);
+
         highliteElement( $(this) );
         showOverviewContent( );
     });
@@ -144,6 +153,9 @@ $(document).ready(function() {
         highliteElement( $(this) );
         showManuscriptDescription( 'V');
     });
+
+    // set initial view...
+    $("#overview").click( );
 });
 
 function highliteElement( element ) {
@@ -180,6 +192,14 @@ function showManuscriptContent( manuscript_prefix ) {
 
     $("#content-display").empty();
 
+    // show the transcript selector and XML button
+    $("#view-control").show();
+    $("#view-control-title").show();
+    $("#xml-button").show();
+    var xml_href = "/xml/" + manuscript_prefix + ".xml"
+    $("#xml-button").attr("href", xml_href );
+    $("#xml-button").attr("target", "_blank" );
+
     $("#content-display").load(resource_name, function(response, status, xhr) {
        if (status == "error") {
           var msg = "Sorry but there was an error: ";
@@ -192,6 +212,11 @@ function showManuscriptDescription( manuscript_prefix ) {
 
     // clear the manuscript name as we are not displaying one
     $("#transcription-name").attr("href", "");
+
+    // hide the transcript selector and XML button
+    $("#view-control").hide();
+    $("#view-control-title").hide();
+    $("#xml-button").hide();
 
     var resource_name = manuscript_prefix + "Description"
     $("#content-display").empty();
@@ -206,4 +231,9 @@ function showManuscriptDescription( manuscript_prefix ) {
 
 function showOverviewContent( ) {
     $("#content-display").empty();
+
+    // hide the transcript selector and XML button
+    $("#view-control").hide();
+    $("#view-control-title").hide();
+    $("#xml-button").hide();
 }

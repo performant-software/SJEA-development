@@ -11,8 +11,9 @@
   margin: 6px 0 0 6px; }
 #content #content-header #xml-button {
   float: right;
-  width: 100px;
+  width: 50px;
   height: 18px;
-  margin: 6px 6px 0 0; }
+  margin: 4px 3px 0 0;
+  background: url("/images/xmlbutton.jpg") no-repeat bottom; }
 #content #content-display {
   text-align: justify; }
