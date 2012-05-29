@@ -94,23 +94,58 @@
             </head>
 
             <body class="contentArea">
+                <!--add a button to view XML copy of document-->
+                <span class="xmlButton">
+                    <a href="{$id}">
+                        <img src="{concat($imgpath, 'xmlbutton.jpg')}" height="14" width="36"/>
+                    </a>
+                </span>
+
                 <h2>
                     <xsl:value-of select="//tei:titleStmt/tei:title"/>
                 </h2>
+                
+                <xsl:call-template name="generateTOC"/>
 
                 <xsl:apply-templates/>
             </body>
         </html>
     </xsl:template>
+    
+    
+    <!--mjc: generateTOC               -->
+    <!--     ===========               -->
+    <!--     generate a table of contents pointing the anchors      -->
+    <!--     created for each heading in the main template          -->
+    <xsl:template name="generateTOC">
+        <div class="TOC">
+            <a href="#orgdate">Date</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
+            <a href="#support">Support</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
+            <a href="#extent">Extent</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
+            <a href="#format">Format</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
+            <a href="#foliation">Foliation</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
+            <a href="#collation">Collation</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
+            <a href="#condition">Condition</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
+            <a href="#layout">Layout</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
+            <a href="#handnote">Scribe</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
+            <a href="#deconote">Decoration</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
+            <a href="#binding">Binding</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
+            <a href="#contents">Contents</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
+            <a href="#provenance">Provenance</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
+            <a href="#listbibl">Bibliography</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
+            <xsl:value-of disable-output-escaping="yes">&lt;br /&gt;</xsl:value-of>
+        </div>
+    </xsl:template>
 
 
     <!--*************************-->
-    <!--mjc: origdate template-->
-    <!--     ========         -->
-    <!--mjc: format the <origdate> of the file-->
+    <!--mjc: main template-->
+    <!--     ====         -->
+    <!--mjc: format the all of the main headers of the Description-->
     <!--*************************-->
     <xsl:template match="//tei:sourceDesc">
         <xsl:for-each select="//tei:origDate">
+            <a name="origdate"></a>
             <div class="origdate">
                 <b>Date: </b>
                 <xsl:apply-templates/>
@@ -119,6 +154,7 @@
 
         <xsl:for-each select="//tei:physDesc">
             <xsl:for-each select="//tei:support">
+                <a name="support"></a>
                 <div class="support">
                     <b>Support: </b>
                     <xsl:value-of select="text()"/>
@@ -127,6 +163,7 @@
 
             <xsl:for-each select="//tei:extent/tei:measure">
                 <xsl:if test="@type='leavesCount'">
+                    <a name="extent"></a>
                     <div class="extent">
                         <b>Extent: </b>
                         <xsl:value-of select="text()"/>
@@ -134,6 +171,7 @@
                 </xsl:if>
 
                 <xsl:if test="@type='pageDimensions'">
+                    <a name="format"></a>
                     <div class="format">
                         <b>Format: </b>
                         <xsl:value-of select="text()"/>
@@ -142,6 +180,7 @@
             </xsl:for-each>
 
             <xsl:for-each select="//tei:foliation">
+                <a name="foliation"></a>
                 <div class="foliation">
                     <b>Foliation: </b>
                     <xsl:apply-templates/>
@@ -149,6 +188,7 @@
             </xsl:for-each>
 
             <xsl:for-each select="//tei:collation">
+                <a name="collation"></a>
                 <div class="collation">
                     <b>Collation: </b>
                     <xsl:apply-templates/>
@@ -156,6 +196,7 @@
             </xsl:for-each>
 
             <xsl:for-each select="//tei:condition">
+                <a name="condition"></a>
                 <div class="condition">
                     <b>Condition: </b>
                     <xsl:value-of select="text()"/>
@@ -163,6 +204,7 @@
             </xsl:for-each>
 
             <xsl:for-each select="//tei:layout">
+                <a name="layout"></a>
                 <div class="layout">
                     <b>Page layout: </b>
                     <xsl:apply-templates/>
@@ -170,6 +212,7 @@
             </xsl:for-each>
 
             <xsl:for-each select="//tei:handNote">
+                <a name="handnote"></a>
                 <div class="handnote">
                     <b>The scribe &#x2014; script and dialect: </b>
                     <xsl:apply-templates/>
@@ -177,6 +220,7 @@
             </xsl:for-each>
 
             <xsl:for-each select="//tei:decoNote">
+                <a name="deconote"></a>
                 <div class="deconote">
                     <b>Decoration: </b>
                     <xsl:apply-templates/>
@@ -184,6 +228,7 @@
             </xsl:for-each>
 
             <xsl:for-each select="//tei:binding">
+                <a name="binding"></a>
                 <div class="binding">
                     <b>Binding: </b>
                     <xsl:apply-templates/>
@@ -191,6 +236,7 @@
             </xsl:for-each>
 
             <xsl:for-each select="../tei:msContents">
+                <a name="contents"></a>
                 <div class="contents">
                     <b>Contents: </b>
                     <xsl:apply-templates/>
@@ -198,6 +244,7 @@
             </xsl:for-each>
     
             <xsl:for-each select="//tei:provenance">
+                <a name="provenance"></a>
                 <div class="provenance">
                     <b>Provenance: </b>
                     <xsl:apply-templates/>
@@ -205,6 +252,7 @@
             </xsl:for-each>
             
             <xsl:for-each select="//tei:listBibl">
+                <a name="listbibl"></a>
                 <div class="listbibl">
                     <b>Bibliography: </b>
                     <!--mjc: tell parser not to turn <br/> into <br></br>-->
@@ -216,6 +264,10 @@
         </xsl:for-each>
     </xsl:template>
 
+
+    <!--mjc: Title              -->
+    <!--     =====              -->
+    <!--     Titles (within <sourceDesc> should be in italics   -->
     <xsl:template match="//tei:sourceDesc//tei:title">
         <i>
             <xsl:value-of select="text()"/>
@@ -223,12 +275,19 @@
     </xsl:template>
 
 
+    <!--mjc: item               -->
+    <!--     ====               -->
+    <!--     <item>s within <collation> -->
     <xsl:template match="//tei:collation//tei:item">
         <div class="collItem">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
 
+
+    <!--mjc: p               -->
+    <!--     =               -->
+    <!--     follow <p>s with two <br/>s -->
     <xsl:template match="tei:p">
         <span class="p">
             <xsl:apply-templates/>
@@ -239,6 +298,10 @@
         
     </xsl:template>
 
+
+    <!--mjc: table/tr/td               -->
+    <!--     ===========              -->
+    <!--     format <table>s     -->
     <xsl:template match="tei:table">
         <table class="descTab">
             <xsl:apply-templates/>
@@ -255,6 +318,7 @@
 
     <xsl:template match="tei:cell">
         <xsl:choose>
+            <!-- when the <cell>'s @role='label', this is the first row, so make it a head-->
             <xsl:when test="@role='label'">
                 <th>
                     <xsl:apply-templates/>
@@ -269,18 +333,30 @@
         </xsl:choose>
     </xsl:template>
 
+
+    <!--mjc: bibl               -->
+    <!--     ====               -->
+    <!--     format <bibl> entries -->
     <xsl:template match="tei:bibl">
         <div class="bibEntry">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     
+    
+    <!--mjc: summary               -->
+    <!--     =======               -->
+    <!--     format <msContent> <summary>s  -->
     <xsl:template match="//tei:msContents/tei:summary">
         <div class="contsumm">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     
+    
+    <!--mjc: msitem               -->
+    <!--     ======               -->
+    <!--     within <msContent> is <msItem>, which itself can have <msItem>s -->
     <xsl:template match="//tei:msContents/tei:msItem">
             <div class="msitem">
                 <xsl:for-each select="./tei:title">
@@ -295,6 +371,10 @@
             </div>
     </xsl:template>
     
+    
+    <!--mjc: hi               -->
+    <!--     ==               -->
+    <!--     format <hi>      -->
     <xsl:template match="tei:hi">
         <xsl:if test="@rend='italic'">
             <i><xsl:apply-templates/></i>
@@ -313,8 +393,17 @@
         </xsl:if>
     </xsl:template>
     
+    
+    <!--mjc: titleStmt/editionStmt/publicationStmt               -->
+    <!--     =====================================               -->
+    <!--     ignore these tags and don't process                 -->
     <xsl:template match="tei:titleStmt | tei:editionStmt | tei:publicationStmt"/>
     
+    
+    <!--mjc: locus               -->
+    <!--     =====               -->
+    <!--     if <locs> has @from & @to, then ignore it,                 -->
+    <!--     otherwise, use the text() to build a link to the page img  -->
     <xsl:template match="tei:locus">
         <xsl:param name="id" tunnel="yes"/>
         
@@ -358,6 +447,7 @@
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
+    
     
     <!--*************************-->
     <!--mjc: graphic template-->

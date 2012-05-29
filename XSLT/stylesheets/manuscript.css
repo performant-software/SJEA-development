@@ -77,29 +77,29 @@
 
 .og, .olg { position:relative ; border-top:1 solid green }
 
-.o2 { font-size:3.2em ; text-transform:uppercase ; float:left ; position:relative }
+.o2 { font-size:3.2em ; text-transform:uppercase ; float:left ; position:relative ; line-height: 0.7em ; margin: 0em ; padding: 0em }
 
-.o3 { font-size:4.8em ; text-transform:uppercase ; float:left ; position:relative }
+.o3 { font-size:4.8em ; text-transform:uppercase ; float:left ; position:relative ; line-height: 0.7em ; margin: 0em ; padding: 0em }
 
-.o4 { font-size:6.4em ; text-transform:uppercase ; float:left ; position:relative }
+.o4 { font-size:6.4em ; text-transform:uppercase ; float:left ; position:relative ; line-height: 0.7em ; margin: 0em ; padding: 0em }
 
-.o5 { font-size:8em ; text-transform:uppercase ; float:left ; position:relative }
+.o5 { font-size:8em ; text-transform:uppercase ; float:left ; position:relative ; line-height: 0.7em ; margin: 0em ; padding: 0em }
 
-.o6 { font-size:9.6em ; text-transform:uppercase ; float:left ; position:relative }
+.o6 { font-size:9.6em ; text-transform:uppercase ; float:left ; position:relative ; line-height: 0.7em ; margin: 0em ; padding: 0em }
 
-.o7 { font-size:11.2em ; text-transform:uppercase ; float:left ; position:relative }
+.o7 { font-size:11.2em ; text-transform:uppercase ; float:left ; position:relative ; line-height: 0.7em ; margin: 0em ; padding: 0em }
 
-.o8 { font-size:12.8em ; text-transform:uppercase ; float:left ; position:relative }
+.o8 { font-size:12.8em ; text-transform:uppercase ; float:left ; position:relative ; line-height: 0.7em ; margin: 0em ; padding: 0em }
 
-.o9 { font-size:14.4em ; text-transform:uppercase ; float:left ; position:relative }
+.o9 { font-size:14.4em ; text-transform:uppercase ; float:left ; position:relative ; line-height: 0.7em ; margin: 0em ; padding: 0em }
 
-.o10 { font-size:16em ; text-transform:uppercase ; float:left ; position:relative }
+.o10 { font-size:16em ; text-transform:uppercase ; float:left ; position:relative ; line-height: 0.7em ; margin: 0em ; padding: 0em }
 
-.o11 { font-size:17.6em ; text-transform:uppercase ; float:left ; position:relative }
+.o11 { font-size:17.6em ; text-transform:uppercase ; float:left ; position:relative ; line-height: 0.7em ; margin: 0em ; padding: 0em }
 
-.o12 { font-size:19.2em ; text-transform:uppercase ; float:left ; position:relative }
+.o12 { font-size:19.2em ; text-transform:uppercase ; float:left ; position:relative ; line-height: 0.7em ; margin: 0em ; padding: 0em }
 
-.lc,.highlightlc { font-size:1.4em ; line-height:.75em ; text-transform:uppercase }
+.lc,.highlightlc { font-size:1.4em ; line-height:.75em ; text-transform:uppercase ; line-height: 0.7em ; margin: 0em ; padding: 0em }
 
 .sup, .highlightsup, { vertical-align:super ; font-size:.7em }
 
@@ -226,6 +226,8 @@
 .puncelev { line-height: 1.2 }
 
 .descTab { border: 1px solid black ; }
+
+.TOC { font-size: smaller }
 
 
 
