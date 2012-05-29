@@ -168,7 +168,7 @@ function highliteElement( element ) {
 function showManuscriptContent( manuscript_prefix ) {
 
     var transcript_type = $("#view-control option:selected").text();
-    var resource_name = manuscript_prefix + "-MS-"
+    var resource_name = manuscript_prefix.replace( "SJ", "MS" ) + "-"
     switch( transcript_type ) {
         case "All Tags":
             resource_name += "alltags"

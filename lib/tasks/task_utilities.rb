@@ -92,7 +92,7 @@ module TaskUtilities
   end
 
   def manuscript_view_list( )
-    return %w{ MS-alltags MS-critical MS-diplomatic MS-scribal }
+    return %w{ alltags critical diplomatic scribal }
   end
 
   def description_file_list( )

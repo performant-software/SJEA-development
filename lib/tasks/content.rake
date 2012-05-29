@@ -15,31 +15,28 @@ namespace :sjea do
     xmldir = "#{xsltdir}/xml"
     targetdir = "public"
 
-    xslfile = "XSLT/SJEA-AllTags-XMLtoHTML.xsl"
+    xslfile = "#{xsltdir}/SJEA-AllTags-XMLtoHTML.xsl"
+    manifest = "#{xsltdir}/SJEAListforHTML.xml"
 
+    puts "generating html..."
+
+    cmd_line( xsl_transform_cmd( manifest, xslfile ) )
+
+    puts "copying generated html..."
     transcription_file_list( ).each do |fname|
 
-      xmlfile = "XSLT/xml/#{fname}.xml"
+      prefix = fname.gsub( "SJ", "MS" )
 
       manuscript_view_list( ).each do |vname|
-        viewfile = vname + ".html"
+        viewfile = "#{prefix}-#{vname}.html"
+        copy_file( viewfile, "#{targetdir}/#{viewfile}" )
         delete_file( viewfile )
       end
-
-      puts "processing #{fname}..."
-
-      cmd_line( xsl_transform_cmd( xmlfile, xslfile ) )
-
-      manuscript_view_list( ).each do |vname|
-        viewfile = vname + ".html"
-        copy_file( viewfile, "#{targetdir}/#{fname}-#{viewfile}" )
-        delete_file( viewfile )
-      end
-
 
       make_dir( "#{targetdir}/xml")
-      publicxmlname = "#{targetdir}/xml/#{fname}.xml"
-      copy_file( xmlfile, publicxmlname )
+      srcname = "#{xsltdir}/xml/#{fname}.xml"
+      dstname = "#{targetdir}/xml/#{fname}.xml"
+      copy_file( srcname, dstname )
 
     end
 
