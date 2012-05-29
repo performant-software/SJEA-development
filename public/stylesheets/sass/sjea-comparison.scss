@@ -14,12 +14,17 @@ $table_lines: #9F9F9F;
 
    #content-header {
 
-      #compare-page {
-          text-align: right;
-          padding: 0 0 0 330px;
+      #compare-page-div {
+          position: relative;
+          text-align: center;
+          width: 100px;
+          height: 18px;
+          margin: 0 0 0 410px;
+          padding: 8px 0 0 0;
       }
 
       #previous-button, #next-button {
+          position: relative;
           width: 100px;
           height: 18px;
       }
@@ -31,7 +36,7 @@ $table_lines: #9F9F9F;
 
       #next-button {
           float: right;
-          margin: 6px 6px 0 0;
+          margin: -20px 6px 0 0;
       }
    }
 
