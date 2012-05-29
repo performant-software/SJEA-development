@@ -16,6 +16,11 @@ $screen_height: 1050px;
 
 $footer_height: 50px;
 
+
+$site_font: 'Ariel', sans-serif;
+$content_font: 'Cardo', serif;
+
+
 * {
    margin: 0;
    padding: 0;
@@ -24,6 +29,7 @@ $footer_height: 50px;
 #page {
     min-height: $screen_height;
     margin-bottom: 10px;
+    font-family: $site_font;
 }
 
 #main-header {
@@ -80,9 +86,9 @@ $footer_height: 50px;
 
         list-style-type: none;
 	    cursor: pointer;
-        margin: 15px 0 15px 0;
+        margin: 20px 0 20px 0;
         padding: 0;
-        font-size: 17px;
+        font-size: 16px;
 
         a:hover {
            color: red;
@@ -91,7 +97,7 @@ $footer_height: 50px;
 
      .sublist {
         padding: 0 0 0 20px;
-        font-size: 14px;
+        font-size: 13px;
 	    cursor: pointer;
      }
 
@@ -115,6 +121,7 @@ $footer_height: 50px;
    #content-display {
       position: relative;
       padding: 25px 0 0 0;
+      font-family: $content_font;
    }
 }
 
@@ -129,4 +136,5 @@ $footer_height: 50px;
    text-align: center;
    font-size: 11px;
    background-color: $footer_background;
+   font-family: $site_font;
 }

@@ -4,7 +4,8 @@
 
 #page {
   min-height: 1050px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  font-family: "Ariel", sans-serif; }
 
 #main-header {
   width: 1300px;
@@ -42,14 +43,14 @@
 #sidebar-items li {
   list-style-type: none;
   cursor: pointer;
-  margin: 15px 0 15px 0;
+  margin: 20px 0 20px 0;
   padding: 0;
-  font-size: 17px; }
+  font-size: 16px; }
   #sidebar-items li a:hover {
     color: red; }
 #sidebar-items .sublist {
   padding: 0 0 0 20px;
-  font-size: 14px;
+  font-size: 13px;
   cursor: pointer; }
 #sidebar-items .active {
   color: red; }
@@ -64,7 +65,8 @@
     height: 30px; }
   #content #content-display {
     position: relative;
-    padding: 25px 0 0 0; }
+    padding: 25px 0 0 0;
+    font-family: "Cardo", serif; }
 
 #footer-spacer {
   height: 10px; }
@@ -75,4 +77,5 @@
   margin: 0;
   text-align: center;
   font-size: 11px;
-  background-color: #b3b3b3; }
+  background-color: #b3b3b3;
+  font-family: "Ariel", sans-serif; }
