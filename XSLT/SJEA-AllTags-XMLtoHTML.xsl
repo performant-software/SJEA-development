@@ -30,6 +30,11 @@
         <xsl:value-of>stylesheets/</xsl:value-of>
     </xsl:variable>
 
+
+    <!--Define tags that need whitespace stripped or preserved-->
+    <xsl:strip-space elements="tei:seg tei:l" />
+    <xsl:preserve-space elements="" />
+    
         
         
     <!--mjc: HTML Output-->
@@ -508,9 +513,21 @@
                         <xsl:apply-templates/>
                     </span>}</xsl:when>
                 
-                <xsl:otherwise>{<span class="del-legible">
-                        <xsl:apply-templates/>
-                    </span>}</xsl:otherwise>
+                <xsl:otherwise>
+                    <xsl:choose>
+                        <!--if the <del> is outside of a word (<l>/<seg>/<del>) then we want a space after it-->
+                        <xsl:when test="parent::tei:seg/parent::tei:l">
+                            {<span class="del-legible">
+                                <xsl:apply-templates/>
+                            </span>}
+                        </xsl:when>
+                        
+                        <!--otherwise, we don't-->
+                        <xsl:otherwise>{<span class="del-legible">
+                            <xsl:apply-templates/>
+                        </span>}</xsl:otherwise>
+                    </xsl:choose>
+                </xsl:otherwise>
             </xsl:choose>
         </xsl:if>
     </xsl:template>
@@ -534,6 +551,11 @@
                 <i><xsl:apply-templates/></i>
             </xsl:otherwise>
         </xsl:choose>
+        
+        <!--some <expan> tags are inside text() nodes and so need to preserve the following space-->
+        <xsl:if test="substring(./following-sibling::text()[1], 1, 1) = ' '">
+            <xsl:value-of xml:space="preserve"> </xsl:value-of>
+        </xsl:if>
     </xsl:template>
     
     
@@ -613,7 +635,7 @@
             <xsl:when test="$view = 'scribal'">
                 <xsl:choose>
                     <xsl:when test="./descendant::tei:orig">
-                        <span class="orig"><xsl:apply-templates select="./descendant::tei:orig"/>&#xA0;</span> 
+                        <span class="orig"><xsl:apply-templates select="./descendant::tei:orig"/><xsl:value-of xml:space="preserve"> </xsl:value-of></span> 
                     </xsl:when>
                     <xsl:when test="./descendant::tei:sic">
                         <span class="sic"><xsl:value-of select="./descendant::tei:sic"/></span>
@@ -627,7 +649,7 @@
             <xsl:when test="$view = 'diplomatic'">
                 <xsl:choose>
                     <xsl:when test="./descendant::tei:orig">
-                        <span><xsl:apply-templates select="./descendant::tei:orig"/>&#xA0;</span>
+                        <span><xsl:apply-templates select="./descendant::tei:orig"/><xsl:value-of xml:space="preserve"> </xsl:value-of></span>
                     </xsl:when>
                     <xsl:when test="./descendant::tei:sic">
                         <span><xsl:value-of select="./descendant::tei:sic"/></span>
@@ -736,7 +758,7 @@
         </xsl:choose>
     </xsl:template>
     
-    <!--mjc: Otherwise we don't want to process <marginalia> normall-->
+    <!--mjc: Otherwise we don't want to process <marginalia> normally-->
     <xsl:template match="tei:marginalia"/>
     
     

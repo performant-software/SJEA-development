@@ -151,26 +151,26 @@
             <xsl:for-each select="//tei:foliation">
                 <div class="foliation">
                     <b>Foliation: </b>
-                    <xsl:value-of select="text()"/>
+                    <xsl:apply-templates/>
                 </div>
             </xsl:for-each>
 
             <xsl:for-each select="//tei:collation">
-                <div class="foliation">
+                <div class="collation">
                     <b>Collation: </b>
                     <xsl:apply-templates/>
                 </div>
             </xsl:for-each>
 
             <xsl:for-each select="//tei:condition">
-                <div class="foliation">
+                <div class="condition">
                     <b>Condition: </b>
                     <xsl:value-of select="text()"/>
                 </div>
             </xsl:for-each>
 
             <xsl:for-each select="//tei:layout">
-                <div class="foliation">
+                <div class="layout">
                     <b>Page layout: </b>
                     <xsl:apply-templates/>
                 </div>
@@ -184,14 +184,14 @@
             </xsl:for-each>
 
             <xsl:for-each select="//tei:decoNote">
-                <div class="handnote">
+                <div class="deconote">
                     <b>Decoration: </b>
                     <xsl:apply-templates/>
                 </div>
             </xsl:for-each>
 
             <xsl:for-each select="//tei:binding">
-                <div class="handnote">
+                <div class="binding">
                     <b>Binding: </b>
                     <xsl:apply-templates/>
                 </div>
@@ -205,14 +205,14 @@
             </xsl:for-each>
     
             <xsl:for-each select="//tei:provenance">
-                <div class="handnote">
+                <div class="provenance">
                     <b>Provenance: </b>
                     <xsl:apply-templates/>
                 </div>
             </xsl:for-each>
             
             <xsl:for-each select="//tei:listBibl">
-                <div class="handnote">
+                <div class="listbibl">
                     <b>Bibliography: </b>
                     <!--mjc: tell parser not to turn <br/> into <br></br>-->
                     <xsl:value-of disable-output-escaping="yes">&lt;br /&gt;</xsl:value-of>
@@ -237,10 +237,13 @@
     </xsl:template>
 
     <xsl:template match="tei:p">
-        <div class="p">
+        <span class="p">
             <xsl:apply-templates/>
-        </div>
-
+        </span>
+        <!--mjc: tell parser not to turn <br/> into <br></br>-->
+        <xsl:value-of disable-output-escaping="yes">&lt;br /&gt;</xsl:value-of>
+        <xsl:value-of disable-output-escaping="yes">&lt;br /&gt;</xsl:value-of>
+        
     </xsl:template>
 
     <xsl:template match="tei:table">
@@ -275,6 +278,12 @@
 
     <xsl:template match="tei:bibl">
         <div class="bibEntry">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="//tei:msContents/tei:summary">
+        <div class="contsumm">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
