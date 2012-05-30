@@ -1848,7 +1848,9 @@
                             <seg type="punct">.</seg>
                             <seg ana="#ne">ne</seg>
                             <seg ana="#made">made</seg>
-                        </seg> : <seg type="bverse">
+                        </seg>
+                        <seg type="punct">:</seg> 
+                        <seg type="bverse">
                             <seg ana="#bot">bot</seg>
                             <seg ana="#mene">mene</seg>
                             <seg ana="#fro">fro</seg>
@@ -1894,7 +1896,9 @@
                             <seg ana="#was">was</seg>
                             <seg ana="#the">the</seg>
                             <seg ana="#sone">sone</seg>
-                        </seg> : <seg type="bverse">
+                        </seg> 
+                        <seg type="punct">:</seg> 
+                        <seg type="bverse">
                             <seg ana="#als">als</seg>
                             <seg ana="#was">was</seg>
                             <seg ana="#the">the</seg>
@@ -1925,7 +1929,9 @@
                             <seg ana="#es">es</seg>
                             <seg ana="#the">the</seg>
                             <seg ana="#sonne">so<expan>n</expan>ne</seg>
-                        </seg> . <seg type="bverse">
+                        </seg> 
+                               <seg type="punct">.</seg> 
+                        <seg type="bverse">
                             <seg ana="#that">that</seg>
                             <seg ana="#sent">sent</seg>
                             <seg ana="#was">was</seg>
@@ -1939,7 +1945,9 @@
                             <seg ana="#carefułł">carefułł</seg>
                             <seg ana="#manes">manes</seg>
                             <seg ana="#kynde">kynde</seg>
-                        </seg> . <seg type="bverse">
+                    </seg> 
+                        <seg type="punct">.</seg> 
+                        <seg type="bverse">
                             <seg ana="#of">of</seg>
                             <seg ana="#a">a</seg>
                             <seg ana="#clene">clene</seg>
@@ -2085,7 +2093,9 @@
                             <seg ana="#he">he</seg>
                             <seg ana="#mirakiłłs">Mirakiłłs</seg>
                             <seg ana="#maa">maa</seg>
-                        </seg> . <seg type="bverse">
+                    </seg> 
+                        <seg type="punct">.</seg> 
+                        <seg type="bverse">
                             <seg ana="#than">than</seg>
                             <seg ana="#i">I</seg>
                             <seg ana="#in">in</seg>
@@ -2316,7 +2326,9 @@
                             <seg type="punct">:</seg>
                             <seg ana="#and">and</seg>
                             <seg ana="#ioħn">Ioħn</seg>
-                        </seg> : <seg type="bverse">
+                        </seg>
+                        <seg type="punct">:</seg> 
+                        <seg type="bverse">
                             <seg ana="#and">and</seg>
                             <seg ana="#iacob">Iacob</seg>
                             <seg ana="#the">the</seg>
@@ -7041,7 +7053,9 @@
                             <seg ana="#lowttede">lowttede</seg>
                             <seg ana="#hym">hym</seg>
                             <seg ana="#ałłe">ałłe</seg>
-                        </seg> . <seg type="bverse">
+                    </seg> 
+                        <seg type="punct">.</seg> 
+                        <seg type="bverse">
                             <seg ana="#and">and</seg>
                             <seg ana="#one">one</seg>
                             <seg ana="#lowde">lowde</seg>
