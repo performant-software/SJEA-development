@@ -1342,7 +1342,7 @@
 
                     <l xml:id="P.0080" n="HL.0089">
                         <seg type="averse">
-                            <seg ana="#þe"><hi rend="rb">þ</hi>e</seg>
+                            <seg ana="#þe"><hi rend="tr">þ</hi>e</seg>
                             <seg ana="#kynge">kynge</seg>
                             <seg ana="#in-to">in<seg type="shadowHyphen">-</seg>to</seg>
                             <seg ana="#counseil">counseil</seg>
@@ -11866,7 +11866,7 @@
 
                     <l xml:id="P.0788" n="HL.0870">
                         <seg type="averse">
-                            <seg ana="#þus">þ<expan>us</expan></seg>
+                            <seg ana="#þus"><hi rend="tr">þ</hi><expan>us</expan></seg>
                             <seg ana="#to">to</seg>
                             <seg ana="#layke">layke</seg>
                             <seg ana="#with">w<expan>i</expan>t<expan>h</expan></seg>

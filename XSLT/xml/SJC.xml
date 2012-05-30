@@ -9340,7 +9340,9 @@
                             <seg ana="#claryones">Claryones</seg>
                             <seg ana="#blewen">blewen</seg>
                             <seg ana="#a-brode">a<seg type="shadowHyphen">-</seg>brode</seg>
-                        </seg> : <seg type="bverse">
+                    </seg> 
+                        <seg type="punct">:</seg> 
+                        <seg type="bverse">
                             <seg ana="#þe">þe</seg>
                             <seg ana="#lordes">lordes</seg>
                             <seg ana="#gon">gon</seg>
