@@ -32,30 +32,9 @@ $(document).ready(function() {
         }
     });
 
-    // XML button
-    //$("#xml-button").click(function () {
-    //
-    //    // are we currently showing a manuscript?
-    //    var current_manuscript = $("#transcription-name").attr("href");
-    //    if (current_manuscript.length != 0 ) {
-    //        var newURL = "xml/" + current_manuscript + ".xml"
-    //        //document.forms[0].target = "_blank";
-    //        window.location.replace( newURL );
-    //    }
-    //});
-
     //
     // menu item handlers
     //
-
-    $("#overview").click(function() {
-
-       // clear any current drop down's
-       $( ".sublist").slideUp(75);
-
-        highliteElement( $(this) );
-        showOverviewContent( );
-    });
 
     $("#SJA-manuscript").click(function() {
         highliteElement( $(this) );
@@ -156,7 +135,7 @@ $(document).ready(function() {
     });
 
     // set initial view...
-    $("#overview").click( );
+    $("#overview").addClass( "active");
 });
 
 function highliteElement( element ) {
@@ -239,13 +218,4 @@ function showManuscriptDescription( manuscript_prefix ) {
           alert(msg + xhr.status + " " + xhr.statusText);
        }
     });
-}
-
-function showOverviewContent( ) {
-    $("#content-display").empty();
-
-    // hide the transcript selector and XML button
-    $("#view-control").hide();
-    $("#view-control-title").hide();
-    $("#xml-button").hide();
 }

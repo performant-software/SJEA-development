@@ -1,0 +1,8 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+#content li {
+  margin: 0 0 0 40px; }
+#content #content-display {
+  text-align: justify; }

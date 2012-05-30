@@ -40,12 +40,17 @@
   height: 350px;
   width: 180px; }
 
+#sidebar-items #item-heading {
+  height: 25px;
+  padding: 10px 0 0 0; }
 #sidebar-items li {
   list-style-type: none;
   cursor: pointer;
-  margin: 20px 0 20px 0;
+  margin: 10px 0 30px 0;
   padding: 0;
   font-size: 16px; }
+  #sidebar-items li a {
+    text-decoration: none; }
   #sidebar-items li a:hover {
     color: red; }
 #sidebar-items .sublist {
