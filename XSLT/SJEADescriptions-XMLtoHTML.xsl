@@ -94,13 +94,6 @@
             </head>
 
             <body class="contentArea">
-                <!--add a button to view XML copy of document-->
-                <span class="xmlButton">
-                    <a href="{$id}">
-                        <img src="{concat($imgpath, 'xmlbutton.jpg')}" height="14" width="36"/>
-                    </a>
-                </span>
-
                 <h2>
                     <xsl:value-of select="//tei:titleStmt/tei:title"/>
                 </h2>
@@ -130,9 +123,10 @@
             <a href="#handnote">Scribe</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
             <a href="#deconote">Decoration</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
             <a href="#binding">Binding</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
+            <xsl:value-of disable-output-escaping="yes">&lt;br /&gt;</xsl:value-of>
             <a href="#contents">Contents</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
             <a href="#provenance">Provenance</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
-            <a href="#listbibl">Bibliography</a><xsl:value-of xml:space="preserve"> &#x2022; </xsl:value-of>
+            <a href="#listbibl">Bibliography</a>
             <xsl:value-of disable-output-escaping="yes">&lt;br /&gt;</xsl:value-of>
         </div>
     </xsl:template>

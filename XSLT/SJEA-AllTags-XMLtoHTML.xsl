@@ -437,7 +437,7 @@
     <!--     we are interested in:                      -->
     <!--     - @type=bverse : add several pre-spaces in -->
     <!--        the critical view                       -->
-    <!--     - @type=punct : for                        -->
+    <!--     - @type=punct : for medial punctuation     -->
     <!--*************************-->
     <xsl:template match="tei:seg">
         <xsl:param name="view" tunnel="yes"/>
@@ -445,8 +445,17 @@
         <xsl:choose>
             <xsl:when test="@type='bverse' and $view='critical'">
                 <xsl:choose>
-                    <xsl:when test="preceding-sibling::tei:g">
-                        <xsl:apply-templates/>
+                    <!--if there's any medial punct, then we don't want to add any extra spaces -->
+                    <xsl:when test="//tei:g/@ref='#puncelev' or //tei:seg/@type='punct'">
+                        <xsl:choose>
+                            <xsl:when test="preceding-sibling::tei:g[1] or preceding-sibling::tei:seg[1]/@type='punct'">
+                                <xsl:apply-templates/>
+                            </xsl:when>
+                            
+                            <xsl:otherwise>
+                                    <xsl:apply-templates/>
+                            </xsl:otherwise>
+                        </xsl:choose>
                     </xsl:when>
                     
                     <xsl:otherwise>
