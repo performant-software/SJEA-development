@@ -24,9 +24,9 @@
 
           .special-key-button {
              float: left;
-             width: 30px;
-             height: 30px;
-             margin: 0 10px 0 0;
+             width: 35px;
+             height: 35px;
+             margin: 0 5px 0 5px;
              font-size: 18px;
           }
       }
@@ -45,17 +45,30 @@
 
       .result-header {
          padding: 0 0 10px 0;
-         font-size: 22px;
+         font-size: 24px;
       }
 
-      .result-title {
-         padding: 10px 0 0 0;
-         font-size: 16px;
-      }
+      .result {
 
-      .result-snippet {
-         padding: 10px 0 0 0;
-         font-size: 15px;
+          padding: 0 0 14px 0;
+
+          .result-title {
+             padding: 10px 0 0 0;
+             font-size: 20px;
+             a {
+                text-decoration: none;
+             }
+          }
+
+          .result-snippet {
+             padding: 10px 0 0 0;
+             font-size: 17px;
+          }
+
+          .result-snippet em {
+             background-color: pink;
+             font-style: normal;
+          }
       }
    }
 }

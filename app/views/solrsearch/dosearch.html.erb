@@ -44,20 +44,27 @@
 
        <%- hits = @results[:hits] -%>
        <%- hits.each do |hit| -%>
-          <div class="result-title">
-             <%= hit["title"] -%>
-          </div>
-          <div class="result-snippet">
-             <%= CGI::unescapeHTML(hit["highlighting"][0]) -%>
-          </div>
+
+          <div class="result">
+              <div class="result-title">
+                 <a href="/manuscript.html"><%= hit["title"] -%></a>
+              </div>
+              <div class="result-snippet">
+                 <%= raw( hit["highlighting"][0] ) -%>
+              </div>
+          </div>  <!-- result -->
+
        <%- end -%>
 
      </div>  <!-- content-display -->
 
+     <div id="footer-spacer">
+     </div>  <!-- footer-spacer -->
+
    </div>  <!-- content -->
 
-   <div id="main-footer">
-       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere ultrices laoreet. Maecenas lacus sapien, tristique ultrices ultrices eu, vestibulum et sem. Nunc eu augue neque, eu congue turpis. Cras vulputate lacus iaculis eros vehicula tincidunt. Suspendisse viverra accumsan ipsum et suscipit. Cras eu tellus nunc. Nam blandit congue lorem vitae faucibus. Nunc at congue libero. Nam et lorem nisl. In laoreet sodales nunc. Quisque egestas, urna et commodo posuere, turpis diam ultricies mauris, id condimentum dui tortor fermentum ante.</p>
-   </div> <!-- main-footer -->
-
 </div>  <!-- page -->
+
+<div id="main-footer">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere ultrices laoreet. Maecenas lacus sapien, tristique ultrices ultrices eu, vestibulum et sem. Nunc eu augue neque, eu congue turpis. Cras vulputate lacus iaculis eros vehicula tincidunt. Suspendisse viverra accumsan ipsum et suscipit. Cras eu tellus nunc. Nam blandit congue lorem vitae faucibus. Nunc at congue libero. Nam et lorem nisl. In laoreet sodales nunc. Quisque egestas, urna et commodo posuere, turpis diam ultricies mauris, id condimentum dui tortor fermentum ante.</p>
+</div> <!-- main-footer -->
