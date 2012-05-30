@@ -97,10 +97,13 @@
           <div id="search-instructions">
 
               </br>
-              <p><b>rayne or water or stremys</b> finds texts with any or all of the words</p>
+              <p><b>rayne OR water OR stremys</b> finds texts with any or all of the words</p>
               </br>
 
-              <p><b>rayne and water and stremys</b> finds only texts with all of the words</p>
+              <p><b>rayne AND water AND stremys</b> finds only texts with all of the words</p>
+              </br>
+
+              <p><b>rayne AND water NOT stremys</b> finds only texts with the words rayne and water that do not contain the word stremys</p>
               </br>
 
               <p><b>"rayne in the street"</b> finds that exact phrase</p>
@@ -116,7 +119,7 @@
               </br>
 
               <p><b>rayne~</b> finds words similar to rayne according to the Levenshtein distance algorithm (fuzzy matching). By putting a number between zero and one
-                    immediately after the tilde, you can control the Levenshtein distance (degree of fuzziness).</p>
+                    immediately after the tilde, you can control the Levenshtein distance (degree of fuzziness)</p>
               <p>For example, <b>rayne~0.05</b> finds words remotely similar to rayne while
                               <b>rayne~0.95</b> finds words very similar to rayne. If you do not specify, the default is ~0.5.</p>
 
