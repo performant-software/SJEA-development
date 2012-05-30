@@ -9,7 +9,7 @@ $(document).ready(function() {
     });
 
     $("#special-button-3").click(function() {
-        addCharacter( '\u0222')
+        addCharacter( '\u00DE')
     });
 
     $("#special-button-4").click(function() {
