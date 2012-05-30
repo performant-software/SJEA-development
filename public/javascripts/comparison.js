@@ -42,7 +42,11 @@ function loadComparison( resource_name ) {
     var title = resource_name.replace(/%20/g, " ").replace(/comparisons\//g, "" ).replace(/.html/g, "" );
     $("#compare-page").text( title )
 
+    // nice wait display...
+    showWaitOverlay();
+
     $("#content-display").load(resource_name, function(response, status, xhr) {
+       clearWaitOverlay();
        if (status == "error") {
           var msg = "Sorry but there was an error: ";
           alert(msg + xhr.status + " " + xhr.statusText);

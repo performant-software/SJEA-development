@@ -203,7 +203,11 @@ function showManuscriptContent( manuscript_prefix ) {
     $("#xml-button").attr("href", xml_href );
     $("#xml-button").attr("target", "_blank" );
 
+    // nice wait display...
+    showWaitOverlay();
+
     $("#content-display").load(resource_name, function(response, status, xhr) {
+       clearWaitOverlay();
        if (status == "error") {
           var msg = "Sorry but there was an error: ";
           alert(msg + xhr.status + " " + xhr.statusText);
@@ -225,7 +229,11 @@ function showManuscriptDescription( manuscript_prefix ) {
     var resource_name = manuscript_prefix + "Description"
     $("#content-display").empty();
 
+    // nice wait display...
+    showWaitOverlay();
+
     $("#content-display").load(resource_name, function(response, status, xhr) {
+       clearWaitOverlay();
        if (status == "error") {
           var msg = "Sorry but there was an error: ";
           alert(msg + xhr.status + " " + xhr.statusText);
