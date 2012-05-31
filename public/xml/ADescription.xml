@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+
+            <titleStmt>
+                <title>Descritpion of British Library, MS Additional 31042 (A)</title>
+                <author>Timothy L. Stinson</author>
+            </titleStmt>
+
+            <editionStmt>
+                <edition>Siege of Jerusalem Electronic Archive</edition>
+            </editionStmt>
+
+            <publicationStmt>
+                <publisher>Society for Early English and Norse Electronic Texts</publisher>
+            </publicationStmt>
+
+            <sourceDesc>
+                <msDesc>
+
+                    <msIdentifier>
+                        <country>United Kingdom</country>
+                        <settlement>London</settlement>
+                        <repository>British Library</repository>
+                        <idno>Additional 31042</idno>
+                        <msName>A</msName>
+                    </msIdentifier>
+
+                    <head>
+                        <title>British Library, MS Additional 31042 (A)</title>
+                        <origPlace>England</origPlace>
+                        <origDate notBefore="1425" notAfter="1475">Mid-fifteenth century. Analysis of the watermarks contained in Additional 31042 has permitted scholars, including <persName>Robert Thompson</persName> and <persName>Ralph Hanna</persName>, to establish a range of dates for the composition of the manuscript and has provided evidence of a long and complex history of compilation. In providing a date for the manuscript, Hanna-Lawton summarize the evidence provided in <persName>Thompson</persName>'s list of watermarks (see <title>Robert Thornton and the London Thornton Manuscript</title>, pp. 71-3) stating that "the most narrowly datable of these fall within the period 1437-50."</origDate>
+                    </head>
+
+                    <msContents>
+                        <summary>For a detailed discussion of contents, see <persName>Thompson</persName> pp. 10-18. The numbers below correspond to – and are in agreement with – <persName>Thompson</persName>’s numbering.</summary>
+                        <msItem>
+                            <p>1-2. <locus from="3r" to="32v">Fols. 3r-32v</locus> excerpts from <title>Cursor Mundi</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=2153">IMEV 2153</ref> and <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1786">1786</ref>. Text begins imperfectly at line 10630. Note that on 32rb text jumps from l. 14933 to 17111, and thus <persName>Thompson</persName> numbers these as two items.
+                            </p>
+                        </msItem>      
+                     
+                        <msItem>
+                            <p>3. <locus from="33r" to="50r">Fols. 33r-50r</locus> <title>The Northern Passion</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1907">IMEV 1907</ref></p>
+                        </msItem>
+
+                        <msItem>
+                            <p>4. <locus from="50r" to="66r">Fols. 50r-66r</locus> <title>Siege of Jerusalem</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1583">IMEV 1583</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>5. <locus from="66v" to="79v">Fols. 66v-79v</locus> <title>The Sege of Melayne</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=234">IMEV 234</ref>, ends abruptly</p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>6. <locus from="80r" to="81v">Fols. 80r-81v</locus> Hymn to the Virgin Mary: <hi rend="italic">O florum flos</hi>  <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=2168">IMEV 2168</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>7. <locus from="82r" to="94r">Fols. 82r-94r</locus> <title>Duke Rowlande and Sir Ottuell of Spayne</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1996">IMEV 1996</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>8. <locus from="94r" to="94r">Fol. 94r</locus> the first nine lines of John Lydgate's <title>Passionis Christi Cantus</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=2081">IMEV 2081</ref>, which <persName>Thornton</persName> begins again on the lower half of 94v and finishes on 96r</p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>9. <locus from="94v" to="94v">Fol. 94v</locus> a verse fragment beginning <hi rend="italic">Exultit celu[m] laudibus / In bathelem in that fare sete</hi>; not in <persName>Thornton</persName>’s hand</p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>10. <locus from="94v" to="94v">Fol. 94v</locus> written just below item 8, another fragment beginning <hi rend="italic">mare mod[er] cu[m] &amp; se</hi></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>11. <locus from="94v" to="96r">Fol. 94v-96r</locus> <persName>Thornton</persName> begins Lydgate's <title>Passionis Christi Cantus</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=2081">IMEV 2081</ref> again, this time completing it.</p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>12. <locus from="96r" to="96v">Fol. 96r-96v</locus> Verses on the Kings of England <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=3632">IMEV 3632</ref> (fragmentary)</p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>13. <locus from="97r" to="97v">Fols. 97r-97v</locus> Lydgate, <title>The Dietary</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=824">IMEV 824</ref>(fragmentary)</p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>14-16. <locus from="97v" to="97v">Fol. 97v</locus> three short Latin aphorisms</p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>17. <locus from="97v" to="97v">Fol. 97v</locus> four lines from a song, with the heading <hi rend="italic">A gud schorte songe of this dete / This werlde es tournede vp sodownne</hi> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=3778">IMEV 3778</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>18. <locus from="98r" to="101v">Fols. 98r-101v</locus> <title>The Quatrefoil of Love</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1453">IMEV 1453</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>19. <locus from="101v" to="101v">Fol. 101v</locus> "Prayer to the Guardian Angel" <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1051">IMEV 1051</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>20. <locus from="102r" to="102v">Fols. 102r-102v</locus> an alliterating paraphrase of Vulgate Psalm 50 <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=990">IMEV 990</ref> (fragmentary)</p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>21. <locus from="103r" to="110v">Fols. 103r-110v</locus> Lydgate, "Virtues of the Mass" <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=4246">IMEV 4246</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>22. <locus from="110v" to="110v">Fol. 110v</locus> Christmas carol: "The Rose of Ryse" <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=3457">IMEV 3457</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>23. Fols. <locus from="111r" to="119v">111r-119v</locus> <title>The Three Kings of Cologne</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=854.3">IMEV 854.3</ref>. Begins abruptly, beginning of poem probably on two leaves now wanting, the stubs of which are visible between Fols. 110 and 111</p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>24. <locus from="120r" to="122r">Fols. 120r-122r</locus> "Þe Prouerbis of Salamon"/ <hi rend="italic">Cantus Cuiusdam Sapientis</hi> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=3861">IMEV 3861</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>25. <locus from="122v" to="123r">Fols. 122v-123r</locus> "A Song how þat Mercy Passeth Rightwisnes" <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=560">IMEV 560</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>26. <locus from="123r" to="123v">Fols. 123r-123v</locus> "A songe how Mercy commes bi fore þe Iugement" <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=3533">IMEV 3533</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>27. <locus from="123v" to="124v">Fols. 123v-124v</locus> "A Songe how þat Mercy Passeth alle thynge" <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=583">IMEV 583</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>28. <locus from="125r" to="163v">Fols. 125r-163v</locus> <title>Richard Coer de Lion</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1979">IMEV 1979</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>29. <locus from="163v" to="168v">Fols. 163v- 168v</locus> Apocryphal History of the Infancy <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=250">IMEV 250</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>30. <locus from="169r" to="176v">Fols. 169r-176v</locus> <title>The Parlement of the Thre Ages</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1556">IMEV 1556</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>31. <locus from="176v" to="181v">Fols. 176v-181v</locus> <title>Wynnere and Wastoure</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=3137">IMEV 3137</ref></p>
+                        </msItem>
+
+                    </msContents>
+
+                    <physDesc>
+
+                        <objectDesc form="codex">
+
+                            <supportDesc material="paper">
+
+                                <support>Paper</support>
+
+
+                                <extent>
+                                    <measure type="leavesCount" n="179">vii + 179 + viii folios</measure>
+                                    <measure type="pageDimensions" n="27.0-27.5 x 20 cm">270-275 x 200 mm</measure> (measurement of paper singletons)
+                                </extent>
+
+                                <foliation>Foliation in pencil, modern hand, top right of rectos. Parchment flyleaves in front are numbered 1, 2, and in rear are numbered 182, 183. Remaining stubs of lost leaves between fols. 110 and 111 are not accounted for in the foliation. An alternate foliation on the lower left of rectos is preferable in that it does not count the flyleaves as folios, but it is not visible on all leaves and is not the foliation used in published discussions of the manuscript. Because this foliation counts the two stubs between 110 and 111 but not the two parchment flyleaves in the front, it is identical with the later foliation from fol. 111 forward.</foliation>
+
+
+                                <collation> 
+                                    <p>Collation of the manuscript is significantly hindered by the fact that leaves are mounted on singletons, presumably as a consequence of rebinding at the British Library. A history of collations is offered by <persName>Thompson</persName> (p. 19), and includes <persName>Karen Stern</persName> (1976), <persName>Sarah M. Horrall</persName> (1979), <persName>Hanna</persName> (1984), and <persName>Thompson</persName> himself (1987). <persName>Thompson</persName> establishes a collation of the manuscript based in large part upon the sequence of watermarks; a complete list is provided on pages 71-3, including a range of known dates for each stock. <persName>Thompson</persName>’s collation is as follows:</p>
+                                    
+                                    <p><hi rend="bold">ii</hi> + ?; <hi rend="bold">a</hi><hi rend="supralinear">?</hi> (ff. 3-8; a fragment of six leaves); <hi rend="bold">b</hi><hi rend="supralinear">24</hi> (ff. 9-32); <hi rend="bold">c</hi><hi rend="supralinear">22</hi> (ff. 33-53; wants xxii); <hi rend="bold">d</hi><hi rend="supralinear">20</hi> (ff. 54-73); <hi rend="bold">e</hi><hi rend="supralinear">28?</hi> (ff. 74-97; wants v, viii, xxvi, xxviii); <hi rend="bold">f</hi><hi rend="supralinear">36?</hi> (ff. 98-124; xix-xx stubs, wants vi-x, xxxv-xxxvi); <hi rend="bold">g</hi><hi rend="supralinear">22</hi> (ff. 125-143; wants xx-xxii); <hi rend="bold">h</hi><hi rend="supralinear">26</hi> (ff. 144-168; wants xxvi); <hi rend="bold">i</hi><hi rend="supralinear">?</hi> (ff. 169-181; fragment of 13 leaves) + <hi rend="bold">ii</hi>.</p>
+                                    
+                                    <p><persName>Hanna</persName>’s 1984 study, “The London Thornton Manuscript: A Corrected Collation,” <title>Studies in Bibliography</title> 37, offered the following collation:</p>
+                                    
+                                    <p>1<hi rend="supralinear">?</hi> (ff. 3-8, the fragmentary end of a quire) 2<hi rend="supralinear">24</hi> (ff. 9-32) 3<hi rend="supralinear">22</hi> ( -22; ff. 33-53) 4<hi rend="supralinear">20</hi> (ff. 54-73) 5<hi rend="supralinear">10?</hi> (-5, -8; ff. 74-81) 6<hi rend="supralinear">18?</hi> (-17; ff. 82-97, only 16 leaves) 7<hi rend="supralinear">4</hi> (ff. 98-101) 8<hi rend="supralinear">10</hi> (-2; ff. 102-10) 9<hi rend="supralinear">?</hi> (-1, -2; ff. 111-19) 10<hi rend="supralinear">?</hi> (ff. 120-24) 11<hi rend="supralinear">22</hi> + 1; ( -20, -21, -22, +23; ff. 125-44) 12<hi rend="supralinear">24</hi> (ff. 145-68) 13<hi rend="supralinear">18</hi> ( -14, -15, -16, -17, -18; ff. 169-81)</p>
+                                    
+                                    <p>Hanna-Lawton correct and update this collation in the introduction to their edition:</p>
+                                    
+                                    <p>I<hi rend="supralinear">?</hi> (six leaves, fols. 3-8) 2<hi rend="supralinear">24</hi> (fol. 32, end of booklet I) 3<hi rend="supralinear">22</hi> (-22) 4<hi rend="supralinear">20</hi> 5<hi rend="supralinear">26</hi> (-5, -8, -26) 6<hi rend="supralinear">?</hi> (six leaves, fols. 97-102, the end of booklet II) 7<hi rend="supralinear">18?</hi> (-1, -10, -11) 8<hi rend="supralinear">?</hi> (seven leaves, fols. 118-24, the end of booklet III) 9<hi rend="supralinear">22</hi> (-20, -21, -22) 10<hi rend="supralinear">26</hi> (-26) (fol. 168, the end of booklet IV) 11<hi rend="supralinear">18?</hi> (if so, -14, -15, -16, -17, -18; fols. 169-81, comprising booklet V)</p>
+                                    
+                                    <p>As the collations attest, even after exhaustive study many uncertainties remain. Taken together, they point to the persistent trouble areas, beginning with the fifth quire and continuing to the end, in establishing a collation.</p>
+                                    
+                                    <p>In "The Growth of Robert Thornton's Books," <title>Studies in Bibliography</title> 40 (1987), pages 51-61, <persName>Hanna</persName> establishes the likely order and method of the compilation of Additional 31042 and Lincoln Cathedral MS. 91, the only other known manuscript copied by <persName>Thornton</persName>. Watermark evidence points to both the London and Lincoln manuscripts being copied gradually over a period of many years.</p>
+                                    
+                                </collation>
+
+                                <condition>In sound condition, but with numerous areas of damage and repairs throughout.</condition>
+
+                            </supportDesc>
+
+
+                            <layoutDesc>
+
+                                <layout columns="1">Bounded in brown ink. Writing area in <title>SJ</title> varies slightly, usually c. <measure type="written">220 x 120 mm</measure>. Horizontal and vertical bounding lines extend to margins. No prickings, not ruled. A similar layout for other texts throughout, although many texts are laid out in two columns, and each column is then bounded but not ruled. Some leaves bounded in red ink instead of brown (e.g., fols 125-143).</layout>
+
+                            </layoutDesc>
+                        </objectDesc>
+
+
+                        <handDesc>
+                            <handNote>
+                                <p>The manuscript is in the hand of <persName>Robert Thornton</persName>, a member of the minor gentry from <placeName>East Newton</placeName> in <placeName>North Yorkshire</placeName>.</p> 
+                                
+                                <p><persName>Thornton</persName>'s hand is an anglicana script that <persName>Guddat-Figge</persName> describes as "careless Anglicana, greatly varied" (159), Hanna-Lawton describe as "sprawling and ill-formed" (xvi), and <persName>Thompson</persName> a bit more generously deems "typical of much fifteenth-century book production as well as many documents and official records of the period" (3). The variance in the script noted by <persName>Guddat-Figge</persName> led a number of earlier scholars to conclude that the manuscript may be the work of more than one scribe, but, according to <persName>Thompson</persName>, these claims were "effectively countered" by <persName>Stern</persName>'s analysis of the London manuscript, and later by <persName>M. B. Parkes</persName>, who "confirmed that, regardless of variations in the shape, size and degree of formality of the script, the <persName>Thornton</persName> scribe was solely responsible for the fifteenth-century material in the Lincoln manuscript as well" (3). Thornton uses black ink throughout, with some stints lighter than others.</p>
+                                
+                                <p>Punctuation in the manuscript is sparse. Lines generally begin with capital letter forms; initial letters that do not have a distinct lower case are likely intended as capitals. There is no medial punctuation.</p>
+                                
+                                <p>The dialect of Additional 31042 is northern, a fact that should come as no surprise given that <persName>Thornton</persName>’s <placeName>Yorkshire</placeName> home. The manuscript, or at least the text of <title>SJ</title>, contains the usual hallmarks of a northern dialect, including the retention of OE long <hi rend="italic">a</hi> in words such as <hi rend="italic">twa</hi>, l. 134, <hi rend="italic">maa</hi> l. 127, and <hi rend="italic">sa</hi>, l. 57, and the preference for <hi rend="italic">-es</hi> and lack of <hi rend="italic">-eth</hi> for the present indicative plural inflection. <persName>Kellogg</persName>'s dissertation provides a thorough accounting of the dialect features of the manuscript, many of which are unique within the <title>SJ</title> corpus.</p>
+                                
+                                <p><locus from="50r">Folio 50r</locus> contains a header reading <hi rend="italic">Hic InCepit Distruccio Ierarusalem Quomodo Titus &amp; vaspasianus Obsederundt &amp; distruxerunt Ierusalem et vidicarunt mortem domini Iesu christi</hi>, and below that <hi rend="italic">The Segge of Ierusalem Off Tytus and vaspasyane</hi>. There are no running heads. Marginalia is sparse within the portion of the manuscript devoted to <title>Siege of Jerusalem</title>; <hi rend="italic">Virionyke</hi> is written in the right margin of <locus from="52r">fol. 52r</locus> and <hi rend="italic">Nyght</hi> at the top of <locus from="51r">51r</locus>, and there are inscriptions at the bottoms of fols. <locus from="54r">54r</locus> and <locus from="61r">61r</locus>, the latter being rather unclear and faded. The poem ends with the colophon <hi rend="italic">Explicit la sege de Ierusalem</hi> and, beneath that is signed <hi rend="italic"><persName>R. Thornton</persName> dictus qui scripsit sit benedictus amen</hi>. <persName>Thornton</persName>'s signature also appears on <locus from="50r">fol. 50r</locus> at the end of <title>Passio Domini nostri Ihesu Christi</title>.</p>
+                                
+                                <p>For biographical information on <persName>Robert Thornton</persName>, see <persName>Thompson</persName> pp. 2-5, and <persName>Robert Keiser</persName>'s two articles on <persName>Thornton</persName>'s life, "Lincoln Cathedral Library MS 91: Life and Milieu of the Scribe," and "More Light on the Life and Milieu of Robert Thornton.” See <persName>Stern</persName>'s article for a detailed discussion of <persName>Thornton</persName>'s script, and <persName>Mary Hamel</persName>, "Scribal Self-Corrections in the Thornton <title>Morte Arthure</title>” for a discussion of <persName>Thornton</persName>'s corrections and his fidelity to his copy text. Although <persName>Hamel</persName>'s article focuses on the Lincoln MS, her discussion of <persName>Thornton</persName>'s scribal and editorial tendencies is pertinent to the London MS as well, especially since <persName>Thornton</persName> seems to have worked on the two books simultaneously.</p>
+                                
+                                
+                            </handNote>
+                        </handDesc>
+
+
+
+
+
+                        <decoDesc>
+                            <decoNote>
+                                <p>Additional 31042 <locus from="50r">fol. 50r</locus> contains the only surviving illustration in any copy of <title>Siege of Jerusalem</title>; although other manuscripts containing <title>SJ</title> also contain illustrations, none of these occur alongside the poem. The illustration features two heads, one a man's and the other a woman's, peering out from the left side of the initial capital <hi rend="italic">I</hi> and an animal head at the top of the letter that <persName>Thompson</persName> colorfully describes as "a grotesque face with pointed ears and malevolent features which bear an obvious resemblance to the pig-like features on f. 33r" (58). The illustration seems to have no overt connection to the content of the poem. It is one of two occurring in the manuscript, the other, which accompanies the <title>Northern Passion</title>, being a drawing of a man's head with a crown and an animal figure on fol. 33r, both enclosed in vines, and what appears to be an incomplete lion's head at the top of that folio. As both <persName>Thompson</persName> and <persName>Guddat-Figge</persName> note, a blank space left at the top of fol. 24v suggests that room was left for an additional illustration.</p>
+                                
+                                <p>Multiline initial capitals occur at lines 1, 25, 49, 263, 427, 616, 872, and 1083. Lines 25, 49, and 263 do not correspond to large initial capitals or passus divisions in other manuscripts. Lines 427, 616, 872, and 1083 correspond not only to other manuscripts, but to what Hanna-Lawton take to be authorial structural divisions in the poem. In addition, before each of these four lines there is a textual gap approximately one line in height in which is written, centered, <hi rend="italic">Passus</hi>.</p>
+                                
+                                <p>Additional decoration is listed below, corresponding to the item numbers listed in the “Contents” section: </p>
+                                
+                                <p>Items 1-2 features red lombard capitals, most of which are 3-4 lines in height, for textual divisions. Spaces have been left preceding these, presumably for illustration, but remain blank. A blue lombard, 2 lines in height, at 9v. </p>
+                                
+                                <p>Item 3 opens with an initial flourished and infilled with vinework in main scribal ink. Above this in blank space, also in scribal ink, vines form a series of circular enclosures. A crowned king is in one, a grotesque animal head in another, and fruit or nuts in the remaining three. At the top of the leaf is an additional grotesque animal head, not connected to the vinework. Elsewhere, red lombards for textual divisions.</p>
+                                
+                                <p>Item 4 is <title>Siege of Jerusalem</title>, described in detail above.</p>
+                                
+                                <p>Item 5, Red lombards. First letter of proper names touched in red - e.g., <hi rend="italic">Charles</hi>, fol. 67r</p>
+                                
+                                <p>Item 6, first line of each 8-line stanza touched in red, and line marked in left margin with paragraph symbol.</p>
+                                
+                                <p>Item 7, Red lombard capitals. Title at top of 82r touched in red, as are first letters of proper names in the poem, e.g., <hi rend="italic">Charlles</hi> and <hi rend="italic">Duke Rowland</hi> on 82v.</p>
+                                
+                                <p>Item 8, single red lombard, paragraph mark in left margin to mark stanzas.</p>
+                                
+                                <p>Items 9-10, no decoration.</p>
+                                
+                                <p>Item, 11, single red lombard at beginning, 8-line stanzas signaled by paragraph marks in left column.</p>
+                                
+                                <p>Item 12, headings consisting of kings' names in scribal ink.</p>
+                                
+                                <p>Item 13, paragraph markers in left column.</p>
+                                
+                                <p>Items 14-16, paragraph markers in left margin.</p>
+                                
+                                <p>Item 17, title in scribal ink with paragraph marker in left margin. Single red lombard at beginning of song.</p>
+                                
+                                <p>Item 18, single red lombard at beginning.</p>
+                                
+                                <p>Item 19, no decoration.</p>
+                                
+                                <p>Item 20, red lombard at beginning. On 102r, headings of stanzas begin with 1-line red initials, but none on 102v.</p>
+                                
+                                <p>Item 21, red and green lombards, usually alternating.</p>
+                                
+                                <p>Item 22, no decoration.</p>
+                                
+                                <p>Item 23, alternating red and green lombards. Two crudely drawn faces at top of 112r, probably added later.</p>
+                                
+                                <p>Item 24, opens with single green lombard, 4 lines in height. Title in scribal ink, eight-line stanzas marked with paragraph markers in left margin.</p>
+                                
+                                <p>Items 25-27, each song has title in scribal ink, begins with a single red lombard three lines in height, and marks stanzas with paragraph marks in left margin.</p>
+                                
+                                <p>Item 28, red lombards, along with a few green ones, most of them four lines in height. Some letters in explicit touched in red.</p>
+                                
+                                <p>Item 29, opening initial five lines in height, green and red. Incipits rubricated. 3-line red or green lombards for textual divisions, proper names in red, e.g., <hi rend="italic">Melchy</hi> on 167r. First letter of each line on 167r and part of 167va touched in red. Some lines begin with rubrication, but no lombard; this rubrication varies from a single letter (<hi rend="italic">S</hi> in <hi rend="italic">Sir</hi> at bottom of 166v) to one word (<hi rend="italic">with</hi> on 168r) to an entire line (e.g., 167v). A few rubricated paragraph markers in left margins.</p>
+                                
+                                <p>Item 30, title and explicit in main scribal ink. Red lombards for textual divisions.</p>
+                                
+                                <p>Item 31, title in main scribal ink. Red lombards for textual divisions.</p>
+                                
+                                
+                                
+                            </decoNote>
+                        </decoDesc>
+
+
+                        <bindingDesc>
+                            <binding notBefore="1972" notAfter="1972">
+
+                                <p>Rebound in <date when="1972">1972</date> from <date when="1880">1880</date> binding. Binding is <measure type="written">287 mm</measure> in height, <measure type="written">272 mm</measure> from center of spine to fore edge. Half bound with black leather spine and corners, blue cloth boards. Five raised bands, blue and white tailband and headband. Spine decorated very simply: the second compartment has single goldtooled line at top and bottom of compartment, adjacent to raised bands, and the title <hi rend="italic">R. THORNTON / COLLETION OF / POEMS AND / ROMANCES</hi> in gold with a single, thin gold line beneath <persName>Thornton</persName>'s name. The fourth compartment also has goldtooled line at top and bottom, and the following stamped in gold: <hi rend="italic">BRIT. MUS. / ADDITIONAL MS. / 31,042</hi>. An oval paper label near top of spine reads <hi rend="italic">682</hi>, while one near bottom of spine reads <hi rend="italic">C</hi>. Edges of leaves sprinkled/marbled with red from an earlier binding. Inside back cover, a stamp on lower left reads <hi rend="italic"><date when="1972-01-24">24 JAN 1972</date></hi>, presumably the date of the binding. A <hi rend="italic">Record of Treatment, Extraction, Repair, etc.</hi> slip affixed to a rear flyleaf notes that the book was examined after binding on <date when="1972-03-02">3.2.72</date> There are three sets of flyleaves front and back. The outermost are four paper flyleaves each, and are modern paper from the <date when="1972">1972</date> rebinding. There is also one paper flyleaf both front and back, presumably from the 19th-c. British Museum binding, now mounted as singletons on stubs. In both front and back are also two parchment flyleaves, each still an intact bifolium.</p>
+                                
+
+                            </binding>
+                        </bindingDesc>
+
+                    </physDesc>
+
+
+                    <history>
+                        <provenance> Ownership of the manuscript after it passed from <persName>Robert Thornton</persName>'s hands is unclear until <date when="1879">1879</date>, at which time an anonymous American owner sent the manuscript to the London bookseller <persName>J. Pearson</persName>, who sold it to the British Museum (<persName>Thompson</persName> 7). Fol. 49r contains the signature <hi rend="italic"><persName>John Nettleton</persName>s boke</hi>, and <hi rend="italic"><persName>Nettylton</persName></hi> or <hi rend="italic"><persName>Netylton</persName></hi> appear several times on fol. 139v; <persName>Thompson</persName> suggests that this is likely "[o]ne of the two <persName>John Nettleton</persName>s of <placeName>Hutton Cranswick</placeName> in the <placeName>East Riding</placeName>" (6). Fol. 73v contains the signature <hi rend="italic"><placeName>willia[m] frost</placeName></hi> in a fifteenth-century hand. For a detailed discussion of the manuscript's provenance, see <persName>Thompson</persName> pp. 5-7.
+                        </provenance>
+                    </history>
+
+                    <additional>
+                        <adminInfo>
+                            <recordHist>
+                                <source>
+                                    <bibl> </bibl>
+                                </source>
+                            </recordHist>
+                        </adminInfo>
+
+                        <listBibl>
+                            
+                            <bibl>Of all of the <title>SJ</title> manuscripts, Additional 31042 has attracted the greatest amount of critical attention, with the possible exception of MS E, Huntingon HM 128, and hence the most, as well as the most detailed, descriptions. This is due in part to its contents, which in addition to <title>SJ</title> include the only surviving copy of <title>Wynnere and Wastoure</title>, works by <persName>Lydgate</persName>, two Charlemagne Romances entitled <title>The Sege of Melayne</title> and <title>Duke Rowlande and Sir Otuell of Spain</title>, and a copy of <title>The Parlement of the Thre Ages</title>. Interest in the manuscript is also due in part to its composition, as there has been much critical discussion of its scribe, <persName>Robert Thornton</persName>, and Lincoln Cathedral Library MS 91, another surviving miscellany in his hand that contains eighty works, including many important romances.</bibl>
+                            
+                            <bibl><author>Brunner, Karl</author>. "Hs. Brit. Mus. Additional 31042." <title>Archiv für das Studium der Neueren Sprachen und Literaturen</title>. 132 (<date when="1914">1914</date>): 316-27.</bibl>
+                            
+                            <bibl><title>Catalogue of Additions to the Manuscripts in the British Museum in the Years 1876-1881</title>. <pubPlace>London</pubPlace>: <publisher>British Museum</publisher>, <date when="1882">1882</date>. </bibl>
+                            
+                            <bibl><author>Doyle, A. I.</author> "The Manuscripts."  In <title>Middle English Alliterative Poetry and its Literary Background: Seven Essays</title>. Ed. <editor>David Lawton</editor>. <pubPlace>Woodbridge, UK</pubPlace>: <publisher>D. S. Brewer</publisher>, <date when="1982">1982</date>. 88-100 (95).
+                            </bibl>
+                            
+                            <bibl><author>Guddat-Figge, Gisela</author>. <title>Catalogue of the Manuscripts Containing Middle English Romances</title>. <pubPlace>Munich</pubPlace>: <publisher>W. Fink</publisher>, <date when="1976">1976</date>. 159-63.
+                            </bibl>
+
+                            <bibl><author>Hamel, Mary</author>. "Scribal Self-Corrections in the Thornton Morte Arthure.” <title>Studies in Bibliography</title> 36 (<date when="1983">1983</date>): 119-37.</bibl>
+                            
+                            <bibl><author>Hanna, Ralph</author>. “The Growth of Robert Thornton’s Books.” <title>Studies in Bibliography</title> 40 (<date when="1987">1987</date>): 62-70.</bibl>
+                            
+                            <bibl><author>Hanna, Ralph</author>. “The London Thornton Manuscript: A Corrected Collation.” <title>Studies in Bibliography</title> 37 (<date when="1984">1984</date>): 122-30.</bibl>
+                            
+                            <bibl><editor>Hanna, Ralph</editor> and <editor>David Lawton</editor>,
+                                eds. <title>The Siege of Jerusalem</title>. EETS o.s. 320.
+                                <pubPlace>London</pubPlace>: <publisher>Oxford UP</publisher>,
+                                <date when="2003">2003</date>.</bibl>
+                            
+                            <bibl><editor>Herrtage, Sidney</editor>, ed. <title>The English Charlemagne Romances</title>. Pt. II, Early English Text Society, e.s. XXXV. <pubPlace>London</pubPlace>: <publisher>Trübner &amp; Co.</publisher>, <date when="1880">1880</date>.</bibl>
+                            
+                            <bibl><author>Horrall, Sarah M</author>. “The London Thornton Manuscript: A New Collation.” <title>Manuscripta</title> 23 (<date when="1979">1979</date>): 99-103.</bibl>
+                            
+                            <bibl><author>Johnston, Michael</author>. “Robert Thornton and <title>The Siege of Jerusalem</title>.” <title>The Yearbook of Langland Studies</title> 23 (<date when="2009">2009</date>): 125-62.</bibl>
+                            
+                            <bibl><author>Keiser, George R</author>. “Lincoln Cathedral Library MS. 91: Life and Milieu of the Scribe.” <title>Studies in Bibliography</title> 32 (<date when="1979">1979</date>): 158-79.</bibl>
+                            
+                            <bibl><author>Keiser, George R</author>. “More Light on the Life and Milieu of the Robert Thornton.” <title>Studies in Bibliography</title> 36 (<date when="1983">1983</date>): 111-19.</bibl>
+                            
+                            <bibl><author>Kellogg, Allen Bond</author>. <title>The Language of the
+                                Alliterative Siege of Jerusalem</title>. Diss. U of Chicago,
+                                <date when="1943">1943</date>.</bibl>
+                            
+                            <bibl><editor>Kölbing, E</editor>. and <editor>Mabel Day</editor>, eds.
+                                <title>Siege of Jerusalem</title>. EETS o.s. 188.
+                                <pubPlace>London</pubPlace>: <publisher>Oxford UP</publisher>,
+                                <date when="1932">1932</date>. (Reprinted <date when="2001"
+                                    >2001</date>)</bibl>
+                            
+                            <bibl><author>Millar, Bonnie</author>. <title>The Siege of Jerusalem in
+                                its Physical, Literary, and Historical Contexts</title>.
+                                <pubPlace>Dublin</pubPlace>: <publisher>Four Courts
+                                    Press</publisher>, <date when="2000">2000</date>. 26-7.</bibl>
+                            
+                            <bibl><author>Stern, Karen</author>. "The London 'Thornton' Miscellany: A New Description of British Museum Additional Manuscript 31042." <title>Scriptorium</title>. 30.1 (<date when="1976">1976</date>): 26-37.</bibl>
+                            
+                            <bibl><author>Thompson, John J</author>. <title>Robert Thornton and the London Thornton Manuscript: British Library MS Additional 31042</title>. Manuscript Studies 2. <pubPlace>Cambridge</pubPlace>: <publisher>D. S. Brewer</publisher>, <date when="1987">1987</date>.</bibl>
+                            
+                        </listBibl>
+
+
+                    </additional>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <!--
+<revisionDesc> <change who="" when=""></change> </revisionDesc>
+-->
+    </teiHeader>
+    <text>
+        <body>
+            <p/>
+        </body>
+    </text>
+</TEI>

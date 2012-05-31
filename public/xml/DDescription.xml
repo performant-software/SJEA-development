@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+
+            <titleStmt>
+                <title>Descritpion of Lambeth Palace Library, MS 491, Part I</title>
+                <author>Timothy L. Stinson</author>
+            </titleStmt>
+
+            <editionStmt>
+                <edition>Siege of Jerusalem Electronic Archive</edition>
+            </editionStmt>
+
+            <publicationStmt>
+                <publisher>Society for Early English and Norse Electronic Texts</publisher>
+            </publicationStmt>
+
+            <sourceDesc>
+                <msDesc>
+
+                    <msIdentifier>
+                        <country>United Kingdom</country>
+                        <settlement>London</settlement>
+                        <institution></institution>
+                        <repository>Lambeth Palace Library</repository>
+                        <idno>Lambeth Palace Library MS 491</idno>
+                        <msName>D</msName>
+                    </msIdentifier>
+
+                    <head>
+                        <title></title>
+                        <origPlace>England</origPlace>
+                        <origDate notBefore="1400" notAfter="1425">First quarter of fifteenth century. The present volume comprises two books bound together. This description primarily concerns part I. The second part dates to the second half of the fifteenth century and is unrelated to the contents of part I; for a description of the part II, see <persName>Lewis</persName> and <persName>McIntosh</persName> pp. 80-81</origDate>
+                    </head>
+
+                    <msContents>
+                            
+                        <msItem>
+                            <p>1. <locus from="1r" to="205v">Fols. 1r-205v</locus> The prose <title>Brut</title> IPMEP 374. Begins imperfectly</p>
+                        </msItem>
+                                 
+                     
+                        <msItem>
+                            <p>2. <locus from="206r" to="227v">Fols. 206r-227v</locus> <title>The Siege of Jerusalem</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1583">IMEV 1583</ref></p>
+                        </msItem>
+
+                        <msItem>
+                            <p>3. <locus from="228r" to="274v">Fols. 228r-274v</locus> the prose <title>The Three Kings of Cologne</title> IPMEP 290</p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>4. <locus from="275r" to="286v">Fols. 275r-286v</locus> <title>The Awntyrs of Arthur at þe Terne athelyn</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1566">IMEV 1566</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>5. <locus from="287r" to="290v">Fols. 287r-290v</locus> Juliana Berner, <title>Book of Hunting</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=4064">IMEV 4064</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>Texts in part II listed in the James catalogue, pp. 683-84.</p>
+                        </msItem>
+       
+
+                    </msContents>
+
+                    <physDesc>
+
+                        <objectDesc form="codex">
+
+                            <supportDesc material="mixed">
+
+                                <support>A mixture of paper and parchment, with parchment bifolia forming innermost and outermost leaves of gatherings.</support>
+
+
+                                <extent>
+                                    <measure type="leavesCount" n="291">291 folios</measure>
+                                    <measure type="pageDimensions" n="22 x 14.5 cm">220 x 145 mm, paper leaves in quarto format</measure>
+                                </extent>
+
+                                <foliation>Foliation, in pencil, repeats <locus from="150r" to="150r">fol. 150</locus> and continues consecutively through parts I and II of the manuscript, including the four flyleaves that separate the two. Thus part one comprises <locus from="1r" to="290r">fols. 1-290</locus> (due to 150 being repeated), the middle flyleaves are foliated <locus from="291r" to="294r">291-294</locus>, and part II comprises <locus from="295r" to="329r">fols. 295-329</locus>.</foliation>
+
+
+                                <collation> 
+                                    
+                                    <list>
+
+                                        <item>I first gathering now lost</item>
+                                        <item>II <locus from="1r" to="14r">1-14</locus> (originally a gathering of 16, now wanting leaves 7, 10)</item>
+                                        <item>III <locus from="15r" to="30r">15-30</locus></item>
+                                        <item>IV <locus from="31r" to="46r">31-46</locus></item>
+                                        <item>V <locus from="47r" to="62r">47-62</locus></item>
+                                        <item>VI <locus from="63r" to="74r">63-74</locus> (originally a gathering of 16, now wanting 5, 7, 10, 12)</item>
+                                        <item>VII <locus from="75r" to="88r">75-88</locus> (originally a gathering of 16, now wanting 2, 15)</item>
+                                        <item>VIII <locus from="89r" to="96r">89-96</locus> (originally a gathering of 16, now wanting 4, 5, 6, 7, 10, 11, 12, 13)</item>
+                                        <item>IX <locus from="97r" to="110r">97-110</locus> (originally a gathering of 16, now wanting 7, 10)</item>
+                                        <item>X <locus from="111r" to="123r">111-123</locus> (originally a gathering of 16, now wanting 7, 10, 14)</item>
+                                        <item>XI <locus from="124r" to="139r">124-139</locus></item>
+                                        <item>XII <locus from="140r" to="153r">140-153</locus> (originally a gathering of 16, now wanting 7; 150 foliated twice)</item>
+                                        <item>XIII <locus from="154r" to="168r">154-168</locus> (originally a gathering of 16, now wanting 9)</item>
+                                        <item>XIV <locus from="169r" to="184r">169-184</locus></item>
+                                        <item>XV <locus from="185r" to="200r">185-200</locus></item>
+                                        <item>XVI <locus from="201r" to="216r">201-216</locus></item>
+                                        <item>XVII <locus from="217r" to="232r">217-232</locus></item>
+                                        <item>XVIII <locus from="233r" to="246r">233-246</locus> (originally a gathering of 16, now wanting 2, 15)</item>
+                                        <item>XIX <locus from="247r" to="262r">247-262</locus></item>
+                                        <item>XX <locus from="262r" to="274r">262-274</locus> (originally a gathering of 16, now wanting 3, 14, 15, 16)</item>
+                                        <item>XXI <locus from="275r" to="290r">275-290</locus></item>
+                                        
+                                    </list> 
+                                    Quire marks lower right, e.g., <hi rend="italic">b</hi> on <locus from="3r" to="3r">3r</locus>, <locus from="7r" to="7r">7r</locus>. Signatures top right in the format <hi rend="italic">2.1</hi>, <hi rend="italic">2.2</hi>, <hi rend="italic">2.3</hi>, etc., typically with every folio numbered in this way, runs up through <locus from="205r" to="205r">fol. 205</locus>. Another set of signatures on the lower right - e.g., <locus from="68r" to="68r">fol. 68</locus>, <hi rend="italic">f8</hi>, although many of these now lost to cropping. First quire now missing, and thus numbering begins with <hi rend="italic">2</hi> and signatures begin with <hi rend="italic">b</hi>. Catchwords, lower right of final verso of most quires, usually framed in red and/or scribal ink. Some catchwords lost to cropping.
+                                </collation>
+
+                                <condition>Worn and soiled throughout, with many tears in paper and large sections cut away from some leaves. Numerous scribbles in margins throughout.</condition>
+
+                            </supportDesc>
+
+
+                            <layoutDesc>
+
+                                <layout columns="1">All texts bounded in brown ink or crayon, but not ruled. Bounding lines now invisible on most leaves. In <title>Siege of Jerusalem</title> 27-32 lines per leaf, <title>Brut</title> 27-28 lines, <title>Three Kings of Cologne</title> usually 31 lines, <title>Awntyrs of Arthur</title> usually 30 lines, <title>Book of Hunting</title> usually 30 lines. Writing area approximately <measure type="written">170 x 95 mm</measure> for all texts.
+                                </layout>
+
+                            </layoutDesc>
+                        </objectDesc>
+
+
+                        <handDesc>
+                            <handNote>
+                                
+                                <p>One scribe throughout, using brown ink and an anglicana script. The scribe is known to have been a London professional who was also responsible for Huntington Library, MS Hm 114, most of British Library, MS Harley 3943, and parts of City of London Record Office, Letter Book I and the London <title>Liber Albus</title>; see Hanna-Lawton pp. xxi-xxii for details. Rubricated running heads by the main scribe throughout much of manuscript. In <title>Brut</title>, these list the reigning monarch who corresponds to the chronological history in the text. In <title>Siege of Jerusalem</title>, <hi rend="italic">þe sege</hi> written on versos, <hi rend="italic">of Ier[usa]l[e]m</hi> written on rectos. In <title>Three Kings of Cologne</title>, <hi rend="italic">The kynges</hi> or <hi rend="italic">þre kynges</hi> on versos, <hi rend="italic">of Coloyne</hi> on rectos. No running heads for items four and five.</p> 
+                                
+                                <p>Punctuation in the manuscript is sparse. Lines generally begin with capital letter forms; initial letters that do not have a distinct lower case are likely intended as capitals. The caesura is marked for the first twenty-four lines by a vertical slash mark (transcribed "|"), but thereafter is not marked.</p>
+                                
+                                <p>The scribe uses a variety of typical suspensions and abbreviations, and presents little in the way of peculiar or problematic tendencies. He frequently bars <hi rend="italic">-ll</hi> to indicate <hi rend="italic">-lle</hi>. This is evident, for example, in the presence of barred <hi rend="italic">-ll</hi> in <hi rend="italic">all</hi> 45x, but unbarred <hi rend="italic">alle</hi> 8x. There are a few self-corrections as well as a few corrections that seem to be the work of a later corrector, who uses a lighter-colored brownish ink; the latter have been identified in the archive by encoding them as the work of "hand x."</p>
+                                
+                                <p>LALME (LP 6030, grid 578 190) considers Huntington MS Hm 114 along with British Library, Harley 3943, both by the same scribe responsible for Lambeth MS 491, and places the dialect near <placeName>Rayleigh, Essex</placeName>. As Hanna-Lawton note, Lambeth MS 491 "contains a variety of names scribbled in (s. xv<hi rend="supralinear">2</hi>) . . . Perhaps most revelatory is <persName>Thomas Patsall</persName>'s inscription on fol. 22<hi rend="supralinear">v</hi>, 'in the tone of barakyng', that is, <placeName>Barking, Essex</placeName>" (xxii). Thus this brief fifteenth-century analysis of the dialect confirms LALME, as do the forms present throughout the text of <title>SJ</title> within MS 491. See also <persName>Doyle</persName>, p. 94 and n. 23, where he cites a conversation with <persName>M. L. Samuels</persName>, who also placed the dialect at <placeName>Essex</placeName>.</p>
+                                
+                            </handNote>
+                        </handDesc>
+
+
+
+
+
+                        <decoDesc>
+                            <decoNote>
+                                <p>As with most <title>Siege of Jerusalem</title> manuscripts, there are no illustrations and only modest ornamentation is present. The opening initial is a 2-line blue lombard flourished in red. Rubricated incipit. Extensive use of paraph markers, discussed further below, in red and blue. The first letter of some proper names touched in red – e.g., <hi rend="italic">Tytus</hi>, <hi rend="italic">Gascoigne</hi>, <hi rend="italic">Guyens</hi> on <locus from="206r">fol. 206r</locus>.</p>
+                                
+                                <p>Hanna-Lawton state that the scribe of MS 491 does not notate large-scale divisions of the text and thus they exclude the manuscript from the list of evidence for establishing authorial passus divisions (lxxi-lxxii). Although they are correct that D features "a scattered series of paraphs" (lxxi), they have missed the marginal instructions left by the scribe for the rubricator to mark large-scale divisions, some of which are obscured by these paraphs. Hanna-Lawton recognize divisions in their edition at lines 189, 305, 445, 637, 897, and 1113. In MS 491, each of these except one is in fact marked  by the scribe or there is a clear explanation as to why it is not marked: at HL 189 (D 182), there is a marginal notation in the brownish scribal ink that has been partly obscured by the red paraph<graphic url="images/D182paraph.jpg"/>; at HL 445 (D 429) a similar mark is visible beneath the blue paraph<graphic url="images/D429paraph.jpg"/>; HL 637 features no marginal notation, but appears at the top of a new quire on <locus from="217r">fol. 217r</locus> at a point where there is an unusual blank space at the end of the previous quire, suggesting that the scribe was responding to a large-scale textual division in his exemplar (see Hanna-Lawton, lxxii, who recognize this as a likely site of a textual division); HL 897 (D 861) features a clear scribal notation to the left of a blue paraph<graphic url="images/D861paraph.jpg"/>; and HL 1113 (D 1070) is similarly marked but there is no paraph added later<graphic url="images/D1070paraph.jpg"/>. This leaves only HL 305, which is not attested by D. Instead, however, the scribe adds a division at HL 953 (D 916), where the notation is written to the left of (and partly obscured by the blotting of) a blue paraph<graphic url="images/D916paraph.jpg"/>. This final division is also marked in E, but that evidence from E has been excluded by Hanna-Lawton on the grounds that it only occurs in only one manuscript (i.e., at E 953; see Hanna-Lawton p. lxxi).</p>
+                                
+                                <p>The large-scale divisions of D, then, correspond exactly to those of E with two possible exceptions. The first is at HL 738, which E marks with a rubricated multiline capital. In D 711, which corresponds to HL 738, it is now impossible to tell if this line was marked because of the drastically cropped margin of <locus from="218v">fol. 218v</locus> and the consequent damage to some of the initial letters of lines on that folio; if it were once marked, the mark would certainly have been lost. This seems the most likely case, however, since D corresponds to E elsewhere as far as large-scale textual divisions are concerned, and since HL 738, although not recognized as archetypal by Hanna-Lawton, is attested by U and C as well as E. The second exception is HL 1177, which E marks with another multiline capital. The rubricator of D supplied a paraph here as well, but there is no sign of the underlying <hi rend="italic">cc</hi> by the scribe that I take to indicate the scribal divisions, and the rubricator supplied such a large number of meaningless paraphs that we must hold this one in doubt. The scribe of D uses the marginal notation described above just before the colophon as well, but otherwise he reserves it for the instances mentioned here.</p>
+                                
+                                <p>Finally, it is necessary to discuss the odd, and what seems rather haphazard, placement of paraphs in the text. In addition to the fact that the rubricator marked some but not all of the large-scale textual divisions with paraphs, obscuring some and placing the paraphs alongside but not over others, he also distributed other paraphs in a perplexing manner, as, for example, when he placed five on <locus from="209r">fol. 209r</locus> alone, three of them within a five-line span. Another hand, perhaps somewhat later, added more paraphs in thin strokes with brown ink, the first of these appearing at l. 927 with quite a few more from there to the end. Many of these, e.g., lines 1005, 1088, 1132, are now badly faded, so much so that it is very difficult to see them without magnification. (Interestingly, most are easily visible on microfilm, suggesting that either this ink has faded since the microfilm images were made or that the process of making the images itself somehow amplified them.) These paraphs may be distinguished in the archive because they display in black as opposed to blue or red.</p>
+                                  
+                                <p>Elsewhere in the manuscript, decorative features are consistent with those found in <title>Siege of Jerusalem</title>. Note that in several instances – <title>SJ</title>, <title>Awntyrs</title>, and <title>Book of Hunting</title>, decoration was begun at the start of the text, but not carried through to the end:</p>
+                                
+                                <p><title>Brut</title>: Running heads in red. Numerous 2-line red or blue lombard capitals. Rubricated headings in text and marginal annotation. Extensive use of blue and red to touch first letters of sentences. Numerous blue or red parpahs. Red underlining for emphasis. Presumably would have had opening initial like other texts in the codex, but is acephalous.</p>
+                                
+                                <p><title>Three Kings of Cologne</title>: Blue lombard initial with red flourishing, as in <title>SJ</title>. Underlining in red, rubircated textual divisions, blue or red lombards, paraphs, text touched in red or blue like <title>Brut</title>.</p>
+                                
+                                <p><title>Awntyrs of Arthur</title>: Opening initial like others. Textual divisions marked by red or blue paraphs in margin, but none from <locus from="281v" to="281v">281v</locus> on. Some letters touched in red or blue. Simple lines/flourishes in red or blue at ends of some lines.</p>
+                                
+                                <p><title>Book of Hunting</title>: Opening initial like others. Alternating blue and red paraphs on <locus from="287r" to="287r">287r</locus> only. Couplets marked with red brackets. A few letters touched in red.</p>
+                                
+                            </decoNote>
+                        </decoDesc>
+
+
+                        <bindingDesc>
+                            <binding notBefore="1600" notAfter="1700">
+
+                                <p>Seventeenth century, English. Binding measures <measure type="written">230 mm in height, 190 mm</measure> from center of spine to fore edge. Calfskin over wooden boards, rebacked and extensively restored. A note in pencil on the inside back cover states: <hi rend="italic">Reback: <date when="1959-01-14">14-1-59</date>. F.W.</hi> Four raised bands. Headband and tailband not visible. Flyleaves and pastedowns in front and back of modern paper. Four leaves of paper between parts I and II of the manuscript, likely added when these two books were bound together.</p>
+                                
+                                <p>On front and back, where remnants of the earlier binding survive, a pair of thin, parallel blindtooled lines along the outer perimeter except for along spine, where they are lost to the rebacking. Also on both front and back covers, another pair of parallel blindtoolled lines, set in from the spine about <measure type="written">33 mm</measure> and placed <measure type="written">5 mm</measure> apart from one another, runs vertically. Stamped in gold, second compartment on spine: <hi rend="italic">BRUT / IN ENGLISH / POEMS</hi> Stamped in gold, bottom compartment of spine: <hi rend="italic">COD. / LAMBETH / 491</hi></p>
+                                
+                                <p>In his catalogue entry for 491, <persName>James</persName> notes:</p>
+                                
+                                <p><hi rend="italic">Calf binding, pr. 1s. 6d. It is no. 16 in the Carew-Sheldon list in MS. Tanner 275</hi></p>
+                                
+                                <p>A large group of Lambeth manuscripts were bound for <persName>Archbishop Sanford</persName> in the late 17th century in a style identical to that of MS 491 (see <persName>Bill</persName>, <title>A Catalogue of Manuscripts in Lambeth Palace Library MSS. 1222-1860</title>, pp. 6-7). In these were recorded the prices, which <persName>James</persName> notes in his catalogue. <persName>Bill</persName> characterizes 491 as "the same style of binding," but does not list it as one of the books bound for <persName>Sancroft</persName>. If evidence for the cost of the calf binding were once contained within the volume, it is not now, and was likely removed when the book was rebacked in <date when="1959">1959</date> (the <persName>James</persName> catalogue is dated <date when="1932">1932</date>).</p>
+                                
+                                <p>A note has been pasted to the front cover:</p>
+                                
+                               <p> <hi rend="italic"><hi rend="underline">Notice</hi><lb/>
+                                Pages 41, 69, 70-78, 90, 91, 146, 190, 191, 192, 199, 200, 201, 216-218, 219, have been mutilated some time or other. <date when="1907">1907</date></hi></p>
+                                
+
+                            </binding>
+                        </bindingDesc>
+
+                    </physDesc>
+
+
+                    <history>
+                        <provenance><p>The manuscript belonged to <persName>Archbishop Richard Bancroft</persName> (1544-1610) and his successor <persName>George Abbot</persName> (1562-1663), and has been in the collections of Lambeth Palace since <date when="1664">1664</date> (<persName>Guddat-Figge</persName> 228). Among the many marginal notations and scribbles are a number of proper names; both <persName>James</persName> and <persName>Guddat-Figge</persName> provide transcriptions of many of these. The list below is adapted from <persName>Guddat-Figge</persName> (p. 227), which is the more through of the two:</p>
+                            
+                            <p><persName>Jhon pattsall</persName> (fols. <locus from="8r" to="8r">8r</locus>, <locus from="30v" to="30v">30v</locus>, <locus from="117v" to="117v">117v</locus>, <locus from="139v" to="139v">139v</locus>, <locus from="152r" to="152r">152r</locus>, <locus from="167v" to="167v">167v</locus>, etc.); <persName>dymond mertyn</persName> (<locus from="30r" to="30r">fol. 30r</locus>); <persName>carrier martyne</persName> (<locus from="30r" to="30r">fol. 30r</locus>); <persName>Thomas pattsal</persName> (fols. <locus from="8r" to="8r">8r</locus>, <locus from="47r" to="47r">47r</locus>, <locus from="168r" to="168r">168r</locus>); <persName>Jhon pressoun</persName> (<locus from="54v" to="54v">fol. 54v</locus>); <persName>Thomas sharpe</persName> (fols. <locus from="116v" to="116v">116v</locus>, <locus from="130r" to="130r">130r</locus>); <persName>John hays</persName> (fols. <locus from="232r" to="232r">232r</locus>, <locus from="239r" to="239r">239r</locus>); a note to <persName>Jhon Pysant</persName> by <persName>Th. Patsall</persName> (<locus from="284v" to="284v">fol. 284v</locus>); <persName>Thomas Patsall</persName> (fols. <locus from="22v" to="22v">22v</locus>, <locus from="123v" to="123v">123v</locus>, <locus from="149r" to="149r">149r</locus>, <locus from="198r" to="198r">198r</locus>, etc. These are in a different hand than the <persName>Thomas Patsall</persName> listed above; <persName>Thomas Patsall</persName> delbying in the tone of barakyng occurs on <locus from="22v" to="22v">22v</locus>); <persName>Rychard Persey</persName> (fols. <locus from="44r" to="44r">44r</locus>, <locus from="109v" to="109v">109v</locus>, <locus from="172r" to="172r">172r</locus>, <locus from="265r" to="265r">265r</locus>); <persName>Thomas Pysant</persName> (fols. <locus from="187v" to="137v">137v</locus>, <locus from="211v">211v</locus>); <persName>Edward shambet</persName> (<locus from="198r" to="198r">fol. 198r</locus>)</p>
+                            
+                        </provenance>
+                    </history>
+
+                    <additional>
+                        <adminInfo>
+                            <recordHist>
+                                <source>
+                                    <bibl> </bibl>
+                                </source>
+                            </recordHist>
+                        </adminInfo>
+
+                        <listBibl>
+                            
+                            <bibl><author>Bill, E. G. W.</author> <title>A Catalogue of Manuscripts in Lambeth Palace Library MSS. 1222-1860</title>. <pubPlace>Oxford</pubPlace>: <publisher>Clarendon Press</publisher>, <date when="1972">1972</date>. </bibl>
+                            
+                            <bibl><author>Bülbring, Karl D.</author> "Über die Handschrift Nr. 491 der Lambeth-Bibliothek." <title>Archiv Für das Studium der Neueren Sprachen und Literaturen</title> 86 (<date when="1891">1891</date>): 383-92.</bibl>
+                            
+                            <bibl><author>Doyle, A. I.</author> "The Manuscripts."  <title>Middle English Alliterative Poetry and its Literary Background: Seven Essays</title>. Ed. <editor>David Lawton</editor>. <pubPlace>Woodbridge, UK</pubPlace>: <publisher>D. S. Brewer</publisher>, <date when="1982">1982</date>. 88-100 (95).
+                            </bibl>
+                            
+                            <bibl><author>Guddat-Figge, Gisela</author>. <title>Catalogue of the Manuscripts Containing Middle English Romances</title>. <pubPlace>Munich</pubPlace>: <publisher>W. Fink</publisher>, <date when="1976">1976</date>. 159-63.
+                            </bibl>
+                            
+                            <bibl><author>Hanna, Ralph</author>. “Booklets in Medieval Manuscripts: Further Considerations.” <title>Studies in Bibliography</title> 39 (<date when="1986">1986</date>): 100-11.</bibl>
+                            
+                            
+                            <bibl><editor>Hanna, Ralph</editor> and <editor>David Lawton</editor>,
+                                eds. <title>The Siege of Jerusalem</title>. EETS o.s. 320.
+                                <pubPlace>London</pubPlace>: <publisher>Oxford UP</publisher>,
+                                <date when="2003">2003</date>.</bibl>
+                            
+                            <bibl><author>Hopper, A. G.</author> "The Lambeth Palace Manuscript of <title>The Awntyrs off Arthure</title>." <title>Leeds Studies in English</title> 3 (<date when="1934">1934</date>), 37-43.</bibl>
+                            
+                            <bibl><author>James, M. R.</author> <title>A Descriptive Catalogue of the Manuscripts in the Library of Lambeth Palace. The Medieval Manuscripts</title> <pubPlace>Cambridge</pubPlace>: <publisher>The University Press</publisher>, <date from="1930" to="1932">1930-32</date>. 681-84.</bibl>
+                            
+                            <bibl><author>Kellogg, Allen Bond</author>. <title>The Language of the
+                                Alliterative Siege of Jerusalem</title>. Diss. U of Chicago,
+                                <date when="1943">1943</date>.</bibl>
+                            
+                            <bibl><editor>Kölbing, E</editor>. and <editor>Mabel Day</editor>, eds.
+                                <title>Siege of Jerusalem</title>. EETS o.s. 188.
+                                <pubPlace>London</pubPlace>: <publisher>Oxford UP</publisher>,
+                                <date when="1932">1932</date>. (Reprinted <date when="2001"
+                                    >2001</date>)</bibl>
+                            
+                            <bibl><author>Lewis, Robert E.</author> and <author>Angus McIntosh</author>. <title>A Descriptive Guide to the Manuscripts of The Prick of Conscience</title>. Medium Aevum Monogrpahs, new series 12. <pubPlace>Oxford</pubPlace>: <publisher>Society for the Study of Mediaeval Languages and Literature</publisher>, <date when="1982">1982</date>.</bibl>
+                            
+                            <bibl><author>McIntosh, Angus</author> and <author>M. L. Samuels</author>. <title>A Linguistic Atlas of Late Mediaeval English</title>. <pubPlace>New York</pubPlace>: <publisher>Aberdeen University Press</publisher>, <date>1986</date>.</bibl>
+                            
+                            <bibl><author>Millar, Bonnie</author>. <title>The Siege of Jerusalem in
+                                its Physical, Literary, and Historical Contexts</title>.
+                                <pubPlace>Dublin</pubPlace>: <publisher>Four Courts
+                                Press</publisher>, <date when="2000">2000</date>. 26-7.</bibl>
+                            
+                            <bibl><editor>Schaer, Frank</editor>. <title>The Three Kings of Cologne</title>: Edited from London, Lambeth Palace MS 491. Middle English Texts 31. <pubPlace>Heidelberg</pubPlace>: <publisher>Winter</publisher>, <date when="2000">2000</date></bibl>
+                            
+                            <bibl><author>Zetterson, Anne</author>. "The Lambeth Manuscript of the <title>Boke of Huntyng</title>. <title>Neuphilologische Mitteilungen</title> 70 (<date when="1969">1969</date>), 106-21</bibl>
+                            
+                            
+                        </listBibl>
+
+
+                    </additional>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <!--
+<revisionDesc> <change who="" when=""></change> </revisionDesc>
+-->
+    </teiHeader>
+    <text>
+        <body>
+            <p/>
+        </body>
+    </text>
+</TEI>

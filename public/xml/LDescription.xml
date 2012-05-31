@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+
+            <titleStmt>
+                <title>Descritpion of Bodleian Library, MS Laud Misc. 656 (L)</title>
+                <author>Timothy L. Stinson</author>
+            </titleStmt>
+
+            <editionStmt>
+                <edition>Siege of Jerusalem Electronic Archive</edition>
+            </editionStmt>
+
+            <publicationStmt>
+                <publisher>Society for Early English and Norse Electronic Texts</publisher>
+            </publicationStmt>
+
+            <sourceDesc>
+                <msDesc>
+
+                    <msIdentifier>
+                        <country>United Kingdom</country>
+                        <settlement>Oxford</settlement>
+                        <institution>University of Oxford</institution>
+                        <repository>Bodleian Library</repository>
+                        <idno>Laud Misc. 656</idno>
+                        <msName>L</msName>
+                    </msIdentifier>
+
+                    <head>
+                        <title>Bodleian Library, MS Laud Misc.656 (L)</title>
+                        <origPlace>England</origPlace>
+                        <origDate notBefore="1375" notAfter="1400">Laud Misc. 656 is likely the
+                            oldest of the manuscripts in the <title>Siege of Jerusalem</title>
+                            corpus, rivaled only by perhaps the Princeton University Library, MS
+                            Taylor 11 (P), as <persName>Doyle</persName> notes when he attributes
+                            the poem "to the fourteenth century with confidence, from the
+                            earliest-looking copy, in Bodleian Laud misc. 656" (93). Hanna-Lawton
+                            concur, dating the manuscript to the end of that century. Guddat-Figge
+                            erroneously dates it to the middle of the fifteenth century.</origDate>
+                    </head>
+
+                    <msContents>
+
+                        <msItem>
+                            <title>Booklet I</title>
+                        
+                        
+                        <msItem>
+                            
+                            <p>1. <locus from="1v" to="19r">Fol. 1v- 19r</locus> <title>The Siege of Jerusalem</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1583">IMEV 1583</ref></p>
+                                
+                            </msItem>
+
+                            <msItem>
+                                <p>2. <locus from="19v" to="114r">Fol. 19v-114r</locus> <title>Piers Plowman</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1459">IMEV 1459</ref></p>
+                            </msItem>
+
+                            <msItem>
+                                <p>3. <locus from="114v" to="116v">Fol. 114v-116v</locus> mostly blank leaves</p>
+                            </msItem>
+                        </msItem>
+
+                        <msItem>
+                            <title>Booklet II</title>
+
+                            <msItem>
+                                <p>4. <locus from="117r" to="118r">Fol. 117r-118r</locus> an exposition of the Creed concerning Genesis 15</p>
+                            </msItem>
+
+                            <msItem>
+                                <p>5. <locus from="118r" to="124v">Fol. 118r-124v </locus> an exposition of the Decalogue</p>
+                            </msItem>
+
+                            <msItem>
+                                <p>6. <locus from="124v" to="125v">Fol. 124v-125v </locus> Biblical excerpts</p>
+                            </msItem>
+                        </msItem>
+
+                    </msContents>
+
+                    <physDesc>
+
+                        <objectDesc form="codex">
+
+                            <supportDesc material="parch">
+
+                                <support>Parchment</support>
+
+
+                                <extent>
+                                    <measure type="leavesCount" n="133">i + 133 folios</measure>
+                                    <measure type="pageDimensions" n="21.0 x 15.0 cm">210 x 150
+                                        mm</measure>
+                                </extent>
+
+                                <foliation>Foliation in both ink and pencil, both rather early. The
+                                    foliation in ink numbers each leaf 1-5 and thereafter in
+                                    intervals of 10 (i.e., 10, 20, 30, etc.). At a later date,
+                                    numbers were added in pencil to the unfoliated leaves by a
+                                    second hand. In quire X, the second hand corrects an error in
+                                    counting by his predecessor, striking through “110” and
+                                    replacing it with the correct “111.” Note also that the first
+                                    hand returns to number the final leaves of Booklet I
+                                    individually, but misnumbers 113, 114, 115, and 116 due the
+                                    earlier error at fol. 110. The later foliator strikes through
+                                    these and uses 115a and 115b to reach number 116 at the same
+                                    point as his predecessor.</foliation>
+
+
+                                <collation> One parchment flyleaf precedes quire I. As Hanna-Lawton
+                                    note, the codex contains two booklets, the first comprising ii +
+                                    fols. 1-116 and the second comprising fol. 117 to the end. The
+                                    following collation refers to the extant modern pencil
+                                    foliation. <list>
+
+                                        <item>Booklet I</item>
+                                        <item> I <locus from="ii" to="13">ii-13</locus> (quire of 14
+                                            leaves; a single parchment leaf precedes this quire) </item>
+                                        <item> II <locus from="14" to="25">14-25</locus>
+                                        </item>
+                                        <item> III <locus from="26" to="37">26-37</locus>
+                                        </item>
+                                        <item> IV <locus from="38" to="49">38-49</locus>
+                                        </item>
+                                        <item> V <locus from="50" to="61">50-61</locus></item>
+                                        <item> VI <locus from="62" to="73">62-73</locus>
+                                        </item>
+                                        <item> VII <locus from="74" to="85">74-85</locus>
+                                        </item>
+                                        <item> VIII <locus from="86" to="97">86-97</locus>
+                                        </item>
+                                        <item> IX <locus from="98" to="107">98-107</locus>
+                                        </item>
+                                        <item> X <locus from="108" to="116">108-116</locus> (115
+                                            counted twice as 115a and 115b) </item>
+
+                                        <item>Booklet II</item>
+
+
+                                        <item> XI <locus from="117" to="124">117-124</locus>
+                                        </item>
+                                        <item> XII <locus from="125" to="131">125-131</locus> (a
+                                            quire of ten with three leaves wanting – one after fol.
+                                            126 and two after fol. 130) </item>
+                                    </list> No quire marks or signatures. Catchwords at lower right,
+                                    booklet I only. </collation>
+
+                                <condition>Parchment in sound condition, but often soiled and with
+                                    the margin frequently cut away.</condition>
+
+                            </supportDesc>
+
+
+                            <layoutDesc>
+
+                                <layout columns="1">In Booklet I, bounding lines in brown ink on
+                                    top, left, and bottom of text blocks; no rulings for individual
+                                    lines. A few prickings, usually one hole at the juncture of the
+                                    bounding lines, remain (e.g., fols. <locus from="11r"
+                                    >11</locus>, <locus from="15r">15</locus>, <locus from="39r" to="39r"
+                                        >39</locus>, and <locus from="51r" to="51r">51</locus>). No ruling or
+                                    prickings in Booklet II. Ruled for 33-41 lines per leaf in
+                                        <title>Siege of Jerusalem</title>, 37-46 lines per leaf in
+                                        <title>Piers Plowman</title>, and 38-40 lines in Booklet II.
+                                    In Booklet I, text block <measure type="written">175-180
+                                        mm</measure> in height in <title>Siege of Jerusalem</title>
+                                    and <measure type="written">170-180 mm</measure> in height in
+                                        <title>Piers Plowman</title>; the width of the text block
+                                    varies in both. In Booklet II, text block <measure
+                                        type="written">170-180 mm</measure> in height, <measure
+                                        type="written">120 mm</measure> in width.</layout>
+
+                            </layoutDesc>
+                        </objectDesc>
+
+
+                        <handDesc>
+                            <handNote>
+                                <p>The text is in an anglicana script using brown ink throughout,
+                                    and is likely the work of one scribe. Russell-Kane believe the
+                                    entire manuscript to be the work of the same scribe, whereas
+                                    Hanna-Lawton note that one scribe copied <title>Siege of
+                                        Jerusalem</title> with "perhaps a second for the remainder."
+                                    There are no running heads in <title>Siege of Jerusalem</title>,
+                                    but <title>Piers Plowman</title> features running heads starting
+                                    on fol. 69 and going through until the end, e.g., “Dowel,”
+                                    “Dobet,” and “Dobest.” The first few of these (58v to 63r)
+                                    appear to have been added later; the rest are contemporary with
+                                    the text. Corrections are sparse, with subpunction on fol.
+                                        <locus from="5r">5r</locus>, erasures on <locus from="9r"
+                                        >9r</locus>, and a few supralinear additions by the main
+                                    scribe (e.g., folios <locus from="3v">3v</locus>, <locus
+                                        from="7v">7v</locus>, <locus from="9r">9r</locus>).</p>
+                                <p>Lines generally begin with capital letter forms; initial letters
+                                    that do not have a distinct lower case are likely intended as
+                                    capitals. The caesura is marked throughout with a punctus
+                                    elevatus. Note that the scribe frequently adds a backwards curl
+                                    to final <hi rend="italic">–r</hi><graphic
+                                        url="images/Lrcurl.jpg"/> to form the suspension <hi
+                                        rend="italic">-re</hi>.</p>
+                                <p>Kellogg's dissertation is an especially useful tool for the study
+                                    of the dialect of Laud Misc. 656; whereas the dialect features
+                                    of the other manuscripts are documented in appendices, the
+                                    features of L are the focus of his dissertation and are
+                                    discussed at great length. He concludes his work with a summary
+                                    of the relationships of the dialects found in the manuscript,
+                                    noting that L is the westernmost dialect of the group (Kellogg
+                                    did not know of P or the Exeter fragment):</p>
+                                <p><quote>"On the whole the MSS are pretty consistent in displaying
+                                        East Midland traits. Western features are mainly limited to
+                                        one MS: L. It alone shows any retention of OE. ēo as a
+                                        rounded vowel. It alone has <hi rend="italic">ȝo</hi> for
+                                        'she' or preserves OE. ȳ as a rounded vowel in more than a
+                                        score of instances. U has seventeen instances of this last;
+                                        E had nine" (61).</quote></p>
+                                <p>Although Kellogg's documentation and characterization of L's
+                                    dialect are accurate, his conclusion that L represents the
+                                    dialect of the poet is much less convincing than Hanna-Lawton's
+                                    argument for an authorial dialect from the Barnoldswick-Earby
+                                    area (see xxvii and following).</p>
+                                <p>In "Langland's Dialect," <title>Medium Ævum</title> 54 (1985)
+                                        <persName>M. L. Samuels</persName> also comments on the
+                                    dialect of the manuscript, although his focus is on the C text
+                                    of <title>Piers Plowman</title> rather than <title>SJ</title>.
+                                    He lists Laud Misc. 656 as originating in "north Oxfordshire,"
+                                    offering as evidence the forms <hi rend="italic">hure</hi>, <hi
+                                        rend="italic">hear</hi>; <hi rend="italic">ȝo</hi>, <hi
+                                        rend="italic">she</hi>; <hi rend="italic">myche</hi>, <hi
+                                        rend="italic">much</hi>; <hi rend="italic">silf</hi>, <hi
+                                        rend="italic">self</hi>; <hi rend="italic">þuder</hi>, <hi
+                                        rend="italic">thither</hi>; <hi rend="italic">to
+                                    gadres</hi>, <hi rend="italic">together</hi>; <hi rend="italic"
+                                        >forȝutte</hi>, <hi rend="italic">forget</hi>; and <hi
+                                        rend="italic">laste</hi>, <hi rend="italic">lest</hi> (p.
+                                    239 and n. 39). Hanna-Lawton cite <persName>Samuels</persName>
+                                    in identifying the manuscript as the work of “northwest
+                                    Oxfordshire scribes,” but it should be noted that in the brief
+                                    list provided above the <title>SJ</title> scribe exhibits
+                                    different forms from those found in <title>Piers</title> in
+                                    three out of six instances:</p>
+                                <table>
+                                    <row>
+                                        <cell role="label">Piers</cell>
+                                        <cell role="label">Siege</cell>
+                                    </row>
+                                    <row>
+                                        <cell><hi rend="italic">hure</hi></cell>
+                                        <cell><hi rend="italic">hure</hi></cell>
+                                    </row>
+                                    <row>
+                                        <cell><hi rend="italic">ȝo</hi></cell>
+                                        <cell><hi rend="italic">ȝo</hi></cell>
+                                    </row>
+                                    <row>
+                                        <cell><hi rend="italic">myche</hi></cell>
+                                        <cell><hi rend="italic">myche</hi></cell>
+                                    </row>
+                                    <row>
+                                        <cell><hi rend="italic">silf</hi></cell>
+                                        <cell><hi rend="italic">self</hi></cell>
+                                    </row>
+                                    <row>
+                                        <cell><hi rend="italic">laste</hi></cell>
+                                        <cell><hi rend="italic">lest</hi></cell>
+                                    </row>
+                                    <row>
+                                        <cell><hi rend="italic">to gadres</hi></cell>
+                                        <cell><hi rend="italic">to gedris</hi></cell>
+                                    </row>
+                                </table>
+                                <p>(Forms of <hi rend="italic">þuder</hi> and <hi rend="italic"
+                                        >forȝutte</hi> do not appear in <title>SJ</title>.)</p>
+                                <p>A fuller comparison of the forms found in the
+                                        <title>Siege</title> with those in <title>Piers
+                                        Plowman</title> may illuminate the debate of whether more
+                                    than one scribe worked on this manuscript, although some
+                                    differences may of course be attributable to the exemplars. </p>
+                            </handNote>
+                        </handDesc>
+
+
+
+
+
+                        <decoDesc>
+                            <decoNote> There are few decorative features in the manuscript.
+                                    <title>Siege of Jerusalem</title> has rubricated initials 3-5
+                                lines in height at fols. <locus from="1v">1v</locus>, <locus
+                                    from="7v">7v</locus>, <locus from="13v">13v</locus>, and <locus
+                                    from="16r">16r</locus>; there are no passus divisions marked
+                                with paraphs or marginalia, but these multiline capitals correspond
+                                to passus divisions recognized by Hanna-Lawton as authorial.
+                                    <title>Piers</title> has spaces and guideletters for rubricated
+                                initials, e.g., 19v, 25r, but these have not been realized; the same
+                                is true in Booklet II, e.g., fol. 119v. </decoNote>
+                        </decoDesc>
+
+
+                        <bindingDesc>
+                            <binding notBefore="1401" notAfter="1500">
+
+                                <p>15th c., English. Binding is <measure type="written">215
+                                        mm</measure> in height and <measure type="written">170
+                                        mm</measure> in width as measured from center of spine to
+                                    the fore edge. Bound in reddish brown calfskin, rebacked but
+                                    otherwise original. Wooden boards, sloped at edges. Four raised
+                                    bands as bound, rebacked spine utilizing original bands.
+                                    Additionally, two slightly raised sewing structures, one at top
+                                    and the other at bottom of spine, detectable. Flat spine.
+                                    Turn-ins at front and back are raggedly cut, glued to boards
+                                    with no endpaper or other coverings. Grooves with recessed
+                                    leather thongs visible in both boards. The binding is not
+                                    decorated. Remnants of a strap and clasp, including bits of
+                                    metal, present on front cover. The strap apparently hooked to a
+                                    metal piece at center of back cover, where there is now a hole
+                                    and corresponding discoloration in the leather. Single vellum
+                                    flyleaf in front only.</p>
+
+                                <p>The binding and boards bear several ownership labels:</p>
+
+                                <p>A small yellow paper label is attached to the spine, on which is
+                                    written <hi rend="italic">MS Laud / Misc. 656</hi> in modern
+                                    handwriting.</p>
+
+                                <p>Paper label, inside front cover, top left: <hi rend="italic">S.C.
+                                        1059</hi> (a reference to the Bodleian’s <title>Summary
+                                        Catalogue</title> entry).</p>
+
+                                <p>Written in ink on binding turn-in, inside front cover: <hi
+                                        rend="italic">F. 22</hi> and <hi rend="italic">Laud /
+                                        656</hi>. Added to the right of <hi rend="italic">Laud</hi>
+                                    in pencil at a later date: <hi rend="italic">MISC</hi>.
+                                    According to the <title>Summary Catalogue</title>, F. 22 refers
+                                    to the old shelfmark: <quote>“In 1641, the Laudian MSS. were
+                                        arranged in eleven compartments, lettered A-L, occupying the
+                                        whole of the S.W. gallery at the Selden End”</quote>
+                                    <ref>(14)</ref>.</p>
+                            </binding>
+                        </bindingDesc>
+
+                    </physDesc>
+
+
+                    <history>
+                        <provenance> Contains signature of <persName>John Cempe</persName> of
+                                <placeName>Ticehurst</placeName>, on <locus from="126v" to="126v">fol.
+                                126v</locus>, which Hanna-Lawton date to the end of the 15th
+                            century. On <locus from="131v" to="131v">fol. 131v</locus>, the signature
+                                    <persName><hi rend="italic">John naseby
+                                hemyngford</hi></persName>. <locus from="2r">Fol. 2r</locus>
+                            contains the <hi rend="italic">ex libris</hi> of <persName>William
+                                Laud</persName>: <hi rend="italic">Liber Guilielmi Laud
+                                Archiep[iscop]i Cantuar[um] : / et Cancellarij Vniuersitatis
+                                Oxon[iensis] . / <date>1633</date> .</hi>
+                        </provenance>
+                    </history>
+
+                    <additional>
+                        <adminInfo>
+                            <recordHist>
+                                <source>
+                                    <bibl> </bibl>
+                                </source>
+                            </recordHist>
+                        </adminInfo>
+
+                        <listBibl>
+                            <bibl><author>Coxe, Henry O.</author>
+                                <title>Catalogus codicum mss. qui in collegiis aulisque oxoniensibus
+                                    hodie adservantur</title>. <pubPlace>Oxonii</pubPlace>, e
+                                Typographeo academico, <date when="1852">1852</date>.</bibl>
+
+                            <bibl><author>Doyle, A. I.</author> "The Manuscripts." <title>Middle
+                                    English Alliterative Poetry and its Literary Background: Seven
+                                    Essays</title>. Ed. <editor>David Lawton</editor>.
+                                    <pubPlace>Woodbridge, UK</pubPlace>: <publisher>D. S.
+                                    Brewer</publisher>, <date when="1982">1982</date>. 88-100
+                                (93).</bibl>
+
+                            <bibl><author>Guddat-Figge, Gisela</author>. <title>Catalogue of the
+                                    Manuscripts Containing Middle English Romances</title>.
+                                    <pubPlace>Munich</pubPlace>: <publisher>W. Fink</publisher>,
+                                    <date when="1976">1976</date>. 287-88.</bibl>
+
+                            <bibl><author>Hanna, Ralph</author>. "The Origins and Productions of
+                                Westminster School MS 3." <title>Studies in Bibliography</title>. 41
+                                    (<date when="1988">1988</date>), 197-218 (211).</bibl>
+
+                            <bibl><editor>Hanna, Ralph</editor> and <editor>David Lawton</editor>,
+                                eds. <title>The Siege of Jerusalem</title>. EETS o.s. 320.
+                                    <pubPlace>London</pubPlace>: <publisher>Oxford UP</publisher>,
+                                    <date when="2003">2003</date>.</bibl>
+
+                            <bibl><author>Kellogg, Allen Bond</author>. <title>The Language of the
+                                    Alliterative Siege of Jerusalem</title>. Diss. U of Chicago,
+                                    <date when="1943">1943</date>.</bibl>
+
+                            <bibl><editor>Kölbing, E</editor>. and <editor>Mabel Day</editor>, eds.
+                                    <title>Siege of Jerusalem</title>. EETS o.s. 188.
+                                    <pubPlace>London</pubPlace>: <publisher>Oxford UP</publisher>,
+                                    <date when="1932">1932</date>. (Reprinted <date when="2001"
+                                    >2001</date>)</bibl>
+
+                            <bibl><author>Millar, Bonnie</author>. <title>The Siege of Jerusalem in
+                                    its Physical, Literary, and Historical Contexts</title>.
+                                    <pubPlace>Dublin</pubPlace>: <publisher>Four Courts
+                                    Press</publisher>, <date when="2000">2000</date>. 29.</bibl>
+
+                            <bibl><editor>Russell, George</editor> and <editor>George Kane</editor>,
+                                eds. <title>Will's visions of Piers Plowman, do-well, do-better, and
+                                    do-best</title>. <author>By William Langland</author>.
+                                    <pubPlace>London</pubPlace>: <publisher>Athlone
+                                    Press</publisher>, <date when="1997">1997</date>. 4.</bibl>
+
+                            <bibl>Skeat, W. W., ed. <title>The vision of William concerning Piers
+                                    Plowman, together with Vita de Dowel, Dobet, et Dobest, secundum
+                                    Wit et Resoun, by William Langland (about 1362-1393 A.D.) Ed.
+                                    from numerous manuscripts, with prefaces, notes, and a
+                                    glossary</title>. By <author>William Langland</author>. Pt. III,
+                                Early English Text Society, o.s. 54. <pubPlace>London</pubPlace>:
+                                Trübner &amp; Co., <date when="1880">1880</date>.</bibl>
+
+
+                        </listBibl>
+
+
+                    </additional>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <!--
+<revisionDesc> <change who="" when=""></change> </revisionDesc>
+-->
+    </teiHeader>
+    <text>
+        <body>
+            <p/>
+        </body>
+    </text>
+</TEI>
