@@ -1,37 +1,47 @@
 $(document).ready(function() {
 
     $("#previous-button").click(function() {
-        showPreviousComparison();
+        showPreviousComparison(null);
     });
 
     $("#next-button").click(function() {
-        showNextComparison();
+        showNextComparison(null);
     });
 
-    showNextComparison();
+    var params = parseURL();
+    showNextComparison( params["comparison"] );
 });
 
-function showPreviousComparison( ) {
+function showPreviousComparison( resource_name ) {
 
-   var resource_name = $("#previous-page").attr( "href");
-   if (resource_name != null) {
-       resource_name = "comparisons/" + resource_name.replace(/ /g, "%20"); // some of the names have spaces in!
-   } else {
-       resource_name = "comparisons/" + "HL.0001.html"
+   // if we did not provide a previous page
+   if( resource_name == null ) {
+      // try to get it from the current page
+      resource_name = $("#previous-page").attr( "href");
+
+      if (resource_name == null) {
+         // just use a default
+         resource_name = "HL.0001.html"
+      }
    }
 
+   resource_name = "comparisons/" + resource_name.replace(/ /g, "%20"); // some of the names have spaces in!
    loadComparison( resource_name );
 }
 
-function showNextComparison( ) {
+function showNextComparison( resource_name ) {
 
-   var resource_name = $("#next-page").attr( "href");
-   if (resource_name != null) {
-       resource_name = "comparisons/" + resource_name.replace(/ /g, "%20"); // some of the names have spaces in!
-   } else {
-       resource_name = "comparisons/" + "HL.0001.html"
+   // if we did not provide a next page
+   if( resource_name == null ) {
+      // try to get it from the current page
+      resource_name = $("#next-page").attr( "href");
+      if (resource_name == null) {
+         // just use a default
+         resource_name = "HL.0001.html"
+      }
    }
 
+   resource_name = "comparisons/" + resource_name.replace(/ /g, "%20"); // some of the names have spaces in!
    loadComparison( resource_name );
 }
 

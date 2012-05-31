@@ -13,9 +13,7 @@ $(document).ready(function() {
 	$(".mainlist-item").toggle(function(){
         $( ".sublist").slideUp(75);
         $(this).parent().next().slideDown(450, function(){
-           var item = $(this).children('.sublist-item').first();
-           highliteElement( item );
-           showManuscriptContent ( item.attr("id").split("-")[0] );
+           $(this).children('.sublist-item').first().click();
         });
 	},
 	function(){
@@ -134,8 +132,22 @@ $(document).ready(function() {
         showManuscriptDescription( 'V');
     });
 
-    // set initial view...
-    $("#overview").addClass( "active");
+    var params = parseURL();
+    // if we are going to a specific page...
+    if( params["manuscript"] != null ) {
+        var element = $( "#" + params["manuscript"] + "-manuscript");
+        element.parent().slideDown(450, function(){
+           element.click();
+        });
+    } else if( params["description"] != null ) {
+        var element = $( "#" + params["description"] + "-description");
+        element.parent().slideDown(450, function(){
+           element.click();
+        });
+    } else {
+       // otherwise, set the default view...
+       $("#overview").addClass( "active");
+    }
 });
 
 function highliteElement( element ) {
