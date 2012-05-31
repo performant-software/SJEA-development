@@ -33,11 +33,21 @@ namespace :sjea do
         delete_file( viewfile )
       end
 
-      make_dir( "#{targetdir}/xml")
-      srcname = "#{xsltdir}/xml/#{fname}.xml"
-      dstname = "#{targetdir}/xml/#{fname}.xml"
-      copy_file( srcname, dstname )
+    end
 
+    make_dir( "#{targetdir}/xml")
+
+    puts "copying raw xml..."
+    transcription_file_list( ).each do |fname|
+       srcname = "#{xsltdir}/xml/#{fname}.xml"
+       dstname = "#{targetdir}/xml/#{fname}.xml"
+       copy_file( srcname, dstname )
+    end
+
+    description_file_list( ).each do |fname|
+       srcname = "#{xsltdir}/xml/#{fname}.xml"
+       dstname = "#{targetdir}/xml/#{fname}.xml"
+       copy_file( srcname, dstname )
     end
 
     puts "copying stylesheet..."
