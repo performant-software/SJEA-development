@@ -12,12 +12,15 @@
     text-align: right; }
   #content #search-controls #textbox-div {
     padding: 0 0 10px 0; }
-  #content #search-controls #special-keys-div .special-key-button {
-    float: left;
-    width: 35px;
-    height: 35px;
-    margin: 0 5px 0 5px;
-    font-size: 18px; }
+  #content #search-controls #special-keys-div {
+    padding: 10px 0 0 15px;
+    width: 350px; }
+    #content #search-controls #special-keys-div .special-key-button {
+      float: left;
+      width: 35px;
+      height: 35px;
+      margin: 0 0 0 10px;
+      font-size: 18px; }
 #content #search-instructions {
   width: 50%;
   text-align: justify;

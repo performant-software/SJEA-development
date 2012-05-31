@@ -22,11 +22,14 @@
 
       #special-keys-div {
 
+          padding: 10px 0 0 15px;
+          width: 350px;
+
           .special-key-button {
              float: left;
              width: 35px;
              height: 35px;
-             margin: 0 5px 0 5px;
+             margin: 0 0 0 10px;
              font-size: 18px;
           }
       }
