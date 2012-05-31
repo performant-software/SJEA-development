@@ -47,8 +47,8 @@ class Solr
 		   options[:q] = "*:*"
 		#	options[:q] = "section:#{overrides[:section]}" if !overrides[:section].blank?
 		else
-			options[:q] += " AND section:#{options[:f]}" if !options[:f].blank?
-      options[:q] += " AND title:#{options[:t]}" if !options[:t].blank?
+			#options[:q] += " AND section:#{options[:f]}" if !options[:f].blank?
+      #options[:q] += " AND title:#{options[:t]}" if !options[:t].blank?
     end
 		options = add_highlighting(options)
 		return options
