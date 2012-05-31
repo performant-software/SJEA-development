@@ -59,7 +59,9 @@
 
         <!--mjc: grab par tof the input filename to build the output filename-->
         <xsl:variable name="idno">
-            <xsl:value-of select="substring(substring-after($id, $xmlpath), 1, 1)"/>
+            <xsl:value-of
+                select="substring-before(substring-after(substring-before($id, '.xml'), $xmlpath), 'Description')"
+            />
         </xsl:variable>
 
         <xsl:result-document href="{concat('SJ', $idno, '-description.html')}" format="html">
@@ -400,7 +402,9 @@
         
         <!--mjc: grab part of the input filename to build the output filename-->
         <xsl:variable name="idno">
-            <xsl:value-of select="substring(substring-after($id, $xmlpath), 1, 1)"/>
+            <xsl:value-of
+                select="substring-before(substring-after(substring-before($id, '.xml'), $xmlpath), 'Description')"
+            />
         </xsl:variable>
         
         <!--mjc: check the value of @from to see how many digits it contains.       -->
