@@ -10,15 +10,12 @@
 
 <SJEA xmlns:tei="http://www.tei-c.org/ns/1.0">
     <part code="xml/ADescription.xml"/>
-    <!--    <part code="xml/CDescription.xml/"/>
+    <part code="xml/CDescription.xml/"/>
     <part code="xml/DDescription.xml"/>
     <part code="xml/EDescription.xml"/>
-    <part code="xml/ExDescription.xml"/>-->
+    <part code="xml/ExDescription.xml"/>
     <part code="xml/LDescription.xml"/>
-    <!--    <part code="xml/PDescription.xml"/>
+    <part code="xml/PDescription.xml"/>
     <part code="xml/UDescription.xml"/>
-    <part code="xml/VDescription.xml"/>-->
-    
+    <part code="xml/VDescription.xml"/>
 </SJEA>
-
-
