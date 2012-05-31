@@ -15,6 +15,8 @@ $(document).ready(function() {
     $("#special-button-4").click(function() {
         addCharacter( '\u04E0')
     });
+
+    $("#search-text").focus();
 });
 
 function addCharacter( character ) {
