@@ -45,9 +45,10 @@
        <%- hits = @results[:hits] -%>
        <%- hits.each do |hit| -%>
 
+          <%- manuscript = "SJ#{hit["title"].gsub(/^.*\((.*)\)$/, '\1')}" -%>
           <div class="result">
               <div class="result-title">
-                 <a href="/manuscript.html"><%= hit["title"] -%></a>
+                 <a href="/manuscript.html?manuscript=<%= manuscript -%>"> <%= hit["title"] -%></a>
               </div>
               <div class="result-snippet">
                  <%= raw( hit["highlighting"][0] ) -%>
