@@ -14,13 +14,9 @@ $table_lines: #9F9F9F;
 
    #content-header {
 
-      #compare-page-div {
-          position: relative;
-          text-align: center;
-          width: 100px;
-          height: 18px;
-          margin: 0 0 0 410px;
-          padding: 8px 0 0 0;
+      #page-number-display {
+          text-align: right;
+          margin: 0 0 0 365px;
       }
 
       #previous-button, #next-button {
@@ -36,7 +32,25 @@ $table_lines: #9F9F9F;
 
       #next-button {
           float: right;
-          margin: -20px 6px 0 0;
+          margin: 6px 6px 0 0;
+      }
+
+      #hl-line-entry-label {
+          text-align: right;
+          margin: 0 0 0 120px;
+          font-size: 14px;
+      }
+
+      #hl-line-entry {
+          width: 70px;
+          margin: 4px 0 0 0;
+      }
+
+      #hl-line-go-button {
+          position: relative;
+          width: 40px;
+          height: 18px;
+          margin: 6px 0 0 5px;
       }
    }
 
@@ -61,4 +75,9 @@ $table_lines: #9F9F9F;
          background: $altrow_background;
       }
    }
+}
+
+.ui-menu .ui-menu-item a {
+     font-size: 14px;
+     font-family: 'Ariel', sans-serif;
 }
