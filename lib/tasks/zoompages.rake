@@ -13,11 +13,9 @@ template = "<!DOCTYPE html>
     <link href=\"stylesheets/sjea-manuscripts.css\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />
 
     <script src=\"javascripts/jquery-1.7.2.min.js\" type=\"text/javascript\"></script>
-    <script src=\"javascripts/manuscripts.js\" type=\"text/javascript\"></script>
     <script src=\"javascripts/ZoomifyImageViewer.js\" type=\"text/javascript\"></script>
 
-    <style type=\"text/css\"> #zoom-div { width:800px; height:950px; margin:auto; border:1px; border-style:solid; border-color:#696969;} </style>
-    <script type=\"text/javascript\"> Z.showImage(\"zoom-div\", \"images/zoom/XXX\", \"\"); </script>
+    <script type=\"text/javascript\"> Z.showImage(\"zoom-image-div\", \"images/zoom/XXX\", \"\"); </script>
 
   </head>
 
@@ -39,7 +37,7 @@ template = "<!DOCTYPE html>
 
           <div id=\"content-display\">
 
-              <div id=\"zoom-div\"></div>
+              <div id=\"zoom-image-div\"></div>
 
           </div>  <!-- content-display -->
 
