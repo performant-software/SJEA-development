@@ -164,22 +164,16 @@
 
 .image { float: right; clear: right; width: 140px; height: 165px; }
 
-.add-topCenter { position: relative ; left: 50% ; right: 50% ; text-align: center ; color: gray }
 .margin-topCenter { position: relative ; left: 50% ; right: 50% ; text-align: center }
 
-.add-supralinear, .margin-supralinear { color: gray}
+.add-supralinear, .margin-supralinear, .add-topCenter, .add-bottomCenter, .add-bottomLeft, .add-marginLeft, .add-marginRight { color: gray}
 
 .sup, .supralinear { vertical-align:super ; font-size:.7em }
 
-.add-bottomCenter { position: relative ; left: 50% ; right: 50% ; text-align: center ; color: gray }
 .margin-bottomCenter { position: relative ; left: 50% ; right: 50% ; text-align: center }
-
-.add-bottomLeft { position: absolute ; left: -60 ; color: gray }
-.add-marginLeft { position: absolute ; left: -60 }
 
 .margin-bottomLeft, .margin-marginLeft { position: absolute ; left: 70 }
 
-.add-marginRight { position: absolute ; right: -100px ; color: gray }
 .margin-marginRight { position: absolute ; right: -100px }
 
 .topCenter, .center, .bottomCenter { position: relative ; left: 50% ; right: 50% ; text-align: center}
