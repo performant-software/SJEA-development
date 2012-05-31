@@ -185,13 +185,8 @@ function showManuscriptContent( manuscript_prefix ) {
     // nice wait display...
     showWaitOverlay();
 
-    $("#content-display").load(resource_name, function(response, status, xhr) {
-       clearWaitOverlay();
-       if (status == "error") {
-          var msg = "Sorry but there was an error: ";
-          alert(msg + xhr.status + " " + xhr.statusText);
-       }
-    });
+    // load the resource and report an error if unsuccessful
+    loadRemoteResource( resource_name, "#content-display" );
 }
 
 function showManuscriptDescription( manuscript_prefix ) {
@@ -211,11 +206,6 @@ function showManuscriptDescription( manuscript_prefix ) {
     // nice wait display...
     showWaitOverlay();
 
-    $("#content-display").load(resource_name, function(response, status, xhr) {
-       clearWaitOverlay();
-       if (status == "error") {
-          var msg = "Sorry but there was an error: ";
-          alert(msg + xhr.status + " " + xhr.statusText);
-       }
-    });
+    // load the resource and report an error if unsuccessful
+    loadRemoteResource( resource_name, "#content-display" );
 }

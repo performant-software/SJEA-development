@@ -49,10 +49,6 @@ function loadContent( resource_name ) {
 
     $("#content-display").empty();
 
-    $("#content-display").load(resource_name, function(response, status, xhr) {
-       if (status == "error") {
-          var msg = "Sorry but there was an error: ";
-          alert(msg + xhr.status + " " + xhr.statusText);
-       }
-    });
+    // load the resource and report an error if unsuccessful
+    loadRemoteResource( resource_name, "#content-display" );
 }
