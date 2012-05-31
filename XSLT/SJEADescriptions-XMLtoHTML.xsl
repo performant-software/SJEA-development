@@ -88,9 +88,6 @@
                 <title>
                     <xsl:value-of select="//tei:titleStmt/tei:title"/>
                 </title>
-                <style>
-                    div { padding-bottom: 12px }
-                </style>
             </head>
 
             <body class="contentArea">
