@@ -29,6 +29,7 @@ $content_font: 'Cardo', serif;
 }
 
 #page {
+    width: 100%;
     min-height: $screen_height;
     margin-bottom: 10px;
     font-family: $site_font;
@@ -36,11 +37,11 @@ $content_font: 'Cardo', serif;
 
 #main-header {
 
-    width: auto;
+    width: 100%;
     height: 60px;
     text-align: center;
     background-color: $title_background;
-    padding: 25px;
+    padding: 25px 0 25px 0;
 
     #header-list {
        padding: 20px 0 0 0;
@@ -68,7 +69,7 @@ $content_font: 'Cardo', serif;
 }
 
 #main-title {
-   width: 100%;
+   width: 75%;
    height: 30px;
    text-align: left;
    padding: 20px 0 0 250px;
@@ -141,7 +142,7 @@ $content_font: 'Cardo', serif;
 }
 
 #main-footer {
-   width: auto;
+   width: 100%;
    height: $footer_height;
    margin: 0;
    text-align: center;
