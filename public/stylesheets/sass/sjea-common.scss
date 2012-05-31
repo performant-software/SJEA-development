@@ -4,6 +4,8 @@
 $title_background: #B3B3B3;
 $footer_background: #B3B3B3;
 $contentheader_background: #B3B3B3;
+$hover_color: red;
+$active_color: red;
 
 //
 // size/position definitions
@@ -11,7 +13,7 @@ $contentheader_background: #B3B3B3;
 $navbox_width: 180px;   // width of the main navigation box
 $navbox_height: 350px;  // hight of the main navigation box
 
-$screen_width: 1350px;
+$contentarea_width: 1000px;
 $screen_height: 1050px;
 
 $footer_height: 50px;
@@ -34,7 +36,7 @@ $content_font: 'Cardo', serif;
 
 #main-header {
 
-    width: $screen_width - 50px; // dont forget the padding...
+    width: auto;
     height: 60px;
     text-align: center;
     background-color: $title_background;
@@ -55,18 +57,18 @@ $content_font: 'Cardo', serif;
           }
 
           a:hover {
-             color: red;
+             color: $hover_color;
           }
        }
 
        .active {
-          color: red;
+          color: $active_color;
        }
     }
 }
 
 #main-title {
-   width: $screen_width - 250px;
+   width: 100%;
    height: 30px;
    text-align: left;
    padding: 20px 0 0 250px;
@@ -100,7 +102,7 @@ $content_font: 'Cardo', serif;
         }
 
         a:hover {
-           color: red;
+           color: $hover_color;
         }
      }
 
@@ -111,13 +113,13 @@ $content_font: 'Cardo', serif;
      }
 
      .active {
-       color: red;
+       color: $active_color;
      }
 }
 
 #content {
 
-   width: 950px;
+   width: $contentarea_width;
    padding: 10px 0 0 250px;
 
    #content-header {
@@ -139,7 +141,7 @@ $content_font: 'Cardo', serif;
 }
 
 #main-footer {
-   width: $screen_width;
+   width: auto;
    height: $footer_height;
    margin: 0;
    text-align: center;
