@@ -150,27 +150,25 @@ function showManuscriptContent( manuscript_prefix ) {
     var resource_name = manuscript_prefix.replace( "SJ", "MS" ) + "-"
     switch( transcript_type ) {
         case "All Tags":
-            resource_name += "alltags"
+            resource_name += "alltags.html"
             break;
 
         case "Critical":
-            resource_name += "critical"
+            resource_name += "critical.html"
             break;
 
         case "Diplomatic":
-            resource_name += "diplomatic"
+            resource_name += "diplomatic.html"
             break;
 
         case "Scribal":
         default:
-           resource_name += "scribal"
+           resource_name += "scribal.html"
            break;
     }
 
-    // set the manuscript name
+    // set the manuscript name; we use this later when setting a new view
     $("#transcription-name").attr("href", manuscript_prefix );
-
-    $("#content-display").empty();
 
     // show the transcript selector, color key and XML button
     $("#view-control").show();
@@ -181,6 +179,9 @@ function showManuscriptContent( manuscript_prefix ) {
     var xml_href = "/xml/" + manuscript_prefix + ".xml"
     $("#xml-button").attr("href", xml_href );
     $("#xml-button").attr("target", "_blank" );
+
+    // clear any existing content...
+    $("#content-display").empty();
 
     // nice wait display...
     showWaitOverlay();
@@ -194,14 +195,22 @@ function showManuscriptDescription( manuscript_prefix ) {
     // clear the manuscript name as we are not displaying one
     $("#transcription-name").attr("href", "");
 
-    // hide the transcript selector, color key and XML button
+    // hide the transcript selector and color key and make sure the XML button is showing
     $("#view-control").hide();
     $("#view-control-title").hide();
     $("#color-key-div").hide();
-    $("#xml-button").hide();
+    $("#xml-button").show();
 
     var resource_name = manuscript_prefix + "Description"
+
+    var xml_href = "/xml/" + resource_name + ".xml"
+    $("#xml-button").attr("href", xml_href );
+    $("#xml-button").attr("target", "_blank" );
+
+    // clear any existing content...
     $("#content-display").empty();
+
+    resource_name += ".html"
 
     // nice wait display...
     showWaitOverlay();
