@@ -41,7 +41,7 @@ $(document).ready(function() {
 
     $("#SJA-description").click(function() {
         highliteElement( $(this) );
-        showManuscriptDescription( 'A');
+        showManuscriptDescription( 'SJA');
     });
 
 
@@ -52,7 +52,7 @@ $(document).ready(function() {
 
     $("#SJC-description").click(function() {
         highliteElement( $(this) );
-        showManuscriptDescription( 'C');
+        showManuscriptDescription( 'SJC');
     });
 
 
@@ -63,7 +63,7 @@ $(document).ready(function() {
 
     $("#SJD-description").click(function() {
         highliteElement( $(this) );
-        showManuscriptDescription( 'D');
+        showManuscriptDescription( 'SJD');
     });
 
 
@@ -74,7 +74,7 @@ $(document).ready(function() {
 
     $("#SJE-description").click(function() {
         highliteElement( $(this) );
-        showManuscriptDescription( 'E');
+        showManuscriptDescription( 'SJE');
     });
 
 
@@ -85,7 +85,7 @@ $(document).ready(function() {
 
     $("#SJEx-description").click(function() {
         highliteElement( $(this) );
-        showManuscriptDescription( 'Ex');
+        showManuscriptDescription( 'SJEx');
     });
 
 
@@ -96,7 +96,7 @@ $(document).ready(function() {
 
     $("#SJL-description").click(function() {
         highliteElement( $(this) );
-        showManuscriptDescription( 'L');
+        showManuscriptDescription( 'SJL');
     });
 
 
@@ -107,7 +107,7 @@ $(document).ready(function() {
 
     $("#SJP-description").click(function() {
         highliteElement( $(this) );
-        showManuscriptDescription( 'P');
+        showManuscriptDescription( 'SJP');
     });
 
 
@@ -118,7 +118,7 @@ $(document).ready(function() {
 
     $("#SJU-description").click(function() {
         highliteElement( $(this) );
-        showManuscriptDescription( 'U');
+        showManuscriptDescription( 'SJU');
     });
 
 
@@ -129,7 +129,7 @@ $(document).ready(function() {
 
     $("#SJV-description").click(function() {
         highliteElement( $(this) );
-        showManuscriptDescription( 'V');
+        showManuscriptDescription( 'SJV');
     });
 
     var params = parseURL();
@@ -213,16 +213,15 @@ function showManuscriptDescription( manuscript_prefix ) {
     $("#color-key-div").hide();
     $("#xml-button").show();
 
-    var resource_name = manuscript_prefix + "Description"
 
-    var xml_href = "/xml/" + resource_name + ".xml"
+    var xml_href = "/xml/" + manuscript_prefix.replace( "SJ", "") + "Description.xml"
     $("#xml-button").attr("href", xml_href );
     $("#xml-button").attr("target", "_blank" );
 
     // clear any existing content...
     $("#content-display").empty();
 
-    resource_name += ".html"
+    var resource_name = manuscript_prefix + "-description.html"
 
     // nice wait display...
     showWaitOverlay();
