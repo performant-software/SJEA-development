@@ -12,21 +12,21 @@ namespace :sjea do
     start_time = start_line("Regenerate the HTML description content from the XML/XSL.")
 
     targetdir = "public"
-    outputfile = "SJ-description.html"  # temp breakage of XSLT...
     xsltdir = "XSLT"
     xslfile = "#{xsltdir}/SJEADescriptions-XMLtoHTML.xsl"
+    manifest = "#{xsltdir}/SJEADescrListforHTML.xml"
 
-    description_file_list( ).each do |fname|
+    puts "generating html..."
+    cmd_line( xsl_transform_cmd( manifest, xslfile ) )
 
-      xmlfile = "#{xsltdir}/xml/#{fname}.xml"
-      targetname = "#{targetdir}/#{fname}.html"
+    puts "copying generated html..."
+    transcription_file_list( ).each do |fname|
 
-      puts "processing #{fname}..."
+      srcname = "#{fname}-description.html"
+      dstname = "#{targetdir}/#{srcname}"
 
-      delete_file( outputfile )
-      cmd_line( xsl_transform_cmd( xmlfile, xslfile ) )
-      copy_file( outputfile, targetname )
-      delete_file( outputfile )
+      copy_file( srcname, dstname )
+      delete_file( srcname )
 
     end
 
