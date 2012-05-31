@@ -13,13 +13,13 @@ namespace :sjea do
 
     targetdir = "public"
     outputfile = "SJ-description.html"  # temp breakage of XSLT...
-
-    xslfile = "XSLT/SJEADescriptions-XMLtoHTML.xsl"
+    xsltdir = "XSLT"
+    xslfile = "#{xsltdir}/SJEADescriptions-XMLtoHTML.xsl"
 
     description_file_list( ).each do |fname|
 
-      xmlfile = "XSLT/xml/#{fname}.xml"
-      targetname = "public/#{fname}.html"
+      xmlfile = "#{xsltdir}/xml/#{fname}.xml"
+      targetname = "#{targetdir}/#{fname}.html"
 
       puts "processing #{fname}..."
 
@@ -29,6 +29,19 @@ namespace :sjea do
       delete_file( outputfile )
 
     end
+
+    # just in case it does not already exist
+    make_dir( "#{targetdir}/xml")
+
+    puts "copying raw xml..."
+    description_file_list( ).each do |fname|
+       srcname = "#{xsltdir}/xml/#{fname}.xml"
+       dstname = "#{targetdir}/xml/#{fname}.xml"
+       copy_file( srcname, dstname )
+    end
+
+    puts "copying stylesheet..."
+    copy_file( "#{xsltdir}/stylesheets/manuscript.css", "#{targetdir}/stylesheets/manuscript.css" )
 
     finish_line(start_time)
   end
