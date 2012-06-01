@@ -797,7 +797,7 @@
             <xsl:when test="$view = 'diplomatic'"/>
                 
             <xsl:otherwise>
-                <span class="supNote" title="{$noteBody}" alt="{$noteBody}">N</span>
+                <span class="supNote"><a id="supNote" class="standard-tooltip"><xsl:apply-templates/></a></span><span class="tooltip"><xsl:value-of select="$noteBody"/></span>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
