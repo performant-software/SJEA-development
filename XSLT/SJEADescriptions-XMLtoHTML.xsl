@@ -421,7 +421,7 @@
             </xsl:when>
             
             <xsl:otherwise>
-                <a href="{concat('/', $idno, $zeros, @from, '-image.html')}" target="_blank"><xsl:apply-templates/></a>
+                <a href="{concat('/', $idno, $zeros, @from, '-lb.html')}"><xsl:apply-templates/></a>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
