@@ -3,7 +3,7 @@ require "#{Rails.root}/lib/tasks/task_utilities"
 namespace :sjea do
 	include TaskUtilities
 
-template = "<!DOCTYPE html>
+fs_template = "<!DOCTYPE html>
 <html>
 
   <head>
@@ -15,7 +15,11 @@ template = "<!DOCTYPE html>
     <script src=\"javascripts/jquery-1.7.2.min.js\" type=\"text/javascript\"></script>
     <script src=\"javascripts/ZoomifyImageViewer.js\" type=\"text/javascript\"></script>
 
-    <script type=\"text/javascript\"> Z.showImage(\"zoom-image-div\", \"images/zoom/XXX\", \"\"); </script>
+    <script type=\"text/javascript\">
+       $(document).ready(function() {
+          Z.showImage(\"zoom-image-div\", \"images/zoom/xXXXx\", \"\");
+       });
+    </script>
 
   </head>
 
@@ -57,6 +61,35 @@ template = "<!DOCTYPE html>
 </html>
 "
 
+  lb_template = "<!DOCTYPE html>
+  <html>
+
+    <head>
+      <title> Siege of Jerusalem Electronic Archive</title>
+
+      <link href=\"stylesheets/sjea-manuscripts.css\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />
+
+      <script src=\"javascripts/jquery-1.7.2.min.js\" type=\"text/javascript\"></script>
+      <script src=\"javascripts/ZoomifyImageViewer.js\" type=\"text/javascript\"></script>
+
+      <script type=\"text/javascript\">
+         $(document).ready(function() {
+            Z.showImage(\"zoom-image-div\", \"images/zoom/xXXXx\", \"\");
+         });
+      </script>
+
+    </head>
+
+    <body>
+
+        <div id=\"zoom-image-div\"></div>
+        <a id=\"open-new-zoom-window\" href=\"/xXXXx-fs.html\" target=\"_blank\">Click for new window<a>
+
+    </body>
+
+  </html>
+  "
+
   #
   # Regenerates the zoom image pages...
   #
@@ -77,9 +110,13 @@ template = "<!DOCTYPE html>
       # if this is a manuscript image...
       if basename =~ /^[A-Z]\d{3}[a-z]$/
 
-         outfile = "#{dstdir}/#{basename}-image.html"
+         outfile = "#{dstdir}/#{basename}-fs.html"
          delete_file( outfile )
-         append_to_file( outfile, template.gsub( "XXX", basename ) )
+         append_to_file( outfile, fs_template.gsub( "xXXXx", basename ) )
+
+         outfile = "#{dstdir}/#{basename}-lb.html"
+         delete_file( outfile )
+         append_to_file( outfile, lb_template.gsub( "xXXXx", basename ) )
 
       end
 
