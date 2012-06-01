@@ -90,12 +90,6 @@
   color: #000;
   cursor: pointer; }
 
-.standard-tooltip:hover {
-  background-position: 0;
-  background-color: transparent;
-  color: #000;
-  text-decoration: none; }
-
 .tooltip {
   background: #FDEAAA;
   border-radius: 10px;
@@ -116,3 +110,11 @@
 .blockUI h1 {
   font-family: 'trebuchet ms', verdana, arial;
   font-size: 20px; }
+
+#zoom-image-div {
+  width: 800px;
+  height: 950px;
+  margin: auto;
+  border: 1px;
+  border-style: solid;
+  border-color: #696969; }

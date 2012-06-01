@@ -157,10 +157,10 @@ $content_font: 'Cardo', serif;
 }
 
 .standard-tooltip:hover {
-	background-position: 0;
-	background-color: transparent;
-	color: #000;
-	text-decoration: none;
+	//background-position: 0;
+	//background-color: transparent;
+	//color: #000;
+	//text-decoration: none;
 }
 
 .tooltip {
@@ -181,4 +181,13 @@ $content_font: 'Cardo', serif;
 .blockUI h1 {
    font-family: 'trebuchet ms', verdana, arial;
    font-size: 20px;
+}
+
+#zoom-image-div {
+   width: 800px;
+   height: 950px;
+   margin: auto;
+   border: 1px;
+   border-style: solid;
+   border-color: #696969;
 }
