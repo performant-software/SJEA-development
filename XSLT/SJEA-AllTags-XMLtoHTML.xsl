@@ -374,7 +374,15 @@
         
         <!--dg: create <img> tags instead of <a> tags for the images. This shows the manuscript page -->
         <!--    as a thumbnail and matches the wireframes we have provided Tim for review.           -->
-        <a href="{concat('/',concat(@entity, '-image.html'))}" target="_blank"><img src='{$imgName}' class="image"></img></a>
+        <!--mjc:add a div around the img in order to add a coption div as well                       -->
+        <div class="imageDiv">
+            <div class="img">
+                <a href="{concat('/',concat(@entity, '-image.html'))}" target="_blank"><img src='{$imgName}' class="image"></img></a>
+            </div>
+            <div class="caption">
+                <xsl:value-of select="@entity"/>
+            </div>
+        </div>
     </xsl:template>
     
     
@@ -700,7 +708,7 @@
         
         <xsl:choose>
             <xsl:when test="$view = 'alltags' or $view = 'scribal'">
-                <span class="add-{@place}" title="{@hand}" alt="{@hand}"><xsl:apply-templates/></span>
+                <a id="add-{@place}" class="standard-tooltip"><font color="gray"><xsl:apply-templates/></font></a><span class="tooltip"><xsl:value-of select="concat('Place: ', @place, ', Hand: ', @hand)"/></span>
             </xsl:when>
             
             <xsl:otherwise>
@@ -752,7 +760,7 @@
             
             <xsl:otherwise>
                 <xsl:for-each select="$margin">
-                    <span class="margin-{@place}" title="{@hand}" alt="{@hand}"><xsl:apply-templates/></span>
+                    <span class="margin-{@place}"><a id="margin-{@place}" class="standard-tooltip"><xsl:apply-templates/></a><span class="tooltip"><xsl:value-of select="concat('Place: ', @place, ', Hand: ', @hand)"/></span></span>
                 </xsl:for-each>
                 
                 <!--mjc: in some cases there can be multiple <marginalia> tags in a row  -->

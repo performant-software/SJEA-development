@@ -162,7 +162,9 @@
 
 .contentArea { cursor:default ; height:100% ; width:700px ; padding:30px ; font-family:Junicode; background-color:#FDEAAA ; position: absolute }
 
-.image { float: right; clear: right; width: 140px; height: 165px; }
+.image { width: 140px; height: 165px; }
+
+.imageDiv { float: right; clear: right }
 
 .margin-topCenter { position: relative ; left: 50% ; right: 50% ; text-align: center }
 
