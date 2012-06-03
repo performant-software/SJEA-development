@@ -139,7 +139,8 @@
             <head>
                 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
                 <link href="{concat($csspath, 'manuscript.css')}" rel="stylesheet" type="text/css"/>
-                <link href="stylesheets/sjea-common.css" media="screen" rel="stylesheet" type="text/css" />
+                <link href="stylesheets/sjea-common.css"
+                    media="screen" rel="stylesheet" type="text/css" />
                 <script src="javascripts/jquery.tools.min.js" type="text/javascript"></script>
                 <script src="javascripts/jquery.blockUI.js" type="text/javascript"></script>
                 <script src="javascripts/tooltips.js" type="text/javascript"></script>
@@ -381,7 +382,9 @@
         <!--mjc:add a div around the img in order to add a coption div as well                       -->
         <div class="imageDiv">
             <div class="img">
-                <a class="imglightbox" href="{concat('/',concat(@entity, '-lb.html'))}"><img src='{$imgName}' class="image"></img></a>
+                <a class="imglightbox" href="{concat('/',concat(@entity, '-lb.html'))}">
+                    <img src='{$imgName}' class="image"></img>
+                </a>
             </div>
             <div class="caption">
                 <xsl:value-of select="@entity"/>
@@ -801,7 +804,7 @@
             <xsl:when test="$view = 'diplomatic'"/>
                 
             <xsl:otherwise>
-                <span class="supNote"><a id="supNote" class="standard-tooltip"><xsl:apply-templates/></a></span><span class="tooltip"><xsl:value-of select="$noteBody"/></span>
+                <span class="supNote"><a id="supNote" class="standard-tooltip">N</a></span><span class="tooltip"><xsl:value-of select="$noteBody"/></span>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
