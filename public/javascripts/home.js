@@ -15,8 +15,6 @@ $(document).ready(function() {
     $("#terms-and-conditions").click(function() {
         termsContent();
     });
-
-    // $(".imglightbox").colorbox( { iframe: true, width: "70%", height: "95%" } );
 });
 
 function aboutContent( ) {
