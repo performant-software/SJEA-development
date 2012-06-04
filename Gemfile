@@ -48,6 +48,3 @@ gem 'therubyracer'
 
 # Processing the xml using this
 gem 'libxml-ruby'
-
-# results pagination
-gem 'will_paginate', '~> 3.0'
