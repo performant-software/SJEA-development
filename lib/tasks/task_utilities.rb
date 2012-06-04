@@ -226,8 +226,62 @@ module TaskUtilities
 
   def load_description_from_file( xmlfile )
 
-    # TODO: implement me
     result = []
+    linecount = 0
+    xmldoc = XML::Reader.file( xmlfile, :options => XML::Parser::Options::NOBLANKS | XML::Parser::Options::PEDANTIC )
+
+    while xmldoc.read
+       unless xmldoc.node_type == XML::Reader::TYPE_END_ELEMENT
+
+          case xmldoc.name
+            when "author",
+                 "bibl",
+                 "binding",
+                 "collation",
+                 "condition",
+                 "contents",
+                 "country",
+                 "date",
+                 "deconote",
+                 "edition",
+                 "editor",
+                 "extent",
+                 "foliation",
+                 "format",
+                 "graphic",
+                 "hi",
+                 "idno",
+                 "item",
+                 "layout",
+                 "locus",
+                 "measure",
+                 "origDate",
+                 "origPlace",
+                 "p",
+                 "persName",
+                 "placeName",
+                 "provenance",
+                 "pubPlace",
+                 "publisher",
+                 "ref",
+                 "repository",
+                 "settlement",
+                 "summary",
+                 "support",
+                 "title"
+
+               content = xmldoc.node.content
+               if content.empty? == false
+                  result[ linecount] = content
+                  linecount += 1
+
+                  #puts "name [#{xmldoc.name}]: [#{content}]"
+               end
+          end
+       end
+    end
+
+    xmldoc.close
     return result
 
   end
@@ -236,6 +290,11 @@ module TaskUtilities
 
     # TODO: implement me
     result = []
+    result[ 0 ] = "this is line number one"
+    result[ 1 ] = "this is line number two"
+    result[ 2 ] = "this is line number three"
+    result[ 3 ] = "this is line number four"
+    result[ 4 ] = "this is line number five"
     return result
 
   end

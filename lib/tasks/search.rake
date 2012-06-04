@@ -8,14 +8,16 @@ namespace :sjea do
 		start_time = start_line("Regenerate the solr index.")
 
     solr = Solr.factory({ testing: false, force: true })
-    solr.clear_all(false)
+    solr.clear_all( false )
 
-    # create a hash of names
+=begin
+    # create a hash of names using the transcription file as a key
     docnames = Hash.new
     filenames = transcription_file_list( )
     titles = transcript_title_list( )
     filenames.size.times { |ix| docnames[filenames[ix]] = titles[ix] }
 
+    # do each of the transcription files individually
     transcription_file_list( ).each do |fname|
 
        xmlfile = "XSLT/xml/#{fname}.xml"
@@ -57,6 +59,43 @@ namespace :sjea do
 
        solr.commit( )
        puts "#{fname}: #{page_count} pages loaded"
+    end
+
+=end
+
+    # create a hash of names using the description file as a key
+    docnames = Hash.new
+    filenames = description_file_list( )
+    titles = transcript_title_list( )
+    filenames.size.times { |ix| docnames[filenames[ix]] = titles[ix] }
+
+    # do each of the description files individually
+    description_file_list( ).each do |fname|
+
+       xmlfile = "XSLT/xml/#{fname}.xml"
+
+       lines = load_description_from_file( xmlfile )
+       puts "#{fname}: #{lines.size} lines loaded"
+
+       content = ""
+       pageuri = "#{fname}-description"
+       page_count = 0
+
+       lines.each do |line|
+
+         content << " " << line
+
+       end
+
+       if content.empty? == false
+         solrdoc = { uri: pageuri, url: "", title: docnames[fname], section: "descriptions", content: content }
+         solr.add_object( solrdoc, 1, false )
+         page_count += 1
+       end
+
+       solr.commit( )
+       puts "#{fname}: #{page_count} pages loaded"
+
     end
 
 		puts ""
