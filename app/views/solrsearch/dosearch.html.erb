@@ -1,6 +1,11 @@
 <link href="/stylesheets/sjea-common.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/sjea-search.css" media="screen" rel="stylesheet" type="text/css" />
 
+<script src="/javascripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="/javascripts/newsearch.js" type="text/javascript"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+
 <div id="page">
 
    <div id="main-header">
@@ -29,29 +34,70 @@
 
      <div id="content-display">
 
-       <!-- <%= @inparams -%> -->
+       <!-- <%= @inparams %>
+       <%= @results %> -->
 
        <div class="result-header">
-         <%- facetname = ( @inparams[:facet] == "" )? "everything" : @inparams[:facet] -%>
-         <%- docname = ( @inparams[:transcription] == "" )? "all manuscripts" : @inparams[:transcription] -%>
+         <%- searchfor = @inparams[:searchfor] %>
+         <%- docname = ( @inparams[:transcription] == "" )? "all manuscripts" : @inparams[:transcription] %>
+         <%- facetname = ( @inparams[:facet] == "" )? "everything" : @inparams[:facet] %>
 
-          <%- if @results[:total].to_i != 0 -%>
-             <%= "Showing results for \"#{@inparams[:searchfor]}\" in #{facetname}, #{docname}:" -%>
-          <%- else -%>
-             <%= "No results found for \"#{@inparams[:searchfor]}\" in #{facetname}, #{docname}" -%>
-          <%- end -%>
+         <div class="params-div">
+           <span id="q-searchfor" data="<%= searchfor %>"></span>
+           <span id="q-docname" data="<%= docname %>"></span>
+           <span id="q-facetname" data="<%= facetname %>"></span>
+         </div>
+
+         <%- paginate_count = 10 %>
+         <%- total_results = @results[:totalrows].to_i %>
+         <%- page_number = ( @results[:pagestart].to_i / paginate_count ) + 1 %>
+         <%- page_results = @results[:hits].size %>
+         <%- total_pages = ( total_results / paginate_count ) + 1 %>
+
+          <%- if total_results != 0 -%>
+             <span><%= "Showing #{page_results} results for \"#{searchfor}\" in #{facetname}, #{docname} (#{total_results} total results):" -%></span>
+
+             <div>
+             <% if total_pages > 1 %>
+                <ul id="pagination">
+                  <% if page_number == 1 %>
+                     <li class="previous-off"><a>&lt;</a></li>
+                  <% else %>
+                     <li class="previous"><a class="new-page" page="<%= page_number - 1 %>">&lt;</a></li>
+                  <% end %>
+
+                  <% (1..total_pages).each do |page| %>
+                      <% if page == page_number %>
+                          <li class="active"><%= page %></li>
+                      <% else %>
+                         <li><a class="new-page" page="<%= page %>"><%= page %></a></li>
+                      <% end %>
+                  <% end %>
+                  <% if page_number == total_pages %>
+                      <li class="next-off"><a>&gt;</a></li>
+                  <% else %>
+                      <li class="next new-page" page="<%= page_number + 1 %>"><a class="new-page" page="<%= page_number + 1 %>">&gt;</a></li>
+                  <% end %>
+                </ul>
+                </br>
+             <%end %>
+
+          <%- else %>
+             <span><%= "No results found for \"#{@inparams[:searchfor]}\" in #{facetname}, #{docname}" %></span>
+          <%- end %>
+         </div>
        </div>
 
-       <%- hits = @results[:hits] -%>
-       <%- hits.each do |hit| -%>
+       <%- hits = @results[:hits] %>
+       <%- hits.each do |hit| %>
 
-          <%- manuscript = "SJ#{hit["title"].gsub(/^.*\((.*)\)$/, '\1')}" -%>
+          <%- manuscript = "SJ#{hit["title"].gsub(/^.*\((.*)\)$/, '\1')}" %>
           <div class="result">
               <div class="result-title">
-                 <a href="/manuscript.html?manuscript=<%= manuscript -%>"> <%= hit["title"] -%></a>
+                 <a href="/manuscript.html?manuscript=<%= manuscript %>"> <%= hit["title"] %></a>
               </div>
               <div class="result-snippet">
-                 <%= raw( hit["highlighting"][0] ) -%>
+                 <span><%= raw( hit["highlighting"][0] ) %></span>
               </div>
           </div>  <!-- result -->
 

@@ -101,7 +101,7 @@ class Solr
 
 		facets = facets_to_hash(ret)
 
-		return { :total => ret['response']['numFound'], :hits => ret['response']['docs'], :facets => facets }
+		return { :totalrows => ret['response']['numFound'], :pagestart => ret['response']['start'], :pagerows => ret['response']['rows'], :hits => ret['response']['docs'], :facets => facets }
 	end
 
 	def quotify(str)
@@ -251,7 +251,10 @@ class Solr
 			options[:shards] = @shards.join(',')
 		end
 		begin
-			ret = @solr.post( 'select', :data => options )
+#			ret = @solr.post( 'select', :data => options )
+      start_page = options[:page]
+      page_rows = options[:rows]
+      ret = @solr.paginate( start_page, page_rows, 'select', :params => options )
 		rescue Errno::ECONNREFUSED => e
 			raise SolrException.new("Cannot connect to the search engine at this time.")
 		rescue RSolr::Error::Http => e

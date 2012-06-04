@@ -27,6 +27,7 @@ $(document).ready(function() {
     $("#search-text").focus();
 });
 
+
 function addCharacter( character ) {
     $("#search-text").val( $("#search-text").val() + character )
 }
