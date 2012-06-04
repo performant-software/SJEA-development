@@ -82,8 +82,9 @@ fs_template = "<!DOCTYPE html>
     <body>
 
         <div id=\"zoom-image-div\"></div>
-        <a id=\"open-new-zoom-window\" href=\"/xXXXx-fs.html\" target=\"_blank\">Click for new window</a>
-
+        <div id=\"open-new-zoom-window\">
+           <a href=\"/xXXXx-fs.html\" target=\"_blank\">Click to open in a new window</a>
+        </div>
     </body>
 
   </html>

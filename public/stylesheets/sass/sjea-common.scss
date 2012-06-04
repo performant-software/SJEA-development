@@ -185,9 +185,17 @@ $content_font: 'Cardo', serif;
 
 #zoom-image-div {
    width: 800px;
-   height: 950px;
+   height: 930px;
    margin: auto;
    border: 1px;
    border-style: solid;
    border-color: #696969;
+}
+
+#open-new-zoom-window {
+    width: 100%;
+    padding: 10px 0 0 0;
+    text-align: center;
+    font-size: 18px;
+    font-family: $site_font;
 }

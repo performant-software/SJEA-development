@@ -195,6 +195,9 @@ function showManuscriptContent( manuscript_prefix ) {
     // clear any existing content...
     $("#content-display").empty();
 
+    // remove any color box decoration/handlers... we will add more shortly.
+    $.colorbox.remove();
+
     // nice wait display...
     showWaitOverlay();
 
@@ -222,6 +225,9 @@ function showManuscriptDescription( manuscript_prefix ) {
     $("#content-display").empty();
 
     var resource_name = manuscript_prefix + "-description.html"
+
+    // remove any color box decoration/handlers... we will add more shortly.
+    $.colorbox.remove();
 
     // nice wait display...
     showWaitOverlay();
