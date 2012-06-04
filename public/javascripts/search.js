@@ -1,19 +1,23 @@
 $(document).ready(function() {
 
+    // barred H
     $("#special-button-1").click(function() {
-        addCharacter( '\u210F')
+        addCharacter( '\u0127');
     });
 
+    // barred L
     $("#special-button-2").click(function() {
-        addCharacter( '\u019A')
+        addCharacter( '\u0142');
     });
 
+    // thorn
     $("#special-button-3").click(function() {
-        addCharacter( '\u00DE')
+        addCharacter( '\u00DE');
     });
 
+    // yogh
     $("#special-button-4").click(function() {
-        addCharacter( '\u04E0')
+        addCharacter( '\u021D');
     });
 
     $("#search-text").focus();
