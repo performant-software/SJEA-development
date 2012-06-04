@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+    $("#the-poem").click(function() {
+        poemContent();
+    });
+
     $("#about").click(function() {
         aboutContent();
     });
@@ -16,6 +20,13 @@ $(document).ready(function() {
         termsContent();
     });
 });
+
+function poemContent( ) {
+
+    $(".mainlist-item").removeClass( "active");
+    $("#the-poem").addClass( "active");
+    loadContent( "/thepoem.html")
+}
 
 function aboutContent( ) {
 
