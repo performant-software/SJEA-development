@@ -36,9 +36,18 @@ gem 'capistrano'
 # To use debugger
 gem 'ruby-debug19', :require => 'ruby-debug'
 
+# solr interface...
 gem 'rsolr'
+
+# thought this was builtin !!
 gem 'sass'
+
 
 gem 'execjs'
 gem 'therubyracer'
+
+# Processing the xml using this
 gem 'libxml-ruby'
+
+# results pagination
+gem 'will_paginate', '~> 3.0'
