@@ -85,15 +85,16 @@
             <head>
                 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
                 <link href="{concat($csspath, 'manuscript.css')}" rel="stylesheet" type="text/css"/>
-                <link href="stylesheets/sjea-common.css"
-                    media="screen" rel="stylesheet" type="text/css" />
+                <link href="stylesheets/sjea-common.css" media="screen" rel="stylesheet" type="text/css" />
                 <link href="stylesheets/colorbox.css" media="screen" rel="stylesheet" type="text/css" />
                 <script src="javascripts/jquery-1.7.2.min.js" type="text/javascript"></script>
                 <script src="javascripts/jquery.tools.min.js" type="text/javascript"></script>
                 <script src="javascripts/jquery.blockUI.js" type="text/javascript"></script>
                 <script src="javascripts/jquery.colorbox-min.js" type="text/javascript"></script>
                 <script src="javascripts/tooltips.js" type="text/javascript"></script>
-                <script type="text/javascript"> $(document).ready(function() { $(".imglightbox").colorbox( { iframe: true, width: "70%", height: "95%" } ); });</script>
+                <script type="text/javascript">
+                    $(document).ready(function() { $(".imglightbox").colorbox( { iframe: true, width: "70%", height: "95%" } ); });
+                </script>
                 <title>
                     <xsl:value-of select="//tei:titleStmt/tei:title"/>
                 </title>
