@@ -5,7 +5,8 @@ $(document).ready(function() {
 	 	position: 'top center',
 		offset: [-8, 25],
 		relative: true,
-		events: {
+        delay: 0,
+        events: {
 			def: "mouseover, mouseout"
 		}
 	});
