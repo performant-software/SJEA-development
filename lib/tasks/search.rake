@@ -10,7 +10,6 @@ namespace :sjea do
     solr = Solr.factory({ testing: false, force: true })
     solr.clear_all( false )
 
-=begin
     # create a hash of names using the transcription file as a key
     docnames = Hash.new
     filenames = transcription_file_list( )
@@ -60,8 +59,6 @@ namespace :sjea do
        solr.commit( )
        puts "#{fname}: #{page_count} pages loaded"
     end
-
-=end
 
     # create a hash of names using the description file as a key
     docnames = Hash.new
