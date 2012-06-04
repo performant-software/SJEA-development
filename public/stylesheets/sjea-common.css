@@ -90,22 +90,23 @@
   color: #000;
   cursor: pointer; }
 
+.standard-tooltip:hover {
+  background-position: 0;
+  background-color: transparent;
+  color: #000; }
+
 .tooltip {
-  background: #FDEAAA;
-  border-radius: 10px;
-  /* rounded-corners for CSS3 browsers */
-  -moz-border-radius: 10px;
-  /* rounded-corners for Firefox */
-  -webkit-border-radius: 10px;
-  /* rounded-corners for Safari */
-  color: #000;
+  background-color: #000;
+  border: 1px solid #FFF;
+  padding: 10px 15px;
   display: none;
-  font-size: 14px;
-  font-weight: normal;
-  padding: 12px;
-  position: relative;
+  color: #fff;
   text-align: left;
-  border: 1px solid #000; }
+  font-size: 15px;
+  font-weight: normal;
+  /* outline radius for mozilla/firefox only */
+  -moz-box-shadow: 0 0 10px #000;
+  -webkit-box-shadow: 0 0 10px #000; }
 
 .blockUI h1 {
   font-family: 'trebuchet ms', verdana, arial;
