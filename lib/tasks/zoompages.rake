@@ -108,7 +108,7 @@ fs_template = "<!DOCTYPE html>
       basename = fname.split( "/" )[ 2 ].gsub(/^(.*).jpg$/, '\1')
 
       # if this is a manuscript image...
-      if basename =~ /^[A-Z]\d{3}[a-z]$/
+      if basename =~ /^[A-Z]{1}[a-z]?\d{3}[a-z]$/
 
          outfile = "#{dstdir}/#{basename}-fs.html"
          delete_file( outfile )
