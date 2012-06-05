@@ -275,27 +275,73 @@ module TaskUtilities
                   result[ linecount] = content
                   linecount += 1
 
-                  #puts "name [#{xmldoc.name}]: [#{content}]"
                end
           end
        end
     end
 
     xmldoc.close
+    #puts "processed #{pagecount} pages and #{linecount} lines"
+
     return result
 
   end
 
-  def load_annotation_from_file( xmlfile )
+  def load_annotations_from_file( xmlfile )
 
-    # TODO: implement me
+    pending_page_content = ""
+    page_image_file = ""
     result = []
-    result[ 0 ] = "this is line number one"
-    result[ 1 ] = "this is line number two"
-    result[ 2 ] = "this is line number three"
-    result[ 3 ] = "this is line number four"
-    result[ 4 ] = "this is line number five"
-    return result
+    pagecount = 0
+    linecount = 0
+
+    xmldoc = XML::Reader.file( xmlfile, :options => XML::Parser::Options::NOBLANKS | XML::Parser::Options::PEDANTIC )
+
+    while xmldoc.read
+       unless xmldoc.node_type == XML::Reader::TYPE_END_ELEMENT
+
+          case xmldoc.name
+
+             # the initial tag for the start of a new page
+             when "milestone"
+
+               # always flush any pending data...
+               if pending_page_content.empty? == false
+                   abour( "page_image_file empty!") unless page_image_file.empty? == false
+
+                   result[ pagecount ] = { :pageimg => page_image_file, :content => pending_page_content }
+                   #puts "page #{pagecount + 1}: img [#{page_image_file}], note [#{pending_page_content}]"
+                   pending_page_content = ""
+                   pagecount += 1
+               end
+
+               page_image_file = xmldoc[ "entity" ]
+
+            when "note"
+
+                content = xmldoc.read_string
+                # sometimes there is a <note> tag with no content so ignore those
+                if content.empty? == false
+                  pending_page_content << content << " "
+                  linecount += 1
+                end
+
+           end
+        end
+     end
+
+     # gets any remaining content that has not already been processed
+     if pending_page_content.empty? == false
+       abour( "page_image_file empty!") unless page_image_file.empty? == false
+        result[ pagecount ] = { :pageimg => page_image_file, :content => pending_page_content }
+        #puts "page #{pagecount + 1}: img [#{page_image_file}], note [#{pending_page_content}]"
+        pagecount += 1
+     end
+
+     xmldoc.close
+     #puts "processed #{linecount} notes in #{pagecount} page(s)"
+
+     return result
 
   end
 
