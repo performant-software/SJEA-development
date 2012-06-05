@@ -32,8 +32,8 @@
 
 
     <!--Define tags that need whitespace stripped or preserved-->
-    <xsl:strip-space elements="tei:seg tei:l" />
-    <xsl:preserve-space elements="" />
+    <xsl:strip-space elements="" />
+    <xsl:preserve-space elements="tei:note tei:hi tei:seg" />
     
         
         
@@ -428,16 +428,31 @@
         <!--     if @place is bottom then display it on another line                        -->
         <xsl:choose>
             <xsl:when test="name(./following-sibling::*[1])='marginalia'">
-                <xsl:variable name="pos" select="substring(@place, 1, 3)"/>
+                <xsl:variable name="pos" select="substring(./following-sibling::*[1]/attribute::place, 1, 3)"/>
                 
-                <span class="line">
-                    <xsl:if test="$pos!='top'">
-                        <xsl:apply-templates/>
+                <xsl:choose>
+                    <xsl:when test="$pos='top' or $pos='bot'">
+                        <span class="line">
+                            <xsl:apply-templates/>
+                        </span>
+                        <!--mjc: tell parser not to turn <br/> into <br></br>-->
+                        <xsl:value-of disable-output-escaping="yes">&lt;br /&gt;</xsl:value-of>
+                        
                         <xsl:call-template name="generateMarginalia">
                             <xsl:with-param name="margin" select="./following-sibling::tei:marginalia[1]"/>
                         </xsl:call-template>
-                    </xsl:if>
-                </span>
+                    </xsl:when>
+                    
+                    <xsl:otherwise>
+                        <span class="line">
+                            <xsl:apply-templates/>
+                            <xsl:call-template name="generateMarginalia">
+                                <xsl:with-param name="margin" select="./following-sibling::tei:marginalia[1]"/>
+                            </xsl:call-template>
+                        </span>
+                    </xsl:otherwise>
+                </xsl:choose>
+                
             </xsl:when>
             
             <xsl:otherwise>
@@ -601,7 +616,7 @@
     <!--     'tr' - red highlight                                   -->
     <!--     'BinR'-red outline around text                         -->
     <!--*************************-->
-    <xsl:template match="tei:hi">
+    <xsl:template match="tei:hi" xml:space="preserve">
         <xsl:param name="view" tunnel="yes"/>
         
         <xsl:choose>
@@ -780,9 +795,13 @@
                 <!--mjc: in some cases there can be multiple <marginalia> tags in a row  -->
                 <!--     handle that special condition here                              -->
                 <xsl:if test="name($margin/following-sibling::*[1])='marginalia'">
+                    <xsl:variable name="pos" select="substring($margin/following-sibling::*[1]/attribute::place, 1, 3)"/>
                     
-                    <!--mjc: tell parser not to turn  into <br></br>-->
-                    <xsl:value-of disable-output-escaping="yes">&lt;br /&gt;</xsl:value-of>
+                    <!--if the @place value of the next <marginalia> is top or bottom, then insert a <br/>--> 
+                    <xsl:if test="$pos='top' or $pos='bot'">
+                        <!--mjc: tell parser not to turn  into <br></br>-->
+                        <xsl:value-of disable-output-escaping="yes">&lt;br /&gt;</xsl:value-of>
+                    </xsl:if>
                     
                     <xsl:call-template name="generateMarginalia">
                         <xsl:with-param name="margin" select="$margin/following-sibling::tei:marginalia[1]"/>
@@ -806,15 +825,11 @@
     <xsl:template match="tei:note">
         <xsl:param name="view" tunnel="yes"/>
         
-        <xsl:variable name="noteBody">
-            <xsl:apply-templates/>
-        </xsl:variable>
-        
         <xsl:choose>
             <xsl:when test="$view = 'diplomatic'"/>
                 
             <xsl:otherwise>
-                <span class="supNote"><a id="supNote" class="standard-tooltip">N</a></span><span class="tooltip"><xsl:value-of select="$noteBody"/></span>
+                <a id="supNote" class="standard-tooltip"><span class="supNote">N</span></a><span class="tooltip"><xsl:apply-templates/></span>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
