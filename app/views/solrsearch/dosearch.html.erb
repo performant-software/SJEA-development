@@ -44,8 +44,8 @@
 
          <div class="params-div">
            <span id="q-searchfor" data="<%= searchfor %>"></span>
-           <span id="q-docname" data="<%= docname %>"></span>
-           <span id="q-facetname" data="<%= facetname %>"></span>
+           <span id="q-docname" data="<%= @inparams[:transcription] %>"></span>
+           <span id="q-facetname" data="<%= @inparams[:facet] %>"></span>
          </div>
 
          <%- paginate_count = 10 %>
@@ -61,7 +61,7 @@
              <% if total_pages > 1 %>
                 <ul id="pagination">
                   <% if page_number == 1 %>
-                     <li class="previous-off"><a>&lt;</a></li>
+                     <li class="previous-off"><span>&lt;</span></li>
                   <% else %>
                      <li class="previous"><a class="new-page" page="<%= page_number - 1 %>">&lt;</a></li>
                   <% end %>
@@ -70,11 +70,11 @@
                       <% if page == page_number %>
                           <li class="active"><%= page %></li>
                       <% else %>
-                         <li><a class="new-page" page="<%= page %>"><%= page %></a></li>
+                          <li><a class="new-page" page="<%= page %>"><%= page %></a></li>
                       <% end %>
                   <% end %>
                   <% if page_number == total_pages %>
-                      <li class="next-off"><a>&gt;</a></li>
+                      <li class="next-off"><span>&gt;</span></li>
                   <% else %>
                       <li class="next new-page" page="<%= page_number + 1 %>"><a class="new-page" page="<%= page_number + 1 %>">&gt;</a></li>
                   <% end %>

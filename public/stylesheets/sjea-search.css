@@ -67,8 +67,7 @@
   display: block;
   font-weight: bold;
   padding: 3px 6px;
-  background-color: #CCCCCC;
-  cursor: pointer; }
+  background-color: #CCCCCC; }
 
 #pagination .next a, #pagination .previous a {
   font-weight: bold;
