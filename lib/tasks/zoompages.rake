@@ -9,10 +9,10 @@ fs_template = "<!DOCTYPE html>
   <head>
     <title> Siege of Jerusalem Electronic Archive</title>
 
-    <link href=\"stylesheets/sjea-common.css\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />
+    <link href=\"/stylesheets/sjea-common.css\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />
 
-    <script src=\"javascripts/jquery-1.7.2.min.js\" type=\"text/javascript\"></script>
-    <script src=\"javascripts/ZoomifyImageViewer.js\" type=\"text/javascript\"></script>
+    <script src=\"/javascripts/jquery-1.7.2.min.js\" type=\"text/javascript\"></script>
+    <script src=\"/javascripts/ZoomifyImageViewer.js\" type=\"text/javascript\"></script>
 
     <script type=\"text/javascript\">
        $(document).ready(function() {
@@ -66,10 +66,10 @@ fs_template = "<!DOCTYPE html>
     <head>
       <title> Siege of Jerusalem Electronic Archive</title>
 
-      <link href=\"stylesheets/sjea-common.css\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />
+      <link href=\"/stylesheets/sjea-common.css\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />
 
-      <script src=\"javascripts/jquery-1.7.2.min.js\" type=\"text/javascript\"></script>
-      <script src=\"javascripts/ZoomifyImageViewer.js\" type=\"text/javascript\"></script>
+      <script src=\"/javascripts/jquery-1.7.2.min.js\" type=\"text/javascript\"></script>
+      <script src=\"/javascripts/ZoomifyImageViewer.js\" type=\"text/javascript\"></script>
 
       <script type=\"text/javascript\">
          $(document).ready(function() {
