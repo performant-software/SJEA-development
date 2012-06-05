@@ -11,10 +11,71 @@ $(document).ready(function() {
     });
 
     $("#hl-line-go-button").click(function() {
-        var resource = "comparisons/HL." + $("#hl-line-entry").val() + ".html";
-        loadComparison( resource );
+
+        var entered_line = $("#hl-line-entry").val( );
+
+        if ( $.inArray( entered_line, getAvailableLines( ) ) != -1 ) {
+           var resource = "comparisons/HL." + entered_line + ".html";
+           $("#hl-line-entry").val( "" );
+           loadComparison( resource );
+        } else {
+           $("#hl-line-entry").val( "" );
+        }
     });
 
+	$( "#hl-line-entry" ).autocomplete({
+	   source: getAvailableLines( )
+	});
+
+    var params = parseURL();
+    showNextComparison( params["comparison"] );
+});
+
+function showPreviousComparison( resource_name ) {
+
+   // if we did not provide a previous page
+   if( resource_name == null ) {
+      // try to get it from the current page
+      resource_name = $("#previous-page").attr( "href");
+
+      if (resource_name == null) {
+         // just use a default
+         resource_name = "HL.0001.html"
+      }
+   }
+
+   resource_name = "comparisons/" + resource_name.replace(/ /g, "%20"); // some of the names have spaces in!
+   loadComparison( resource_name );
+}
+
+function showNextComparison( resource_name ) {
+
+   // if we did not provide a next page
+   if( resource_name == null ) {
+      // try to get it from the current page
+      resource_name = $("#next-page").attr( "href");
+      if (resource_name == null) {
+         // just use a default
+         resource_name = "HL.0001.html"
+      }
+   }
+
+   resource_name = "comparisons/" + resource_name.replace(/ /g, "%20"); // some of the names have spaces in!
+   loadComparison( resource_name );
+}
+
+function loadComparison( resource_name ) {
+
+    $("#content-display").empty();
+
+    var title = resource_name.replace(/%20/g, " ").replace(/comparisons\//g, "" ).replace(/.html/g, "" );
+    $("#page-number-display").text( title )
+
+    // load the resource and report an error if unsuccessful
+    loadRemoteResource( resource_name, "#content-display" );
+}
+
+function getAvailableLines( ) {
     var availableLines = [
         "0001",
         "0002",
@@ -1415,54 +1476,5 @@ $(document).ready(function() {
         "2147"
 	];
 
-	$( "#hl-line-entry" ).autocomplete({
-	   source: availableLines
-	});
-
-    var params = parseURL();
-    showNextComparison( params["comparison"] );
-});
-
-function showPreviousComparison( resource_name ) {
-
-   // if we did not provide a previous page
-   if( resource_name == null ) {
-      // try to get it from the current page
-      resource_name = $("#previous-page").attr( "href");
-
-      if (resource_name == null) {
-         // just use a default
-         resource_name = "HL.0001.html"
-      }
-   }
-
-   resource_name = "comparisons/" + resource_name.replace(/ /g, "%20"); // some of the names have spaces in!
-   loadComparison( resource_name );
-}
-
-function showNextComparison( resource_name ) {
-
-   // if we did not provide a next page
-   if( resource_name == null ) {
-      // try to get it from the current page
-      resource_name = $("#next-page").attr( "href");
-      if (resource_name == null) {
-         // just use a default
-         resource_name = "HL.0001.html"
-      }
-   }
-
-   resource_name = "comparisons/" + resource_name.replace(/ /g, "%20"); // some of the names have spaces in!
-   loadComparison( resource_name );
-}
-
-function loadComparison( resource_name ) {
-
-    $("#content-display").empty();
-
-    var title = resource_name.replace(/%20/g, " ").replace(/comparisons\//g, "" ).replace(/.html/g, "" );
-    $("#page-number-display").text( title )
-
-    // load the resource and report an error if unsuccessful
-    loadRemoteResource( resource_name, "#content-display" );
+    return( availableLines );
 }
