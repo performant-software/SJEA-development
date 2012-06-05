@@ -418,9 +418,22 @@
             <span class="lineMarker">
                 <xsl:value-of select="concat($idno, ' ', number($manLine))"/>
                 <xsl:if test="$view = 'critical' or $view = 'alltags'">
-                    <xsl:value-of select="concat(' (HL ', $HLLine, ')')"/>
+                    <a href="{concat('/comparison.html?comparison=HL.', substring-after(@n, '.'))}">
+                       <xsl:value-of select="concat(' (HL ', $HLLine, ')')"/>
+                     </a>
                 </xsl:if>
             </span>
+        </xsl:if>
+        
+        <!-- an HL placeholder -->
+        <xsl:if test="(number($manLine) mod 4) != 0">
+            <xsl:if test="$view = 'critical' or $view = 'alltags'">
+                <span class="lineMarker">
+                    <a href="{concat('/comparison.html?comparison=HL.', substring-after(@n, '.'))}">
+                        <xsl:value-of select="concat('', '*')"/>
+                    </a>
+                </span>
+            </xsl:if>
         </xsl:if>
         
         <!--mjc: if the line is followed by a <marginalia> with @place of left or right,    -->
