@@ -164,7 +164,7 @@
 
 .image { width: 140px; height: 165px; }
 
-.imageDiv { float: right; clear: right }
+.imageDiv { float: right; clear: right; padding-right: 150px; }
 
 .margin-topCenter { position: relative ; left: 50% ; right: 50% ; text-align: center }
 
