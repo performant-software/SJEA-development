@@ -419,8 +419,8 @@
                 <xsl:value-of select="concat($idno, ' ', number($manLine))"/>
                 <xsl:if test="$view = 'critical' or $view = 'alltags'">
                     <a href="{concat('/comparison.html?comparison=HL.', substring-after(@n, '.'))}">
-                       <xsl:value-of select="concat(' (HL ', $HLLine, ')')"/>
-                     </a>
+                        <xsl:value-of select="concat(' (HL ', $HLLine, ')')"/>
+                    </a>
                 </xsl:if>
             </span>
         </xsl:if>
@@ -629,7 +629,33 @@
     <!--     'tr' - red highlight                                   -->
     <!--     'BinR'-red outline around text                         -->
     <!--*************************-->
-    <xsl:template match="tei:hi" xml:space="preserve">
+    <xsl:template match="tei:hi">
+        <xsl:param name="view" tunnel="yes"/>
+        
+        <xsl:choose>
+            <xsl:when test="$view = 'critical'">
+                <xsl:apply-templates/>
+            </xsl:when>
+            
+            <xsl:otherwise>
+                <span class="{@rend}"><xsl:apply-templates/></span>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <!--*************************-->
+    <!--mjc: //note/hi template-->
+    <!--     =========         -->
+    <!--mjc: apply actions of <hi> tags found withing <note>        -->
+    <!--     tags, except to critical view:                         -->
+    <!--     'it' - italics                                         -->
+    <!--     'sup"- superposition                                   -->
+    <!--     'ul' - underline                                       -->
+    <!--     'o5' - character is 5 lines high                       -->
+    <!--     'tr' - red highlight                                   -->
+    <!--     'BinR'-red outline around text                         -->
+    <!--*************************-->
+    <xsl:template match="//tei:note/tei:hi" xml:space="preserve">
         <xsl:param name="view" tunnel="yes"/>
         
         <xsl:choose>
