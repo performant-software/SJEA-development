@@ -1,59 +1,67 @@
 $(document).ready(function() {
 
     $("#the-poem").click(function() {
-        poemContent();
+        redirectTo( "thepoem" );
     });
 
     $("#about").click(function() {
-        aboutContent();
+        redirectTo( "about" );
     });
 
     $("#partners").click(function() {
-        partnersContent();
+        redirectTo( "partners" );
     });
 
     $("#how-to-use").click(function() {
-        useContent();
+        redirectTo( "use" );
     });
 
     $("#terms-and-conditions").click(function() {
-        termsContent();
+        redirectTo( "terms" );
     });
+
+    // grab the URL paramaters...
+    var params = parseURL();
+    showContent( params["page"] );
 });
 
-function poemContent( ) {
+function redirectTo( pageName ) {
 
-    $(".mainlist-item").removeClass( "active");
-    $("#the-poem").addClass( "active");
-    loadContent( "/thepoem.html")
+    var newURL = "index.html?page=" + pageName;
+    document.location.href = newURL;
 }
 
-function aboutContent( ) {
+function showContent( pageName ) {
 
+    // un-highlight everything...
     $(".mainlist-item").removeClass( "active");
-    $("#about").addClass( "active");
-    loadContent( "/about.html")
-}
 
-function partnersContent( ) {
+    switch( pageName ) {
+        case "thepoem":
+            $("#the-poem").addClass( "active");
+            loadContent( "/thepoem.html" )
+           break;
 
-    $(".mainlist-item").removeClass( "active");
-    $("#partners").addClass( "active");
-    loadContent( "/partners.html")
-}
+        case "about":
+            $("#about").addClass( "active");
+            loadContent( "/about.html")
+            break;
 
-function useContent( ) {
+        case "partners":
+            $("#partners").addClass( "active");
+            loadContent( "/partners.html")
+            break;
 
-    $(".mainlist-item").removeClass( "active");
-    $("#how-to-use").addClass( "active");
-    loadContent( "/use.html")
-}
+        case "use":
+            $("#how-to-use").addClass( "active");
+            loadContent( "/use.html")
+            break;
 
-function termsContent( ) {
-
-    $(".mainlist-item").removeClass( "active");
-    $("#terms-and-conditions").addClass( "active");
-    loadContent( "/terms.html")
+        case "terms":
+            $("#terms-and-conditions").addClass( "active");
+            loadContent( "/terms.html")
+            break;
+    }
 }
 
 function loadContent( resource_name ) {
