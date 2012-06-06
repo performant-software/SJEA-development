@@ -23,11 +23,9 @@ $(document).ready(function() {
     // selection box changes
     $("#view-control").change(function () {
 
-        // are we currently showing a manuscript?
-        var current_manuscript = $("#transcription-name").attr("href");
-        if (current_manuscript.length != 0 ) {
-            showManuscriptContent( current_manuscript )
-        }
+        // get the current view
+        var view = getManuscriptViewState( );
+        redirectToManuscript( $("#transcription-name").attr("href"), view );
     });
 
     //
@@ -35,152 +33,155 @@ $(document).ready(function() {
     //
 
     $("#SJA-manuscript").click(function() {
-        highliteElement( $(this) );
-        showManuscriptContent( 'SJA');
+        redirectToManuscript( "SJA", "diplomatic")
     });
 
     $("#SJA-description").click(function() {
-        highliteElement( $(this) );
-        showManuscriptDescription( 'SJA');
+        redirectToDescription( "SJA" );
     });
 
 
     $("#SJC-manuscript").click(function() {
-        highliteElement( $(this) );
-        showManuscriptContent( 'SJC');
+        redirectToManuscript( "SJC", "diplomatic")
     });
 
     $("#SJC-description").click(function() {
-        highliteElement( $(this) );
-        showManuscriptDescription( 'SJC');
+        redirectToDescription( "SJC" );
     });
 
 
     $("#SJD-manuscript").click(function() {
-        highliteElement( $(this) );
-        showManuscriptContent( 'SJD');
+        redirectToManuscript( "SJD", "diplomatic")
     });
 
     $("#SJD-description").click(function() {
-        highliteElement( $(this) );
-        showManuscriptDescription( 'SJD');
+        redirectToDescription( "SJD" );
     });
 
 
     $("#SJE-manuscript").click(function() {
-        highliteElement( $(this) );
-        showManuscriptContent( 'SJE');
+        redirectToManuscript( "SJE", "diplomatic")
     });
 
     $("#SJE-description").click(function() {
-        highliteElement( $(this) );
-        showManuscriptDescription( 'SJE');
+        redirectToDescription( "SJE" );
     });
 
 
     $("#SJEx-manuscript").click(function() {
-        highliteElement( $(this) );
-        showManuscriptContent( 'SJEx');
+        redirectToManuscript( "SJEx", "diplomatic")
     });
 
     $("#SJEx-description").click(function() {
-        highliteElement( $(this) );
-        showManuscriptDescription( 'SJEx');
+        redirectToDescription( "SJEx" );
     });
 
 
     $("#SJL-manuscript").click(function() {
-        highliteElement( $(this) );
-        showManuscriptContent( 'SJL');
+        redirectToManuscript( "SJL", "diplomatic")
     });
 
     $("#SJL-description").click(function() {
-        highliteElement( $(this) );
-        showManuscriptDescription( 'SJL');
+        redirectToDescription( "SJL" );
     });
 
 
     $("#SJP-manuscript").click(function() {
-        highliteElement( $(this) );
-        showManuscriptContent( 'SJP');
+        redirectToManuscript( "SJP", "diplomatic")
     });
 
     $("#SJP-description").click(function() {
-        highliteElement( $(this) );
-        showManuscriptDescription( 'SJP');
+        redirectToDescription( "SJP" );
     });
 
 
     $("#SJU-manuscript").click(function() {
-        highliteElement( $(this) );
-        showManuscriptContent( 'SJU');
+        redirectToManuscript( "SJU", "diplomatic")
     });
 
     $("#SJU-description").click(function() {
-        highliteElement( $(this) );
-        showManuscriptDescription( 'SJU');
+        redirectToDescription( "SJU" );
     });
 
 
     $("#SJV-manuscript").click(function() {
-        highliteElement( $(this) );
-        showManuscriptContent( 'SJV');
+        redirectToManuscript( "SJV", "diplomatic")
     });
 
     $("#SJV-description").click(function() {
-        highliteElement( $(this) );
-        showManuscriptDescription( 'SJV');
+        redirectToDescription( "SJV" );
     });
 
+    // load the URL paramaters...
     var params = parseURL();
     // if we are going to a specific page...
-    if( params["manuscript"] != null ) {
-        var element = $( "#" + params["manuscript"] + "-manuscript");
-        element.parent().slideDown(450, function(){
-           element.click();
-        });
+    if( ( params["manuscript"] != null ) && ( params["view"] != null ) ) {
+        //var element = $( "#" + params["manuscript"] + "-manuscript");
+        //element.parent().slideDown(450, function(){
+        //   element.click();
+        // });
+
+        // set the GUI widgets to the correct state
+        setGUIForManuscript( params["manuscript"], params["view"] );
+        showManuscript( params["manuscript"], params["view"] );
+
     } else if( params["description"] != null ) {
-        var element = $( "#" + params["description"] + "-description");
-        element.parent().slideDown(450, function(){
-           element.click();
-        });
+        //var element = $( "#" + params["description"] + "-description");
+        //element.parent().slideDown(450, function(){
+        //   element.click();
+        //});
+
+        // set the GUI widgets to the correct state
+        setGUIForDescription( params["description"] );
+        showDescription( params["description"] );
     } else {
        // otherwise, set the default view...
        $("#overview").addClass( "active");
     }
 });
 
-function highliteElement( element ) {
-    $( ".sublist-item").removeClass( "active");
-    $("#overview").removeClass( "active");
-    element.addClass( "active");
+function showManuscript( name, view ) {
+
+    // set the manuscript name; we may need this later when setting a new view
+    $("#transcription-name").attr("href", name );
+
+    // remove any color box decoration/handlers... we will add more shortly.
+    $.colorbox.remove();
+
+    // nice wait display...
+    showWaitOverlay();
+
+    // load the resource and report an error if unsuccessful
+    var resource = name.replace( "SJ", "MS") + "-" + view + ".html";
+    loadRemoteResource( resource, "#content-display" );
 }
 
-function showManuscriptContent( manuscript_prefix ) {
+function showDescription( name ) {
 
-    var transcript_type = $("#view-control option:selected").text();
-    var resource_name = manuscript_prefix.replace( "SJ", "MS" ) + "-"
-    switch( transcript_type ) {
-        case "All Tags":
-            resource_name += "alltags.html"
-            break;
+    // remove any color box decoration/handlers... we will add more shortly.
+    $.colorbox.remove();
 
-        case "Critical":
-            resource_name += "critical.html"
-            break;
+    // nice wait display...
+    showWaitOverlay();
 
-        case "Diplomatic":
-            resource_name += "diplomatic.html"
-            break;
+    // load the resource and report an error if unsuccessful
+    var resource = name + "-description.html";
+    loadRemoteResource( resource, "#content-display" );
+}
 
-        case "Scribal":
-        default:
-           resource_name += "scribal.html"
-           break;
-    }
+function redirectToManuscript( name, view ) {
 
-    // set the manuscript name; we use this later when setting a new view
-    $("#transcription-name").attr("href", manuscript_prefix );
+    var newURL = "manuscript.html?manuscript=" + name + "&view=" + view;
+    document.location.href = newURL;
+}
+
+function redirectToDescription( name ) {
+
+    var newURL = "manuscript.html?description=" + name;
+    document.location.href = newURL;
+}
+
+function setGUIForManuscript( name, view ) {
 
     // show the transcript selector, color key and XML button
     $("#view-control").show();
@@ -188,50 +189,79 @@ function showManuscriptContent( manuscript_prefix ) {
     $("#color-key-div").show();
     $("#xml-button").show();
 
-    var xml_href = "/xml/" + manuscript_prefix + ".xml"
-    $("#xml-button").attr("href", xml_href );
-    $("#xml-button").attr("target", "_blank" );
-
     // clear any existing content...
-    $("#content-display").empty();
+    $("#content-display").empty( );
 
-    // remove any color box decoration/handlers... we will add more shortly.
-    $.colorbox.remove();
+    // configure the XML button so it does the right thing...
+    setXMLButtonAttributes( name );
 
-    // nice wait display...
-    showWaitOverlay();
+    // set up the nav bar correctly...
+    var navElement = $( "#" + name + "-manuscript");
+    navElement.parent( ).slideDown( 0 );
+    highliteNavElement( navElement );
 
-    // load the resource and report an error if unsuccessful
-    loadRemoteResource( resource_name, "#content-display" );
+    // set the view dropdown
+    setManuscriptViewState( view )
 }
 
-function showManuscriptDescription( manuscript_prefix ) {
+function setGUIForDescription( name ) {
 
-    // clear the manuscript name as we are not displaying one
-    $("#transcription-name").attr("href", "");
-
-    // hide the transcript selector and color key and make sure the XML button is showing
+    // hide the transcript selector and color key and show the XML button
     $("#view-control").hide();
     $("#view-control-title").hide();
     $("#color-key-div").hide();
     $("#xml-button").show();
 
-
-    var xml_href = "/xml/" + manuscript_prefix.replace( "SJ", "") + "Description.xml"
-    $("#xml-button").attr("href", xml_href );
-    $("#xml-button").attr("target", "_blank" );
-
     // clear any existing content...
     $("#content-display").empty();
 
-    var resource_name = manuscript_prefix + "-description.html"
+    // configure the XML button so it does the right thing...
+    setXMLButtonAttributes( name.replace( "SJ", "") + "Description" );
 
-    // remove any color box decoration/handlers... we will add more shortly.
-    $.colorbox.remove();
+    // set up the nav bar correctly...
+    var navElement = $( "#" + name + "-description");
+    navElement.parent().slideDown( 0 );
+    highliteNavElement( navElement );
+}
 
-    // nice wait display...
-    showWaitOverlay();
+function setXMLButtonAttributes( ) {
 
-    // load the resource and report an error if unsuccessful
-    loadRemoteResource( resource_name, "#content-display" );
+    var xml_href = "/xml/" + name + ".xml";
+    $("#xml-button").attr("href", xml_href );
+    $("#xml-button").attr("target", "_blank" );
+}
+
+function highliteNavElement( element ) {
+
+    // clear any existing highlights...
+    $( ".sublist-item").removeClass( "active");
+    $("#overview").removeClass( "active");
+
+    // and highlight this element.
+    element.addClass( "active");
+}
+
+// get the state of the view dropdown so we know which view to display
+function getManuscriptViewState( ) {
+
+    var view = $("#view-control option:selected").text( );
+    switch( view ) {
+        case "All Tags":
+            return( "alltags" );
+
+        case "Critical":
+            return( "critical" );
+
+        case "Diplomatic":
+            return( "diplomatic" );
+
+        case "Scribal":
+        default:
+           return( "scribal" );
+    }
+}
+
+// set the state of the view drop-down to reflect what we are currently showing
+function setManuscriptViewState( name ) {
+    $("#view-control" ).val( name );
 }
