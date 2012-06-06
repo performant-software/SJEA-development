@@ -84,7 +84,8 @@
   text-align: center;
   font-size: 11px;
   background-color: #b3b3b3;
-  font-family: "Ariel", sans-serif; }
+  font-family: "Ariel", sans-serif;
+  clear: both; }
 
 .standard-tooltip {
   color: #000;

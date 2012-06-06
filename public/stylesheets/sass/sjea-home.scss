@@ -3,6 +3,9 @@
    padding: 0;
 }
 
+$logobox_hight: 110px;
+$logobox_width: 300px;
+
 #content {
 
    li {
@@ -12,19 +15,32 @@
    #content-display {
       text-align: justify;
 
-      .logo {
+      .logo-left, .logo-right {
 	     background-repeat: no-repeat;
 	     background-position: top left;
 	     display: block;
+	     height: $logobox_hight;
+	     width: $logobox_width;
+	     margin-top: 12px;
+	     margin-bottom: 12px;
+         background-size: $logobox_width $logobox_hight;
+      }
+
+      .logo-left {
 	     float: left;
-	     height: 100px;
-	     width: 300px;
-	     margin: 30px 10px;
+	     clear: left;
+	     margin-left: 50px;
+	  }
+
+      .logo-right {
+	     float: right;
+	     clear: right;
+	     margin-right: 150px;
       }
 
       #neh-logo {
          background-image: url(/images/neh_logo_horizontal_rgb.jpg);
-         background-size: 100%;
+         background-size: $logobox_width $logobox_hight - 25px;
 
          /* IE 8 specific !!! */
          background-image: none\9;
@@ -33,7 +49,6 @@
 
       #ncsu-logo {
          background-image: url(/images/CHASScolor.jpg);
-         background-size: 100%;
 
          /* IE 8 specific !!! */
          background-image: none\9;
@@ -42,7 +57,7 @@
 
       #bibsoc-logo {
          background-image: url(/images/BSA-new-logo-text.jpg);
-         background-size: 100%;
+         background-size: $logobox_width $logobox_hight - 10px;
 
          /* IE 8 specific !!! */
          background-image: none\9;
@@ -51,7 +66,6 @@
 
       #bodlib-logo{
          background-image: url(/images/bod_t_2009.gif);
-         background-size: 100%;
 
          /* IE 8 specific !!! */
          background-image: none\9;
@@ -60,7 +74,6 @@
 
       #britlib-logo{
          background-image: url(/images/BL-logo.jpg);
-         background-size: 100%;
 
          /* IE 8 specific !!! */
          background-image: none\9;
@@ -69,7 +82,7 @@
 
       #culib-logo{
          background-image: url(/images/uoc-logo.gif);
-         background-size: 100%;
+         background-size: $logobox_width $logobox_hight - 40px;
 
          /* IE 8 specific !!! */
          background-image: none\9;
@@ -78,7 +91,7 @@
 
       #dro-logo {
          background-image: url(/images/dro-logo.jpg);
-         background-size: 100%;
+         background-size: $logobox_hight $logobox_hight;
 
          /* IE 8 specific !!! */
          background-image: none\9;
@@ -87,7 +100,7 @@
 
       #huntlib-logo{
          background-image: url(/images/HuntingtonLogoWithH.jpg);
-         background-size: 100%;
+         background-size: $logobox_width $logobox_hight - 50px;
 
          /* IE 8 specific !!! */
          background-image: none\9;
@@ -96,7 +109,7 @@
 
       #lamlib-logo{
          background-image: url(/images/lpl_logo.gif);
-         background-size: 100%;
+         background-size: $logobox_hight $logobox_hight;
 
          /* IE 8 specific !!! */
          background-image: none\9;
@@ -105,13 +118,11 @@
 
       #pulib-logo{
          background-image: url(/images/hp_logo.jpg);
-         background-size: 100%;
+         background-size: $logobox_width $logobox_hight - 50px;
 
          /* IE 8 specific !!! */
          background-image: none\9;
          filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/hp_logo.jpg',sizingMethod='scale');
       }
    }
-
-
 }
