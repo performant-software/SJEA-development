@@ -193,10 +193,16 @@ $content_font: "Times New Roman", Times, serif;
    border-color: #696969;
 }
 
+#copyright-div {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-family: $site_font;
+}
+
 #open-new-zoom-window {
     width: 100%;
-    padding: 10px 0 0 0;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     font-family: $site_font;
 }

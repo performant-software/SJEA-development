@@ -16,7 +16,7 @@ fs_template = "<!DOCTYPE html>
 
     <script type=\"text/javascript\">
        $(document).ready(function() {
-          Z.showImage(\"zoom-image-div\", \"images/zoom/xXXXx\", \"\");
+          Z.showImage(\"zoom-image-div\", \"images/zoom/_FOLIONAME_\", \"\");
        });
     </script>
 
@@ -41,6 +41,9 @@ fs_template = "<!DOCTYPE html>
           <div id=\"content-display\">
 
               <div id=\"zoom-image-div\"></div>
+              <div id=\"copyright-div\">
+                 <span>_COPYRIGHT_</span>
+              </div>
 
           </div>  <!-- content-display -->
 
@@ -73,7 +76,7 @@ fs_template = "<!DOCTYPE html>
 
       <script type=\"text/javascript\">
          $(document).ready(function() {
-            Z.showImage(\"zoom-image-div\", \"images/zoom/xXXXx\", \"\");
+            Z.showImage(\"zoom-image-div\", \"images/zoom/_FOLIONAME_\", \"\");
          });
       </script>
 
@@ -82,8 +85,11 @@ fs_template = "<!DOCTYPE html>
     <body>
 
         <div id=\"zoom-image-div\"></div>
+        <div id=\"copyright-div\">
+           <span>_COPYRIGHT_</span>
+        </div>
         <div id=\"open-new-zoom-window\">
-           <a href=\"/xXXXx-fs.html\" target=\"_blank\">Click to open in a new window</a>
+           <a href=\"/_FOLIONAME_-fs.html\" target=\"_blank\">New window</a>
         </div>
     </body>
 
@@ -101,6 +107,11 @@ fs_template = "<!DOCTYPE html>
     srcdir = "public/images"
     dstdir = "public"
 
+    copyrightlist = Hash.new
+    filenames = transcription_file_list( )
+    copyrights = copyright_text_list( )
+    filenames.size.times { |ix| copyrightlist[filenames[ix].gsub(/^SJ(.*)$/, '\1')] = copyrights[ix] }
+
     files = Dir.glob( "#{srcdir}/*.jpg" )
 
     files.each do |fname|
@@ -112,11 +123,15 @@ fs_template = "<!DOCTYPE html>
 
          outfile = "#{dstdir}/#{basename}-fs.html"
          delete_file( outfile )
-         append_to_file( outfile, fs_template.gsub( "xXXXx", basename ) )
+         content = fs_template.gsub( "_COPYRIGHT_", copyrightlist[ basename.gsub(/^(.*)\d{3}[a-z]$/, '\1') ] )
+         content = content.gsub( "_FOLIONAME_", basename )
+         append_to_file( outfile, content )
 
          outfile = "#{dstdir}/#{basename}-lb.html"
          delete_file( outfile )
-         append_to_file( outfile, lb_template.gsub( "xXXXx", basename ) )
+         content = lb_template.gsub( "_COPYRIGHT_", copyrightlist[ basename.gsub(/^(.*)\d{3}[a-z]$/, '\1') ] )
+         content = content.gsub( "_FOLIONAME_", basename )
+         append_to_file( outfile, content )
 
       end
 

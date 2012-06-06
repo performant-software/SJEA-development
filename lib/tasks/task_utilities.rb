@@ -88,7 +88,6 @@ module TaskUtilities
 
   def transcription_file_list( )
     return %w{ SJA SJC SJD SJE SJEx SJL SJP SJU SJV }
-    #return %w{ SJE }
   end
 
   def manuscript_view_list( )
@@ -98,6 +97,20 @@ module TaskUtilities
   def description_file_list( )
     return %w{ ADescription CDescription DDescription EDescription ExDescription LDescription PDescription UDescription VDescription }
   end
+
+  def copyright_text_list( )
+
+     return [ "&#169;THE BRITISH LIBRARY BOARD.  ALL RIGHTS RESERVED.",
+              "&#169;THE BRITISH LIBRARY BOARD.  ALL RIGHTS RESERVED.",
+              "Reproduced by permission of the Trustees of Lambeth Palace Library",
+              "Reproduced by permission of the Trustees of the Huntington Library",
+              "Reproduced by permission of the Devon Record Office",
+              "Reproduced by permission of the Bodleian Library, University of Oxford Bodleian Library, MS Laud Misc. 656, Fol. _FOLIONAME_",
+              "Reproduced by permission of Princeton University Library",
+              "Reproduced by kind permission of the Syndics of Cambridge University Library",
+              "&#169;THE BRITISH LIBRARY BOARD.  ALL RIGHTS RESERVED." ]
+  end
+
 
   def transcript_title_list()
     return [ "British Library, MS Additional 31042 (A)",
