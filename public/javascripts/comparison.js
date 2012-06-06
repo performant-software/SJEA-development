@@ -2,77 +2,78 @@ $(document).ready(function() {
 
     $("#previous-button").click(function() {
         $("#hl-line-entry").val( "" )
-        showPreviousComparison(null);
+        redirectPreviousComparison( )
     });
 
     $("#next-button").click(function() {
         $("#hl-line-entry").val( "" )
-        showNextComparison(null);
+        redirectNextComparison( )
     });
 
     $("#hl-line-go-button").click(function() {
 
+        // make sure the line entered is one of the possible options
         var entered_line = $("#hl-line-entry").val( );
-
-        if ( $.inArray( entered_line, getAvailableLines( ) ) != -1 ) {
-           var resource = "comparisons/HL." + entered_line + ".html";
+        if ( $.inArray( entered_line, getAvailableLines( ) ) == -1 ) {
            $("#hl-line-entry").val( "" );
-           loadComparison( resource );
         } else {
            $("#hl-line-entry").val( "" );
+           redirectToComparison( "HL." + entered_line );
         }
     });
 
+    // load the list of possible comparisons...
 	$( "#hl-line-entry" ).autocomplete({
 	   source: getAvailableLines( )
 	});
 
+    // grab the URL paramaters...
     var params = parseURL();
-    showNextComparison( params["comparison"] );
+    showComparison( params["comparison"] );
 });
 
-function showPreviousComparison( resource_name ) {
+// get the previous comparison name from the current page and redirect to it.
+function redirectPreviousComparison( ) {
 
-   // if we did not provide a previous page
-   if( resource_name == null ) {
-      // try to get it from the current page
-      resource_name = $("#previous-page").attr( "href");
-
-      if (resource_name == null) {
-         // just use a default
-         resource_name = "HL.0001.html"
-      }
-   }
-
-   resource_name = "comparisons/" + resource_name.replace(/ /g, "%20"); // some of the names have spaces in!
-   loadComparison( resource_name );
+    redirectToComparison( $("#previous-page").attr( "href") );
 }
 
-function showNextComparison( resource_name ) {
+// get the next comparison name from the current page and redirect to it.
+function redirectNextComparison( ) {
 
-   // if we did not provide a next page
-   if( resource_name == null ) {
-      // try to get it from the current page
-      resource_name = $("#next-page").attr( "href");
-      if (resource_name == null) {
-         // just use a default
-         resource_name = "HL.0001.html"
-      }
-   }
-
-   resource_name = "comparisons/" + resource_name.replace(/ /g, "%20"); // some of the names have spaces in!
-   loadComparison( resource_name );
+    redirectToComparison( $("#next-page").attr( "href") );
 }
 
-function loadComparison( resource_name ) {
+function redirectToComparison( comparisonName ) {
 
-    $("#content-display").empty();
+    if (comparisonName == null) {
+       // just use a default
+       comparisonName = "HL.0001"
+    }
 
-    var title = resource_name.replace(/%20/g, " ").replace(/comparisons\//g, "" ).replace(/.html/g, "" );
-    $("#page-number-display").text( title )
+    var newURL = "comparison.html?comparison=" + comparisonName.replace(/ /g, "%20"); // some of the names have spaces in!;
+    document.location.href = newURL;
+}
+
+function showComparison( comparisonName ) {
+
+   // if we did not provide a destination page
+   if( comparisonName == null ) {
+      // just use a default
+      comparisonName = "HL.0001"
+   }
+
+   loadComparison( comparisonName );
+}
+
+// use AJAX to populate the content div on this page with the resource provided.
+function loadComparison( comparisonName ) {
+
+    $("#content-display").empty( );
+    $("#page-number-display").text( comparisonName )
 
     // load the resource and report an error if unsuccessful
-    loadRemoteResource( resource_name, "#content-display" );
+    loadRemoteResource( "/comparisons/" + comparisonName + ".html", "#content-display" );
 }
 
 function getAvailableLines( ) {
