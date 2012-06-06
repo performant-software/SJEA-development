@@ -181,7 +181,7 @@
           <%- manuscript = "SJ#{hit["title"].gsub(/^.*\((.*)\)$/, '\1')}" %>
           <div class="result">
               <div class="result-title">
-                 <a href="/manuscript.html?manuscript=<%= manuscript %>"> <%= hit["title"] %></a>
+                 <a href="/manuscript.html?manuscript=<%= manuscript %>&view=diplomatic"> <%= hit["title"] %></a>
               </div>
               <div class="result-snippet">
                  <span><%= raw( hit["highlighting"][0] ) %></span>
