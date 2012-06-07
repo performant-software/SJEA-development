@@ -45,27 +45,66 @@ $content_font: "Times New Roman", Times, serif;
     padding: 25px 0 25px 0;
 
     #header-list {
-       padding: 20px 0 0 0;
+
+       padding: 10px 0 0 725px;
+
        li {
-          list-style-type: none;
+          float: left;
+          position: relative;
           display: inline;
-          margin: 25px;
-
-          a {
-             position: relative;
-             text-decoration: none;
-             padding: 25px 0 0 0;
-
-          }
-
-          a:hover {
-             color: $hover_color;
-          }
        }
 
-       .active {
-          color: $active_color;
+       li a {
+          position: relative;
+          width: 110px;
+          height: 29px;
+          display: block;
+          background-image: url("/images/tabs.png");
+          background-position: center center;
+          color: #44403b;
+          text-decoration: none;
+          font-size: 14px;
+          padding-top: 12px;
+          text-align: left;
+          padding-left: 20px;
+          font-weight: bold;
        }
+
+       li.home a {
+          background-image: url("/images/tab-home.png");
+       }
+
+       li.current a {
+         background-position: top;
+         color: #ffffff;
+       }
+
+       li a:hover {
+         background-position: bottom;
+         color: #ffffff;
+       }
+
+       li.current a:hover {
+         background-position: top; /*To Prevent the Current tab from changing colour on hover*/
+         color: #ffffff;
+       }
+
+       li.current, li.home {
+          z-index: 100;
+       }
+
+       li.manuscript {
+          z-index: 99;
+       }
+
+       li.search {
+          z-index: 98;
+       }
+
+       li.compare {
+          z-index: 97;
+       }
+
     }
 }
 

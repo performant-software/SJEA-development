@@ -15,19 +15,45 @@
   background-color: #b3b3b3;
   padding: 25px 0 25px 0; }
   #main-header #header-list {
-    padding: 20px 0 0 0; }
+    padding: 10px 0 0 725px; }
     #main-header #header-list li {
-      list-style-type: none;
-      display: inline;
-      margin: 25px; }
-      #main-header #header-list li a {
-        position: relative;
-        text-decoration: none;
-        padding: 25px 0 0 0; }
-      #main-header #header-list li a:hover {
-        color: red; }
-    #main-header #header-list .active {
-      color: red; }
+      float: left;
+      position: relative;
+      display: inline; }
+    #main-header #header-list li a {
+      position: relative;
+      width: 110px;
+      height: 29px;
+      display: block;
+      background-image: url("/images/tabs.png");
+      background-position: center center;
+      color: #44403b;
+      text-decoration: none;
+      font-size: 14px;
+      padding-top: 12px;
+      text-align: left;
+      padding-left: 20px;
+      font-weight: bold; }
+    #main-header #header-list li.home a {
+      background-image: url("/images/tab-home.png"); }
+    #main-header #header-list li.current a {
+      background-position: top;
+      color: #ffffff; }
+    #main-header #header-list li a:hover {
+      background-position: bottom;
+      color: #ffffff; }
+    #main-header #header-list li.current a:hover {
+      background-position: top;
+      /*To Prevent the Current tab from changing colour on hover*/
+      color: #ffffff; }
+    #main-header #header-list li.current, #main-header #header-list li.home {
+      z-index: 100; }
+    #main-header #header-list li.manuscript {
+      z-index: 99; }
+    #main-header #header-list li.search {
+      z-index: 98; }
+    #main-header #header-list li.compare {
+      z-index: 97; }
 
 #main-title {
   width: 75%;
