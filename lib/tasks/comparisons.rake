@@ -30,7 +30,7 @@ namespace :sjea do
       lines.each do |line|
 
         local_lnumber = line[:loc_line]
-        hl_lnumber = line[:hl_line]
+        hl_lnumber = line[:hl_line].gsub( ", ", "-" )
         text_line = CGI::escapeHTML( line[:content] )
 
         fname = "#{workdir}/#{hl_lnumber}.xml"
