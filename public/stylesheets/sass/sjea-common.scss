@@ -1,26 +1,41 @@
 //
 // color definitions
 //
-$title_background: #B3B3B3;
-$footer_background: #B3B3B3;
-$contentheader_background: #B3B3B3;
-$hover_color: red;
-$active_color: red;
+
+$page_background_color: #2F1E17;
+
+$title_text_color: white;
+$title_background_color: #5A765E;
+
+$footer_text_color: #ECE6D7;
+$footer_background_color: $page_background_color;
+
+
+$content_text_color: black;
+$content_background_color: #ECE6D7;
+
+$navitem_hover_color: white;
+$navitem_active_color: $page_background_color;
+$navitem_text_color: #695A42;
+
+$navbox_background_color: #DDD5BD;
+
+$contentheader_background_color: $navbox_background_color;
 
 //
 // size/position definitions
 //
-$navbox_width: 180px;   // width of the main navigation box
+$navbox_width: 195px;    // width of the main navigation box
 $navbox_height: 350px;  // hight of the main navigation box
 
-$contentarea_width: 1000px;
+$contentarea_width: 1075px;
 $screen_height: 1050px;
-
 $footer_height: 50px;
 
-
+//
+// Font definitions...
+//
 $site_font: 'Ariel', sans-serif;
-//$content_font: 'Cardo', serif;
 $content_font: "Times New Roman", Times, serif;
 
 
@@ -41,7 +56,8 @@ $content_font: "Times New Roman", Times, serif;
     width: 100%;
     height: 60px;
     text-align: center;
-    background-color: $title_background;
+    background-color: $title_background_color;
+    color: $title_text_color;
     padding: 25px 0 25px 0;
 
     #header-list {
@@ -109,18 +125,23 @@ $content_font: "Times New Roman", Times, serif;
 }
 
 #main-title {
-   width: 75%;
+   width: 74%;
    height: 30px;
    text-align: left;
-   padding: 20px 0 0 250px;
+   padding: 20px 0 0 310px;
+   color: $page_background_color;
+   background-color: $content_background_color;
 }
 
 #sidebar {
 
    float: left;
-   padding: 10px 0 0 40px;
+   margin: -50px 0 0 40px;
+   padding: 0 0 0 15px;
    height: $navbox_height;
    width: $navbox_width;
+   color: $navitem_text_color;
+   background-color: $navbox_background_color;
 }
 
 #sidebar-items {
@@ -143,7 +164,7 @@ $content_font: "Times New Roman", Times, serif;
         }
 
         a:hover {
-           color: $hover_color;
+           color: $navitem_hover_color;
         }
      }
 
@@ -154,30 +175,34 @@ $content_font: "Times New Roman", Times, serif;
      }
 
      .active {
-       color: $active_color;
+       color: $navitem_active_color;
      }
 }
 
 #content {
 
+   color: $content_text_color;
+   background-color: $content_background_color;
    width: $contentarea_width;
    padding: 10px 0 0 250px;
+   min-height: $screen_height - 200px;
 
    #content-header {
       position: relative;
-      background-color: $contentheader_background;
+      background-color: $contentheader_background_color;
       width: 100%;
       height: 30px;
    }
 
    #content-display {
       position: relative;
-      padding: 25px 0 0 0;
+      padding: 25px 60px 0 60px;
       font-family: $content_font;
    }
 }
 
 #footer-spacer {
+   background-color: $content_background_color;
    height: 10px;
 }
 
@@ -187,8 +212,10 @@ $content_font: "Times New Roman", Times, serif;
    margin: 0;
    text-align: center;
    font-size: 11px;
-   background-color: $footer_background;
+   background-color: $footer_background_color;
+   color: $footer_text_color;
    font-family: $site_font;
+   padding-top: 8px;
    clear: both;
 }
 

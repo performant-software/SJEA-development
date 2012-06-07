@@ -12,7 +12,8 @@
   width: 100%;
   height: 60px;
   text-align: center;
-  background-color: #b3b3b3;
+  background-color: #5a765e;
+  color: white;
   padding: 25px 0 25px 0; }
   #main-header #header-list {
     padding: 10px 0 0 725px; }
@@ -56,16 +57,21 @@
       z-index: 97; }
 
 #main-title {
-  width: 75%;
+  width: 74%;
   height: 30px;
   text-align: left;
-  padding: 20px 0 0 250px; }
+  padding: 20px 0 0 310px;
+  color: #2f1e17;
+  background-color: #ece6d7; }
 
 #sidebar {
   float: left;
-  padding: 10px 0 0 40px;
+  margin: -50px 0 0 40px;
+  padding: 0 0 0 15px;
   height: 350px;
-  width: 180px; }
+  width: 195px;
+  color: #695a42;
+  background-color: #ddd5bd; }
 
 #sidebar-items #item-heading {
   height: 25px;
@@ -79,28 +85,32 @@
   #sidebar-items li a {
     text-decoration: none; }
   #sidebar-items li a:hover {
-    color: red; }
+    color: white; }
 #sidebar-items .sublist {
   padding: 0 0 0 20px;
   font-size: 13px;
   cursor: pointer; }
 #sidebar-items .active {
-  color: red; }
+  color: #2f1e17; }
 
 #content {
-  width: 1000px;
-  padding: 10px 0 0 250px; }
+  color: black;
+  background-color: #ece6d7;
+  width: 1075px;
+  padding: 10px 0 0 250px;
+  min-height: 850px; }
   #content #content-header {
     position: relative;
-    background-color: #b3b3b3;
+    background-color: #ddd5bd;
     width: 100%;
     height: 30px; }
   #content #content-display {
     position: relative;
-    padding: 25px 0 0 0;
+    padding: 25px 60px 0 60px;
     font-family: "Times New Roman", Times, serif; }
 
 #footer-spacer {
+  background-color: #ece6d7;
   height: 10px; }
 
 #main-footer {
@@ -109,8 +119,10 @@
   margin: 0;
   text-align: center;
   font-size: 11px;
-  background-color: #b3b3b3;
+  background-color: #2f1e17;
+  color: #ece6d7;
   font-family: "Ariel", sans-serif;
+  padding-top: 8px;
   clear: both; }
 
 .standard-tooltip {
