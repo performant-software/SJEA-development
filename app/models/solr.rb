@@ -31,7 +31,7 @@ class Solr
 		@core = "#{SOLR_CORE_PREFIX}/#{core}"
 		@solr = RSolr.connect( :url=>"#{SOLR_URL}/#{core}" )
 		@field_list = [ "uri", "url", "title", "section" ]
-		@highlight_field_list = [ "content" ]
+		@highlight_field_list = [ "content", "content_ascii" ]
 		@facet_fields = ['section']
 	end
 
@@ -46,7 +46,8 @@ class Solr
 		if options[:q].blank?
 		   options[:q] = "*:*"
 		#	options[:q] = "section:#{overrides[:section]}" if !overrides[:section].blank?
-		else
+    else
+      options[:q] += " OR content_ascii:#{options[:q]}"
 			options[:q] += " AND section:#{options[:f]}" if !options[:f].blank?
       options[:q] += " AND title:#{options[:t]}" if !options[:t].blank?
     end
