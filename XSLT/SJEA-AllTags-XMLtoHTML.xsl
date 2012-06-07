@@ -387,7 +387,7 @@
         <!--dg: create <img> tags instead of <a> tags for the images. This shows the manuscript page -->
         <!--    as a thumbnail and matches the wireframes we have provided Tim for review.           -->
         <!--mjc:add a div around the img in order to add a coption div as well                       -->
-        <div class="imageDiv">
+        <div id="{@entity}" class="imageDiv">
             <div class="img">
                 <a class="imglightbox" href="{concat('/',concat(@entity, '-lb.html'))}">
                     <img src='{$imgName}' class="image"></img>
