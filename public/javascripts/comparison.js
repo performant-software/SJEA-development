@@ -73,7 +73,7 @@ function loadComparison( comparisonName ) {
     $("#page-number-display").text( comparisonName )
 
     // load the resource and report an error if unsuccessful
-    loadRemoteResource( "/comparisons/" + comparisonName + ".html", "#content-display" );
+    loadRemoteResource( "/comparisons/" + comparisonName + ".html", "#content-display", null );
 }
 
 function getAvailableLines( ) {

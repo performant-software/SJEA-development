@@ -69,5 +69,5 @@ function loadContent( resource_name ) {
     $("#content-display").empty();
 
     // load the resource and report an error if unsuccessful
-    loadRemoteResource( resource_name, "#content-display" );
+    loadRemoteResource( resource_name, "#content-display", null );
 }

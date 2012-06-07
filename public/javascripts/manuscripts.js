@@ -116,34 +116,31 @@ $(document).ready(function() {
     var params = parseURL();
     // if we are going to a specific page...
     if( ( params["manuscript"] != null ) && ( params["view"] != null ) ) {
-        //var element = $( "#" + params["manuscript"] + "-manuscript");
-        //element.parent().slideDown(450, function(){
-        //   element.click();
-        // });
-
         // set the GUI widgets to the correct state
         setGUIForManuscript( params["manuscript"], params["view"] );
-        showManuscript( params["manuscript"], params["view"] );
+        showManuscript( params["manuscript"], params["view"], params["folio"] );
 
     } else if( params["description"] != null ) {
-        //var element = $( "#" + params["description"] + "-description");
-        //element.parent().slideDown(450, function(){
-        //   element.click();
-        //});
-
         // set the GUI widgets to the correct state
         setGUIForDescription( params["description"] );
         showDescription( params["description"] );
+
     } else {
        // otherwise, set the default view...
        $("#overview").addClass( "active");
     }
 });
 
-function showManuscript( name, view ) {
+function showManuscript( name, view, scrollto_id ) {
 
     // set the manuscript name; we may need this later when setting a new view
     $("#transcription-name").attr("href", name );
+
+    // create the done callback as appropriate
+    var callback = null;
+    if( scrollto_id != null ) {
+       callback = function() { $('html,body').animate( { scrollTop: $("#" + scrollto_id ).offset().top - 15 },'slow' ); }
+    }
 
     // remove any color box decoration/handlers... we will add more shortly.
     $.colorbox.remove();
@@ -153,7 +150,7 @@ function showManuscript( name, view ) {
 
     // load the resource and report an error if unsuccessful
     var resource = name.replace( "SJ", "MS") + "-" + view + ".html";
-    loadRemoteResource( resource, "#content-display" );
+    loadRemoteResource( resource, "#content-display", callback );
 }
 
 function showDescription( name ) {
@@ -166,7 +163,7 @@ function showDescription( name ) {
 
     // load the resource and report an error if unsuccessful
     var resource = name + "-description.html";
-    loadRemoteResource( resource, "#content-display" );
+    loadRemoteResource( resource, "#content-display", null );
 }
 
 function redirectToManuscript( name, view ) {
