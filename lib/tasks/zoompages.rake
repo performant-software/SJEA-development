@@ -16,7 +16,7 @@ fs_template = "<!DOCTYPE html>
 
     <script type=\"text/javascript\">
        $(document).ready(function() {
-          Z.showImage(\"zoom-image-div\", \"images/zoom/_FOLIONAME_\", \"\");
+          Z.showImage(\"zoom-image-div\", \"images/zoom/_FILENAME_\", \"\");
        });
     </script>
 
@@ -76,7 +76,7 @@ fs_template = "<!DOCTYPE html>
 
       <script type=\"text/javascript\">
          $(document).ready(function() {
-            Z.showImage(\"zoom-image-div\", \"images/zoom/_FOLIONAME_\", \"\");
+            Z.showImage(\"zoom-image-div\", \"images/zoom/_FILENAME_\", \"\");
          });
       </script>
 
@@ -89,7 +89,7 @@ fs_template = "<!DOCTYPE html>
            <span>_COPYRIGHT_</span>
         </div>
         <div id=\"open-new-zoom-window\">
-           <a href=\"/_FOLIONAME_-fs.html\" target=\"_blank\">New window</a>
+           <a href=\"/_FILENAME_-fs.html\" target=\"_blank\">New window</a>
         </div>
     </body>
 
@@ -121,16 +121,21 @@ fs_template = "<!DOCTYPE html>
       # if this is a manuscript image...
       if basename =~ /^[A-Z]{1}[a-z]?\d{3}[a-z]$/
 
+         prefix = basename.gsub(/^(.*)\d{3}[a-z]$/, '\1')
+         folio = basename.gsub(/^.*(\d{3}[a-z])$/, '\1').sub(/^[0]*/,"")
+
          outfile = "#{dstdir}/#{basename}-fs.html"
          delete_file( outfile )
-         content = fs_template.gsub( "_COPYRIGHT_", copyrightlist[ basename.gsub(/^(.*)\d{3}[a-z]$/, '\1') ] )
-         content = content.gsub( "_FOLIONAME_", basename )
+         content = fs_template.gsub( "_COPYRIGHT_", copyrightlist[ prefix ] )
+         content = content.gsub( "_FILENAME_", basename )
+         content = content.gsub( "_FOLIONAME_", folio )
          append_to_file( outfile, content )
 
          outfile = "#{dstdir}/#{basename}-lb.html"
          delete_file( outfile )
-         content = lb_template.gsub( "_COPYRIGHT_", copyrightlist[ basename.gsub(/^(.*)\d{3}[a-z]$/, '\1') ] )
-         content = content.gsub( "_FOLIONAME_", basename )
+         content = lb_template.gsub( "_COPYRIGHT_", copyrightlist[ prefix ] )
+         content = content.gsub( "_FILENAME_", basename )
+         content = content.gsub( "_FOLIONAME_", folio )
          append_to_file( outfile, content )
 
       end
