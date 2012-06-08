@@ -175,15 +175,14 @@ body {
 
 #sidebar {
 
+   position: absolute;
    float: left;
    padding: 0 0 0 25px;
    min-height: $page_height - $header_height;
    width: $navbox_width;
    color: $navitem_text_color;
    background-color: $navbox_background_color;
-   bottom: 0;
-   //top: 0;
-
+   z-index: 100;
 }
 
 #sidebar-items {
@@ -225,9 +224,8 @@ body {
 
    color: $content_text_color;
    background-color: $content_background_color;
-   width: $contentarea_width;
-   padding: 10px 0 0 250px;
-   min-height: $page_height - ( $header_height + $footer_height );
+   width: 100%;
+   min-height: $page_height - $header_height;
 
    #content-title {
       width: 100%;
@@ -239,17 +237,18 @@ body {
       background-color: $content_background_color;
    }
 
-   #content-header {
+   #content-controls {
       position: relative;
       background-color: $contentheader_background_color;
-      width: 100%;
       height: 30px;
+      margin: 15px 25px 0 265px;
    }
 
    #content-display {
       position: relative;
-      padding: 25px 60px 0 60px;
       font-family: $content_font;
+      text-align: justify;
+      padding: 75px 25px 0 265px;
    }
 }
 

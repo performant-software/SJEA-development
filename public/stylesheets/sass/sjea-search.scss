@@ -1,3 +1,7 @@
+//
+// Font definitions...
+//
+$site_font: 'Ariel', sans-serif;
 
 * {
    margin: 0;
@@ -6,48 +10,47 @@
 
 #content {
 
-   #search-controls {
-
-      width: 42%;
-      padding: 20px 0 0 27px;
-      float: left;
-
-      #textbox-div, #special-keys-div, #searchin-div, #manuscripts-div, #submit-div {
-          width: 100%;
-          padding: 0 0 30px 0;
-          text-align: right;
-      }
-
-      #textbox-div {
-         padding: 0 0 10px 0;
-      }
-
-      #special-keys-div {
-
-          padding: 10px 0 0 15px;
-
-          .special-key-button {
-             float: left;
-             width: 35px;
-             height: 35px;
-             margin: 0 0 0 10px;
-             font-size: 18px;
-          }
-      }
-   }
-
-   #search-instructions {
-       width: 50%;
-       text-align: justify;
-       padding: 0 0 0 5px;
-       float: right;
-       border-left-style: solid;
-       border-width: 2px;
-   }
-
    #content-display {
 
-      clear: both;
+       padding-top: 10px;
+
+       #search-controls {
+
+          width: 40%;
+          padding: 0 0 0 25px;
+          float: left;
+          font-family: $site_font;
+
+          #textbox-div, #special-keys-div, #searchin-div, #manuscripts-div, #submit-div {
+              width: 100%;
+              padding: 0 0 20px 0;
+              text-align: right;
+          }
+
+          #textbox-div {
+             //padding: 0 0 10px 0;
+          }
+
+          #special-keys-div {
+
+              .special-key-button {
+                 float: left;
+                 width: 35px;
+                 height: 35px;
+                 font-size: 18px;
+              }
+          }
+       }
+
+       #search-instructions {
+           width: 50%;
+           text-align: justify;
+           padding: 0 0 0 5px;
+           float: right;
+           border-left-style: solid;
+           border-width: 2px;
+           font-family: $site_font;
+       }
 
       .result-header {
          padding: 0 0 10px 0;

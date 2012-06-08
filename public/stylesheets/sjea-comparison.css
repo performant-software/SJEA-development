@@ -2,27 +2,27 @@
   margin: 0;
   padding: 0; }
 
-#content #content-header #page-number-display {
+#content #content-controls #page-number-display {
   text-align: right;
   margin: 0 0 0 365px; }
-#content #content-header #previous-button, #content #content-header #next-button {
+#content #content-controls #previous-button, #content #content-controls #next-button {
   position: relative;
   width: 100px;
   height: 18px; }
-#content #content-header #previous-button {
+#content #content-controls #previous-button {
   float: left;
   margin: 6px 0 0 6px; }
-#content #content-header #next-button {
+#content #content-controls #next-button {
   float: right;
   margin: 6px 6px 0 0; }
-#content #content-header #hl-line-entry-label {
+#content #content-controls #hl-line-entry-label {
   text-align: right;
   margin: 0 0 0 120px;
   font-size: 14px; }
-#content #content-header #hl-line-entry {
+#content #content-controls #hl-line-entry {
   width: 70px;
   margin: 4px 0 0 0; }
-#content #content-header #hl-line-go-button {
+#content #content-controls #hl-line-go-button {
   position: relative;
   width: 40px;
   height: 18px;

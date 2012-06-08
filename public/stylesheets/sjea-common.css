@@ -90,13 +90,14 @@ body {
       z-index: 97; }
 
 #sidebar {
+  position: absolute;
   float: left;
   padding: 0 0 0 25px;
   min-height: 852px;
   width: 15.833%;
   color: #695a42;
   background-color: #ddd5bd;
-  bottom: 0; }
+  z-index: 100; }
 
 #sidebar-items #item-heading {
   height: 25px;
@@ -121,9 +122,8 @@ body {
 #content {
   color: black;
   background-color: #f0e7cf;
-  width: 79.167%;
-  padding: 10px 0 0 250px;
-  min-height: 802px; }
+  width: 100%;
+  min-height: 852px; }
   #content #content-title {
     width: 100%;
     height: 30px;
@@ -131,15 +131,16 @@ body {
     text-align: left;
     color: #2f1e17;
     background-color: #f0e7cf; }
-  #content #content-header {
+  #content #content-controls {
     position: relative;
     background-color: #ddd5bd;
-    width: 100%;
-    height: 30px; }
+    height: 30px;
+    margin: 15px 25px 0 265px; }
   #content #content-display {
     position: relative;
-    padding: 25px 60px 0 60px;
-    font-family: "Times New Roman", Times, serif; }
+    font-family: "Times New Roman", Times, serif;
+    text-align: justify;
+    padding: 75px 25px 0 265px; }
 
 #footer-spacer {
   background-color: #f0e7cf;
