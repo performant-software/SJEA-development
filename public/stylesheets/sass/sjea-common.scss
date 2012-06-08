@@ -302,6 +302,8 @@ body {
     /* outline radius for mozilla/firefox only */
     -moz-box-shadow: 0 0 10px #000;
     -webkit-box-shadow: 0 0 10px #000;
+
+    z-index: 9999;
 }
 
 .blockUI h1 {
