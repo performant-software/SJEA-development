@@ -46,7 +46,7 @@
 
              <div id="textbox-div">
                 <span>Search for: </span>
-                <textarea id="search-text" name="searchfor" rows="2" cols="45"></textarea>
+                <textarea id="search-text" name="searchfor" rows="2" cols="52"></textarea>
              </div>
 
              <div id="special-keys-div">
@@ -136,7 +136,8 @@
              <%- total_results = @results[:totalrows].to_i %>
              <%- page_number = ( @results[:pagestart].to_i / paginate_count ) + 1 %>
              <%- page_results = @results[:hits].size %>
-             <%- total_pages = ( total_results / paginate_count ) + 1 %>
+             <%- total_pages = ( total_results / paginate_count ) -%>
+             <%- total_pages += 1 unless ( total_results % paginate_count ) == 0 %>
 
               <%- if total_results != 0 -%>
                  <span><%= "Showing #{page_results} results for \"#{searchfor}\" in #{facetname}, #{docname} (#{total_results} total results):" -%></span>

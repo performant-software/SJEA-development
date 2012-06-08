@@ -27,7 +27,11 @@ fs_template = "<!DOCTYPE html>
     <div id=\"page\">
 
       <div id=\"page-header\">
-          <h1>The Siege of Jerusalem Electronic Archive</h1>
+          <div id=\"background-graphic\"></div>
+          <div id=\"logo-graphic\"></div>
+          <div id=\"title-graphic\"></div>
+          <div id=\"title-support\">ELECTRONIC ARCHIVE</div>
+          <div id=\"editor-name\">Timothy L. Stinson, editor</div>
       </div> <!-- page-header -->
 
       <div id=\"content-title\">

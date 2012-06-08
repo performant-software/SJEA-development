@@ -156,7 +156,7 @@
 
 .kdMarker { display:none }
 
-.lineMarker { position:absolute ; left:30px ; font-size:9pt ; font-family:Times New Roman ; line-height:1.8em }
+.lineMarker { position:absolute ; left: 275px ; font-size:9pt ; font-family:Times New Roman ; line-height:1.8em }
 
 .line { position:relative ; left:150px }
 
