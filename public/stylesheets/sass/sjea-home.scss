@@ -13,6 +13,26 @@ $logo_background_color: #F2F0E4;
 
    #content-display {
 
+      background-image: url(/images/home_art.jpg);
+      background-repeat: no-repeat;
+      background-position: top right;
+
+      #home-image {
+         background-image: url(/images/home_image.jpg);
+	     background-repeat: no-repeat;
+	     height: 260px;
+	     width: 183px;
+	     float: left;
+	     margin: 0 10px 0 0;
+      }
+
+      #thanks {
+         width: 100%;
+         margin: 25px 0 25px 0;;
+         text-align: center;
+         font-style: italic;
+      }
+
       #logo-div {
 	     height: 300px;
 	     width: 100%;

@@ -62,14 +62,11 @@ body {
       display: block;
       background-image: url("/images/topnav_tab_inactive.png");
       background-repeat: no-repeat;
-      background-position: top left;
-      color: #44403b;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 15px;
       padding-top: 8px;
       text-align: left;
-      padding-left: 30px;
-      font-weight: bold;
+      padding-left: 18px;
       color: #f0e7cf; }
     #page-header #header-tabs li.current a {
       background-image: url("/images/topnav_tab_active.png");
@@ -91,7 +88,7 @@ body {
 
 #sidebar {
   position: absolute;
-  float: left;
+  display: block;
   padding: 0 0 0 25px;
   min-height: 852px;
   width: 15.833%;
@@ -101,7 +98,11 @@ body {
 
 #sidebar-items #item-heading {
   height: 25px;
-  padding: 10px 0 0 0; }
+  padding: 25px 0 25px 5px;
+  font-size: 24px;
+  color: #7b1c12; }
+#sidebar-items #overview {
+  color: #695a42; }
 #sidebar-items li {
   list-style-type: none;
   cursor: pointer;
@@ -117,7 +118,8 @@ body {
   font-size: 13px;
   cursor: pointer; }
 #sidebar-items .active {
-  color: #2f1e17; }
+  color: #2f1e17;
+  font-weight: bold; }
 
 #content {
   color: black;
@@ -156,7 +158,8 @@ body {
   color: #f0e7cf;
   font-family: "Ariel", sans-serif;
   padding-top: 8px;
-  clear: both; }
+  clear: both;
+  bottom: 0; }
 
 .standard-tooltip {
   color: #000;

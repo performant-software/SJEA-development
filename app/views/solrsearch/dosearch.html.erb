@@ -38,157 +38,154 @@
 
       </div>  <!-- content-controls -->
 
-      <div id="search-controls">
+      <div id="content-display">
 
-         <form accept-charset="UTF-8" name="search" action="/solrsearch/dosearch" method="get">
+         <div id="search-controls">
 
-         <div id="textbox-div">
-            <span>Search for: </span>
-            <textarea id="search-text" name="searchfor" rows="2" cols="55"></textarea>
-         </div>
+             <form accept-charset="UTF-8" name="search" action="/solrsearch/dosearch" method="get">
 
-         <div id="special-keys-div">
-             <!-- thorn -->
-             <button id="special-button-1" type="button" class="special-key-button">&#x00DE</button>
-             <!-- yogh -->
-             <button id="special-button-2" type="button" class="special-key-button">&#x021D</button>
-         </div>
+             <div id="textbox-div">
+                <span>Search for: </span>
+                <textarea id="search-text" name="searchfor" rows="2" cols="45"></textarea>
+             </div>
 
-         <div id="searchin-div">
-            <span>Search in:</span>
-            <select name="facet" >
-               <option value="">Everything</option>
-               <option value="transcriptions">Transcriptions</option>
-               <option value="descriptions">Descriptions</option>
-               <option value="annotations">Annotations</option>
-            </select>
-         </div>
+             <div id="special-keys-div">
+                 <!-- thorn -->
+                 <button id="special-button-1" type="button" class="special-key-button">&#x00DE</button>
+                 <!-- yogh -->
+                 <button id="special-button-2" type="button" class="special-key-button">&#x021D</button>
+             </div>
 
-         <div id="manuscripts-div">
-             <span>Which manuscript(s):</span>
-             <select name="transcription">
-                <option value="">All of them</option>
-                <option value="British Library, MS Additional 31042 (A)">British Library, MS Additional 31042 (A)</option>
-                <option value="British Library, MS Cotton Caligula A.ii, part I (C)">British Library, MS Cotton Caligula A.ii, part I (C)</option>
-                <option value="Lambeth Palace Library, MS 491 (D)">Lambeth Palace Library, MS 491 (D)</option>
-                <option value="Huntington Library, MS HM 128 (E)">Huntington Library, MS HM 128 (E)</option>
-                <option value="Devon Record Office, Deposit 2507 (Ex)">Devon Record Office, Deposit 2507 (Ex)</option>
-                <option value="Bodleian Library, MS Laud Misc. 656 (L)">Bodleian Library, MS Laud Misc. 656 (L)</option>
-                <option value="Princeton University Library, MS Taylor Medieval 11 (P)">Princeton University Library, MS Taylor Medieval 11 (P)</option>
-                <option value="Cambridge University Library, MS Mm.v.14 (U)">Cambridge University Library, MS Mm.v.14 (U)</option>
-                <option value="British Library, MS Cotton Vespasian E.xvi (V)">British Library, MS Cotton Vespasian E.xvi (V)</option>
-             </select>
-         </div>
+             <div id="searchin-div">
+                <span>Search in:</span>
+                <select name="facet" >
+                   <option value="">Everything</option>
+                   <option value="transcriptions">Transcriptions</option>
+                   <option value="descriptions">Descriptions</option>
+                   <option value="annotations">Annotations</option>
+                </select>
+             </div>
 
-         <div id="submit-div">
-             <input id="search-submit" type="submit" class="search-button" value="Search" />
-         </div>  <!-- submit-div -->
+             <div id="manuscripts-div">
+                 <span>Which manuscript(s):</span>
+                 <select name="transcription">
+                    <option value="">All of them</option>
+                    <option value="British Library, MS Additional 31042 (A)">British Library, MS Additional 31042 (A)</option>
+                    <option value="British Library, MS Cotton Caligula A.ii, part I (C)">British Library, MS Cotton Caligula A.ii, part I (C)</option>
+                    <option value="Lambeth Palace Library, MS 491 (D)">Lambeth Palace Library, MS 491 (D)</option>
+                    <option value="Huntington Library, MS HM 128 (E)">Huntington Library, MS HM 128 (E)</option>
+                    <option value="Devon Record Office, Deposit 2507 (Ex)">Devon Record Office, Deposit 2507 (Ex)</option>
+                    <option value="Bodleian Library, MS Laud Misc. 656 (L)">Bodleian Library, MS Laud Misc. 656 (L)</option>
+                    <option value="Princeton University Library, MS Taylor Medieval 11 (P)">Princeton University Library, MS Taylor Medieval 11 (P)</option>
+                    <option value="Cambridge University Library, MS Mm.v.14 (U)">Cambridge University Library, MS Mm.v.14 (U)</option>
+                    <option value="British Library, MS Cotton Vespasian E.xvi (V)">British Library, MS Cotton Vespasian E.xvi (V)</option>
+                 </select>
+             </div>
 
-         </form>
+             <div id="submit-div">
+                 <input id="search-submit" type="submit" class="search-button" value="Search" />
+             </div>  <!-- submit-div -->
 
-     </div>  <!-- search-controls -->
+             </form>
 
-     <div id="search-instructions">
+         </div>  <!-- search-controls -->
 
-         </br>
-         <p><b>rayne OR water OR stremys</b> finds texts with any or all of the words</p>
-         </br>
+         <div id="search-instructions">
 
-         <p><b>rayne AND water AND stremys</b> finds only texts with all of the words</p>
-         </br>
+             <p><b>rayne OR water OR stremys</b> finds texts with any or all of the words</p>
+             </br>
 
-         <p><b>rayne AND water NOT stremys</b> finds only texts with the words rayne and water that do not contain the word stremys</p>
-         </br>
+             <p><b>rayne AND water AND stremys</b> finds only texts with all of the words</p>
+             </br>
 
-         <p><b>"rayne in the strete"</b> finds that exact phrase</p>
-         </br>
+             <p><b>rayne AND water NOT stremys</b> finds only texts with the words rayne and water that do not contain the word stremys</p>
+             </br>
 
-         <p><b>"rayne strete"~4</b> finds the word rayne and the word strete no farther than four words apart</p>
-         </br>
+             <p><b>"rayne in the strete"</b> finds that exact phrase</p>
+             </br>
 
-         <p><b>ray?e</b> finds rayne and rayse</p>
-         </br>
+             <p><b>"rayne strete"~4</b> finds the word rayne and the word strete no farther than four words apart</p>
+             </br>
 
-         <p><b>ray*e</b> finds raykande, raylede, rayne, rayse, raysede, and rayssede</p>
-         </br>
+             <p><b>ray?e</b> finds rayne and rayse</p>
+             </br>
 
-         <p><b>rayne~</b> finds words similar to rayne according to the Levenshtein distance algorithm (fuzzy matching). By putting a number between zero and one
-               immediately after the tilde, you can control the Levenshtein distance (degree of fuzziness)</p>
-         <p>For example, <b>rayne~0.05</b> finds words remotely similar to rayne while
-                         <b>rayne~0.95</b> finds words very similar to rayne. If you do not specify, the default is ~0.5.</p>
+             <p><b>ray*e</b> finds raykande, raylede, rayne, rayse, raysede, and rayssede</p>
+             </br>
 
-     </div>  <!-- search-instructions -->
+             <p><b>rayne~</b> finds words similar to rayne according to the Levenshtein distance algorithm (fuzzy matching). By putting a number between zero and one
+                   immediately after the tilde, you can control the Levenshtein distance (degree of fuzziness)</p>
+             <p>For example, <b>rayne~0.05</b> finds words remotely similar to rayne while
+                             <b>rayne~0.95</b> finds words very similar to rayne. If you do not specify, the default is ~0.5.</p>
 
-     <div id="content-display">
+         </div>  <!-- search-instructions -->
 
-       <!-- <%= @inparams %>
-       <%= @results %> -->
+         <div class="result-header">
 
-       <div class="result-header">
-         <%- searchfor = @inparams[:searchfor] %>
-         <%- docname = ( @inparams[:transcription] == "" )? "all manuscripts" : @inparams[:transcription] %>
-         <%- facetname = ( @inparams[:facet] == "" )? "everything" : @inparams[:facet] %>
+             <%- searchfor = @inparams[:searchfor] %>
+             <%- docname = ( @inparams[:transcription] == "" )? "all manuscripts" : @inparams[:transcription] %>
+             <%- facetname = ( @inparams[:facet] == "" )? "everything" : @inparams[:facet] %>
 
-         <div class="params-div">
-           <span id="q-searchfor" data="<%= searchfor %>"></span>
-           <span id="q-docname" data="<%= @inparams[:transcription] %>"></span>
-           <span id="q-facetname" data="<%= @inparams[:facet] %>"></span>
-         </div>
+             <div class="params-div">
+               <span id="q-searchfor" data="<%= searchfor %>"></span>
+               <span id="q-docname" data="<%= @inparams[:transcription] %>"></span>
+               <span id="q-facetname" data="<%= @inparams[:facet] %>"></span>
+             </div>
 
-         <%- paginate_count = 10 %>
-         <%- total_results = @results[:totalrows].to_i %>
-         <%- page_number = ( @results[:pagestart].to_i / paginate_count ) + 1 %>
-         <%- page_results = @results[:hits].size %>
-         <%- total_pages = ( total_results / paginate_count ) + 1 %>
+             <%- paginate_count = 10 %>
+             <%- total_results = @results[:totalrows].to_i %>
+             <%- page_number = ( @results[:pagestart].to_i / paginate_count ) + 1 %>
+             <%- page_results = @results[:hits].size %>
+             <%- total_pages = ( total_results / paginate_count ) + 1 %>
 
-          <%- if total_results != 0 -%>
-             <span><%= "Showing #{page_results} results for \"#{searchfor}\" in #{facetname}, #{docname} (#{total_results} total results):" -%></span>
+              <%- if total_results != 0 -%>
+                 <span><%= "Showing #{page_results} results for \"#{searchfor}\" in #{facetname}, #{docname} (#{total_results} total results):" -%></span>
 
-             <div>
-             <% if total_pages > 1 %>
-                <ul id="pagination">
-                  <% if page_number == 1 %>
-                     <li class="previous-off"><span>&lt;</span></li>
-                  <% else %>
-                     <li class="previous"><a class="new-page" page="<%= page_number - 1 %>">&lt;</a></li>
-                  <% end %>
+                   <% if total_pages > 1 %>
+                      <div id="paginate-div">
+                        <ul id="pagination">
+                          <% if page_number == 1 %>
+                             <li class="previous-off"><span>&lt;</span></li>
+                          <% else %>
+                             <li class="previous"><a class="new-page" page="<%= page_number - 1 %>">&lt;</a></li>
+                          <% end %>
 
-                  <% (1..total_pages).each do |page| %>
-                      <% if page == page_number %>
-                          <li class="active"><%= page %></li>
-                      <% else %>
-                          <li><a class="new-page" page="<%= page %>"><%= page %></a></li>
-                      <% end %>
-                  <% end %>
-                  <% if page_number == total_pages %>
-                      <li class="next-off"><span>&gt;</span></li>
-                  <% else %>
-                      <li class="next new-page" page="<%= page_number + 1 %>"><a class="new-page" page="<%= page_number + 1 %>">&gt;</a></li>
-                  <% end %>
-                </ul>
-                </br>
-             <%end %>
+                          <% (1..total_pages).each do |page| %>
+                              <% if page == page_number %>
+                                  <li class="active"><%= page %></li>
+                              <% else %>
+                                  <li><a class="new-page" page="<%= page %>"><%= page %></a></li>
+                              <% end %>
+                          <% end %>
+                          <% if page_number == total_pages %>
+                              <li class="next-off"><span>&gt;</span></li>
+                          <% else %>
+                              <li class="next new-page" page="<%= page_number + 1 %>"><a class="new-page" page="<%= page_number + 1 %>">&gt;</a></li>
+                          <% end %>
+                        </ul>
+                        </br>
+                      </div>  <!-- paginate-div  -->
+                 <%end %>
+              <%- else %>
+                 <span><%= "No results found for \"#{@inparams[:searchfor]}\" in #{facetname}, #{docname}" %></span>
+              <%- end %>
 
-          <%- else %>
-             <span><%= "No results found for \"#{@inparams[:searchfor]}\" in #{facetname}, #{docname}" %></span>
-          <%- end %>
-         </div>
-       </div>
+         </div>  <!-- results-header -->
 
-       <%- hits = @results[:hits] %>
-       <%- hits.each do |hit| %>
+          <%- hits = @results[:hits] %>
+          <%- hits.each do |hit| %>
 
-          <%- manuscript = "SJ#{hit["title"].gsub(/^.*\((.*)\)$/, '\1')}" %>
-          <div class="result">
-              <div class="result-title">
-                 <a href="/manuscript.html?manuscript=<%= manuscript %>&view=alltags&folio=<%= hit["uri"] %>"> <%= hit["title"] %></a>
-              </div>
-              <div class="result-snippet">
-                 <span><%= raw( hit["highlighting"][0] ) %></span>
-              </div>
-          </div>  <!-- result -->
+             <%- manuscript = "SJ#{hit["title"].gsub(/^.*\((.*)\)$/, '\1')}" %>
+             <div class="result">
+                 <div class="result-title">
+                    <a href="/manuscript.html?manuscript=<%= manuscript %>&view=alltags&folio=<%= hit["uri"] %>"> <%= hit["title"] %></a>
+                 </div>
+                 <div class="result-snippet">
+                    <span><%= raw( hit["highlighting"][0] ) %></span>
+                 </div>
+             </div>  <!-- result -->
 
-       <%- end -%>
+          <%- end -%>
 
      </div>  <!-- content-display -->
 

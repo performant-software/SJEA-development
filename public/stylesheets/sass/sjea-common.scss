@@ -125,14 +125,11 @@ body {
           display: block;
           background-image: url("/images/topnav_tab_inactive.png");
           background-repeat: no-repeat;
-          background-position: top left;
-          color: #44403b;
           text-decoration: none;
-          font-size: 14px;
+          font-size: 15px;
           padding-top: 8px;
           text-align: left;
-          padding-left: 30px;
-          font-weight: bold;
+          padding-left: 18px;
           color: $header_tabs_inactive_color;
        }
 
@@ -176,20 +173,29 @@ body {
 #sidebar {
 
    position: absolute;
-   float: left;
+   display: block;
    padding: 0 0 0 25px;
    min-height: $page_height - $header_height;
+
    width: $navbox_width;
    color: $navitem_text_color;
    background-color: $navbox_background_color;
    z-index: 100;
+   //bottom: $footer_height + 15px;
+   //top: $header_height;
 }
 
 #sidebar-items {
 
      #item-heading {
         height: 25px;
-        padding: 10px 0 0 0;
+        padding: 25px 0 25px 5px;
+        font-size: 24px;
+        color: $header_tabs_active_color;
+     }
+
+     #overview {
+        color: $navitem_text_color;
      }
 
      li {
@@ -217,6 +223,7 @@ body {
 
      .active {
        color: $navitem_active_color;
+       font-weight: bold;
      }
 }
 
@@ -268,6 +275,7 @@ body {
    font-family: $site_font;
    padding-top: 8px;
    clear: both;
+   bottom: 0;
 }
 
 .standard-tooltip {

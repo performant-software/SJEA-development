@@ -1,4 +1,9 @@
 //
+// Color definitions...
+//
+$content_text_color: black;
+
+//
 // Font definitions...
 //
 $site_font: 'Ariel', sans-serif;
@@ -28,7 +33,6 @@ $site_font: 'Ariel', sans-serif;
           }
 
           #textbox-div {
-             //padding: 0 0 10px 0;
           }
 
           #special-keys-div {
@@ -43,7 +47,7 @@ $site_font: 'Ariel', sans-serif;
        }
 
        #search-instructions {
-           width: 50%;
+           width: 55%;
            text-align: justify;
            padding: 0 0 0 5px;
            float: right;
@@ -53,8 +57,14 @@ $site_font: 'Ariel', sans-serif;
        }
 
       .result-header {
-         padding: 0 0 10px 0;
-         font-size: 24px;
+         padding: 15px 0 10px 0;
+         font-size: 22px;
+         clear: both;
+         font-family: $site_font;
+      }
+
+      #paginate-div {
+         padding: 10px 0 0 0;
       }
 
       .result {
@@ -62,16 +72,17 @@ $site_font: 'Ariel', sans-serif;
           padding: 0 0 14px 0;
 
           .result-title {
-             padding: 10px 0 0 0;
-             font-size: 20px;
+             padding: 8px 0 0 0;
+             font-size: 18px;
              a {
-                text-decoration: none;
+                font-weight: bold;
+                color: $content_text_color;
              }
           }
 
           .result-snippet {
              padding: 10px 0 0 0;
-             font-size: 17px;
+             font-size: 16px;
           }
 
           .result-snippet em {

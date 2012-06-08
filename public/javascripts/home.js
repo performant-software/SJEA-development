@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+    // disguise this as we dont need it
+    $("#content-controls").css("background-color", "#F0E7CF");
+
     $("#the-poem").click(function() {
         redirectTo( "thepoem" );
     });

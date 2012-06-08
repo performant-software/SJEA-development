@@ -19,7 +19,7 @@
       height: 35px;
       font-size: 18px; }
   #content #content-display #search-instructions {
-    width: 50%;
+    width: 55%;
     text-align: justify;
     padding: 0 0 0 5px;
     float: right;
@@ -27,18 +27,23 @@
     border-width: 2px;
     font-family: "Ariel", sans-serif; }
   #content #content-display .result-header {
-    padding: 0 0 10px 0;
-    font-size: 24px; }
+    padding: 15px 0 10px 0;
+    font-size: 22px;
+    clear: both;
+    font-family: "Ariel", sans-serif; }
+  #content #content-display #paginate-div {
+    padding: 10px 0 0 0; }
   #content #content-display .result {
     padding: 0 0 14px 0; }
     #content #content-display .result .result-title {
-      padding: 10px 0 0 0;
-      font-size: 20px; }
+      padding: 8px 0 0 0;
+      font-size: 18px; }
       #content #content-display .result .result-title a {
-        text-decoration: none; }
+        font-weight: bold;
+        color: black; }
     #content #content-display .result .result-snippet {
       padding: 10px 0 0 0;
-      font-size: 17px; }
+      font-size: 16px; }
     #content #content-display .result .result-snippet em {
       background-color: pink;
       font-style: normal; }

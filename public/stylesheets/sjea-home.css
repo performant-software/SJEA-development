@@ -2,72 +2,88 @@
   margin: 0;
   padding: 0; }
 
-#content #content-display #logo-div {
-  height: 300px;
-  width: 100%;
-  clear: right;
-  background-color: #f2f0e4; }
-#content #content-display .logo-top, #content #content-display .logo-bot {
+#content #content-display {
+  background-image: url(/images/home_art.jpg);
   background-repeat: no-repeat;
-  background-position: top left;
-  display: block;
-  height: 100px;
-  width: 175px;
-  margin: 30px 10px 0 0;
-  float: left; }
-#content #content-display .logo-bot {
-  margin: 0 10px 0 0; }
-#content #content-display #neh-logo {
-  background-image: url(/images/partnerlogo_top_neh.jpg);
-  /* IE 8 specific !!! */
-  background-image: none\9;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_top_neh.jpg',sizingMethod='scale'); }
-#content #content-display #ncsu-logo {
-  background-image: url(/images/partnerlogo_top_chass.jpg);
-  /* IE 8 specific !!! */
-  background-image: none\9;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_top_chass.jpg',sizingMethod='scale'); }
-#content #content-display #bibsoc-logo {
-  background-image: url(/images/partnerlogo_top_bsa.jpg);
-  /* IE 8 specific !!! */
-  background-image: none\9;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_top_bsa.jpg',sizingMethod='scale'); }
-#content #content-display #bodlib-logo {
-  background-image: url(/images/partnerlogo_top_bodleian.jpg);
-  /* IE 8 specific !!! */
-  background-image: none\9;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_top_bodleian.jpg',sizingMethod='scale'); }
-#content #content-display #britlib-logo {
-  background-image: url(/images/partnerlogo_top_britishlib.jpg);
-  width: 90px;
-  /* IE 8 specific !!! */
-  background-image: none\9;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_top_britishlib.jpg',sizingMethod='scale'); }
-#content #content-display #culib-logo {
-  background-image: url(/images/partnerlogo_btm_uoc.jpg);
-  /* IE 8 specific !!! */
-  background-image: none\9;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_btm_uoc.jpg',sizingMethod='scale'); }
-#content #content-display #dro-logo {
-  background-image: url(/images/partnerlogo_btm_devon.jpg);
-  /* IE 8 specific !!! */
-  background-image: none\9;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_btm_devon.jpg',sizingMethod='scale'); }
-#content #content-display #huntlib-logo {
-  background-image: url(/images/partnerlogo_btm_huntington.jpg);
-  width: 225px;
-  /* IE 8 specific !!! */
-  background-image: none\9;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_btm_huntington.jpg',sizingMethod='scale'); }
-#content #content-display #lamlib-logo {
-  background-image: url(/images/partnerlogo_top_lamberth.jpg);
-  width: 90px;
-  /* IE 8 specific !!! */
-  background-image: none\9;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_top_lamberth.jpg',sizingMethod='scale'); }
-#content #content-display #pulib-logo {
-  background-image: url(/images/partnerlogo_btm_princeton.jpg);
-  width: 225px;
-  /* IE 8 specific !!! */
-  background-image: none\9;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_btm_princeton.jpg',sizingMethod='scale'); }
+  background-position: top right; }
+  #content #content-display #home-image {
+    background-image: url(/images/home_image.jpg);
+    background-repeat: no-repeat;
+    height: 260px;
+    width: 183px;
+    float: left;
+    margin: 0 10px 0 0; }
+  #content #content-display #thanks {
+    width: 100%;
+    margin: 25px 0 25px 0;
+    text-align: center;
+    font-style: italic; }
+  #content #content-display #logo-div {
+    height: 300px;
+    width: 100%;
+    clear: right;
+    background-color: #f2f0e4; }
+  #content #content-display .logo-top, #content #content-display .logo-bot {
+    background-repeat: no-repeat;
+    background-position: top left;
+    display: block;
+    height: 100px;
+    width: 175px;
+    margin: 30px 10px 0 0;
+    float: left; }
+  #content #content-display .logo-bot {
+    margin: 0 10px 0 0; }
+  #content #content-display #neh-logo {
+    background-image: url(/images/partnerlogo_top_neh.jpg);
+    /* IE 8 specific !!! */
+    background-image: none\9;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_top_neh.jpg',sizingMethod='scale'); }
+  #content #content-display #ncsu-logo {
+    background-image: url(/images/partnerlogo_top_chass.jpg);
+    /* IE 8 specific !!! */
+    background-image: none\9;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_top_chass.jpg',sizingMethod='scale'); }
+  #content #content-display #bibsoc-logo {
+    background-image: url(/images/partnerlogo_top_bsa.jpg);
+    /* IE 8 specific !!! */
+    background-image: none\9;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_top_bsa.jpg',sizingMethod='scale'); }
+  #content #content-display #bodlib-logo {
+    background-image: url(/images/partnerlogo_top_bodleian.jpg);
+    /* IE 8 specific !!! */
+    background-image: none\9;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_top_bodleian.jpg',sizingMethod='scale'); }
+  #content #content-display #britlib-logo {
+    background-image: url(/images/partnerlogo_top_britishlib.jpg);
+    width: 90px;
+    /* IE 8 specific !!! */
+    background-image: none\9;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_top_britishlib.jpg',sizingMethod='scale'); }
+  #content #content-display #culib-logo {
+    background-image: url(/images/partnerlogo_btm_uoc.jpg);
+    /* IE 8 specific !!! */
+    background-image: none\9;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_btm_uoc.jpg',sizingMethod='scale'); }
+  #content #content-display #dro-logo {
+    background-image: url(/images/partnerlogo_btm_devon.jpg);
+    /* IE 8 specific !!! */
+    background-image: none\9;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_btm_devon.jpg',sizingMethod='scale'); }
+  #content #content-display #huntlib-logo {
+    background-image: url(/images/partnerlogo_btm_huntington.jpg);
+    width: 225px;
+    /* IE 8 specific !!! */
+    background-image: none\9;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_btm_huntington.jpg',sizingMethod='scale'); }
+  #content #content-display #lamlib-logo {
+    background-image: url(/images/partnerlogo_top_lamberth.jpg);
+    width: 90px;
+    /* IE 8 specific !!! */
+    background-image: none\9;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_top_lamberth.jpg',sizingMethod='scale'); }
+  #content #content-display #pulib-logo {
+    background-image: url(/images/partnerlogo_btm_princeton.jpg);
+    width: 225px;
+    /* IE 8 specific !!! */
+    background-image: none\9;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/partnerlogo_btm_princeton.jpg',sizingMethod='scale'); }
