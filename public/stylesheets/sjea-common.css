@@ -188,6 +188,7 @@ body {
   font-size: 20px; }
 
 #zoom-image-div {
+  padding: 15px 0 0 0;
   width: 875px;
   height: 910px;
   margin: auto;
@@ -202,7 +203,7 @@ body {
   text-align: center;
   font-size: 12px;
   font-family: "Ariel", sans-serif;
-  color: white; }
+  color: #f0e7cf; }
 
 #open-new-zoom-window {
   padding: 15px 0 0 0;
@@ -211,4 +212,4 @@ body {
   font-size: 14px;
   font-family: "Ariel", sans-serif; }
   #open-new-zoom-window a {
-    color: white; }
+    color: #f0e7cf; }

@@ -34,27 +34,10 @@ fs_template = "<!DOCTYPE html>
           <div id=\"editor-name\">Timothy L. Stinson, editor</div>
       </div> <!-- page-header -->
 
-      <div id=\"content-title\">
-      </div>  <!-- content-title -->
-
-      <div id=\"sidebar\">
-      </div>  <!-- sidebar -->
-
-      <div id=\"content\">
-
-          <div id=\"content-display\">
-
-              <div id=\"zoom-image-div\"></div>
-              <div id=\"copyright-div\">
-                 <span>_COPYRIGHT_</span>
-              </div>
-
-          </div>  <!-- content-display -->
-
-          <div id=\"footer-spacer\">
-          </div>  <!-- footer-spacer -->
-
-      </div>  <!-- content -->
+      <div id=\"zoom-image-div\"></div>
+      <div id=\"copyright-div\">
+         <a>_COPYRIGHT_</a>
+      </div>
 
     </div>  <!-- page -->
 
