@@ -8,58 +8,84 @@
   margin: auto;
   font-family: "Ariel", sans-serif; }
 
-#main-header {
+#page-header {
   width: 100%;
-  height: 95px;
+  height: 98px;
   text-align: center;
-  background-color: #5a765e;
+  background-image: url("/images/banner_bg_stretch.jpg");
+  background-repeat: repeat-x;
   color: white;
   padding: 25px 0 25px 0; }
-  #main-header #header-list {
-    padding: 46px 0 0 850px; }
-    #main-header #header-list li {
-      float: left;
-      position: relative;
-      display: inline; }
-    #main-header #header-list li a {
-      position: relative;
-      width: 110px;
-      height: 29px;
-      display: block;
-      background-image: url("/images/tabs.png");
-      background-position: center center;
-      color: #44403b;
-      text-decoration: none;
-      font-size: 14px;
-      padding-top: 12px;
-      text-align: left;
-      padding-left: 20px;
-      font-weight: bold; }
-    #main-header #header-list li.home a {
-      background-image: url("/images/tab-home.png"); }
-    #main-header #header-list li.current a {
-      background-position: top;
-      color: #ffffff; }
-    #main-header #header-list li a:hover {
-      background-position: bottom;
-      color: #ffffff; }
-    #main-header #header-list li.current a:hover {
-      background-position: top;
-      /*To Prevent the Current tab from changing colour on hover*/
-      color: #ffffff; }
-    #main-header #header-list li.current, #main-header #header-list li.home {
-      z-index: 100; }
-    #main-header #header-list li.manuscript {
-      z-index: 99; }
-    #main-header #header-list li.search {
-      z-index: 98; }
-    #main-header #header-list li.compare {
-      z-index: 97; }
+  #page-header #background-graphic {
+    float: left;
+    margin: -25px 0 0 0; }
+  #page-header #logo-graphic {
+    background-image: url("/images/logo_banner.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 90px;
+    height: 120px;
+    float: left;
+    margin: -15px 0 10px -1005px; }
+  #page-header #title-graphic {
+    background-image: url("/images/banner_siegeofjerusalem.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 425px;
+    height: 75px;
+    float: left;
+    margin: -125px 0 0 125px; }
+  #page-header #title-support {
+    float: left;
+    font-size: 14px;
+    margin: -88px 0 0 552px; }
+  #page-header #editor-name {
+    float: left;
+    font-size: 16px;
+    margin: -55px 0 0 130px; }
+  #page-header #header-tabs li {
+    position: relative;
+    display: inline;
+    float: right; }
+  #page-header #header-tabs li a {
+    position: relative;
+    width: 110px;
+    height: 29px;
+    display: block;
+    background-image: url("/images/tabs.png");
+    background-position: center center;
+    color: #44403b;
+    text-decoration: none;
+    font-size: 14px;
+    padding-top: 12px;
+    text-align: left;
+    padding-left: 25px;
+    font-weight: bold; }
+  #page-header #header-tabs li.home a {
+    background-image: url("/images/tab-home.png"); }
+  #page-header #header-tabs li.current a {
+    background-position: top;
+    color: #ffffff; }
+  #page-header #header-tabs li a:hover {
+    background-position: bottom;
+    color: #ffffff; }
+  #page-header #header-tabs li.current a:hover {
+    background-position: top;
+    /*To Prevent the Current tab from changing colour on hover*/
+    color: #ffffff; }
+  #page-header #header-tabs li.current, #page-header #header-tabs li.home {
+    z-index: 100; }
+  #page-header #header-tabs li.manuscript {
+    z-index: 99; }
+  #page-header #header-tabs li.search {
+    z-index: 98; }
+  #page-header #header-tabs li.compare {
+    z-index: 97; }
 
 #sidebar {
   float: left;
   padding: 0 0 0 25px;
-  min-height: 905px;
+  min-height: 902px;
   width: 15.833%;
   color: #695a42;
   background-color: #ddd5bd;
@@ -90,7 +116,7 @@
   background-color: #ece6d7;
   width: 79.167%;
   padding: 10px 0 0 250px;
-  min-height: 855px; }
+  min-height: 852px; }
   #content #content-title {
     width: 100%;
     height: 30px;

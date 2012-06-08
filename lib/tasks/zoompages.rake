@@ -26,9 +26,9 @@ fs_template = "<!DOCTYPE html>
 
     <div id=\"page\">
 
-      <div id=\"main-header\">
+      <div id=\"page-header\">
           <h1>The Siege of Jerusalem Electronic Archive</h1>
-      </div> <!-- main-header -->
+      </div> <!-- page-header -->
 
       <div id=\"content-title\">
       </div>  <!-- content-title -->
