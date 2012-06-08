@@ -6,12 +6,14 @@ $page_background_color: #2F1E17;
 
 $title_text_color: white;
 
-$footer_text_color: #ECE6D7;
+$footer_text_color: #F0E7CF;
 $footer_background_color: $page_background_color;
 
+$header_tabs_active_color: #7B1C12;
+$header_tabs_inactive_color: #F0E7CF;
 
 $content_text_color: black;
-$content_background_color: #ECE6D7;
+$content_background_color: #F0E7CF;
 
 $navitem_hover_color: white;
 $navitem_active_color: $page_background_color;
@@ -27,7 +29,7 @@ $contentheader_background_color: $navbox_background_color;
 $page_width: 95%;
 
 $page_height: 1000px;
-$header_height: 98px;
+$header_height:148px;
 $footer_height: 50px;
 
 $navbox_width: $page_width * ( 1 / 6 );
@@ -45,66 +47,70 @@ $content_font: "Times New Roman", Times, serif;
    padding: 0;
 }
 
+body {
+    background-color: $page_background_color;
+}
+
 #page {
     width: $page_width;
     min-height: $page_height;
     margin: auto;
     font-family: $site_font;
-    //background-color: $page_background_color;
 }
 
 #page-header {
 
     width: 100%;
     height: $header_height;
-    text-align: center;
     background-image: url("/images/banner_bg_stretch.jpg");
     background-repeat: repeat-x;
     color: $title_text_color;
-    padding: 25px 0 25px 0;
 
     #background-graphic {
-       float: left;
-       margin: -25px 0 0 0;
+       position: absolute;
+       background-image: url("/images/banner_bg.jpg") ;
+       width: 1024px;
+       height: 148px;
     }
 
     #logo-graphic {
+       position: relative;
        background-image: url("/images/logo_banner.png");
        background-repeat: no-repeat;
-       background-position: center center;
-       width: 90px;
+       width: 81px;
        height: 120px;
+       margin: 15px 0 0 15px;
        float: left;
-       margin: -15px 0 10px -1005px;
     }
 
     #title-graphic {
+       position: relative;
        background-image: url("/images/banner_siegeofjerusalem.png");
        background-repeat: no-repeat;
-       background-position: center center;
        width: 425px;
        height: 75px;
        float: left;
-       margin: -125px 0 0 125px;
+       margin: 35px 0 0 20px;
     }
 
     #title-support {
+       position: relative;
        float: left;
        font-size: 14px;
-       margin: -88px 0 0 552px;
+       margin: 63px 0 0 10px;
     }
 
     #editor-name {
+       position: relative;
        float: left;
        font-size: 16px;
-       margin: -55px 0 0 130px;
+       margin: 90px 0 0 -585px;
     }
 
     #header-tabs {
 
-       //margin: -50px 0 0 0;
-       //width: 500px;
-       //height: 20px  ;
+       position: relative;
+       padding: 118px 0 0 0;
 
        li {
           position: relative;
@@ -114,36 +120,38 @@ $content_font: "Times New Roman", Times, serif;
 
        li a {
           position: relative;
-          width: 110px;
-          height: 29px;
+          width: 88px;
+          height: 30px;
           display: block;
-          background-image: url("/images/tabs.png");
-          background-position: center center;
+          background-image: url("/images/topnav_tab_inactive.png");
+          background-repeat: no-repeat;
+          background-position: top left;
           color: #44403b;
           text-decoration: none;
           font-size: 14px;
-          padding-top: 12px;
+          padding-top: 8px;
           text-align: left;
-          padding-left: 25px;
+          padding-left: 30px;
           font-weight: bold;
+          color: $header_tabs_inactive_color;
        }
 
        li.home a {
-          background-image: url("/images/tab-home.png");
+          //background-image: url("/images/tab-home.png");
        }
 
        li.current a {
-         background-position: top;
-         color: #ffffff;
+          background-image: url("/images/topnav_tab_active.png");
+          background-repeat: no-repeat;
+          background-position: top left;
+          color: $header_tabs_active_color;
        }
 
        li a:hover {
-         background-position: bottom;
          color: #ffffff;
        }
 
        li.current a:hover {
-         background-position: top; /*To Prevent the Current tab from changing colour on hover*/
          color: #ffffff;
        }
 
@@ -162,7 +170,6 @@ $content_font: "Times New Roman", Times, serif;
        li.compare {
           z-index: 97;
        }
-
     }
 }
 
