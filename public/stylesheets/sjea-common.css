@@ -3,20 +3,20 @@
   padding: 0; }
 
 #page {
-  width: 100%;
-  min-height: 1050px;
-  margin-bottom: 10px;
+  width: 95%;
+  min-height: 1000px;
+  margin: auto;
   font-family: "Ariel", sans-serif; }
 
 #main-header {
   width: 100%;
-  height: 60px;
+  height: 95px;
   text-align: center;
   background-color: #5a765e;
   color: white;
   padding: 25px 0 25px 0; }
   #main-header #header-list {
-    padding: 10px 0 0 725px; }
+    padding: 46px 0 0 850px; }
     #main-header #header-list li {
       float: left;
       position: relative;
@@ -56,22 +56,14 @@
     #main-header #header-list li.compare {
       z-index: 97; }
 
-#main-title {
-  width: 74%;
-  height: 30px;
-  text-align: left;
-  padding: 20px 0 0 310px;
-  color: #2f1e17;
-  background-color: #ece6d7; }
-
 #sidebar {
   float: left;
-  margin: -50px 0 0 40px;
-  padding: 0 0 0 15px;
-  height: 350px;
-  width: 195px;
+  padding: 0 0 0 25px;
+  min-height: 905px;
+  width: 15.833%;
   color: #695a42;
-  background-color: #ddd5bd; }
+  background-color: #ddd5bd;
+  bottom: 0; }
 
 #sidebar-items #item-heading {
   height: 25px;
@@ -96,9 +88,16 @@
 #content {
   color: black;
   background-color: #ece6d7;
-  width: 1075px;
+  width: 79.167%;
   padding: 10px 0 0 250px;
-  min-height: 850px; }
+  min-height: 855px; }
+  #content #content-title {
+    width: 100%;
+    height: 30px;
+    margin: auto;
+    text-align: left;
+    color: #2f1e17;
+    background-color: #ece6d7; }
   #content #content-header {
     position: relative;
     background-color: #ddd5bd;
@@ -114,9 +113,9 @@
   height: 10px; }
 
 #main-footer {
-  width: 100%;
+  width: 95%;
   height: 50px;
-  margin: 0;
+  margin: auto;
   text-align: center;
   font-size: 11px;
   background-color: #2f1e17;

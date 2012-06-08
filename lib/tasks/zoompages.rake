@@ -30,8 +30,8 @@ fs_template = "<!DOCTYPE html>
           <h1>The Siege of Jerusalem Electronic Archive</h1>
       </div> <!-- main-header -->
 
-      <div id=\"main-title\">
-      </div>  <!-- main-title -->
+      <div id=\"content-title\">
+      </div>  <!-- content-title -->
 
       <div id=\"sidebar\">
       </div>  <!-- sidebar -->

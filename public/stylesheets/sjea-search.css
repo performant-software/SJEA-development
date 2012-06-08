@@ -4,7 +4,7 @@
 
 #content #search-controls {
   width: 42%;
-  padding: 21px 0 0 20px;
+  padding: 20px 0 0 27px;
   float: left; }
   #content #search-controls #textbox-div, #content #search-controls #special-keys-div, #content #search-controls #searchin-div, #content #search-controls #manuscripts-div, #content #search-controls #submit-div {
     width: 100%;
@@ -13,8 +13,7 @@
   #content #search-controls #textbox-div {
     padding: 0 0 10px 0; }
   #content #search-controls #special-keys-div {
-    padding: 10px 0 0 15px;
-    width: 350px; }
+    padding: 10px 0 0 15px; }
     #content #search-controls #special-keys-div .special-key-button {
       float: left;
       width: 35px;
