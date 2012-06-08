@@ -92,9 +92,9 @@ namespace :sjea do
          tx = lines.index{|l| l[:trans] == tname}
 
          if tx != nil
-            compline << "<td>#{lines[tx][:loc_line]}</td><td>(#{tname})</td><td class=\"textline\">#{lines[tx][:content]}</td>\n"
+            compline << "<td>#{lines[tx][:loc_line].split( "." )[1].sub(/^[0]*/,"")}</td><td>(#{tname.sub("SJ", "" )})</td><td class=\"textline\">#{lines[tx][:content]}</td>\n"
          else
-            compline << "<td></td><td>(#{tname})</td><td class=\"textline\">---- no text ----</td>\n"
+            compline << "<td></td><td>(#{tname.sub("SJ", "")})</td><td class=\"textline\">---- no text ----</td>\n"
          end
 
          append_to_file( outfile, compline )

@@ -70,7 +70,7 @@ function showComparison( comparisonName ) {
 function loadComparison( comparisonName ) {
 
     $("#content-display").empty( );
-    $("#page-number-display").text( comparisonName )
+    $("#page-number-display").text( "HL " + comparisonName.replace( "HL.", "").replace( /^[0]*/g, "" ) )
 
     // load the resource and report an error if unsuccessful
     loadRemoteResource( "/comparisons/" + comparisonName + ".html", "#content-display", null );
