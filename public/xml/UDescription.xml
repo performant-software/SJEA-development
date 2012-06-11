@@ -4,7 +4,7 @@
         <fileDesc>
 
             <titleStmt>
-                <title>Transcript (U) Description</title>
+                <title>Descritpion of Cambridge University Library, MS Mm.V.14 (U)</title>
                 <author>Timothy L. Stinson</author>
             </titleStmt>
 
@@ -16,6 +16,205 @@
                 <publisher>Society for Early English and Norse Electronic Texts</publisher>
             </publicationStmt>
 
+            <sourceDesc>
+                <msDesc>
+
+                    <msIdentifier>
+                        <country>United Kingdom</country>
+                        <settlement>Cambridge</settlement>
+                        <institution>University of Cambridge</institution>
+                        <repository>Cambridge University Library</repository>
+                        <idno>Mm.V.14</idno>
+                        <msName>U</msName>
+                    </msIdentifier>
+
+                    <head>
+                        <title></title>
+                        <origPlace>England</origPlace>
+                        <origDate notBefore="1400" notAfter="1425">The manuscript dates to the beginning of the fifteenth century. Our ability to date it with some confidence is aided by the fact that we know its scribe, <persName>Richard Frampton</persName>, and some details concerning his professional life as a <placeName>London</placeName>-, or perhaps <placeName>Westminster</placeName>-based copyist. <persName>Doyle</persName> informs us that <persName>Frampton</persName> worked in one of those locations "from at least <date when="1402">1402</date> to <date when="1416">1416</date> for <persName>Henry IV</persName> and V" (p. 93 and note 19).</origDate>
+                    </head>
+
+                    <msContents>
+                            
+                        <msItem>
+                            <p>1. <locus from="2r" to="139v">Fols. 2r-139v</locus> <persName>Guido delle Colonne</persName>, <title>Historia destructionis Troie</title></p>
+                        </msItem>
+                                 
+                     
+                        <msItem>
+                            <p>2. <locus from="140r" to="185r">Fols. 140r-185r</locus> prose <title>Historia de preliis Alexandri Magni</title></p>
+                        </msItem>
+
+                        <msItem>
+                            <p>3. <locus>Fols. 187r-206v</locus> <title>The Siege of Jerusalem</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1583">IMEV 1583</ref></p>
+                        </msItem>
+       
+
+                    </msContents>
+
+                    <physDesc>
+
+                        <objectDesc form="codex">
+
+                            <supportDesc material="parch">
+
+                                <support>Parchment</support>
+
+
+                                <extent>
+                                    <measure type="leavesCount" n="207">207 folios</measure>
+                                    <measure type="pageDimensions" n="25 x 17.5 cm">250 x 175 mm</measure>
+                                </extent>
+
+                                <foliation>Foliation in upper right corner, pencil, modern hand, begins on the first parchment flyleaf at the beginning of the book. On the lower right margin there is a foliation in units of ten that would be preferable if complete, as it does not count flyleaves and thus is more accurate – i.e., 21 should actually be 20, 41 should actually be 40, etc. This hand also numbers the first folio of the second and third texts as 139 and 186 respectively, which is correct. All references to the manuscript in this description and in this archive more broadly use the folio numbers found at the top right, however.</foliation>
+
+
+                                <collation> 
+                                    
+                                    <list>
+
+                                        <item>I <locus from="2r" to="9r">2-9</locus></item>
+                                        <item>II <locus from="10r" to="17r">10-17</locus></item>
+                                        <item>III <locus from="18r" to="25r">18-25</locus></item>
+                                        <item>IV <locus from="26r" to="33r">26-33</locus></item>
+                                        <item>V <locus from="34r" to="41r">34-41</locus></item>
+                                        <item>VI <locus from="42r" to="49r">42-49</locus></item>
+                                        <item>VII <locus from="50r" to="57r">50-57</locus></item>
+                                        <item>VIII <locus from="58r" to="65r">58-65</locus></item>
+                                        <item>IX <locus from="66r" to="73r">66-73</locus></item>
+                                        <item>X <locus from="74r" to="81r">74-81</locus></item>
+                                        <item>XI <locus from="82r" to="89r">82-89</locus></item>
+                                        <item>XII <locus from="90r" to="97r">90-97</locus></item>
+                                        <item>XIII <locus from="98r" to="105r">98-105</locus></item>
+                                        <item>XIV <locus from="106r" to="113r">106-113</locus></item>
+                                        <item>XV <locus from="114r" to="121r">114-121</locus></item>
+                                        <item>XVI <locus from="122r" to="129r">122-129</locus></item>
+                                        <item>XVII <locus from="130r" to="137r">130-137</locus></item>
+                                        <item>XVIII <locus from="138r" to="139">138-139</locus> (formerly a gathering of four leaves; text ends on recto of second leaf and the final two leaves have been trimmed away, leaving stubs behind)</item>
+                                        <item>XIX <locus from="140r" to="147r">140-147</locus></item>
+                                        <item>XX <locus from="148r" to="155r">148-155</locus></item>
+                                        <item>XXI <locus from="156r" to="163r">156-163</locus></item>
+                                        <item>XXII <locus from="164r" to="171r">164-171</locus></item>
+                                        <item>XXIII <locus from="172r" to="179r">172-179</locus></item>
+                                        <item>XXIV <locus from="180r" to="186r">180-186</locus> (formerly a gathering of eight, but seventh leaf, which was blank, has been cut out)</item>
+                                        <item>XXV <locus from="187r" to="194r">187-194</locus></item>
+                                        <item>XXVI <locus from="195r" to="202r">195-202</locus></item>
+                                        <item>XXVII <locus from="203r" to="208r">203-208</locus> (formerly a gathering of eight; thread visible between 206 and 207)</item>
+                                            
+                                        
+                                    </list> 
+                                    A series of three booklets, with a new booklet beginning at the start of each text. The last two leaves were either trimmed off, or the last three leaves were trimmed off and <locus from="208r" to="208r">208</locus> is a parchment flyleaf from a previous binding. Signatures in pencil, modern hand, in the format <hi rend="italic">Ai-Aiiii</hi>. Series begins again with <hi rend="italic">Ai</hi> for each of the three booklets. Alphabet skips <hi rend="italic">J</hi>. Catchwords throughout, boxed and flourished in quires I-XX, but simply text thereafter.
+                                </collation>
+
+                                <condition>Good quality and condition throughout.</condition>
+
+                            </supportDesc>
+
+
+                            <layoutDesc>
+
+                                <layout columns="1"><p>The layout is consistent across all three texts even though the first two are prose and <title>Siege of Jerusalem</title> is verse. The main text block is <measure type="written">160-163 x 107-108 mm</measure>, and is ruled for 32 lines. Text block bounded in lead or brown ink with four lines that run to edge of leaf. Ruled lines generally stay within text block. Examples of unused ruled leaves may be seen at <locus from="185v" to="186v">185v-186v</locus>. No prickings.</p>
+                                </layout>
+
+                            </layoutDesc>
+                        </objectDesc>
+
+
+                        <handDesc>
+                            <handNote>
+                                <p>One scribe throughout, using brown ink and an anglicana formata script, who has been identified as <persName>Peter Frampton</persName>, a professional scribe based in <placeName>London</placeName>. <persName>Guddat-Figge</persName> believed the manuscript to be the work of three scribes, an opinion that has not held up in subsequent analyses by Hanna-Lawton, <persName>Doyle</persName>, and <persName>Somerville</persName>, who believe it all to be the work of <persName>Frampton</persName>. <persName>Doyle</persName> and <persName>Parks</persName> (and, after them, Hanna-Lawton) list other manuscripts known to be by <persName>Frampton</persName>, which include "two enormous Coucher books" for the Duchy of Lancaster (now PRO D.L. 42, 1 and 2), a two-volume breviary for <persName>Henry IV</persName>, and Glasgow University Library, Hunterian MS T.4.1, which begins with the same two Latin histories as U. Hanna-Lawton add that <persName>Frampton</persName> is also responsible for portions of Huntington Library, MS HM 19920 and British Library, MS Cotton Claudius D.ii. For more on <persName>Frampton</persName>, see also <persName>Doyle</persName> and <persName>Parkes</persName>, "The Production of Copies of the <title>Canterbury Tales</title> and the <title>Confessio Amantis</title> in the Early Fifteenth Century" (especially p. 192 and note 65) and <persName>Somerville</persName>, "The Cowcher Books of the Duchy of Lancaster.”</p> 
+                                
+                                <p>The scribe uses a variety of typical suspensions and abbreviations. Lines generally begin with capital letter forms; initial letters that do not have a distinct lower case are likely intended as capitals, have been transcribed as they appear. The caesura is marked throughout with a slash and has been transcribed "/." There is a header reading <hi rend="italic">Incipit destruccio de Ier[usa]lem per Titum &amp; Vespasianu[m]</hi>, but no running heads.</p>
+                                
+                                <p>While the text of <title>Siege of Jerusalem</title> reflects <persName>Frampton</persName>’s <placeName>London</placeName>-area dialect, Hanna-Lawton observe that "the text includes a substantial veneer of northern and north Midland forms" that likely derive from his exemplar.</p>
+                                
+                                
+                            </handNote>
+                        </handDesc>
+
+
+
+
+
+                        <decoDesc>
+                            <decoNote>
+                                <p>Rubricated headings, incipts, explicits, and textual divisions. At the beginning of each text, and also at beginning of each book of <title>Historia destructionis Troie</title>, 4-line initials that are either blue or red with white highlighting on a gold leaf background and decorated with blue, red, and gold vines and buds. All blue and red highlighted in white. Additionally, numerous multiline blue initials with red pen flourishing extending into margins. Red paraph signs with blue flourishing and blue paraphs with red flourishing; in items 1 and 2, these mark textual divisions, and in <title>Siege of Jerusalem</title> they divide the text into 8-line passus divisions. From <locus from="204r">204r</locus> to end, <persName>Frampton</persName> has left signs for paraphs, but they have not been realized; these have been transcribed with the ¶ symbol, but they remain uncolored in the display. On these same folios (i.e., <locus from="204r">204r</locus> and following), each initial touched in white or yellow, now barely visible to the naked eye, but clear under ultraviolet light. On <locus from="198r">198r</locus>, a couple of paraph marks are missing where we would expect them to occur at eight-line intervals. Rubricated passus headings in <title>SJ</title>.</p>
+                                
+                                <p>On <locus from="1r" to="1r">1r</locus>, a thin gold border surrounds the text. This is paralleled by a vine that alternates blue and red with leaves and offshoots in blue and red. At bottom corners, interwoven red and blue lines on a round, lobed gold background. At top corners, red and blue vines curl around a similar gold background. All red and blue highlighted with white. Similar borders accompany initials decorated with gold leaf throughout the book, but aside from <locus from="1r" to="1r">1r</locus> these feature the border on the left edge only, with vines extending across the top and bottom margins.</p>
+                                
+                                <p>Seven passus divisions are marked with headings that read <hi rend="italic">Primus Passus</hi>, etc. Initial letters following passus divisions are blue with red decorative work and are two to seven lines in height. The first passus designation is found at l. 180 which, as Hanna-Lawton note, implies that the first 179 lines are a prologue, an arrangement that they have taken to be authorial and included in their critical text.</p>
+                                
+                                <p>The material presentation of the poem in U is considerably more lavish than in any other surviving copy. This is likely related to the intended audience; the poem’s placement alongside two Latin histories suggests that the poem was received as a learned historical work by some readers, even though most of the surviving manuscripts place it alongside religious works. <persName>Millar</persName> notes that it may be inferred "from the fact that <title>The Siege of Jerusalem</title> is to be found with the two Latin histories in the same hand that the intended audience of the manuscript was well-educated and possessed more than the mere rudiments of Latin" (25), a view supported by the fact that at least one user made marginal annotations in Latin (<persName>Guddat-Figge</persName> 108).</p>
+                                    
+                                    
+                                    
+                            </decoNote>
+                        </decoDesc>
+
+
+                        <bindingDesc>
+                            <binding>
+
+                                <p>A modern binding, half bound in leather with marbled paper on boards and leather corners, measuring <measure type="written">260 mm</measure> in height and <measure type="written">210 m</measure>m from center of spine to fore edge. Five raised bands. Headband and tailband covered with leather. Stamped in gold in second compartment on spine: <hi rend="italic">TROY / ETC.</hi> Stamped in gold in fifth compartment: <hi rend="italic">UNIV. / LIB. / CAMB.</hi> Bottom compartment has gold stamped shelfmark: <hi rend="italic">MM . 5 . 14</hi> Blind-tooled parallel lines at top and bottom of spine and on either side of each raised band. Parallel lines also run vertically alongside edge of binding where leather half binding meets marbled paper, as well as along inside edge of leather corners. A paper pastedown and three paper flyleaves in front and back, added with modern binding. These contain an elaborate watermark of a person balancing on one foot atop a sphere that in turns rests atop a rectangular base.</p>
+                                
+
+                            </binding>
+                        </bindingDesc>
+
+                    </physDesc>
+
+
+                    <history>
+                        <provenance> 
+                            <p>A number of names appear in the manuscript, including <persName><hi rend="italic">Arthur Maynwaring</hi>,</persName> written on flyleaf <hi rend="italic">ia</hi> and dated <date when="1567">1567</date>, and <persName>Robert Cotton</persName> (written in Greek letters on flyleaf <hi rend="italic">ia</hi>, along with the initials <hi rend="italic">R. Co.</hi>). Three names occur on <locus from="208v" to="208v">fol. 208v</locus>: <persName><hi rend="italic">Edwardus Savage Capillanus</hi></persName>, <persName><hi rend="italic">Johannes Redmayn</hi></persName>, and <persName><hi rend="italic">Johannes Kyngston</hi></persName>. Despite such evidence, however, little is known of the manuscript's past.</p>
+                        </provenance>
+                    </history>
+
+                    <additional>
+                        <adminInfo>
+                            <recordHist>
+                                <source>
+                                    <bibl> </bibl>
+                                </source>
+                            </recordHist>
+                        </adminInfo>
+
+                        <listBibl>
+                            <bibl><author>Doyle, A. I.</author> "The Manuscripts." <title>Middle English Alliterative Poetry and its Literary Background: Seven Essays</title> Ed. <editor>David Lawton</editor>. <pubPlace>Woodbridge, UK</pubPlace>: <publisher>D. S. Brewer</publisher>, <date when="1982">1982</date>. 88-100 (96).
+                            </bibl>
+                            
+                            <bibl><author>Doyle, A. I.</author> and <author>Malcolm Parkes</author>. "The Production of Copies of the <title>Canterbury Tales</title> and the <title>Confessio Amantis</title> in the Early Fifteenth Century." <title>Medieval Scribes, Manuscripts and Libraries: Essays Presented to N. R. Ker</title>. <pubPlace>London</pubPlace>: <publisher>Scolar Press</publisher>, <date when="1978">1978</date>. 163-210.</bibl>
+                            
+                            <bibl><editor>Hanna, Ralph</editor> and <editor>David Lawton</editor>,
+                                eds. <title>The Siege of Jerusalem</title>. EETS o.s. 320.
+                                <pubPlace>London</pubPlace>: <publisher>Oxford UP</publisher>,
+                                <date when="2003">2003</date>.</bibl>
+                            
+                            <bibl><author>Kellogg, Allen Bond</author>. <title>The Language of the
+                                Alliterative Siege of Jerusalem</title>. Diss. U of Chicago,
+                                <date when="1943">1943</date>.</bibl>
+                            
+                            <bibl><editor>Kölbing, E</editor>. and <editor>Mabel Day</editor>, eds.
+                                <title>Siege of Jerusalem</title>. EETS o.s. 188.
+                                <pubPlace>London</pubPlace>: <publisher>Oxford UP</publisher>,
+                                <date when="1932">1932</date>. (Reprinted <date when="2001"
+                                    >2001</date>)</bibl>
+                            
+                            <bibl><author>McIntosh, Angus</author> and <author>M. L. Samuels</author>. <title>A Linguistic Atlas of Late Mediaeval English</title>. <pubPlace>New York</pubPlace>: <publisher>Aberdeen University Press</publisher>, <date>1986</date>.</bibl>
+                            
+                            <bibl><author>Millar, Bonnie</author>. <title>The Siege of Jerusalem in
+                                its Physical, Literary, and Historical Contexts</title>.
+                                <pubPlace>Dublin</pubPlace>: <publisher>Four Courts
+                                Press</publisher>, <date when="2000">2000</date>. 26-7.</bibl>
+                            
+                            <bibl><author>Somerville, R.</author> "The Cowcher Books of the Duchy of Lancaster," <title>English Historical Review</title> 41 (<date when="1936">1936</date>): 598-615.</bibl>
+                            
+                        </listBibl>
+
+
+                    </additional>
+                </msDesc>
+            </sourceDesc>
         </fileDesc>
         <!--
 <revisionDesc> <change who="" when=""></change> </revisionDesc>
