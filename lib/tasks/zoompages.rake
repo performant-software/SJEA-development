@@ -42,7 +42,7 @@ fs_template = "<!DOCTYPE html>
     </div>  <!-- page -->
 
     <div id=\"main-footer\">
-        <p>&copy;The Society for Early English and Norse Electronic Texts, 2012. Use of this site is subject to the following <a id="terms" href="/index.html?page=terms">terms and conditions</a>.</p>
+        <p>&copy;The Society for Early English and Norse Electronic Texts, 2012. Use of this site is subject to the following <a id=\"terms\" href=\"/index.html?page=terms\">terms and conditions</a>.</p>
     </div> <!-- main-footer -->
 
   </body>
