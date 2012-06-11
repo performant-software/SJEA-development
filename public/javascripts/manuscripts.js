@@ -136,12 +136,6 @@ function showManuscript( name, view, scrollto_id ) {
     // set the manuscript name; we may need this later when setting a new view
     $("#transcription-name").attr("href", name );
 
-    // create the done callback as appropriate
-    var callback = null;
-    if( scrollto_id != null ) {
-       callback = function() { $('html,body').animate( { scrollTop: $("#" + scrollto_id ).offset().top - 15 },'slow' ); }
-    }
-
     // remove any color box decoration/handlers... we will add more shortly.
     $.colorbox.remove();
 
@@ -150,7 +144,7 @@ function showManuscript( name, view, scrollto_id ) {
 
     // load the resource and report an error if unsuccessful
     var resource = name.replace( "SJ", "MS") + "-" + view + ".html";
-    loadRemoteResource( resource, "#content-display", callback );
+    loadRemoteResource( resource, "#content-display", makeDocReadyCallback( scrollto_id ) );
 }
 
 function showDescription( name ) {
@@ -163,7 +157,7 @@ function showDescription( name ) {
 
     // load the resource and report an error if unsuccessful
     var resource = name + "-description.html";
-    loadRemoteResource( resource, "#content-display", null );
+    loadRemoteResource( resource, "#content-display", makeDocReadyCallback( null ) );
 }
 
 function redirectToManuscript( name, view ) {
@@ -261,4 +255,34 @@ function getManuscriptViewState( ) {
 // set the state of the view drop-down to reflect what we are currently showing
 function setManuscriptViewState( name ) {
     $("#view-control" ).val( name );
+}
+
+function makeDocReadyCallback( scrollto_id ) {
+
+    var callback = function( ) {
+
+        // Enable the lightbox behavior
+        $(".imglightbox").colorbox( { iframe:true, width: "70%", height: "95%" } );
+
+        // decorate the tooltips...
+        $(".standard-tooltip").tooltip({
+            opacity: 0.8,
+            effect: 'fade',
+            position: 'top center',
+            offset: [-8, 25],
+            relative: true,
+            delay: 30,
+            events: {
+                def: "mouseover, mouseout"
+            }
+        });
+
+        // scroll to the right position if appropriate...
+        if( scrollto_id != null ) {
+           $('html,body').animate( { scrollTop: $("#" + scrollto_id ).offset().top - 15 },'slow' );
+        }
+    }
+
+    return( callback )
+
 }
