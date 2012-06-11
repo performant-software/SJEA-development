@@ -160,6 +160,8 @@ body {
   padding-top: 8px;
   clear: both;
   bottom: 0; }
+  #main-footer #terms {
+    color: #f0e7cf; }
 
 .standard-tooltip {
   color: #000;

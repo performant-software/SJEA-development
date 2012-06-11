@@ -276,6 +276,10 @@ body {
    padding-top: 8px;
    clear: both;
    bottom: 0;
+
+   #terms {
+      color: $footer_text_color;
+   }
 }
 
 .standard-tooltip {
