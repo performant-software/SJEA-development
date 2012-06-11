@@ -215,7 +215,7 @@ function setGUIForDescription( name ) {
     highliteNavElement( navElement );
 }
 
-function setXMLButtonAttributes( ) {
+function setXMLButtonAttributes( name ) {
 
     var xml_href = "/xml/" + name + ".xml";
     $("#xml-button").attr("href", xml_href );
