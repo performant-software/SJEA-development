@@ -4,7 +4,7 @@
         <fileDesc>
 
             <titleStmt>
-                <title>Transcript (P) Description</title>
+                <title>Descritpion of Princeton University Library, MS Taylor Medieval 11 (P)</title>
                 <author>Timothy L. Stinson</author>
             </titleStmt>
 
@@ -16,6 +16,192 @@
                 <publisher>Society for Early English and Norse Electronic Texts</publisher>
             </publicationStmt>
 
+            <sourceDesc>
+                <msDesc>
+
+                    <msIdentifier>
+                        <country>United States</country>
+                        <settlement>Princeton</settlement>
+                        <institution>Princeton University</institution>
+                        <repository>Princeton University Library</repository>
+                        <idno>MS Taylor Medieval 11</idno>
+                        <msName>P</msName>
+                    </msIdentifier>
+
+                    <head>
+                        <title></title>
+                        <origPlace>England</origPlace>
+                        <origDate notBefore="1390" notAfter="1400">Late fourteenth century. <persName>Doyle</persName> states that Taylor Medieval 11 is "[n]ot much later, if at all" (93) than Bodleian, Laud Misc. 656 (L). Hanna-Lawton agree with this, listing the manuscript as being from the end of the fourteenth century.</origDate>
+                    </head>
+
+                    <msContents>
+                            
+                        <msItem>
+                            <p>1. <locus from="1r" to="96v">Fols. 1r-96v</locus> <persName>William of Nassyngton</persName>, <title>Speculum Vitae</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=245">IMEV 245</ref></p>
+                        </msItem>
+                                 
+                     
+                        <msItem>
+                            <p><locus from="97r" to="104v">Fols. 97r-104v</locus> a prose translation of the Pseduo-Bonaventuran <title>Meditaciones passionis Christi</title></p>
+                        </msItem>
+
+                        <msItem>
+                            <p>3. <locus from="104v" to="110v">Fols. 104v-110v</locus> <title>The Siege of Jerusalem</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1583">IMEV 1583</ref>. Ends imperfectly at Hanna-Lawton line 1143.</p>                        
+                        </msItem>
+       
+
+                    </msContents>
+
+                    <physDesc>
+
+                        <objectDesc form="codex">
+
+                            <supportDesc material="parch">
+
+                                <support>Parchment</support>
+
+
+                                <extent>
+                                    <measure type="leavesCount" n="110">110 folios</measure>
+                                    <measure type="pageDimensions" n="35 x 27 cm">350 x 270 mm</measure>
+                                </extent>
+
+                                <foliation>A previous foliation in pencil, upper right corner, repeated 12 and 35 and omitted 59. This has been replaced, from fol. 12 forward, by a corrected foliation.</foliation>
+
+
+                                <collation> 
+                                    
+                                    <list>
+
+                                        <item> I <locus from="1r" to="12r">1-12</locus></item>
+                                        <item> II <locus from="13r" to="24r">13-24</locus></item>
+                                        <item> III <locus from="25r" to="34r">25-34</locus></item>
+                                        <item> IV <locus from="35r" to="46r">35-46</locus></item>
+                                        <item> V <locus from="47r" to="58r">47-58</locus></item>
+                                        <item>VI <locus from="59r" to="68r">59-68</locus></item>
+                                        <item>VII <locus from="69r" to="80r">69-80</locus></item>
+                                        <item>VIII <locus from="81r" to="88r">81-88</locus></item>
+                                        <item>IX <locus from="89r" to="100r">89-100</locus></item>
+                                        <item>X <locus from="101r" to="110r">101-110</locus> (previously a gathering of 12, but the final two leaves now missing)</item>
+                                        
+                                        
+                                    </list> A few signatures remain – e.g., <locus from="17r" to="18r">17r-18r</locus>, <locus from="28r" to="28r">28r</locus>, <locus from="38r" to="40r">38r-40r</locus>. Catchwords at bottom right of final verso of each quire.
+                                </collation>
+
+                                <condition>Parchment worn and frequently mottled throughout. The front and rear of the book have suffered extensive wear and water damage. <locus from="110v">Fol. 110v</locus> was formerly used as a pastedown.</condition>
+
+                            </supportDesc>
+
+
+                            <layoutDesc>
+
+                                <layout columns="2">
+                                    <p><title>Siege of Jerusalem</title> is ruled in crayon for two columns of 42 lines each. The writing area varies slightly, approximately <measure type="written">280 x 190 mm</measure>; each column <measure type="written">85-88 mm</measure> in width. Four vertical lines, one defining each edge of the two columns. Horizontal lines remain within columns except for first two and last two, which extend across the intercolumnar space. Prickings at top and bottom.</p>
+                                    
+                                    <p>Layout is consistent throughout for all three texts, with only minor differences as noted below:</p>
+                                    
+                                    <p><title>Speculum Vitae</title>: Some variety in size of writing space, but generally <measure type="written">275-280 mm x 195-200mm</measure>, with two columns of 42 lines each  measuring <measure type="written">88 mm</measure> in width. Same pattern of four vertical lines and horizontal lines contained within columns excepting top and bottom two. Also ruled in crayon. Extensive prickings survive along fore edge, top and bottom. One hole per horizontal line, and one hole each at top and bottom for vertical lines.</p>
+                                    
+                                    <p><title>Meditaciones passionis Cristi</title>: Same layout as <title>Speculum Vitae</title> and <title>Siege</title>, but features prose in two columns rather than verse. Ruling mostly faded away, and, like <title>Siege</title>, prickings on fore edge tend not to have survived.</p>
+                                    
+                                </layout>
+
+                            </layoutDesc>
+                        </objectDesc>
+
+
+                        <handDesc>
+                            <handNote>
+                                <p>One scribe responsible for <title>Siege of Jerusalem</title>, using brown ink and an anglicana formata script. A second scribe may be responsible for the other two texts. The text of <title>SJ</title> is not heavily corrected, although there are examples of overwriting, erasure, and deletion, all of which appear to be the work of the original scribe. There are numerous corrections in <title>Speculum Vitae</title>, conversely – e.g., lines added in margin <locus from="8v" to="8v">8v</locus>, erasure and corrected text <locus from="23v" to="23v">23v</locus>, text added above line with carat <locus from="44r" to="44r">44r</locus>. Running heads have been added throughout <title>Speculum</title>, but there are none for <title>SJ</title>.</p> 
+                                
+                                <p>Punctuation in <title>SJ</title> is sparse. Lines generally begin with capital letter forms; letters that do not have a distinct lower case are likely intended as capitals, but have been transcribed as they appear. The caesura is not usually marked, but in a few instances there is either a medial punctus (e.g., lines 95-97, 101, 103) or punctus elevatus (e.g., lines 148, 258, 259). It is not clear why the scribe uses medial punctuation on the few occasions when he chooses to do so.</p>
+                                
+                                <p>The scribe has a few peculiar or problematic tendencies that are worth noting, some of which create problems of interpretation or consistency in transcriptional policy:</p>
+                                
+                                <p><hi rend="underline"><hi rend="italic">-n</hi> and <hi rend="italic">-m</hi></hi>: The scribe frequently places a semicircular tilde (and less frequently a macron) above the combination of vowel plus nasal consonant. While it might be possible to understand this to indicate an expansion doubling the nasal consonant, the fact that he places such a mark above <hi rend="italic">rann</hi><graphic url="images/P12rann.jpg"/> in l. 12, where the consonant is already doubled, indicates that these marks are likely otiose. In addition, the scribe often adds a large flourish that curves up and back to the left on the letter <hi rend="italic">n</hi> when it is the last letter in a word. Good examples of this may be found at the ends of lines 500-503<graphic url="images/P500-503.jpg"/> at the bottom left of fol. <locus from="107v">107v</locus>.</p>
+                                
+                                <p><hi rend="underline">Otiose flourish on <hi rend="italic">-t</hi></hi>: In a few instances, e.g., lines 666<graphic url="images/P666t.jpg"/> and 766<graphic url="images/P766t.jpg"/>, final <hi rend="italic">-t</hi> features an otiose flourish.</p>
+                                
+                                <p><hi rend="underline">Barred letters</hi>: The scribe bars <hi rend="italic">-ll</hi> almost invariably, even when the letters are followed by a final vowel, and thus there is no evidence that he does so to alter spelling. Barred <hi rend="italic">-h</hi> is found on nine occasions, but again this does not bear upon the spelling; for example, the scribe uses the spelling <hi rend="italic">burgħ</hi> at lines 592, 599, and 657, but also uses <hi rend="italic">burgh</hi> twelve times and <hi rend="italic">burghe</hi> once, but does not vary the spelling due to grammatical demands.</p>
+                                
+                                <p><hi rend="underline"><hi rend="italic">-r'</hi></hi>: On a few occasions – twice at line 122<graphic url="images/P122rcurl.jpg"/> and once at line 150<graphic url="images/P150rcurl.jpg"/> – the scribe attaches a small flourish to final <hi rend="italic">-r</hi>. Although such a flourish is used by some scribes to indicate a suspended <hi rend="italic">-e</hi>, there is no evidence to suggest that such was the intention here.</p>
+                                
+                                <p>LALME places the dialect of MS Taylor Medieval 11 near <placeName>Sedbergh, Westmorland</placeName>, which, according to Hanna-Lawton, places it closer to the poet's dialect than any other surviving manuscript containing <title>Siege of Jerusalem</title>. Although LALME analyzes only folios <locus from="14r" to="15r">14r-15r</locus>, <locus from="19r" to="26v">19r-26v</locus>, <locus from="34r" to="34r">34r</locus>, and <locus from="38r" to="42v">38r-42v</locus>, all of which contain portions of <title>Speculum Vitae</title>, an analysis of the forms listed in LALME that are also found in <title>SJ</title> shows that the two works share a dialect.</p>
+                                
+                                
+                            </handNote>
+                        </handDesc>
+
+
+
+
+
+                        <decoDesc>
+                            <decoNote>
+                                <p>In <title>Siege of Jerusalem</title>, no rubricated text other than marginal abbreviations noting passus divisions. Blue lombards flourished with red mark passus divisions. The first letter of each line is touched in red.</p>
+                                
+                                <p><title>Speculum Vitae</title> features numerous section headings in red, along with extensive marginal annotations and running heads. Numerous 2- to 4-line blue initials with flourishes in red. Flourishing typically in the form of abstract vine and foliage designs, but several also contain a fish –  e.g., <locus from="5r" to="5r">5r</locus>, <locus from="84v" to="84v">84v</locus>. In addition to marginal commentary in red, there are numerous red paraphs – see, e.g., the opening <locus from="34v" to="35r">34v-35r</locus> where nearly every line is preceded by such a mark. The first letter of each line touched in red.</p>
+                                
+                                <p>In <title>Meditaciones passionis Christi</title>, incipit rubricated along with section headings and numerous paraph marks. Blue initials with red flourishes, as found in <title>Speculum Vitae</title>. The first letter of any given line not touched in red as with other texts, presumably because this is a prose translation. A number of decorative ascenders in main scribal hand extend into top margins – e.g., <locus from="100v" to="100v">100v</locus>, <locus from="101r" to="101r">101r</locus>.
+                                </p>
+                            </decoNote>
+                        </decoDesc>
+
+
+                        <bindingDesc>
+                            <binding notBefore="1875" notAfter="1900">
+
+                                <p>Late 19th century, white parchment binding over wooden boards. Binding <measure type="written">368 mm</measure> in height, <measure>304 mm</measure> from center of spine to fore edge. Five raised bands on spine.  Headband and tailband of green thread. Front and back covers decorated identically, all decorations blind tooled. An outer frame is formed by a tripartite border consisting of one broad line in the center of two thin lines. This frame measures <measure type="written">355 x 255 mm</measure>. A second frame, set in <measure type="written">20 mm</measure> from the first, is made from the same tool and overlaps at the outer corners so that both the horizontal and vertical lines extend out to meet those forming the outer frame. In the square spaces formed at each corner by these intersecting lines is a design from a single tool featuring a flower surrounded by several lines –  square on four sides but curving in at the corners, and a fleur de lis at each corner. Rawhide ties on front and back. In both front and back, a pastedown formed from white parchment and a single parchment flyleaf.</p>
+                                
+
+                            </binding>
+                        </bindingDesc>
+
+                    </physDesc>
+
+
+                    <history>
+                        <provenance>
+                            
+                            <p>The early history of the manuscript has been the subject of some debate and speculation. <persName>N. R. Ker</persName>'s <title>Medieval Libraries of Great Britain</title>, 2nd ed., (London, <date when="1964">1964</date>), lists the manuscript as having belonged to the "Aug. priory of B. V. M. in <placeName>Bolton, Yorkshire</placeName>, on the basis of <persName>Ker</persName>'s reading of an <hi rend="italic">ex libris</hi> as <hi rend="italic">Liber beate Marie de Bolton in Crauen</hi>. <persName>Doyle</persName>, however, disagrees with this (see "The Manuscripts," note 18), stating he and <persName>Ker</persName> "agree that another name than the last occurs in the defective ex-libris on fol. 1, which looks to me like 'Liber beate Marie de Bolton in Tower.'" This led <persName>Doyle</persName> to argue that the manuscript probably belonged to "a church or convent, probably in the <placeName>West Riding</placeName> of <placeName>Yorkshire</placeName>" (93). The <hi rend="italic">ex libris</hi> has become considerably less legible since <persName>Ker</persName> and <persName>Doyle</persName> read it. It is not known who owned the manuscript prior to the twentieth century, but it eventually came into the possession of <persName>Captain Robert Petre</persName> and was sold at auction by Sotheby's in <date when="1952">1952</date>. It was purchased by <persName>Quaritch</persName> booksellers for £350, and in turn listed in Quaritch catalogue 716 (<date when="1953">1953</date>, item 319). <persName>Quaritch</persName> sold it to <persName>Laurence Witten</persName>, and it was subsequently sold to <persName>Robert Taylor</persName>, who bequeathed it to Princeton University Library. </p>
+                            
+                            <p>A couple of inscriptions within the book might provide further clues to ownership. On the recto of the front flyleaf is written in pencil <hi rend="italic">If it belonged to the <persName>Judge Walmesley</persName>?</hi>. On the back pastedown is written in pencil <hi rend="italic">22065</hi>.</p>
+                            
+                            <p></p>
+                        </provenance>
+                    </history>
+
+                    <additional>
+                        <adminInfo>
+                            <recordHist>
+                                <source>
+                                    <bibl> </bibl>
+                                </source>
+                            </recordHist>
+                        </adminInfo>
+
+                        <listBibl>
+                            <bibl><author>Doyle, A. I.</author> "The Manuscripts." <title>Middle English Alliterative Poetry and its Literary Background: Seven Essays</title> Ed. <editor>David Lawton</editor>. <pubPlace>Woodbridge, UK</pubPlace>: <publisher>D. S. Brewer</publisher>, <date when="1982">1982</date>. 88-100 (96).
+                            </bibl>
+
+                            <bibl><editor>Hanna, Ralph</editor> and <editor>David Lawton</editor>,
+                            eds. <title>The Siege of Jerusalem</title>. EETS o.s. 320.
+                            <pubPlace>London</pubPlace>: <publisher>Oxford UP</publisher>,
+                            <date when="2003">2003</date>.</bibl>
+                            
+                            <bibl><author>McIntosh, Angus</author> and <author>M. L. Samuels</author>. <title>A Linguistic Atlas of Late Mediaeval English</title>. <pubPlace>New York</pubPlace>: <publisher>Aberdeen University Press</publisher>, <date>1986</date>.</bibl>
+                            
+                            <bibl><author>Millar, Bonnie</author>. <title>The Siege of Jerusalem in
+                                its Physical, Literary, and Historical Contexts</title>.
+                                <pubPlace>Dublin</pubPlace>: <publisher>Four Courts
+                                    Press</publisher>, <date when="2000">2000</date>. 26-7.</bibl>
+                            
+                        </listBibl>
+
+
+                    </additional>
+                </msDesc>
+            </sourceDesc>
         </fileDesc>
         <!--
 <revisionDesc> <change who="" when=""></change> </revisionDesc>

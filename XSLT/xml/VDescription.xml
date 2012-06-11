@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
 
             <titleStmt>
-                <title>Transcript (V) Description</title>
+                <title>Descritpion of British Library, MS Cotton Vespasian E.xvi (V)</title>
                 <author>Timothy L. Stinson</author>
             </titleStmt>
 
@@ -16,6 +17,204 @@
                 <publisher>Society for Early English and Norse Electronic Texts</publisher>
             </publicationStmt>
 
+            <sourceDesc>
+                <msDesc>
+
+                    <msIdentifier>
+                        <country>United Kingdom</country>
+                        <settlement>London</settlement>
+                        <institution></institution>
+                        <repository>British Library</repository>
+                        <idno>Cotton Vespasian E.xvi</idno>
+                        <msName>V</msName>
+                    </msIdentifier>
+
+                    <head>
+                        <title></title>
+                        <origPlace>England</origPlace>
+                        <origDate notBefore="1425" notAfter="1475">Mid-fifteenth century</origDate>
+                    </head>
+
+                    <msContents>
+                            
+                        <msItem>
+                            <p><locus from="1r" to="37r">Fols. 1-37</locus> contain two groups of leaves: <locus from="2r" to="25r">fols. 2-25</locus>, a 13th-century register of charters pertaining to Lincoln cathedral, and <locus from="26r" to="37r">fols. 26-37</locus>, a 16th-century Latin chronicle of <placeName>Lichfield</placeName>. These are codicologically unrelated to the unit of 48 folios containing <title>The Siege of Jerusalem</title>.</p>
+                        </msItem>
+                                 
+                     
+                        <msItem>
+                            <p>1. <locus from="38r" to="69v">Fols. 38r-69v</locus> <title>The Three Kings of Cologne</title> IPMEP 290. Ends imperfectly.</p>
+                                
+                        </msItem>
+
+                        <msItem>
+                            <p>2. <locus from="70r" to="75v">Fols. 70r-75v</locus> <title>The Siege of Jerusalem</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1583">IMEV 1583</ref>. Begins imperfectly at Hanna-Lawton l. 966</p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>3. <locus from="76r" to="77v">Fols. 76r-77v</locus> Latin prose treatise on the calendar, incipit <hi rend="italic">Cum in vnaquaue sciencia est vnum generale in quod resoluuntur omnia que sunt</hi>. Ends imperfectly.</p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>4. <locus from="78r" to="82v">Fols. 78r-82v</locus> Latin prose medical treatise, incipit brachium et ideo puslus sinistro brachio</p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>5. <locus from="83r" to="85r">Fols. 83r-85r</locus> Middle English prose treatise on physiognomy, incipit <hi rend="italic">Among all þinges who þat woll knowe the mervelous science of ffysnomy</hi></p>
+                        </msItem>
+
+                    </msContents>
+
+                    <physDesc>
+
+                        <objectDesc form="codex">
+
+                            <supportDesc material="parch">
+
+                                <support>Parchment</support>
+
+
+                                <extent>
+                                    <measure type="leavesCount" n="48">48 folios (bound with a group of 37 unrelated folios)</measure>
+                                    <measure type="pageDimensions" n="21-21.5 cm x 15-15.5 cm">210-215 x 150-155mm</measure>
+                                </extent>
+
+                                <foliation>The book comprises the three codicologically unrelated groups of leaves, two of which are found in <locus from="1r" to="37r">fols. 1-37</locus> and the remainder in <locus from="38r" to="85r">fols. 38-85</locus>; only the latter are considered in this description. Foliation is continuous across these three units, however, commencing on the first parchment leaf and continuing throughout. Fol. 5 is repeated with an asterisk beside the second 5, which occurs on a blank leaf. Pairs of blank parchment leaves following fols. <locus from="25r" to="25r">25</locus>, <locus from="37r" to="37r">37</locus>, and <locus from="69r" to="69r">69</locus> are not numbered; these were added by the binder. <locus from="1r" to="5r">Fols. 1-5</locus> in modern hand in pencil, and an earlier foliation which began on what is now 2r has been lined through; the doubling of fol. 5 permits the usage of an earlier foliation in ink, which runs throughout consecutively but appears to be in several hands. <locus from="62r" to="77r">Fols. 62-77</locus> were once numbered 70-85, while <locus from="78r" to="85r">fols. 78-85</locus> were once numbered 62-69, with the older numbers now crossed through, which suggests that the final two quires were previously bound in reverse order. The evidence of the quire signatures and the missing lines of <title>Siege of Jerusalem</title>, however, suggest that quire VI would not have come before quire V when the manuscript was first produced; apparently the quires were previously bound out of order, a mistake corrected in a later rebinding.</foliation>
+
+
+                                <collation> 
+                                    
+                                    <list>
+
+                                        <item>I <locus from="38r" to="45r">38-45</locus></item>
+                                        <item>II <locus from="46r" to="53r">46-53</locus></item>
+                                        <item>III <locus from="54r" to="61r">54-61</locus></item>
+                                        <item>IV <locus from="62r" to="69r">62-69</locus></item>
+                                        <item>V <locus from="70r" to="77r">70-77</locus></item>
+                                        <item>VI <locus from="78r" to="85r">78-85</locus></item>
+                                        
+                                    </list> 
+                                    Each quire is sewn through the center to a stub in the modern binding. Quire marks suggest that there were formerly two quires between what are now the fourth and fifth quires. These must have contained the beginning of <title>Siege of Jerusalem</title>; at about 30 lines per leaf, there would be 480 lines per quire, thus 960 in the two quires, which, with the 362 extant lines, would amount to a full copy of the poem. Quires are numbered <hi rend="italic">x-xiii</hi> on leaves <locus from="38r" to="38r">38r</locus>, <locus from="46r" to="46r">46r</locus>, <locus from="54r" to="54r">54r</locus>, and <locus from="62r" to="62r">62r</locus>, and <locus from="70r" to="70r">70r</locus> is numbered <hi rend="italic">xvi</hi>. <locus from="45v" to="45v">45v</locus> (i.e., the end of quire I) is labeled <hi rend="italic">a</hi>, with <locus from="46r" to="46r">46r</locus>, <locus from="54r" to="54r">54r</locus>, and <locus from="62r" to="62r">62r</locus> labeled <hi rend="italic">b</hi>, <hi rend="italic">c</hi>, and <hi rend="italic">d</hi>. A single catchword survives at <locus from="53v" to="53v">53v</locus>.
+                                </collation>
+
+                                <condition>Parchment somewhat worn, but in sound condition.</condition>
+
+                            </supportDesc>
+
+
+                            <layoutDesc>
+
+                                <layout columns="1"><title>Siege of Jerusalem</title> bounded in lead, with rulings visible on <locus from="70r">70r</locus> but faded or never present elsewhere. Writing area in <title>SJ</title> <measure type="written">150-155 x 105 mm</measure>, with 29-36 lines per page. Similar, rather minimal layout for other texts, although <title>The Three Kings of Cologne</title> is bounded in brown crayon. Usually 29-31 lines per leaf for all texts. No prickings.
+                                </layout>
+
+                            </layoutDesc>
+                        </objectDesc>
+
+
+                        <handDesc>
+                            <handNote>
+                                <p>Previous scholars have disagreed on the number of scribes and the distribution of their work. <persName>Guddat-Figge</persName> lists four scribes, with the first copying <locus from="38r" to="69v">fols. 38r-69v</locus>, the second <locus from="70r" to="75v">fols. 70r-75v</locus>, the third <locus from="76r" to="82v">fols. 76r-82v</locus>, and the fourth <locus from="83r" to="85r">fols. 83r-85r</locus> (179). Hanna-Lawton agree that there were four scribes, but suggest that each section is by “a different hand and the two items of the second booklet different hands” (xvii). The manuscript was also consulted by the editors of LALME (LP 553), who state that there is only one hand throughout (422).</p> 
+                                
+                                <p>I argue conversely that there are two scribes. Scribe 1 copied <locus from="38r" to="69v">fols. 38-69</locus> using dark ink and an anglicana script mixed with secretary forms. Scribe 2 copied <locus from="70r" to="85r">fols. 70-85</locus> in brown ink and a secretary hand. A side-by-side analysis of English words occurring in <title>Siege of Jerusalem</title> as well as in item 5, the prose treatise on physiognomy, is useful for confirming that the same hand is responsible for both. For example, <hi rend="italic">And</hi> on <locus from="70r">70r</locus> and <locus from="83r" to="83r">83r</locus><graphic url="images/And.jpg"/>, <hi rend="italic">moche</hi> on <locus from="72v">72v</locus> and <locus from="83r" to="83r">83r</locus><graphic url="images/moche.jpg"/>, <hi rend="italic">þ[er]fore</hi> on <locus from="72r">72r</locus> and <locus from="83r" to="83r">83r</locus><graphic url="images/Therfore.jpg"/>, and <hi rend="italic">wołł</hi> on <locus from="75r">75r</locus> and <locus from="83r" to="83r">83r</locus>. While a word-to-word comparison cannot be made between <title>SJ</title> and the Latin texts in <locus from="76r" to="82v">fols. 76r-82v</locus>, a comparison of letterforms indicates that these texts are by the same scribe who copied the English texts that bookend them. For example, the roman numeral <hi rend="italic">xxx</hi> on <locus from="75r">75r</locus> and <locus from="82v" to="82v">82v</locus><graphic url="images/xxxti.jpg"/>, the distinctive capital <hi rend="italic">T</hi><graphic url="images/CapitalT.jpg"/> and capital <hi rend="italic">D</hi><graphic url="images/CapitalD.jpg"/> found throughout, as well as the distinctive flat-topped capital <hi rend="italic">N</hi><graphic url="images/CapitalN.jpg"/>.</p>
+                                
+                                <p>As Hanna-Lawton note, the fact that the scribe responsible for <title>The Three Kings of Cologne</title> is not the same as the scribe who copied <title>Siege of Jerusalem</title> means that we cannot apply the conclusions that the editors of LALME draw to <title>SJ</title>. While noting that the scribe of <title>Siege</title> does share agreement with LALME LP 553 in some instances, they also list a number of dialect features that point not to <placeName>Oakham, Rutland</placeName>, as LALME posits, but further east near <placeName>Lincoln</placeName>. They raise the possibility that “LALME’s LP 553 may show some interference from the <title>Three Kings</title> exemplar” (xvii). <persName>Kellogg</persName>'s analysis of the manuscript's language, which focused exclusively on the <title>SJ</title> portion of the text, also attributes the scribe to the <placeName>east Midlands</placeName>, although he does not offer a more specifc locality. He does, however, provide a list of thirty dialect features, some of which, such as the <hi rend="italic">-and</hi> present participle termination mentioned by Hanna-Lawton, make it clear that the dialect is distinct from that of <title>Three Kings of Cologne</title>. Hanna-Lawton also note the presence of the register of charters pertaining to <placeName>Lincoln</placeName> Cathedral in the front of the book; while this is not codicologically related to the portion containing <title>Three Kings</title> or <title>Siege</title>, it might be a further sign “pointing to such an <placeName>east Midland</placeName> provenance” (xvii).</p>
+                                
+                                <p>Scribe 2 uses a variety of typical suspensions and abbreviations. The text is not heavily corrected, although there are examples of overwriting, erasure, and deletion, all of which appear to be the work of the original scribe and are handled according to the policy discussed in the general introduction. In addition, he has a number of peculiar or problematic tendencies that are worth noting, some of which create problems of interpretation or consistency in transcriptional policy:</p>
+                                
+                                <p><hi rend="underline">Curl on <hi rend="italic">-r</hi></hi>: In nine instances, the scribe places a curl on final <hi rend="italic">-r</hi>. In most cases, it is apparent that this is intended to be expanded to <hi rend="italic">-re</hi>, as in <hi rend="italic">her[e]</hi>, l. 43<graphic url="images/V43rcurl.jpg"/>, which is elsewhere spelled <hi rend="italic">here</hi>, and <hi rend="italic">tresour[e]</hi>, l. 51, which is elsewhere spelled <hi rend="italic">tresoure</hi>. In three cases – <hi rend="italic">brothir</hi>, l. 29, and <hi rend="italic">copper</hi> and <hi rend="italic">silvir</hi>, both at l. 300 – the curl seems merely to be a flourish, as it does not curve back as far as the other six examples and the spelling does not require an expansion to <hi rend="italic">-re</hi>. Thus these three have been transcribed <hi rend="italic">-r'</hi>.</p>
+                                
+                                <p><hi rend="underline">Barred letters</hi>: Barred letters, which tend to be otiose throughout most of the <title>SJ</title> corpus, are used by this scribe to indicate suspended <hi rend="italic">-e</hi>, and have been expanded in the text accordingly. Note, e.g., barred <hi rend="italic">wałł</hi> 1x vs. <hi rend="italic">walle</hi> elsewhere, and <hi rend="italic">tille</hi> vs. barred <hi rend="italic">tiłł</hi>. Note also <hi rend="italic">higħ</hi> vs. <hi rend="italic">highe</hi>.</p>
+                                
+                                <p><hi rend="underline">Otiose tildes</hi>: The scribe frequently uses an otiose tilde, as at <hi rend="italic">worship</hi>, l. 19<graphic url="images/V19tilde.jpg"/>, <hi rend="italic">come</hi>, l. 75, and <hi rend="italic">wrought</hi>, l. 154. He is especially prone to place this mark above the letter <hi rend="italic">p</hi>, as he does with <hi rend="italic">worship</hi> at l. 19, <hi rend="italic">vp</hi>, l. 30, and <hi rend="italic">hap</hi>, l. 42.</p>
+                                    
+                            </handNote>
+                        </handDesc>
+
+
+
+
+
+                        <decoDesc>
+                            <decoNote>
+                                <p>No marginalia appear alongside <title>Siege of Jerusalem</title> other than <hi rend="italic">Septim[us] passus</hi>, which is the only surviving passus division and is written in the right margin of <locus from="72r">fol. 72r</locus> at a point that corresponds to a passus division and/or multiline capital in all of the other <title>SJ</title> manuscripts. Blue multiline capitals, boxed and decorated with red leaves and vines, appear at lines 60 and 148. The former corresponds to a large, if not multiline, capital in C, as discussed in the description of that manuscript; the latter corresponds to the passus division on <locus from="72r">72r</locus>.</p>
+                                
+                                <p><title>Three Kings of Cologne</title> features similar 3-line blue lombards with red flourishing at section heads, and some proper names as well as Latin passages are framed in scribal ink. Item 3 is adorned with a single 4-line blue lombard with red flourishing. No decoration in items 4 and 5.</p>
+                            </decoNote>
+                        </decoDesc>
+
+
+                        <bindingDesc>
+                            <binding notBefore="1978" notAfter="1978">
+
+                                <p>A British Library binding dated <date when="1978">1978</date> on the inside back cover. Binding measures <measure type="written">229 mm</measure> in height, <measure type="written">202 mm</measure> from center of spine to fore edge. Half bound, red morocco spine and corners over reddish brown bookboard. Blind-tooled double fillets on edges of leather, including leather corners,  where they join the bookboard. Green and gold headband and tailband. A pair of thin gold fillets runs vertically on each side of the spine, and a pair of these lines defines the top and bottom of each compartment. The bottom compartment, which is larger than the others, features an additional pair of gold-tooled lines near the bottom of the spine so that it is split into two sections, one similar in size to the other compartments, and the other an additional area about <measure type="written">10 mm</measure> in height defined by the extra tooled lines. Compartments 1, 5, and 6 decorated with gold tools. Compartments 3, 4, and 5 have text in gold on black leather background:</p>
+                                
+                                <p>Compartment 3: <hi rend="italic">CHARTULARIUM / LINCOLNIENSE</hi></p>
+                                
+                                <p>Compartment 4: <hi rend="italic">BRITISH / LIBRARY</hi></p>
+                                
+                                <p>Compartment 5: <hi rend="italic">COTTON / MS / VESPASIAN / E. XVI</hi></p>
+                                
+                                <p>Front and back covers have gold stamp of <persName>Cotton</persName>'s coat of arms in center.</p>
+                                
+                                <p>A white oval sticker at the top of the spine reads <hi rend="italic">684</hi>; another at the bottom of the spine reads <hi rend="italic">b</hi>. Stamped in black ink, with a black ink frame, on rear pastedown: <hi rend="italic">B.L. 1978</hi>.  On front pastedown is written <hi rend="italic">684 B</hi>. A slip of paper affixed to the verso of the second paper flyleaf in the rear notes that the manuscript was "examined after Binding" in <date when="1978">1978</date>. In the front, a modern paper pastedown and four modern paper flyleaves. This is followed by a single earlier paper flyleaf from a previous binding, and this by a parchment leaf (<locus from="1r" to="1r">fol. 1</locus> in the present foliation) that may also have been a flyleaf in a previous binding. In the rear, a single paper flyleaf on early paper matching that in the front, followed by three modern paper flyleaves and a modern paper pastedown. A modern parchment bifolium is found following fols. <locus from="25r" to="25r">25</locus>, <locus from="37r" to="37r">37</locus>, and <locus from="69r" to="69r">69</locus>. The outer edges of leaves towards the end of the volume appear singed, which likely happened during the fire at the Ashburnham House in <date when="1731">1731</date>. </p>
+                                    
+                                    
+
+                            </binding>
+                        </bindingDesc>
+
+                    </physDesc>
+
+
+                    <history>
+                        <provenance> 
+                            <p>Nothing is known of the manuscript's early history. An <hi rend="italic">ex libris</hi> in the group of leaves comprising <locus from="2r" to="11r">fols. 2-11</locus>, material unrelated to the manuscript containing <title>Siege of Jerusalem</title>, reads <hi rend="italic">liber cartarum eccleise beate Marie Lincoliensis</hi>. As discussed above, it is impossible to know whether this has bearing on the origins of the portion of the book containing <title>SJ</title>. As a group, the famous <persName>Cotton</persName> manuscripts were owned by <persName>Sir Robert Bruce Cotton</persName> (<date from="1571" to="1631">1571-1631</date>) and presented as a gift to the nation of Great Britain by his grandson, <persName>Sir John Cotton</persName>, in <date when="1700">1700</date>. They were initially housed in Ashburnham House, <placeName>Westminster</placeName>, where a fire destroyed or damaged about twenty-five percent of them in <date when="1731">1731</date>. The manuscripts are now part of The British Library.</p>
+                        </provenance>
+                    </history>
+
+                    <additional>
+                        <adminInfo>
+                            <recordHist>
+                                <source>
+                                    <bibl> </bibl>
+                                </source>
+                            </recordHist>
+                        </adminInfo>
+
+                        <listBibl>
+                            <bibl><author>Doyle, A. I.</author> "The Manuscripts." <title>Middle English Alliterative Poetry and its Literary Background: Seven Essays</title> Ed. <editor>David Lawton</editor>. <pubPlace>Woodbridge, UK</pubPlace>: <publisher>D. S. Brewer</publisher>, <date when="1982">1982</date>. 88-100 (96).
+                            </bibl>
+
+                            <bibl><author>Guddat-Figge, Gisela</author>. <title>Catalogue of the Manuscripts Containing Middle English Romances</title>. <pubPlace>Munich</pubPlace>: <publisher>W. Fink</publisher>, <date when="1976">1976</date>. 159-63.
+                            </bibl>
+                            
+                            <bibl><editor>Hanna, Ralph</editor> and <editor>David Lawton</editor>,
+                                eds. <title>The Siege of Jerusalem</title>. EETS o.s. 320.
+                                <pubPlace>London</pubPlace>: <publisher>Oxford UP</publisher>,
+                                <date when="2003">2003</date>.</bibl>
+                            
+                            <bibl><author>Kellogg, Allen Bond</author>. <title>The Language of the
+                                Alliterative Siege of Jerusalem</title>. Diss. U of Chicago,
+                                <date when="1943">1943</date>.</bibl>
+                            
+                            <bibl><editor>Kölbing, E</editor>. and <editor>Mabel Day</editor>, eds.
+                                <title>Siege of Jerusalem</title>. EETS o.s. 188.
+                                <pubPlace>London</pubPlace>: <publisher>Oxford UP</publisher>,
+                                <date when="1932">1932</date>. (Reprinted <date when="2001"
+                                    >2001</date>)</bibl>
+                            
+                            <bibl><author>McIntosh, Angus</author> and <author>M. L. Samuels</author>. <title>A Linguistic Atlas of Late Mediaeval English</title>. <pubPlace>New York</pubPlace>: <publisher>Aberdeen University Press</publisher>, <date>1986</date>.</bibl>
+                            
+                            <bibl><author>Millar, Bonnie</author>. <title>The Siege of Jerusalem in
+                                its Physical, Literary, and Historical Contexts</title>.
+                                <pubPlace>Dublin</pubPlace>: <publisher>Four Courts
+                                    Press</publisher>, <date when="2000">2000</date>. 26-7.</bibl>
+                        </listBibl>
+
+
+                    </additional>
+                </msDesc>
+            </sourceDesc>
         </fileDesc>
         <!--
 <revisionDesc> <change who="" when=""></change> </revisionDesc>

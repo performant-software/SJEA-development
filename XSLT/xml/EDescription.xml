@@ -4,7 +4,7 @@
         <fileDesc>
 
             <titleStmt>
-                <title>Transcript (E) Description</title>
+                <title>Descritpion of Huntington Library, MS HM 128 (E)</title>
                 <author>Timothy L. Stinson</author>
             </titleStmt>
 
@@ -16,6 +16,276 @@
                 <publisher>Society for Early English and Norse Electronic Texts</publisher>
             </publicationStmt>
 
+            <sourceDesc>
+                <msDesc>
+
+                    <msIdentifier>
+                        <country>United States</country>
+                        <settlement>San Marino</settlement>
+                        <repository>The Huntington Library</repository>
+                        <idno>HM 128</idno>
+                        <msName>E</msName>
+                    </msIdentifier>
+
+                    <head>
+                        <title>Huntington Library, MS HM 128 (E)</title>
+                        <origPlace>England</origPlace>
+                        <origDate notBefore="1400" notAfter="1450">Early fifteenth century. In "Putting It Right," <persName>Turville-Petre</persName>, citing <persName>Hanna</persName>, suggests a date of around <date when="1410">1410</date> for most of the manuscript, but a date of around <date when="1435">1435</date> for <title>The Siege of Jerusalem</title>: "It seems that the manuscript remained in that state for perhaps a quarter of a century when Hand 5, spotting blank leaves at the end of the final quire, began the <title>Siege of Jerusalem</title> on the lower half of the last leaf of <title>Piers</title> and added two new quires" (44).</origDate>
+                    </head>
+
+                    <msContents>
+                            
+                        <msItem>
+                            <p>1. <locus from="1r" to="94r">Fols. 1r-94r</locus> <title>Prick of Conscience</title> (Southern recension) <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=3429">IMEV 3429</ref>. Bound out of order; quires should be <locus from="1r" to="16v">1r-16v</locus>, <locus from="25r" to="32v">25r-32v</locus>, <locus from="17r" to="24v">17r-24v</locus>. <locus from="94v" to="94v">Fol. 94v</locus> is blank.</p>
+                        </msItem>
+                                 
+                     
+                        <msItem>
+                            <p>2. <locus from="95r" to="96v">Fols. 95r-96v</locus> Fragment of <title>Piers Plowman</title> (Hm<hi rend="supralinear">2</hi> in Kane-Donaldson) <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1459">IMEV 1459</ref>. Order of leaves reversed. <locus from="95v" to="95v">Fol. 95v</locus> is blank.</p>
+                        </msItem>
+
+                        <msItem>
+                            <p>3. <locus from="97r" to="112v">Fols. 97r-112v</locus> <title>Expositio sequentiarum</title></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>4. <locus from="113r" to="205r">Fols. 113r-205r</locus> <title>Piers Plowman</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1459">IMEV 1459</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>5. <locus from="205r" to="216r">Fols. 205r-216r</locus> <title>The Siege of Jerusalem</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1583">IMEV 1583</ref></p>
+                        </msItem>
+                        
+                        <msItem>
+                            <p>6. <locus from="216v" to="219r">Fols. 216v-219r</locus> <title>How the Good Wife Taught her Daughter</title> <ref target="http://www.cddc.vt.edu/host/imev/record.php?recID=1673">IMEV 1673</ref>. <locus from="219v" to="219v">Fol. 219v</locus> is blank.</p>
+                        </msItem>
+       
+
+                    </msContents>
+
+                    <physDesc>
+
+                        <objectDesc form="codex">
+
+                            <supportDesc material="parch">
+
+                                <support>Parchment</support>
+
+
+                                <extent>
+                                    <measure type="leavesCount" n="219">i+219+i folios</measure>
+                                    <measure type="pageDimensions" n="24 x 17 cm">240 x 170 mm</measure>
+                                </extent>
+
+                                <foliation>Foliation in pencil, modern hand, top right corner, is accurate. Another foliation in pencil, modern hand, found on many leaves in the right margin approximately <measure type="written">9-10 cm</measure> up from bottom edge of leaves (and in bottom right corner towards the end of codex), is also accurate. An earlier foliation that counted the first flyleaf as folio 1 has been erased, but is sometimes still visible (e.g., <locus from="128r" to="128r">fol. 128</locus>). <persName>Dutschke</persName> notes that "in the 1930s the foliation changed to begin with the first leaf of the text, therefore many printed references to this manuscript advance by 1 the current foliation" (162).</foliation>
+
+
+                                <collation> 
+                                    
+                                    <list>
+
+                                        <item>I <locus from="1r" to="8r">1-8</locus></item>
+                                        <item>II <locus from="9r" to="16r">9-16</locus></item>
+                                        <item>III <locus from="17r" to="24r">17-24</locus> (quires III and IV bound in reverse order)</item>
+                                        <item>IV <locus from="25r" to="32r">25-32</locus></item>
+                                        <item>V <locus from="33r" to="40r">33-40</locus></item>
+                                        <item>VI <locus from="41r" to="48r">41-48</locus></item>
+                                        <item>VII <locus from="49r" to="56r">49-56</locus></item>
+                                        <item>VIII <locus from="57r" to="64r">57-64</locus></item>
+                                        <item>IX <locus from="65r" to="72r">65-72</locus></item>
+                                        <item>X <locus from="73r" to="80r">73-80</locus></item>
+                                        <item>XI <locus from="81r" to="88r">81-88</locus></item>
+                                        <item>XII <locus from="89r" to="96r">89-96</locus></item>
+                                        <item>XIII <locus from="97r" to="104r">97-104</locus></item>
+                                        <item>XIV <locus from="105r" to="112r">105-112</locus></item>
+                                        <item>XV <locus from="113r" to="120r">113-120</locus></item>
+                                        <item>XVI <locus from="121r" to="128r">121-128</locus></item>
+                                        <item>XVII <locus from="129r" to="136r">129-136</locus></item>
+                                        <item>XVIII <locus from="137r" to="144r">137-144</locus></item>
+                                        <item>XIX <locus from="145r" to="152r">145-152</locus></item>
+                                        <item>XX <locus from="153r" to="160r">153-160</locus></item>
+                                        <item>XXI <locus from="161r" to="168r">161-168</locus></item>
+                                        <item>XXII <locus from="169r" to="176r">169-176</locus></item>
+                                        <item>XXIII <locus from="177r" to="184r">177-184</locus></item>
+                                        <item>XXIV <locus from="185r" to="192r">185-192</locus></item>
+                                        <item>XXV <locus from="193r" to="200r">193-200</locus></item>
+                                        <item>XXVI <locus from="201r" to="208r">201-208</locus></item>
+                                        <item>XXVII <locus from="209r" to="216r">209-216</locus></item>
+                                        <item>XXVIII <locus from="217r" to="219r">217-219</locus> (three leaves, structure uncertain)</item>
+                                        
+                                    </list> No signatures or catchwords; these were likely trimmed off. Quires are numbered in pencil in a modern hand in the gutter on the lower left of first recto of each gathering. The codex is divided into three booklets, with booklet I comprising <locus from="1r" to="96r">fols. 1-96</locus>, booklet II <locus from="97r" to="112r">fols. 97-112</locus>, and booklet III <locus from="113r" to="219r">fols. 113-219</locus>.
+                                    
+                                </collation>
+
+                                <condition>Parchment not of particularly high quality, but in sound condition. A few repairs (e.g., <locus from="216r" to="216r">fol. 216</locus>).</condition>
+
+                            </supportDesc>
+
+
+                            <layoutDesc>
+
+                                <layout columns="1">
+                                    
+                                    <p>In T<title>he Siege of Jerusalem</title>, text block bounded in lead, but this is visible only in some areas, however (e.g., inner edge of <locus from="208v">208v</locus>). No prickings survive, and no additional ruling patterns visible. Text block around <measure type="written">205 x 130 mm</measure>. There are 51-61 lines per page, with a tendency to squeeze in an increasing number as the poem progresses (e.g., the first ten leaves average just over 55 lines per page, whereas the final ten average 61).</p>
+                                    
+                                    <p>As <persName>Turville-Petre</persName> describes, there is a tendency in this manuscript for the layout and other features to go from orderly to less so over time. The increasingly scrunched text of <title>SJ</title> provides a microcosm of this. The layout of the other texts is as follows: </p>
+                                    
+                                    <p><title>The Prick of Conscience</title> has 40 lines per page and is bounded and ruled in lead, although the ruling is mostly faded. </p>
+                                    <p>The <title>Expositio sequentiarum</title> is in two columns, which a text block of around <measure type="written">202 x 135 mm</measure> and each column approximately <measure type="written">65 mm</measure> wide. Numbers of lines varies slightly, but most within 55-60 per column.</p>
+                                    
+                                    <p><title>Piers Plowman</title> features a text block <measure type="written">205 x 135 mm</measure> with 40 lines each (excepting areas where lines have been added).</p>
+                                    
+                                    <p><title>How the Good Wife Taught her Daughter</title>, like <title>Siege of Jerusalem</title>, which it follows, is somewhat messier than the first few texts. There are 27-31 lines per leaf with a text block that averages about <measure type="written">210 x 120 mm</measure>.</p>
+                                      
+                                    
+                                </layout>
+
+                            </layoutDesc>
+                        </objectDesc>
+
+
+                        <handDesc>
+                            <handNote>
+                                <p>One scribe, using an anglicana script and brown ink, is responsible for the entire text of <title>The Siege of Jerusalem</title>. The script begins small and gets even more compressed as the text continues. As many as six scribes worked on the manuscript, however, and their division of work has been the subject of considerable scholarly attention. This is discussed fully in <title>The Piers Plowman Electronic Archive 6</title>, from which I quote at length here:</p> 
+                                <p>“The most probable sequence of composition is that Hand A began his work with <title>Piers Plowman</title>, copying the first quire (<locus from="113r" to="120r">ff. 113-20</locus>) and making a start on the second (<locus from="96r" to="96r">fol. 96r</locus>), before abruptly handing over to Hand B (<locus from="96r" to="95r">ff. 96r-v, 95r</locus>) while he himself copied <title>The Prick of Conscience</title> (<locus from="1r" to="94r">ff. 1r-94r</locus>). But Hand B soon abandoned his work on <title>Piers Plowman</title>, and the blank leaves were incorporated into the final quire of <title>The Prick of Conscience</title> (as <locus from="89r" to="90r">ff. 89r-90r</locus>) in such a way that the <title>Piers Plowman</title> fragment Hm<hi rend="supralinear">2</hi> became the wrapper of that section of the manuscript. The bottom right edge of folio <locus from="96v" to="96v">96v</locus> has lost text (affecting the last 12 lines of Hm<hi rend="supralinear">2</hi>, corresponding to Hm.3.38-49) either through erasure (as though someone had started to clean the page for new text) or more probably through rubbing. While Hand A copied <title>The Prick of Conscience</title>, Hand D completed <title>Piers Plowman</title> (<locus from="121r" to="205r">ff.121r-205r</locus>). Hand A rubricated <title>The Prick of Conscience</title> himself, but rubrication of <title>Piers Plowman</title> is in another hand. Some years after <title>Piers Plowman</title> was completed, Hand E began the <title>Siege of Jerusalem</title> on the lower half of the same leaf (<locus from="205r" to="216r">ff. 205r-216r</locus>), and when the <title>Siege of Jerusalem</title> was finished, hand F began <title>The Good Wife</title> on the verso (<locus from="216v" to="219r">ff. 216v-219r</locus>). The third text in the volume <title>Expositio sequentiarum</title> has no necessary connection with the rest of the volume in origin, since it is two independent quires (<locus from="97r" to="112v">ff. 97r-112v</locus>) copied by a scribe C whose work appears nowhere else in the manuscript.”</p>
+                                
+                                <p>Punctuation within <title>Siege of Jerusaelm</title> is sparse. Lines generally begin with capital letter forms; initial letters that do not have a distinct lower case are likely intended as capitals, but have been transcribed as they appear. The caesura is usually, but not always, marked by a simple punctus. Some lines have no medial punctuation, but there is no discernible reason for this occasional omission.</p>
+                                
+                                <p>The scribe uses a variety of typical suspensions and abbreviations and, despite the messiness of his script, offers little in the way of difficulties of interpretation or unusual forms. The text features a number of erasures, some of which are the work of a later corrector, who has been tagged with the designation <hi rend="italic">hand x</hi>. In two instances on <locus from="206v">fol. 206v</locus> the scribe left blank spaces, one a little over half a line in size and the other large enough to accommodate a quatrain. These were completed in a later stint, probably by the original scribe working with lighter ink and perhaps a different pen, a fact that suggests that he consulted more than one exemplar. Perhaps the most interesting aspect of this scribe is the relationship of his role to the others who worked on Hm 128, "a complex manuscript containing several interrelated texts and involving a number of collaborating scribes probably in a religious house" (<persName>Turville-Petre</persName> 43). <title>Prick of Conscience</title> and <title>Piers Plowman</title>, the first texts copied, were written in clear, attractive hands, but later both texts were "defaced by a multitude of corrections on every page," and the unattractive <title>Siege</title> text is "followed by <title>The Good Wife</title> in a remarkably large and sprawling hand" (44). There is no indication that the scribe of <title>SJ</title> was involved in the corrections of the earlier texts, nor is it clear how much time lapsed between the copying of <title>Piers</title> and <title>Prick of Conscience</title> and the extensive revising. At any rate, it is clear that the volume began as a rather attractive and competently copied one, and that the undisciplined hand of the <title>SJ</title> scribe was one of a number of later additions that resulted in it ending up as a rather messy and defaced one. It is also interesting to note that the scribe presented here produced the least accurate and least metrical copy of the <title>Siege of Jerusalem</title>. His text, filled with mistakes, omissions, additions, and unmetrical lines, seems as haphazard as his hand. What it lacks in ability to convey authorial design, however, it makes up for in presenting a good model of scribal recomposition as well as later scribal correction and alteration of the text.</p>
+                                
+                                <p>LALME, LP 6910 grid 423 238,provides a linguistic analysis of the manuscript that, unlike other analyses of manuscripts containing <title>Siege of Jerusalem</title> included in the atlas, is based on linguistic data from <title>SJ</title> itself rather than from other works in the codex. The editors place the scribe in south <placeName>Warwickshire</placeName>, which is close to the dialects of the other scribes in the book. See T<title>he Piers Plowman Electronic Archive 6</title>, section IV, “Linguistic Description,” for a full description of the dialect of <title>Piers Plowman</title> and a discussion of previous dialect studies. Hanna-Lawton note that the cluster of <placeName>Warwickshire</placeName> dialects found in neighboring texts might suggest production in a communal religious environment (xxiv).</p>
+                                
+                                <p>Lines in <title>Siege of Jerusalem</title> have been numbered by a later hand in five-line increments. This lineation is inaccurate; note in particular folio 209r where the sequence of numbers is 415, 420, 410, 415, 420, 425, etc.</p>
+                                
+                            </handNote>
+                        </handDesc>
+
+
+
+
+
+                        <decoDesc>
+                            <decoNote>
+                                <p><title>Siege of Jerusalem</title> features a rubricated incipit and a rubricated opening initial 4 lines in with flourishing in scribal brown ink. Rubricated paraphs, usually every four lines.  Textual divisions signaled with red capitals 3 to 8 lines in height.</p>
+                                
+                                <p><title>The Prick of Conscience</title> features rubricated section headings and an opening 8-line initial in red and blue with red and blue infill, which forms a vine; a red and blue cascade runs along the left of the text block to the lower margin. 4-line initials of the same design (e.g. <locus from="4v" to="4v">4v</locus>).  Numerous 2-line initials in blue with red flourishing. Paraphs in red and blue both within the text and accompanying running heads. Latin quotations set off with red line above and below. </p>
+                                
+                                <p><title>Expositio sequentiarum</title> features rubricated 3- and 4-line initials, paraphs, headings.</p>
+                                
+                                <p><title>Piers Plowman</title> features a 12-line initial in red and blue with flourishing in both colors. Numerous red and blue paraphs, usually alternating colors. Each passus usually, although not invariably, begins with 3-line initial in blue with red flourshing. Passus headings also rubricated. </p>
+                                <p><title>How the Good Wife Taught her Daughter</title> features a single 2-line red initial at the beginning. Text arranged into groups of five lines each, with first line rubricated and first letter of next four lines touched in red. Red brackets have been drawn to the right of the quatrains. Explicit rubricated. Two crudely drawn marginalia: at bottom of <locus from="217v" to="217v">217v</locus>, acorns, and at the bottom of <locus from="218r" to="218r">218r</locus>, the heads of two figures arranged back to back. Both are drawn in brown ink with red highlights.</p>
+                                
+                            </decoNote>
+                        </decoDesc>
+
+
+                        <bindingDesc>
+                            <binding notBefore="1500" notAfter="1599">
+
+                                <p>English, 16th century, calfskin over wooden boards. Four raised bands on spine. Headband and tailband feature white thread. Both front and back blind tooled in similar fashion. The perimeter of the boards outlined by a fillet with a more narrow fillet running parallel to and just inside of this outer perimeter. This pairing of one broader and one more narrow fillet repeated both as horizontal lines approximately <measure type="written">30 mm</measure> from bottom and top and as vertical lines set in approximately <measure type="written">20 mm</measure> from fore edge and spine, with the result being the creation of a series of compartments formed by these perpendicular lines. In the center a panel rectangular frame is created by use of a roll that <persName>Dutschke</persName> identifies as "of Oldham's class HM.a (17-23)."  Inside of this, another pairing of wide and narrow fillet. A tool featuring a flower and leaf motif has been used to decorate each corner within the rectangle formed within the roll pattern, and this tool has been repeated four times on an axis to make a design at the very center of the boards. Lines have been tooled at an angle on either side of each raised band in such a manner that these lines intersect approximately <measure type="written">35mm</measure> in from the spine. </p>
+                                
+                                <p>Spine has been rebacked. Second compartment on spine outlined with parallel gold-tooled lines, and the following is stamped in gold on a red morocco label: <hi rend="italic">MS / THE / PRIKKE OF / CONSCIENCE</hi>. The third compartment is decorated in a similar manner, with the following stamped in gold: <hi rend="italic">PIERCE / PLOWMAN'S / VISION / &amp;C</hi>. The fifth compartment has <hi rend="italic">CXXIX</hi> stamped in gold. Each band has a single blind-tooled line in its center and another on each side. Compartments 1, 4, and 5 (i.e., those not featuring gold-tooled lines) have additional blind-tooled lines at the top and bottom edges of the compartment. </p>
+                                
+                                <p>Two anchors and catches for clasps survive on the front and back covers, respectively, but the clasps are gone. When <persName>Dutschke</persName> wrote her description, she noted that one clasp survived, presumably attached to the book, but that clasp is now loose and in an envelope kept inside the box that houses the manuscript</p>
+                                
+                                <p>Pastedowns are parchment leaves containing Latin texts identified by <persName>A. I. Doyle</persName> (see <persName>Dutschke</persName> p. 163) as excerpts from the letters of <persName>John of Salisbury</persName> (see ed. <persName>W. J. Millor</persName> and <persName>C. N. L. Brooke</persName>, Oxford 1979, v. 2 pp. 104 line 18-100  and pp. 200, line 9 - p. 206 line 4. <persName>Dutschke</persName> identifies these pastedowns as being from late 14th c. and in anglicana script. Two inscriptions at the bottom of the front pastedown are discussed below, as well as in <title>The Piers Plowman Electronic Archive 6</title>, section I.11. At the bottom of rear pastedown is a gold star and, written in pencil, <hi rend="italic">HM 128 V4D6</hi>. Both recto of front flyleaf and verso of rear flyleaf contain arabic numerals, perhaps mathematical calculations. On the recto of the front flyleaf are the bookplates of <persName>Ross Winans</persName> and the <persName>Earl of Ashburnham</persName>. <persName>Winans</persName>' bookplate is now adhered only on the left edge. It looks as if it had previously been pasted over most of the 16th-century signature <persName>Richard Rychard</persName>. <persName>Ashburnham</persName>'s bookplate reads <hi rend="italic">From the Library of the Earl of Ashburnham Appendix No. CXXX May 1897</hi>. The label is printed with the exception of <hi rend="italic">CXXX</hi>, which is written into a blank printed for that purpose. Written in pencil on the recto of flyleaf ir is <hi rend="italic">Catl A No 175</hi>; on the verso is written in blue pencil <hi rend="italic">A catal. 130</hi>. The verso also features a table of contents dated <date when="1751">1751</date> that lists the texts in order and the number of leaves that each text comprises.</p>
+                                  
+
+                            </binding>
+                        </bindingDesc>
+
+                    </physDesc>
+
+
+                    <history>
+                        <provenance> 
+                            
+                            <p>1. As described above, the dialect and composition of the manuscript suggest that the manuscript was made in a communal religious setting in <placeName>Warwickshire</placeName>. Hanna-Lawton suggest <placeName>Alcester</placeName> (OSB) or <placeName>Evesham</placeName> (worcs., OSB) as possibilities (xxiv).</p>
+                            
+                            <p>2. The bottom of the front pastedown includes two inscriptions. The first reads <hi rend="italic">Robert or William langeland made pers ploughman</hi>, and has been identified as likely being the hand of <persName>Ralph Coppinger</persName>, a knight of <placeName>Davington</placeName> who died in <date when="1551">1551</date> (<title>PPEA 6</title>, I.11). A second inscription, <hi rend="italic">Robertus Langlande natus in comitatu Salopie in villa Mortymers Clybery in the claylande, within .viij. myles of Malborne Hylles scripsit, Peers Ploughman, li. i / In somer season whan set was sunne</hi>, is in the hand of <persName>John Bale</persName> (d. <date when="1563">1563</date>), author of <title>Index Britanniae Scriptorum</title>. This attribution has been discussed extensively in the critical literature; see <title>PPEA 6</title> and <persName>Dutschke</persName>’s description (p. 163) for details.</p>
+                            
+                            <p>3. In <date when="1751">1751</date>, the list of contents on the verso of the front flyleaf was added. As <persName>Dutschke</persName> notes, a number of annotations in the same hand may be found throughout the manuscript. Perhaps the most telling of these occurs on <locus from="92r" to="92r">fol. 92</locus> at line 9138 of <title>The Prick of Conscience</title>, where we find written <hi rend="italic">The other MS ends here</hi>. This likely refers to British Library, Egerton 657, which begins lacks the beginning of the poem and begins at that line. Since both Egerton 657 and HM 128 once belonged to <persName>Adam Clarke</persName>, this suggests that these books were purchased together from a previous owner by <persName>Clarke</persName> (<persName>Dutschke</persName> 163).</p>
+                            
+                            <p>4. <persName>Adam Clarke</persName> (1760?-1832), is the first owner whose identity we know with certainty. The book is listed as item <hi rend="italic">CXXIX</hi> in <title>Catalogue of the Collection of Dr. Adam Clarke</title>.</p>
+                            
+                            <p>5. From there, <persName>Dutschke</persName> traces a quick succession of owners leading to the purchase of the book in <date when="1918">1918</date> by <persName>Henry E. Huntington</persName>:</p>
+                            
+                            <p><hi rend="italic">Both Egerton 657 and HM 128 belonged to <persName>Adam Clarke</persName> (1760?-1832); HM 128 in the <title>Catalogue of the Collection of Dr. Adam Clarke</title>, complied by <persName>J. B. B. Clarke</persName> (London <date when="1835">1835</date>) pp. 69-70, n. CXXIX (this number on the spine); his sale, Sotheby’s, <date when="1985-06-20">20 June 1836</date>, lot 352 to <persName>Thorpe</persName>; Thorpe Catalogue (<date when="1836">1836</date>) Suppl. n. 509. Acquired by <persName>Clifton W. Loscombe</persName> before <date when="1838">1838</date> (when <persName>F. Madden</persName> used it for his edition of art. 6); his sale, Sotheby’s, <date when="1854-06-19">19 June 1854</date>, lot 1167 to <persName>Upham</persName> for the fourth Earl of Ashburnham (1797-1878); see the <title>Catalogue of the Manuscripts at Ashburnham Place</title> (London n.d.), Appendix, n. CXXX; Ashburnham sale, Sotheby’s, <date when="1899-05-01">1 May 1899</date>, lot 78 to <persName>Quaritch</persName>; Quaritch Catalogue 193 (<date when="1899">1899</date>) n. 54. In <date when="1918-01">January 1918</date> <persName>Henry E. Huntington</persName> selected this and other books from the collection of <persName>Ross C. Winans</persName>, at the time in the hands of <persName>G. D. Smit</persName> (163).</hi></p>
+                            
+                            <p>A number of other names also occur throughout the manuscript. On <locus from="149r" to="149r">149r</locus> is written <hi rend="italic">betou(n) bryg(es)</hi>, and <locus from="153r" to="153r">153r</locus> <hi rend="italic">Maude</hi>, each in a 15th-century hand (probably the same hand) and written perpendicular to the text in the right margin. At the top of <locus from="101r" to="101r">101r</locus> in ink, <hi rend="italic">Aleksander London</hi> (or Loudon) in 15th- or 16th-century hand. At the bottom of <locus from="144v" to="144v">144v</locus>, in probably a 16th-c. hand, <hi rend="italic">cysley</hi>. <hi rend="italic">Richard Rychard</hi>, 16th c., on ir. On back pastedown, also <hi rend="italic">Richard</hi>, but in a different hand, either 16th- or 17th-c.. Also on the back pastedown, on the right edge, <hi rend="italic">John Sarum</hi>(?). The same hand that wrote <hi rend="italic">Richard</hi> on the back pastedown has written <hi rend="italic">shall recyue</hi>(?) beneath <hi rend="italic">John Sarum</hi>.</p>
+                                
+                            
+                        </provenance>
+                    </history>
+
+                    <additional>
+                        <adminInfo>
+                            <recordHist>
+                                <source>
+                                    <bibl> </bibl>
+                                </source>
+                            </recordHist>
+                        </adminInfo>
+
+                        <listBibl>
+                            <bibl><author>Benson, David</author> and <author>Lynne S. Blanchfield</author>. <title>The Manuscripts of Piers Plowman: The B-Version</title>. <pubPlace>Cambridge</pubPlace>: <publisher>D. S. Brewer</publisher>, <date when="1997">1997</date>.
+                            </bibl>
+
+                            <bibl><author>de Ricci, Seymour</author>. <title>A Census of Medieval and Renaissance Manuscripts in the United States and Canada</title>. 3 vols. <pubPlace>New York</pubPlace>: <publisher>H. W. Wilson Co.</publisher>, <date from="1935" to="1940">1935-40</date>. vol I., 54.
+                            </bibl>
+                            
+                            <bibl><author>Doyle, A. I.</author> "The Manuscripts." <title>Middle English Alliterative Poetry and its Literary Background: Seven Essays</title>. Ed. <editor>David Lawton</editor>. <pubPlace>Woodbridge, UK</pubPlace>: <publisher>D. S. Brewer</publisher>, <date when="1982">1982</date>. 88-100 (94).
+                            </bibl>
+
+                            <bibl><author>Dutschke, C. W.</author> <title>Guide to Medieval and Renaissance Manuscripts in the Huntington Library</title>. 2 vols. <pubPlace>San Marino</pubPlace>: <publisher>The Library</publisher>, <date when="1989">1989</date>. vol. I, 161-63.
+                            </bibl>
+                            
+                            <bibl><author>Guddat-Figge, Gisela</author>. <title>Catalogue of the
+                                Manuscripts Containing Middle English Romances</title>.
+                                <pubPlace>Munich</pubPlace>: <publisher>W. Fink</publisher>,
+                                <date when="1976">1976</date>. 287-88.</bibl>
+                            
+                            <bibl><editor>Hanna, Ralph</editor> and <editor>David Lawton</editor>,
+                                eds. <title>The Siege of Jerusalem</title>. EETS o.s. 320.
+                                <pubPlace>London</pubPlace>: <publisher>Oxford UP</publisher>,
+                                <date when="2003">2003</date>.</bibl>
+                            
+                            <bibl><editor>Kane, George</editor> and <editor>E Talbot Donaldson</editor>, eds. <title>Will's visions of Piers Plowman, do-well, do-better, and do-best</title>. By <author>William Langland</author>. <pubPlace>London</pubPlace>: <publisher>Athlone Press</publisher>, <date when="1988">1988</date>. 9-10.</bibl>
+                            
+                            <bibl><author>Kellogg, Allen Bond</author>. <title>The Language of the
+                                Alliterative Siege of Jerusalem</title>. Diss. U of Chicago,
+                                <date when="1943">1943</date>.</bibl>
+                            
+                            <bibl><editor>Kölbing, E</editor>. and <editor>Mabel Day</editor>, eds.
+                                <title>Siege of Jerusalem</title>. EETS o.s. 188.
+                                <pubPlace>London</pubPlace>: <publisher>Oxford UP</publisher>,
+                                <date when="1932">1932</date>. (Reprinted <date when="2001"
+                                    >2001</date>)</bibl>
+                            
+                            <bibl><author>McIntosh, Angus</author> and <author>M. L. Samuels</author>. <title>A Linguistic Atlas of Late Mediaeval English</title>. <pubPlace>New York</pubPlace>: <publisher>Aberdeen University Press</publisher>, <date>1986</date>.</bibl>
+                            
+                            <bibl><author>Millar, Bonnie</author>. <title>The Siege of Jerusalem in
+                                its Physical, Literary, and Historical Contexts</title>.
+                                <pubPlace>Dublin</pubPlace>: <publisher>Four Courts
+                                Press</publisher>, <date when="2000">2000</date>. 29.</bibl>
+                            
+                            <bibl><editor>Mustanoja, Tauno F.</editor>, ed. T<title>he Good Wife Taught her Daughter; The Good Wyfe wold a Pylgremage; The Thewis of Gud Women</title>. <pubPlace>Helsinki</pubPlace>: <publisher>Société néophilologique</publisher>, <date when="1948">1948</date>.</bibl>
+                            
+                            <bibl><author>Oldham, J. B.</author> <title>English Blind-stamped Bindings</title>. <pubPlace>Cambridge</pubPlace>: <publisher>Cambridge University Press</publisher>, <date when="1952">1952</date>.</bibl>
+                            
+                            <bibl><title>The Piers Plowman Electronic Archive 6: San Marino, Huntington Library HM 128 (HM, HM2</title>). Ed. <editor>Michael Calabrese</editor>, <editor>Hoyt N. Duggan</editor>, and <editor>Thorlac Turville-Petre</editor>. <publisher>The Society for Early English and Norse Electronic Texts</publisher>, <date when="2008">2008</date>.</bibl>
+                            
+                            <bibl><editor>Skeat, W. W.</editor>, ed. <title>The vision of William concerning Piers Plowman, together with Vita de Dowel, Dobet, et Dobest, secundum Wit et Resoun, by William Langland (about 1362-1393 A.D.) Ed. from numerous manuscripts, with prefaces, notes, and a glossary</title>. By <author>William Langland</author>. Pt. II, Early English Text Society, o.s. 54. <pubPlace>London</pubPlace>: <publisher>Trübner &amp; Co.</publisher>, <date when="1869">1869</date>.</bibl>
+                            
+                            <bibl><author>Turville-Petre, Thorlac</author>. "Putting It Right: The Corrections of Huntington Library MS HM 128 and BL Additional MS. 35287." <title>The Yearbook of Langland Studies</title>. 16 (<date when="2003">2003</date>): 41-65.</bibl>
+                            
+                            
+                        </listBibl>
+
+
+                    </additional>
+                </msDesc>
+            </sourceDesc>
         </fileDesc>
         <!--
 <revisionDesc> <change who="" when=""></change> </revisionDesc>

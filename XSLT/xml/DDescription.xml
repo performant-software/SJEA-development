@@ -4,7 +4,7 @@
         <fileDesc>
 
             <titleStmt>
-                <title>Descritpion of Lambeth Palace Library, MS 491, Part I</title>
+                <title>Descritpion of Lambeth Palace Library, MS 491, Part I (D)</title>
                 <author>Timothy L. Stinson</author>
             </titleStmt>
 
@@ -24,7 +24,7 @@
                         <settlement>London</settlement>
                         <institution></institution>
                         <repository>Lambeth Palace Library</repository>
-                        <idno>Lambeth Palace Library MS 491</idno>
+                        <idno>MS 491</idno>
                         <msName>D</msName>
                     </msIdentifier>
 
