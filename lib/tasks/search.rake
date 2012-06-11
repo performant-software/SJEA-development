@@ -29,7 +29,8 @@ namespace :sjea do
        current_img_file_name = ""
        pageuri = ""
        imgurl = ""
-       page_count = 0
+       total_page_count = 0
+       #current_line_count = 0
 
        lines.each do |line|
 
@@ -38,7 +39,11 @@ namespace :sjea do
             if content.empty? == false
               solrdoc = { uri: pageuri, url: imgurl, title: docnames[fname], section: "transcriptions", content: content }
               solr.add_object( solrdoc, 1, false )
-              page_count += 1
+              total_page_count += 1
+
+              #current_line_count += 1
+              #puts "page #{pageuri}, #{current_line_count} pages"
+              #current_line_count = 0
             end
 
             current_img_file_name = line[:pageimg]
@@ -47,6 +52,7 @@ namespace :sjea do
             content = line[:content]
           else
             content << " " << line[:content]
+            #current_line_count += 1
           end
 
        end
@@ -54,11 +60,14 @@ namespace :sjea do
        if content.empty? == false
          solrdoc = { uri: pageuri, url: imgurl, title: docnames[fname], section: "transcriptions", content: content }
          solr.add_object( solrdoc, 1, false )
-         page_count += 1
+         total_page_count += 1
+
+         #current_line_count += 1
+         #puts "page #{pageuri}, #{current_line_count} pages"
        end
 
        solr.commit( )
-       #puts "#{fname}: #{page_count} pages loaded"
+       puts "#{fname}: #{total_page_count} pages loaded"
     end
 
     puts "loading annotations..."
@@ -72,7 +81,7 @@ namespace :sjea do
 
        pageuri = ""
        imgurl = ""
-       page_count = 0
+       total_page_count = 0
 
        pages.each do |page|
 
@@ -82,12 +91,12 @@ namespace :sjea do
             content = page[:content]
             solrdoc = { uri: pageuri, url: imgurl, title: docnames[fname], section: "annotations", content: content }
             solr.add_object( solrdoc, 1, false )
-            page_count += 1
+            total_page_count += 1
 
        end
 
        solr.commit( )
-       #puts "#{fname}: #{page_count} pages loaded"
+       #puts "#{fname}: #{total_page_count} pages loaded"
 
     end
 
@@ -108,7 +117,7 @@ namespace :sjea do
 
        content = ""
        pageuri = "#{fname}-description"
-       page_count = 0
+       total_page_count = 0
 
        lines.each do |line|
          content << " " << line
@@ -117,11 +126,11 @@ namespace :sjea do
        if content.empty? == false
          solrdoc = { uri: pageuri, url: "", title: docnames[fname], section: "descriptions", content: content }
          solr.add_object( solrdoc, 1, false )
-         page_count += 1
+         total_page_count += 1
        end
 
        solr.commit( )
-       #puts "#{fname}: #{page_count} pages loaded"
+       #puts "#{fname}: #{total_page_count} pages loaded"
 
     end
 

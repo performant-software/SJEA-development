@@ -129,12 +129,32 @@ module TaskUtilities
   end
 
 
+  def occurs?( what, where )
+
+    if where.include?( what )
+      return 1
+    else
+      return 0
+    end
+  end
+
+  # count the number of times the word "what" occurs in "where"
+  def countTimes( what, where )
+
+    result = 0
+    wordlist = where.split
+    wordlist.each { |word| result += occurs?( what, word )}
+    return result
+
+  end
+
   def load_transcription_from_file( xmlfile )
 
      xmldoc = XML::Reader.file( xmlfile, :options => XML::Parser::Options::NOBLANKS | XML::Parser::Options::PEDANTIC )
 
      linecount = 0
      pagecount = 0
+     #pagelinecount = 0
      seqtags = 0
      pending_line_content = ""
      hl_line = ""
@@ -159,10 +179,13 @@ module TaskUtilities
                    result[ linecount ] = { :pageimg => page_image_file, :loc_line => loc_line, :hl_line => hl_line, :content => pending_line_content }
                    pending_line_content = ""
                    linecount += 1
+
                end
 
                page_image_file = xmldoc[ "entity" ]
                pagecount += 1
+               #pagelinecount = 0
+               #puts "got #{page_image_file}"
 
              when "l"
 
@@ -174,23 +197,32 @@ module TaskUtilities
                  result[ linecount ] = { :pageimg => page_image_file, :loc_line => loc_line, :hl_line => hl_line, :content => pending_line_content }
                  pending_line_content = ""
                  linecount += 1
+
+                 #pagelinecount += 1
+                 #puts "line-flushed "
                end
 
-               # TODO: fix me...
-               #pending_line_content = xmldoc.node.content
-               # if pending_line_content.empty? == true
-                   #puts "*********** ALERT line #{linecount} should not be empty ***********"
-               # end
+               # if this line node does not contain any child <seg> nodes or it contains 1 of a special type
+               contain_count = countTimes( "<seg", xmldoc.node.to_s( ) )
+               case contain_count
+                 when 0, 1
+                    if xmldoc.node.content.empty? == false
+                        pending_line_content << xmldoc.node.content << " "
+                        if contain_count == 1
+                          #puts "** SPECIAL CASE ** [#{pending_line_content}]"
+                        end
+                    end
+               end
 
-                loc_line = xmldoc[ "xml:id" ]
-                hl_line = xmldoc[ "n" ]
+               loc_line = xmldoc[ "xml:id" ]
+               hl_line = xmldoc[ "n" ]
 
              # we are in a line and this is a bit of content
              when "seg"
 
-                # sometimes there is a parent <seq> tag with no content so ignore those; they have a "type" attribute
-                if xmldoc[ "type" ] == nil
-                  pending_line_content << xmldoc.read_string << " "
+                case xmldoc[ "type" ]
+                  when nil, "shadowHyphen", "punct"
+                     pending_line_content << xmldoc.read_string << " "
                 end
            end
         end
@@ -203,10 +235,14 @@ module TaskUtilities
        abour( "page_image_file empty!") unless page_image_file.empty? == false
         result[ linecount ] = { :pageimg => page_image_file, :loc_line => loc_line, :hl_line => hl_line, :content => pending_line_content }
         linecount += 1
+
+       #pagelinecount += 1
+       #puts "     page #{page_image_file}; #{pagelinecount} lines"
+
      end
 
      xmldoc.close
-     #puts "processed #{pagecount} pages and #{linecount} lines"
+     puts "STATUS: #{xmlfile}: #{pagecount} pages, #{linecount} lines"
 
      return result
   end
