@@ -1,46 +1,4 @@
-//
-// color definitions
-//
-
-$page_background_color: #2F1E17;
-
-$title_text_color: white;
-
-$footer_text_color: #F0E7CF;
-$footer_background_color: $page_background_color;
-
-$header_tabs_active_color: #7B1C12;
-$header_tabs_inactive_color: #F0E7CF;
-
-$content_text_color: black;
-$content_background_color: #F0E7CF;
-
-$navitem_hover_color: white;
-$navitem_active_color: $page_background_color;
-$navitem_text_color: #695A42;
-
-$navbox_background_color: #DDD5BD;
-
-$contentheader_background_color: $navbox_background_color;
-
-//
-// size/position definitions
-//
-$page_width: 95%;
-
-$page_height: 1000px;
-$header_height:148px;
-$footer_height: 50px;
-
-$navbox_width: $page_width * ( 1 / 6 );
-$contentarea_width: $page_width * ( 5 / 6 );
-
-//
-// Font definitions...
-//
-$site_font: 'Ariel', sans-serif;
-$content_font: "Times New Roman", Times, serif;
-
+@import "sjea-defs";
 
 * {
    margin: 0;
@@ -49,6 +7,7 @@ $content_font: "Times New Roman", Times, serif;
 
 body {
     background-color: $page_background_color;
+    height: 100%;
 }
 
 #page {
@@ -60,11 +19,14 @@ body {
 
 #page-header {
 
-    width: 100%;
+    position: fixed;
+    width: $page_width;
+    margin: auto;
     height: $header_height;
     background-image: url("/images/banner_bg_stretch.jpg");
     background-repeat: repeat-x;
     color: $title_text_color;
+    z-index: $fixed_element_z_index;
 
     #background-graphic {
        position: absolute;
@@ -110,7 +72,7 @@ body {
     #header-tabs {
 
        position: relative;
-       padding: 118px 0 0 0;
+       padding-top: 118px;
 
        li {
           position: relative;
@@ -133,10 +95,6 @@ body {
           color: $header_tabs_inactive_color;
        }
 
-       li.home a {
-          //background-image: url("/images/tab-home.png");
-       }
-
        li.current a {
           background-image: url("/images/topnav_tab_active.png");
           background-repeat: no-repeat;
@@ -153,43 +111,41 @@ body {
        }
 
        li.current, li.home {
-          z-index: 100;
+          z-index: $fixed_element_z_index + 5;
        }
 
        li.manuscript {
-          z-index: 99;
+          z-index: $fixed_element_z_index + 4;
        }
 
        li.search {
-          z-index: 98;
+          z-index: $fixed_element_z_index + 3;
        }
 
        li.compare {
-          z-index: 97;
+          z-index: $fixed_element_z_index + 2;
        }
     }
 }
 
 #sidebar {
 
-   position: absolute;
+   position: fixed;
+   float: left;
    display: block;
-   padding: 0 0 0 25px;
-   min-height: $page_height - $header_height;
-
    width: $navbox_width;
    color: $navitem_text_color;
    background-color: $navbox_background_color;
-   z-index: 100;
-   //bottom: $footer_height + 15px;
-   //top: $header_height;
+   z-index: $fixed_element_z_index;
+   bottom: $footer_height + 8px;
+   top: $header_height;
 }
 
 #sidebar-items {
 
      #item-heading {
         height: 25px;
-        padding: 25px 0 25px 5px;
+        padding: 25px 0 25px 25px;
         font-size: 24px;
         color: $header_tabs_active_color;
      }
@@ -205,6 +161,7 @@ body {
         margin: 25px 0 20px 0;
         padding: 0;
         font-size: 16px;
+        padding: 0 0 0 25px;
 
         a {
            text-decoration: none;
@@ -229,33 +186,27 @@ body {
 
 #content {
 
+   position: relative;
+   float: right;
    color: $content_text_color;
    background-color: $content_background_color;
-   width: 100%;
-   min-height: $page_height - $header_height;
-
-   #content-title {
-      width: 100%;
-      height: 30px;
-      margin: auto;
-      text-align: left;
-      //padding: 20px 0 0 310px;
-      color: $page_background_color;
-      background-color: $content_background_color;
-   }
+   width: $contentarea_width;
+   top: $header_height;
+   bottom: $footer_height + 8px;
+   min-height: $page_height - $footer_height;
 
    #content-controls {
       position: relative;
       background-color: $contentheader_background_color;
       height: 30px;
-      margin: 15px 25px 0 265px;
+      margin: 15px 23px 0 25px;
    }
 
    #content-display {
       position: relative;
       font-family: $content_font;
       text-align: justify;
-      padding: 75px 25px 0 265px;
+      margin: 15px 23px 0 25px;
    }
 }
 
@@ -265,7 +216,8 @@ body {
 }
 
 #main-footer {
-   width: $page_width;
+   position: fixed;
+   width: 100%;
    height: $footer_height;
    margin: auto;
    text-align: center;

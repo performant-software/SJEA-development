@@ -57,14 +57,6 @@
 
       <div id="content">
 
-          <div id="content-title">
-              <!-- <h2>Search.</h2> -->
-          </div>  <!-- content-title -->
-
-          <div id="content-controls">
-
-          </div>  <!-- content-controls -->
-
           <div id="content-display">
 
               <div id="search-controls">
@@ -72,8 +64,8 @@
                   <form accept-charset="UTF-8" name="search" action="/solrsearch/dosearch" method="get">
 
                   <div id="textbox-div">
-                     <span>Search for: </span>
-                     <textarea id="search-text" name="searchfor" rows="2" cols="52"></textarea>
+                     <div>Search for: </div>
+                     <textarea id="search-text" name="searchfor"></textarea>
                   </div>
 
                   <div id="special-keys-div">
@@ -84,7 +76,7 @@
                   </div>
 
                   <div id="searchin-div">
-                     <span>Search in:</span>
+                     <div>Search in:</div>
                      <select name="facet" >
                         <option value="">Everything</option>
                         <option value="transcriptions">Transcriptions</option>
@@ -94,7 +86,7 @@
                   </div>
 
                   <div id="manuscripts-div">
-                      <span>Which manuscript(s):</span>
+                      <div>Which manuscript(s):</div>
                       <select name="transcription">
                          <option value="">All of them</option>
                          <option value="British Library, MS Additional 31042 (A)">British Library, MS Additional 31042 (A)</option>

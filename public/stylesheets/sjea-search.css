@@ -2,51 +2,55 @@
   margin: 0;
   padding: 0; }
 
-#content #content-display {
-  padding-top: 10px; }
-  #content #content-display #search-controls {
-    width: 40%;
-    padding: 0 0 0 25px;
+#content #content-display #search-controls {
+  width: 40%;
+  padding: 0 0 0 10px;
+  float: left;
+  font-family: "Ariel", sans-serif; }
+  #content #content-display #search-controls #textbox-div, #content #content-display #search-controls #special-keys-div, #content #content-display #search-controls #searchin-div, #content #content-display #search-controls #manuscripts-div, #content #content-display #search-controls #submit-div {
+    width: 100%;
+    padding: 0 0 10px 0;
+    text-align: right; }
+  #content #content-display #search-controls #search-text {
+    width: 100%; }
+  #content #content-display #search-controls #special-keys-div .special-key-button {
     float: left;
-    font-family: "Ariel", sans-serif; }
-    #content #content-display #search-controls #textbox-div, #content #content-display #search-controls #special-keys-div, #content #content-display #search-controls #searchin-div, #content #content-display #search-controls #manuscripts-div, #content #content-display #search-controls #submit-div {
-      width: 100%;
-      padding: 0 0 20px 0;
-      text-align: right; }
-    #content #content-display #search-controls #special-keys-div .special-key-button {
-      float: left;
-      width: 35px;
-      height: 35px;
-      font-size: 18px; }
-  #content #content-display #search-instructions {
-    width: 55%;
-    text-align: justify;
-    padding: 0 0 0 5px;
-    float: right;
-    border-left-style: solid;
-    border-width: 2px;
-    font-family: "Ariel", sans-serif; }
-  #content #content-display .result-header {
-    padding: 15px 0 10px 0;
-    font-size: 22px;
-    clear: both;
-    font-family: "Ariel", sans-serif; }
-  #content #content-display #paginate-div {
-    padding: 10px 0 0 0; }
-  #content #content-display .result {
-    padding: 0 0 14px 0; }
-    #content #content-display .result .result-title {
-      padding: 8px 0 0 0;
-      font-size: 18px; }
-      #content #content-display .result .result-title a {
-        font-weight: bold;
-        color: black; }
-    #content #content-display .result .result-snippet {
-      padding: 10px 0 0 0;
-      font-size: 16px; }
-    #content #content-display .result .result-snippet em {
-      background-color: pink;
-      font-style: normal; }
+    width: 35px;
+    height: 35px;
+    font-size: 18px; }
+  #content #content-display #search-controls #search-submit {
+    width: 90px;
+    height: 33px;
+    font-size: 15px; }
+#content #content-display #search-instructions {
+  width: 55%;
+  text-align: justify;
+  padding: 0 0 0 5px;
+  float: right;
+  border-left-style: solid;
+  border-width: 2px;
+  font-family: "Ariel", sans-serif; }
+#content #content-display .result-header {
+  padding: 15px 0 10px 0;
+  font-size: 22px;
+  clear: both;
+  font-family: "Ariel", sans-serif; }
+#content #content-display #paginate-div {
+  padding: 10px 0 0 0; }
+#content #content-display .result {
+  padding: 0 0 14px 0; }
+  #content #content-display .result .result-title {
+    padding: 8px 0 0 0;
+    font-size: 18px; }
+    #content #content-display .result .result-title a {
+      font-weight: bold;
+      color: black; }
+  #content #content-display .result .result-snippet {
+    padding: 10px 0 0 0;
+    font-size: 16px; }
+  #content #content-display .result .result-snippet em {
+    background-color: pink;
+    font-style: normal; }
 
 #pagination ul {
   border: 0;

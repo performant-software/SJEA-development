@@ -1,12 +1,4 @@
-//
-// Color definitions...
-//
-$content_text_color: black;
-
-//
-// Font definitions...
-//
-$site_font: 'Ariel', sans-serif;
+@import "sjea-defs";
 
 * {
    margin: 0;
@@ -17,22 +9,21 @@ $site_font: 'Ariel', sans-serif;
 
    #content-display {
 
-       padding-top: 10px;
-
        #search-controls {
 
           width: 40%;
-          padding: 0 0 0 25px;
+          padding: 0 0 0 10px;
           float: left;
           font-family: $site_font;
 
           #textbox-div, #special-keys-div, #searchin-div, #manuscripts-div, #submit-div {
               width: 100%;
-              padding: 0 0 20px 0;
+              padding: 0 0 10px 0;
               text-align: right;
           }
 
-          #textbox-div {
+          #search-text {
+              width: 100%;
           }
 
           #special-keys-div {
@@ -43,6 +34,16 @@ $site_font: 'Ariel', sans-serif;
                  height: 35px;
                  font-size: 18px;
               }
+          }
+
+          #manuscripts-div {
+          }
+
+          #search-submit {
+             width: 90px;
+             height: 33px;
+             font-size: 15px;
+
           }
        }
 
