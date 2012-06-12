@@ -111,28 +111,28 @@
 
               <div id="search-instructions">
 
-                  <p><b>rayne OR water OR stremys</b> finds texts with any or all of the words</p>
+                  <p><b>rayne OR water OR stremys</b> finds pages with any or all of the words</p>
                   </br>
 
-                  <p><b>rayne AND water AND stremys</b> finds only texts with all of the words</p>
+                  <p><b>rayne AND water AND stremys</b> finds only pages with all of the words</p>
                   </br>
 
-                  <p><b>rayne AND water AND NOT stremys</b> finds only texts with the words rayne and water that do not contain the word stremys</p>
+                  <p><b>rayne AND water AND NOT stremys</b> finds only pages with the words rayne and water that do not contain the word stremys</p>
                   </br>
 
-                  <p><b>"rayne in the strete"</b> finds that exact phrase</p>
+                  <p><b>"rayne in the strete"</b> finds pages with that exact phrase</p>
                   </br>
 
-                  <p><b>"rayne strete"~4</b> finds the word rayne and the word strete no farther than four words apart</p>
+                  <p><b>"rayne strete"~4</b> finds pages with the word rayne and the word strete no farther than four words apart</p>
                   </br>
 
-                  <p><b>ray?e</b> finds rayne and rayse</p>
+                  <p><b>ray?e</b> finds pages with the words rayne and rayse</p>
                   </br>
 
-                  <p><b>ray*e</b> finds raykande, raylede, rayne, rayse, raysede, and rayssede</p>
+                  <p><b>ray*e</b> finds pages with the words raykande, raylede, rayne, rayse, raysede, and rayssede</p>
                   </br>
 
-                  <p><b>rayne~</b> finds words similar to rayne according to the Levenshtein distance algorithm (fuzzy matching). By putting a number between zero and one
+                  <p><b>rayne~</b> finds pages with words similar to rayne according to the Levenshtein distance algorithm (fuzzy matching). By putting a number between zero and one
                         immediately after the tilde, you can control the Levenshtein distance (degree of fuzziness)</p>
                   <p>For example, <b>rayne~0.05</b> finds words remotely similar to rayne while
                                   <b>rayne~0.95</b> finds words very similar to rayne. If you do not specify, the default is ~0.5.</p>

@@ -10,7 +10,14 @@ class SolrsearchController < ApplicationController
 
     # generate our search interface and issue the query
     solr = Solr.factory({ testing: false })
-    @results = solr.search( { :q => @inparams[:searchfor], :t => @inparams[:transcription], :f => @inparams[:facet], :page => page, :rows => 10 } )
+
+    # solr does not like wildcard searches that contain upper case letters
+    searchfor = @inparams[:searchfor]
+    if searchfor.include?( "*" ) || searchfor.include?( "?" )
+      searchfor = searchfor.downcase
+    end
+
+    @results = solr.search( { :q => searchfor, :t => @inparams[:transcription], :f => @inparams[:facet], :page => page, :rows => 10 } )
 
   end
 
