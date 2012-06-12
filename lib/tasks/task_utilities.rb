@@ -249,26 +249,18 @@ module TaskUtilities
 
   def load_comparison_from_file( xmlfile )
 
-    result = []
+    result = Array.new
     linecount = 0
-    xmldoc = XML::Reader.file( xmlfile, :options => XML::Parser::Options::NOBLANKS | XML::Parser::Options::PEDANTIC )
+    file = File.new( xmlfile, "r")
+    while ( json = file.gets )
 
-    while xmldoc.read
-       unless xmldoc.node_type == XML::Reader::TYPE_END_ELEMENT
+       #puts "[#{json.gsub(/\n/, "" )}]"
+       parsed_json = ActiveSupport::JSON.decode( json.strip )
+       result[ linecount] = parsed_json
+       linecount += 1
 
-          case xmldoc.name
-            when "l"
-               trans = xmldoc[ "attr" ]
-               loc_line = xmldoc[ "line" ]
-               line_content = xmldoc.node.content
-               result[ linecount] = { :trans => trans, :loc_line => loc_line, :content => line_content }
-               linecount += 1
-
-          end
-       end
     end
-
-    xmldoc.close
+    file.close
     return result
 
   end

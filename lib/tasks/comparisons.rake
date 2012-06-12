@@ -31,28 +31,18 @@ namespace :sjea do
 
         local_lnumber = line[:loc_line]
         hl_lnumber = line[:hl_line].gsub( ", ", "-" )
-        text_line = CGI::escapeHTML( line[:content] )
+        text_line = CGI::escapeHTML( line[:content].gsub(/\n/, "" ) )
 
-        fname = "#{workdir}/#{hl_lnumber}.xml"
-        output = "<l attr=\'#{tfilename}\' line=\'#{local_lnumber}'>#{text_line}</l>\n"
-
-        # add a div tag if necessary... required for the subsequent XML parsing !!!
-        if file_exists( fname ) == false
-           append_to_file( fname, "<div>\n" )
-        end
+        # create json files of the information...
+        fname = "#{workdir}/#{hl_lnumber}.json"
+        output = "{ \"trans\" : \"#{tfilename}\", \"loc_line\" : \"#{local_lnumber}\", \"content\" : \"#{text_line}\"}\n"
         append_to_file( fname, output )
 
       end
 
     end
 
-    # close the div for each file
-    files = Dir.glob( "#{workdir}/*.xml" )
-    files.each do |fname|
-       append_to_file( fname, "</div>\n" )
-    end
-
-    files = Dir.glob( "#{workdir}/*.xml" ).sort! { |a, b| filename_sort_helper( a, b ) }
+    files = Dir.glob( "#{workdir}/*.json" ).sort! { |a, b| filename_sort_helper( a, b ) }
     puts "rolling up comparisons: #{files.size} files to process..."
 
     ix = 0
@@ -61,18 +51,18 @@ namespace :sjea do
     files.each do |fname|
 
        lines = load_comparison_from_file( fname )
-       outfile = targetdir + "/" + fname.split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1') + ".html";
+       outfile = targetdir + "/" + fname.split( "/" )[ 2 ].gsub(/^(.*).json$/, '\1') + ".html";
 
        # generate the previous and next page tags...
        if ix == 0  # first page of comparisons
           prevpage = "HL.2147"
-          nextpage = files[ ix + 1 ].split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1');
+          nextpage = files[ ix + 1 ].split( "/" )[ 2 ].gsub(/^(.*).json$/, '\1');
        elsif ix == ixend    # last page of comparisons
-         prevpage = files[ ix - 1 ].split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1');
+         prevpage = files[ ix - 1 ].split( "/" )[ 2 ].gsub(/^(.*).json$/, '\1');
          nextpage = "HL.0001"
        else
-          prevpage = files[ ix - 1 ].split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1');
-          nextpage = files[ ix + 1 ].split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1');
+          prevpage = files[ ix - 1 ].split( "/" )[ 2 ].gsub(/^(.*).json$/, '\1');
+          nextpage = files[ ix + 1 ].split( "/" )[ 2 ].gsub(/^(.*).json$/, '\1');
        end
 
        append_to_file( outfile, "<div id=\"previous-page\" href=\"#{prevpage}\"></div><div id=\"next-page\" href=\"#{nextpage}\"></div>\n<table id=\"compare-results\">\n" )
@@ -89,10 +79,10 @@ namespace :sjea do
          alt += 1
 
          # do we have this particular transcript
-         tx = lines.index{|l| l[:trans] == tname}
+         tx = lines.index{|l| l["trans"] == tname}
 
          if tx != nil
-            compline << "<td>#{lines[tx][:loc_line].split( "." )[1].sub(/^[0]*/,"")}</td><td>(#{tname.sub("SJ", "" )})</td><td class=\"textline\">#{lines[tx][:content]}</td>\n"
+            compline << "<td>#{lines[tx]["loc_line"].split( "." )[1].sub(/^[0]*/,"")}</td><td>(#{tname.sub("SJ", "" )})</td><td class=\"textline\">#{lines[tx]["content"]}</td>\n"
          else
             compline << "<td></td><td>(#{tname.sub("SJ", "")})</td><td class=\"textline\">---- no text ----</td>\n"
          end
