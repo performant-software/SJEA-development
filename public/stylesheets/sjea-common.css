@@ -120,7 +120,7 @@ body {
   #sidebar-items li a:hover {
     color: white; }
 #sidebar-items .sublist {
-  padding: 0 0 0 20px;
+  padding: 0 0 0 30px;
   font-size: 13px;
   cursor: pointer; }
 #sidebar-items .active {
@@ -193,40 +193,3 @@ body {
 .blockUI h1 {
   font-family: 'trebuchet ms', verdana, arial;
   font-size: 20px; }
-
-#lb-zoom-image-div {
-  width: 875px;
-  height: 910px;
-  margin: auto;
-  border: 3px;
-  border-style: solid;
-  border-color: #696969;
-  background-color: #f0e7cf; }
-
-#fs-zoom-image-div {
-  position: relative;
-  top: 158px;
-  width: 875px;
-  height: 910px;
-  margin: auto;
-  border: 3px;
-  border-style: solid;
-  border-color: #696969;
-  background-color: #f0e7cf; }
-
-#copyright-div {
-  padding: 15px 0 0 0;
-  width: 100%;
-  text-align: center;
-  font-size: 12px;
-  font-family: "Ariel", sans-serif;
-  color: #f0e7cf; }
-
-#open-new-zoom-window {
-  padding: 15px 0 0 0;
-  width: 100%;
-  text-align: center;
-  font-size: 14px;
-  font-family: "Ariel", sans-serif; }
-  #open-new-zoom-window a {
-    color: #f0e7cf; }

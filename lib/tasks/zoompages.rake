@@ -10,6 +10,7 @@ fs_template = "<!DOCTYPE html>
     <title> Siege of Jerusalem Electronic Archive</title>
 
     <link href=\"/stylesheets/sjea-common.css\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />
+    <link href=\"/stylesheets/sjea-manuscripts.css\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />
 
     <script src=\"/javascripts/jquery-1.7.2.min.js\" type=\"text/javascript\"></script>
     <script src=\"/javascripts/ZoomifyImageViewer.js\" type=\"text/javascript\"></script>
@@ -57,6 +58,7 @@ fs_template = "<!DOCTYPE html>
       <title> Siege of Jerusalem Electronic Archive</title>
 
       <link href=\"/stylesheets/sjea-common.css\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />
+      <link href=\"/stylesheets/sjea-manuscripts.css\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />
 
       <script src=\"/javascripts/jquery-1.7.2.min.js\" type=\"text/javascript\"></script>
       <script src=\"/javascripts/ZoomifyImageViewer.js\" type=\"text/javascript\"></script>

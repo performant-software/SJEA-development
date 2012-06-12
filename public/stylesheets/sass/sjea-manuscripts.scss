@@ -70,3 +70,48 @@
       text-align: justify;
    }
 }
+
+#lb-zoom-image-div {
+   width: 875px;
+   height: 910px;
+   margin: auto;
+   border: 3px;
+   border-style: solid;
+   border-color: $image_border_color;
+   background-color: $content_background_color;
+
+}
+
+#fs-zoom-image-div {
+   position: relative;
+   top: $header_height + 10px;
+   width: 875px;
+   height: 910px;
+   margin: auto;
+   border: 3px;
+   border-style: solid;
+   border-color: $image_border_color;
+   background-color: $content_background_color;
+}
+
+#open-new-zoom-window {
+    padding: 15px 0 0 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-family: $site_font;
+    a {
+       color: $content_background_color;
+    }
+}
+
+#copyright-div {
+    padding: 15px 0 0 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-family: $site_font;
+    color: $content_background_color;
+}
+
+

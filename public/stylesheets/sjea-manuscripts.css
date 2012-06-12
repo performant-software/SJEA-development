@@ -37,3 +37,40 @@
   background: url("/images/xmlbutton.jpg") no-repeat bottom; }
 #content #content-display {
   text-align: justify; }
+
+#lb-zoom-image-div {
+  width: 875px;
+  height: 910px;
+  margin: auto;
+  border: 3px;
+  border-style: solid;
+  border-color: #696969;
+  background-color: #f0e7cf; }
+
+#fs-zoom-image-div {
+  position: relative;
+  top: 158px;
+  width: 875px;
+  height: 910px;
+  margin: auto;
+  border: 3px;
+  border-style: solid;
+  border-color: #696969;
+  background-color: #f0e7cf; }
+
+#open-new-zoom-window {
+  padding: 15px 0 0 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Ariel", sans-serif; }
+  #open-new-zoom-window a {
+    color: #f0e7cf; }
+
+#copyright-div {
+  padding: 15px 0 0 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  font-family: "Ariel", sans-serif;
+  color: #f0e7cf; }
