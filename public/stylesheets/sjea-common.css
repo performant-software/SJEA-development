@@ -194,12 +194,22 @@ body {
   font-family: 'trebuchet ms', verdana, arial;
   font-size: 20px; }
 
-#zoom-image-div {
-  padding: 15px 0 0 0;
+#lb-zoom-image-div {
   width: 875px;
   height: 910px;
   margin: auto;
-  border: 1px;
+  border: 3px;
+  border-style: solid;
+  border-color: #696969;
+  background-color: #f0e7cf; }
+
+#fs-zoom-image-div {
+  position: relative;
+  top: 158px;
+  width: 875px;
+  height: 910px;
+  margin: auto;
+  border: 3px;
   border-style: solid;
   border-color: #696969;
   background-color: #f0e7cf; }

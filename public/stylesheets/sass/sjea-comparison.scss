@@ -10,11 +10,14 @@
    #content-controls {
 
       #page-number-display {
+          position: absolute;
+          width: 52%;
           text-align: right;
-          margin: 0 0 0 365px;
+          margin: 5px 0 0 0;
+          font-size: 20px;
       }
 
-      #previous-button, #next-button {
+      #previous-button, #next-button, #hl-line-go-button {
           position: relative;
           width: 100px;
           height: 18px;
@@ -23,6 +26,7 @@
       #previous-button {
           float: left;
           margin: 6px 0 0 6px;
+          z-index: 10;
       }
 
       #next-button {
@@ -30,22 +34,15 @@
           margin: 6px 6px 0 0;
       }
 
-      #hl-line-entry-label {
-          text-align: right;
-          margin: 0 0 0 120px;
-          font-size: 14px;
-      }
-
       #hl-line-entry {
+          float: right;
           width: 70px;
-          margin: 4px 0 0 0;
+          margin: 5px 20px 0 0;
       }
 
       #hl-line-go-button {
-          position: relative;
-          width: 40px;
-          height: 18px;
-          margin: 6px 0 0 5px;
+          float: right;
+          margin: 6px 10px 0 0;
       }
    }
 

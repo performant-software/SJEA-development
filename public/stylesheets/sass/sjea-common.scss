@@ -267,16 +267,29 @@ body {
    font-size: 20px;
 }
 
-#zoom-image-div {
-   padding: 15px 0 0 0;
+#lb-zoom-image-div {
    width: 875px;
    height: 910px;
    margin: auto;
-   border: 1px;
+   border: 3px;
    border-style: solid;
-   border-color: #696969;
+   border-color: $image_border_color;
+   background-color: $content_background_color;
+
+}
+
+#fs-zoom-image-div {
+   position: relative;
+   top: $header_height + 10px;
+   width: 875px;
+   height: 910px;
+   margin: auto;
+   border: 3px;
+   border-style: solid;
+   border-color: $image_border_color;
    background-color: $content_background_color;
 }
+
 
 #copyright-div {
     padding: 15px 0 0 0;

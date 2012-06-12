@@ -16,7 +16,7 @@ fs_template = "<!DOCTYPE html>
 
     <script type=\"text/javascript\">
        $(document).ready(function() {
-          Z.showImage(\"zoom-image-div\", \"images/zoom/_FILENAME_\", \"\");
+          Z.showImage(\"fs-zoom-image-div\", \"images/zoom/_FILENAME_\", \"\");
        });
     </script>
 
@@ -34,7 +34,7 @@ fs_template = "<!DOCTYPE html>
           <div id=\"editor-name\">Timothy L. Stinson, editor</div>
       </div> <!-- page-header -->
 
-      <div id=\"zoom-image-div\"></div>
+      <div id=\"fs-zoom-image-div\"></div>
       <div id=\"copyright-div\">
          <a>_COPYRIGHT_</a>
       </div>
@@ -63,7 +63,7 @@ fs_template = "<!DOCTYPE html>
 
       <script type=\"text/javascript\">
          $(document).ready(function() {
-            Z.showImage(\"zoom-image-div\", \"images/zoom/_FILENAME_\", \"\");
+            Z.showImage(\"lb-zoom-image-div\", \"images/zoom/_FILENAME_\", \"\");
          });
       </script>
 
@@ -71,7 +71,7 @@ fs_template = "<!DOCTYPE html>
 
     <body>
 
-        <div id=\"zoom-image-div\"></div>
+        <div id=\"lb-zoom-image-div\"></div>
         <div id=\"copyright-div\">
            <span>_COPYRIGHT_</span>
         </div>
