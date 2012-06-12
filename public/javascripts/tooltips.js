@@ -1,14 +1,18 @@
 $(document).ready(function() {
+   decorateTooltips( );
+});
+
+function decorateTooltips( ) {
 
     $(".standard-tooltip").tooltip({
         opacity: 0.8,
 		effect: 'fade',
 	 	position: 'top center',
-		offset: [-8, 25],
 		relative: true,
-        delay: 30,
+        delay: 100,
         events: {
 			def: "mouseover, mouseout"
 		}
 	});
-});
+
+}
