@@ -3,14 +3,12 @@ $(document).ready(function() {
     // thorn
     $("#special-button-1").click(function() {
         addCharacter( '\u00DE');
-        $("#search-text").focus();
         setCaretPosition( "search-text", $("#search-text").val( ).length );
     });
 
     // yogh
     $("#special-button-2").click(function() {
         addCharacter( '\u021D');
-        $("#search-text").focus();
         setCaretPosition( "search-text", $("#search-text").val( ).length );
     });
 
