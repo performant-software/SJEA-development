@@ -27,6 +27,15 @@ $(document).ready(function() {
 	   source: getAvailableLines( )
 	});
 
+    // add a return key handler
+    $("#hl-line-entry").keydown( function(event){
+       if( event.keyCode == 13 ) {
+          $("#hl-line-go-button").click( );
+          // prevent this from being handled elsewhere...
+          event.preventDefault( );
+       }
+    });
+
     // grab the URL paramaters...
     var params = parseURL();
     showComparison( params["comparison"] );

@@ -12,6 +12,15 @@ $(document).ready(function() {
         setCaretPosition( "search-text", $("#search-text").val( ).length );
     });
 
+    // add a return key handler
+    $("#search-text").keydown( function(event){
+       if( event.keyCode == 13 ) {
+          $("#search-submit").click( );
+          // prevent this from being handled elsewhere...
+          event.preventDefault( );
+       }
+    });
+
     $("#search-text").focus();
 });
 
