@@ -41,9 +41,9 @@
   padding: 0 0 14px 0; }
   #content #content-display .result .result-title {
     padding: 8px 0 0 0;
-    font-size: 18px; }
+    font-size: 18px;
+    font-weight: bold; }
     #content #content-display .result .result-title a {
-      font-weight: bold;
       color: black; }
   #content #content-display .result .result-snippet {
     padding: 10px 0 0 0;

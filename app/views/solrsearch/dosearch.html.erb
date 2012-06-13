@@ -169,10 +169,9 @@
           <%- hits = @results[:hits] %>
           <%- hits.each do |hit| %>
 
-             <%- manuscript = "SJ#{hit["title"].gsub(/^.*\((.*)\)$/, '\1')}" %>
              <div class="result">
                  <div class="result-title">
-                    <a href="/manuscript.html?manuscript=<%= manuscript %>&view=alltags&folio=<%= hit["uri"] %>"> <%= hit["title"] %></a>
+                    <span><%= raw( makeTitleHTML( hit["uri"], hit["title"] ) ) %></span>
                  </div>
                  <div class="result-snippet">
                     <span><%= raw( hit["highlighting"][0] ) %></span>
