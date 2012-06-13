@@ -47,14 +47,21 @@
           }
        }
 
-       #search-instructions {
+       #search-instructions-div {
+
            width: 55%;
            text-align: justify;
-           padding: 0 0 0 5px;
+           padding: 0 0 0 10px;
            float: right;
-           border-left-style: solid;
-           border-width: 2px;
+           //border-left-style: solid;
+           //border-width: 2px;
            font-family: $site_font;
+
+           #toggle-instructions-button {
+              margin: 10px 0 10px 0;
+              width: 150px;
+              height: 20px;
+           }
        }
 
       .result-header {

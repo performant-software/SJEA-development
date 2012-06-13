@@ -1,6 +1,10 @@
 $(document).ready(function() {
 
-   $("#params-div").hide();
+    // hide the div with the search parameters
+    $("#params-div").hide();
+
+    // hide the instructions
+    $("#toggle-instructions-button").click( );
 
     $(".new-page").click(function() {
        var page = $(this).attr( "page" );

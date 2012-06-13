@@ -12,6 +12,16 @@ $(document).ready(function() {
         setCaretPosition( "search-text", $("#search-text").val( ).length );
     });
 
+    // search instructiuons toggle behavior handlers
+	$("#toggle-instructions-button").toggle( function(){
+        $( "#search-instructions").slideUp( 350 );
+        $("#toggle-instructions-button").text( "search tips");
+	},
+	function(){
+		$( "#search-instructions").slideDown( 350 );
+        $("#toggle-instructions-button").text( "hide tips");
+	});
+
     // add a return key handler
     $("#search-text").keydown( function(event){
        if( event.keyCode == 13 ) {

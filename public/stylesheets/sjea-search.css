@@ -22,14 +22,16 @@
     width: 90px;
     height: 33px;
     font-size: 15px; }
-#content #content-display #search-instructions {
+#content #content-display #search-instructions-div {
   width: 55%;
   text-align: justify;
-  padding: 0 0 0 5px;
+  padding: 0 0 0 10px;
   float: right;
-  border-left-style: solid;
-  border-width: 2px;
   font-family: "Ariel", sans-serif; }
+  #content #content-display #search-instructions-div #toggle-instructions-button {
+    margin: 10px 0 10px 0;
+    width: 150px;
+    height: 20px; }
 #content #content-display .result-header {
   padding: 15px 0 10px 0;
   font-size: 22px;
