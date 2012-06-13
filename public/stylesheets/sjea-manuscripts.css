@@ -29,6 +29,8 @@
   background-color: aqua; }
 #content #content-controls #color-key-6 {
   background-color: fuchsia; }
+#content #content-controls #color-key-7 {
+  background-color: darkgray; }
 #content #content-controls #xml-button {
   float: right;
   width: 50px;
