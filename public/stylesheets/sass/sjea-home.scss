@@ -27,6 +27,7 @@
 
       #thanks {
          width: 100%;
+         clear: both;
          margin: 25px 0 25px 0;;
          text-align: center;
          font-style: italic;
@@ -96,6 +97,10 @@
       #pulib-logo{
          background-image: url(/images/partnerlogo_btm_princeton.jpg);
          width: 225px;
+      }
+
+      #terms-list {
+         margin: 0 0 0 50px;
       }
    }
 }

@@ -1,9 +1,112 @@
 <div id=use-copy>
-    <p>
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget mauris turpis. Aenean luctus luctus nulla nec sagittis. Sed tellus sem, aliquam a cursus sit amet, semper non quam. Nunc quis mollis orci. Vestibulum feugiat sodales elementum. Suspendisse justo massa, tincidunt vel ornare quis, varius vel turpis. Suspendisse vehicula ligula sed purus blandit scelerisque. Pellentesque ultrices lacus et sem eleifend sed varius lectus fringilla. Nullam malesuada libero a dui pellentesque semper. Cras nec dolor in tortor ornare rutrum. In et neque nec ligula venenatis semper. Fusce euismod pretium blandit. Nulla nec erat in quam convallis dapibus ac eu nisl. Nunc vulputate quam ut ligula euismod tempor.
+
+    <p><h3>The Manuscripts tab</h3> links to a list of all manuscript copies of the poem, which are listed in alphabetical order by manuscript sigil.
+       Clicking on the name of a manuscript will open a transcription of that manuscript and also provide access to both a full description of the manuscript
+       and color images of the portions of the manuscript containing <em>The Siege of Jerusalem</em>.
     </p>
+
     </br>
-    <p>
-       Ut elementum fringilla odio ut cursus. Phasellus augue ipsum, tincidunt at hendrerit vestibulum, imperdiet sed elit. Cras bibendum mauris et nunc pharetra eget pulvinar diam ultricies. Integer tortor ante, aliquam ut vestibulum quis, condimentum vitae dolor. Aenean euismod luctus ligula, eu vehicula libero fermentum et. Etiam mi mi, lacinia at venenatis non, malesuada id dui. Donec fermentum, sapien id malesuada viverra, quam lacus congue purus, a pretium tortor tellus et est. Cras posuere, libero feugiat condimentum cursus, nisl lacus interdum nibh, vel viverra justo ligula a mi.
+
+    <p><h3>Style sheets</h3><em>The Siege of Jerusalem Electronic Archive</em> uses style sheets and color encoding conventions adapted from those created for the <em>Piers Plowman
+       Electronic Archive</em>. The transcription of each manuscript may be consulted in four different views: Diplomatic, Critical, Scribal, and AllTags.
+       These views may be selected from the drop menu at the top of each screen displaying a manuscript transcription. The default view when a new manuscript is selected
+       is Diplomatic. The four views offer a variety of ways of encountering the text:
     </p>
+
+    <p>The Diplomatic style sheet suppresses all notes and indications of error or eccentric word division. Its text is otherwise identical to that presented in the
+       Scribal style sheet. The goal of this style sheet is to represent as faithfully as possible the physical features of the manuscript and to minimize editorial
+       intervention.</p>
+
+    <p>The Critical style sheet is designed to indicate the text as intended to appear after editorial intervention. Since the text displayed is a reconstructed,
+       putative text, it lacks the color features that appear in the more nearly diplomatic transcriptions of the manuscript. Eccentric word divisions are silently
+       (at least in the surface display) corrected in this style sheet; for example, <em>abe</em> appears as <em>a be</em>. The Critical view also adds links along the left edge of
+       the text that lead to the archive’s Comparison feature. Clicking a link will lead to a list of all manuscript readings of that line organized alphabetically
+       by sigil; clicking the back button on your browser will return you to the transcription.</p>
+
+    <p>The Scribal style sheet's presentation of the text represents as closely as possible both the readings and features of the manuscript text as well as the most
+       information about editorial intervention. Resolved abbreviations and suspensions appear in italics. Color in this style sheet serves two functions:
+       red and blue indicate colors of ink used by the scribe, while any other colors — aqua, gray, lime, olive, pink, purple, fuchsia and violet — mark editorial
+       functions, as described below.</p>
+
+    <p>The AllTags style sheet, as its name implies, is intended to display the full content of markup in XML tags. The XML encoding itself may be viewed by
+       clicking the “XML” button on the upper right hand side of the header for each transcription file.</p>
+
+    </br>
+
+    <p><h3>Color encoding conventions</h3> Color encoding of text is used in conjunction with style sheets to indicate editorial interventions.
+       The guide below provides a full explanation of the meaning of each color. Each transcription also features a color key along the top right edge of the header.
+       Positioning your mouse above a color will activate a mouseover text box that offers a brief summary of the role of that color.
+    </p>
+
+    </br>
+    <p><span style="color: red">Red</span> occurs in the Scribal, Diplomatic, and AllTags style sheets where the scribe used red ink. Black characters with a red shadow represent characters
+       written in text ink and touched with a bit of red ink. </p>
+    </br>
+    <p><span style="color: blue">Blue</span> in the Scribal, Diplomatic, and AllTags style sheets indicates textual elements written in blue ink. </p>
+    </br>
+    <p><span style="color: green">Lime</span> in the Scribal and AllTags style sheets indicates all matter appearing inside the XML tag <orig> (=original reading). For instance, A.44 reads
+       " he was a Marynere of Mighte & <span style="color: green">amarchande</span> bothe " with "amarchande" appearing in lime green in both Scribal and Alltags. (AllTags also displays the
+       regularized reading; see "Olive" below.)</p>
+    </br>
+    <p><span style="color: olive">Olive</span> in the AllTags style sheet indicates a regularized reading (contents of a <reg> tag) shown in conjunction with the corresponding <orig> reading in lime green.
+       For instance, A.44 reads "he was a Marynere of Mighte & <span style="color: green">amarchande /</span> <span style="color: olive">a marchande</span> bothe" Note that the Critical style sheet prints only "a marchande" without any
+       marker to call attention to it. Similarly, the Diplomatic style sheet prints "amarchande" in black without notice.</p>
+    </br>
+    <p><span style="color: violet">Violet</span> in the Scribal and AllTags style sheets distinguishes readings believed to reflect scribal error (the contents of <sic> tags). For example, at L.139,
+       the Scribal style sheet will read " þat of <span style="color: violet">cayftes</span> he ches ؛ holy churche to encresche " The AllTags style sheet will read " þat of 
+       <span style="color: violet">cayftes /</span> <span style="color: purple">caytifes</span> he ches ؛ 
+       holy churche to encresche " The Diplomatic transcription reads "cayftes" without any coding, and the Critical style sheet will read "caytifes" in black. </p>
+    </br>
+    <p><span style="color: purple">Purple</span> appears only in the AllTags style sheet, where it marks the contents of a <corr> (= correction) tag which is separated from the contents of a matching
+       &lt;sic&gt; tag by a violet virgule.</p>
+    </br>
+    <p><span style="color: gray">Gray</span> in the Scribal and AllTags style sheets represents supralinear, inline, and marginal additions to the text (this does not include marginalia that
+       are not part of the poem itself). Placing your mouse above the word or characters in gray will produce a mouseover box that indicates where the addition
+       is found on the manuscript page as well as the hand responsible for it. “Hand1” indicates the main scribal hand, and “Handx” indicates an unknown hand other
+       than the main scribe. </p>
+    </br>
+    <p><span style="color: aqua">Aqua</span> in the AllTags style sheet represents text that has been damaged but is still legible.</p>
+    </br>
+    <p><span style="color: fuchsia">Fuchsia</span> in the AllTags style sheet represents text that is unclear for any reason.</p>
+
+    </br>
+
+    <p><h3>Marginalia</h3>Marginal additions that are not part of the poem itself are encoded in &lt;marginalia&gt; tags. The contents of these tags appear in all views
+        other than Critical. Positioning your mouse over the text of marginalia produces a mouseover box that indicates where on the page the marginalia is positioned
+        as well as the hand responsible for the marginal addition. When the marginalia is by an unknown hand, which is usually the case, the hand is identified as “Handx.”
+    </p>
+
+    </br>
+
+    <p><h3>Images</h3>A color image of each folio appears in the right margin alongside the transcription of the text from that folio. Clicking the thumbnail image
+       will launch a Zoomify image viewer window that allows you to zoom and pan. Clicking on the image within the window zooms in. Additional navigation buttons are
+       available at the bottom of the image viewer. To exit the image viewer and return to the transcription, click the X on the lower right of the window. If you wish
+       to view the image in its own window, a link is provided at the bottom of the screen to do so.
+    </p>
+
+    </br>
+
+    <p><h3>The Search tab</h3>leads to an interface that facilitates searching of all materials within the archive. Clicking the special characters beneath the
+       search box will populate the box with those letters that generally are not available on your keyboard (e.g., thorn and yogh). There are two drop menus that
+       offer faceted searching. The first allows you to search all materials in the archive, transcriptions of the poem only, descriptions of the manuscripts only,
+       or annotations to transcriptions only (i.e., the contents of <note> tags). The second menu allows you to search within all manuscript transcriptions or to
+       limit your search to one manuscript.
+    </p>
+
+    </br>
+
+    <p>The search function is built on Solr and utilizes that platform’s standard advanced search commands. A guide to these is included on the right side of the
+       search interface.
+    </p>
+
+    </br>
+
+    <p><h3>The Comparison tab</h3>facilitates the side-by-side comparison of all manuscript versions of a particular line of text. Texts are listed in alphabetical
+       order by sigil. Each line of text is encoded with two line numbers: the first is the logical line number of the line within a given manuscript, and the second is
+       the corresponding number in the Hanna-Lawton critical edition of the poem (Early English Text Society, o.s. 320, 2003) . As described above, this search feature
+       is also dynamically linked to the Critical view of transcriptions under the Manuscripts tag. If you wish to begin with a Hanna-Lawton line number and see all
+       relevant manuscript witnesses, you may do so by entering the HL line number in the search box at top of the Comparison screen. You may navigate through lines
+       in order by utilizing the “Previous line” and “Next line” buttons.
+    </p>
+
 </div>
