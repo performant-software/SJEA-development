@@ -17,6 +17,7 @@ namespace :sjea do
     filenames.size.times { |ix| docnames[filenames[ix]] = titles[ix] }
 
     puts "loading transcriptions..."
+
     # do each of the transcription files individually
     transcription_file_list( ).each do |fname|
 
@@ -47,7 +48,7 @@ namespace :sjea do
             end
 
             current_img_file_name = line[:pageimg]
-            pageuri = current_img_file_name
+            pageuri = "tx-#{current_img_file_name}"
             imgurl = "/images/#{current_img_file_name}"
             content = line[:content]
           else
@@ -70,6 +71,7 @@ namespace :sjea do
        puts "#{fname}: #{total_page_count} pages loaded"
     end
 
+
     puts "loading annotations..."
     # do each of the transcription files individually
     transcription_file_list( ).each do |fname|
@@ -86,7 +88,7 @@ namespace :sjea do
        pages.each do |page|
 
             current_img_file_name = page[:pageimg]
-            pageuri = current_img_file_name
+            pageuri = "an-#{current_img_file_name}"
             imgurl = "/images/#{current_img_file_name}"
             content = page[:content]
             solrdoc = { uri: pageuri, url: imgurl, title: docnames[fname], section: "annotations", content: content }
@@ -109,6 +111,7 @@ namespace :sjea do
 
     # do each of the description files individually
     description_file_list( ).each do |fname|
+    #["ADescription"].each do |fname|
 
        xmlfile = "XSLT/xml/#{fname}.xml"
 
@@ -116,15 +119,15 @@ namespace :sjea do
        #puts "#{fname}: #{lines.size} lines loaded"
 
        content = ""
-       pageuri = "#{fname}-description"
+       pageuri = "de-#{fname}"
        total_page_count = 0
 
        lines.each do |line|
-         content << " " << line
+         content << line << " "
        end
 
        if content.empty? == false
-         solrdoc = { uri: pageuri, url: "", title: docnames[fname], section: "descriptions", content: content }
+         solrdoc = { uri: pageuri, url: pageuri, title: docnames[fname], section: "descriptions", content: content }
          solr.add_object( solrdoc, 1, false )
          total_page_count += 1
        end
