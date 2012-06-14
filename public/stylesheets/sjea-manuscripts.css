@@ -47,7 +47,7 @@
   border: 3px;
   border-style: solid;
   border-color: #696969;
-  background-color: #f0e7cf; }
+  background-color: #ece6d6; }
 
 #fs-zoom-image-div {
   position: relative;
@@ -58,21 +58,21 @@
   border: 3px;
   border-style: solid;
   border-color: #696969;
-  background-color: #f0e7cf; }
+  background-color: #ece6d6; }
 
 #open-new-zoom-window {
   padding: 15px 0 0 0;
   width: 100%;
   text-align: center;
   font-size: 14px;
-  font-family: "Ariel", sans-serif; }
+  font-family: "Arial", sans-serif; }
   #open-new-zoom-window a {
-    color: #f0e7cf; }
+    color: #ece6d6; }
 
 #copyright-div {
   padding: 15px 0 0 0;
   width: 100%;
   text-align: center;
   font-size: 12px;
-  font-family: "Ariel", sans-serif;
-  color: #f0e7cf; }
+  font-family: "Arial", sans-serif;
+  color: #ece6d6; }

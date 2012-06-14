@@ -10,7 +10,7 @@ body {
   width: 97%;
   min-height: 1000px;
   margin: auto;
-  font-family: "Ariel", sans-serif; }
+  font-family: "Arial", sans-serif; }
 
 #page-header {
   position: fixed;
@@ -131,7 +131,7 @@ body {
   position: relative;
   float: right;
   color: black;
-  background-color: #f0e7cf;
+  background-color: #ece6d6;
   width: 84%;
   top: 148px;
   bottom: 38px;
@@ -160,7 +160,7 @@ body {
   font-size: 11px;
   background-color: #2f1e17;
   color: #f0e7cf;
-  font-family: "Ariel", sans-serif;
+  font-family: "Arial", sans-serif;
   padding-top: 8px;
   clear: both;
   bottom: 0; }
