@@ -212,7 +212,7 @@ body {
 
 #footer-spacer {
    background-color: $content_background_color;
-   height: 10px;
+   height: $footer_height + 5px;
 }
 
 #main-footer {
