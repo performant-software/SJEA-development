@@ -56,12 +56,10 @@ body {
     position: relative;
     padding-top: 118px; }
     #page-header #header-tabs li {
-      position: relative;
       display: inline;
       float: right; }
     #page-header #header-tabs li a {
-      position: relative;
-      width: 95px;
+      width: 111px;
       height: 30px;
       display: block;
       background-image: url("/images/topnav_tab_inactive.png");
@@ -70,7 +68,6 @@ body {
       font-size: 15px;
       padding-top: 8px;
       text-align: center;
-      padding-left: 17px;
       color: #f0e7cf; }
     #page-header #header-tabs li.current a {
       background-image: url("/images/topnav_tab_active.png");

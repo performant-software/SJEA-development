@@ -75,14 +75,14 @@ body {
        padding-top: 118px;
 
        li {
-          position: relative;
+          //position: relative;
           display: inline;
           float: right;
        }
 
        li a {
-          position: relative;
-          width: 95px;
+          //position: relative;
+          width: 111px;
           height: 30px;
           display: block;
           background-image: url("/images/topnav_tab_inactive.png");
@@ -91,7 +91,6 @@ body {
           font-size: 15px;
           padding-top: 8px;
           text-align: center;
-          padding-left: 17px;
           color: $header_tabs_inactive_color;
        }
 
