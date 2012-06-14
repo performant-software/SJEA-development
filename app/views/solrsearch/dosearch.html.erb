@@ -179,9 +179,9 @@
                  <div class="result-title">
                     <span><%= raw( makeTitleHTML( hit["uri"], hit["title"] ) ) %></span>
                  </div>
-                 <div class="result-snippet">
-                    <span><%= raw( hit["highlighting"][0] ) %></span>
-                 </div>
+                 <div class="snippets-div">
+                    <div class="result-snippet"><%= raw( hit["highlighting"][0] ) -%></div>
+                 </div> <!-- snippets-div -->
              </div>  <!-- result -->
 
           <%- end -%>
