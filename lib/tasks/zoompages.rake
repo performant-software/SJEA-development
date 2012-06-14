@@ -15,6 +15,8 @@ fs_template = "<!DOCTYPE html>
     <script src=\"/javascripts/jquery-1.7.2.min.js\" type=\"text/javascript\"></script>
     <script src=\"/javascripts/ZoomifyImageViewer.js\" type=\"text/javascript\"></script>
 
+    <link href=\"http://fonts.googleapis.com/css?family=Signika+Negative\" rel=\"stylesheet\" type=\"text/css\">
+
     <script type=\"text/javascript\">
        $(document).ready(function() {
           Z.showImage(\"fs-zoom-image-div\", \"images/zoom/_FILENAME_\", \"\");
@@ -62,6 +64,8 @@ fs_template = "<!DOCTYPE html>
 
       <script src=\"/javascripts/jquery-1.7.2.min.js\" type=\"text/javascript\"></script>
       <script src=\"/javascripts/ZoomifyImageViewer.js\" type=\"text/javascript\"></script>
+
+      <link href=\"http://fonts.googleapis.com/css?family=Signika+Negative\" rel=\"stylesheet\" type=\"text/css\">
 
       <script type=\"text/javascript\">
          $(document).ready(function() {

@@ -6,7 +6,7 @@
   width: 40%;
   padding: 0 0 0 10px;
   float: left;
-  font-family: "Arial", sans-serif; }
+  font-family: "Signika Negative", "Arial", sans-serif; }
   #content #content-display #search-controls #textbox-div, #content #content-display #search-controls #special-keys-div, #content #content-display #search-controls #searchin-div, #content #content-display #search-controls #manuscripts-div, #content #content-display #search-controls #submit-div {
     width: 100%;
     padding: 0 0 10px 0;
@@ -27,7 +27,7 @@
   text-align: justify;
   padding: 0 0 0 10px;
   float: right;
-  font-family: "Arial", sans-serif; }
+  font-family: "Times New Roman", Times, serif; }
   #content #content-display #search-instructions-div #toggle-instructions-button {
     margin: 10px 0 10px 0;
     width: 150px;
@@ -36,7 +36,7 @@
   padding: 15px 0 10px 0;
   font-size: 22px;
   clear: both;
-  font-family: "Arial", sans-serif; }
+  font-family: "Signika Negative", "Arial", sans-serif; }
 #content #content-display #paginate-div {
   padding: 10px 0 0 0; }
 #content #content-display .result {

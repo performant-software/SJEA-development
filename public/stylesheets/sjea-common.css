@@ -10,7 +10,7 @@ body {
   width: 97%;
   min-height: 1000px;
   margin: auto;
-  font-family: "Arial", sans-serif; }
+  font-family: "Signika Negative", "Arial", sans-serif; }
 
 #page-header {
   position: fixed;
@@ -46,12 +46,12 @@ body {
     position: relative;
     float: left;
     font-size: 14px;
-    margin: 63px 0 0 10px; }
+    margin: 61px 0 0 10px; }
   #page-header #editor-name {
     position: relative;
     float: left;
     font-size: 16px;
-    margin: 90px 0 0 -585px; }
+    margin: 90px 0 0 -565px; }
   #page-header #header-tabs {
     position: relative;
     padding-top: 118px; }
@@ -61,7 +61,7 @@ body {
       float: right; }
     #page-header #header-tabs li a {
       position: relative;
-      width: 88px;
+      width: 95px;
       height: 30px;
       display: block;
       background-image: url("/images/topnav_tab_inactive.png");
@@ -69,8 +69,8 @@ body {
       text-decoration: none;
       font-size: 15px;
       padding-top: 8px;
-      text-align: left;
-      padding-left: 18px;
+      text-align: center;
+      padding-left: 17px;
       color: #f0e7cf; }
     #page-header #header-tabs li.current a {
       background-image: url("/images/topnav_tab_active.png");
@@ -160,7 +160,7 @@ body {
   font-size: 11px;
   background-color: #2f1e17;
   color: #f0e7cf;
-  font-family: "Arial", sans-serif;
+  font-family: "Signika Negative", "Arial", sans-serif;
   padding-top: 8px;
   clear: both;
   bottom: 0; }
