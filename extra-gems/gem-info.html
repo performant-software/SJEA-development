@@ -1,0 +1,1087 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>WyeWorks Blog: Ruby 1.9.3 and ruby-debug</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="verify-v1" content="FjDxCNXUj2zynBs25T/noTCY6yROhwVkyE9iSViwPrs=" >
+  <!-- Use this RSS link if you are using FeedBurner (recommended) -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/wyeworks" />
+  
+
+  <script src="/javascripts/prototype.js" type="text/javascript"></script>
+
+  <link href="/stylesheets/application.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div id="header">
+<div class="inner">    
+    <h1><span><a href="/">WyeWorks Blog</a></span></h1>
+    <h2><span><a href="http://www.wyeworks.com">The team's voice</a></span></h2>
+  </div>
+</div>
+
+<div id="available"><a href="http://www.wyeworks.com" title="Available for hire!" alt="Available for hire!" ></a></div>
+
+<div id="container">
+
+  <div id="page">
+    <div id="content">
+      
+  
+<!--
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+  rdf:about=""
+  trackback:ping=""
+  dc:title="Ruby 1.9.3 and ruby-debug"
+  dc:identifier="/2011/11/1/ruby-1-9-3-and-ruby-debug"
+  dc:description="<p>As you probably know Ruby (MRI so brixen doesn&#8217;t get mad at me :P) <a href="http://www.ruby-lang.org/en/news/2011/10/31/ruby-1-9-3-p0-is-released/">1.9.3 was released</a>. I&#8217;ve been using 1.9.3 for a while now and as part of my Ruby..."
+  dc:creator="santiago.pastorino"
+  dc:date="November 01, 2011 19:52" />
+</rdf:RDF>
+-->
+
+<div class="hentry" id="article-9897">
+ <img alt="santiago.pastorino" class="gravatar" height="60" src="http://www.gravatar.com/avatar.php?size=60&amp;gravatar_id=d04d064616ae7fd752fdcb8daa5abdd6&amp;default=avatar" width="60" /> 
+  <h2 class="entry-title">
+    <a href="/2011/11/1/ruby-1-9-3-and-ruby-debug" title="Ruby 1.9.3 and ruby-debug">Ruby 1.9.3 and ruby-debug</a>
+    
+    <span class="comment_count">42</span>
+    
+  </h2>
+  <div class="vcard">
+ Posted by <span class="fn">santiago.pastorino</span>
+</div>
+<abbr class="published" title="2011-11-01T19:52:00+00:00">on Tuesday, November 01</abbr>
+<br class="clear" />
+  <div class="entry-content">
+  <p>As you probably know Ruby (MRI so brixen doesn&#8217;t get mad at me :P) <a href="http://www.ruby-lang.org/en/news/2011/10/31/ruby-1-9-3-p0-is-released/">1.9.3 was released</a>. I&#8217;ve been using 1.9.3 for a while now and as part of my RubyConf Uruguay talk I wanted to show ruby-debug. So my first attempt was:</p>
+
+
+<pre><code>$ gem install ruby-debug19
+Fetching: linecache19-0.5.12.gem (100%)
+Building native extensions.  This could take a while...
+Fetching: ruby-debug-base19-0.11.25.gem (100%)
+Building native extensions.  This could take a while...
+Fetching: ruby-debug19-0.11.6.gem (100%)
+Successfully installed linecache19-0.5.12
+Successfully installed ruby-debug-base19-0.11.25
+Successfully installed ruby-debug19-0.11.6
+3 gems installed</code></pre>
+
+	<p>Then require &#8216;ruby-debug&#8217; and booom!!</p>
+
+
+<pre><code>$ irb
+irb(main):001:0&gt; require 'ruby-debug'
+LoadError: dlopen(/Users/santiago/.rbenv/versions/1.9.3/lib/ruby/gems/1.9.1/gems/ruby-debug-base19-0.11.25/lib/ruby_debug.bundle, 9): Symbol not found: _ruby_current_thread
+  Referenced from: /Users/santiago/.rbenv/versions/1.9.3/lib/ruby/gems/1.9.1/gems/ruby-debug-base19-0.11.25/lib/ruby_debug.bundle
+  Expected in: flat namespace
+ in /Users/santiago/.rbenv/versions/1.9.3/lib/ruby/gems/1.9.1/gems/ruby-debug-base19-0.11.25/lib/ruby_debug.bundle - /Users/santiago/.rbenv/versions/1.9.3/lib/ruby/gems/1.9.1/gems/ruby-debug-base19-0.11.25/lib/ruby_debug.bundle
+    from /Users/santiago/.rbenv/versions/1.9.3/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+    from /Users/santiago/.rbenv/versions/1.9.3/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+    from /Users/santiago/.rbenv/versions/1.9.3/lib/ruby/gems/1.9.1/gems/ruby-debug-base19-0.11.25/lib/ruby-debug-base.rb:1:in `&lt;top (required)&gt;'
+    from /Users/santiago/.rbenv/versions/1.9.3/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+    from /Users/santiago/.rbenv/versions/1.9.3/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+    from /Users/santiago/.rbenv/versions/1.9.3/lib/ruby/gems/1.9.1/gems/ruby-debug19-0.11.6/cli/ruby-debug.rb:5:in `&lt;top (required)&gt;'
+    from /Users/santiago/.rbenv/versions/1.9.3/lib/ruby/1.9.1/rubygems/custom_require.rb:59:in `require'
+    from /Users/santiago/.rbenv/versions/1.9.3/lib/ruby/1.9.1/rubygems/custom_require.rb:59:in `rescue in require'
+    from /Users/santiago/.rbenv/versions/1.9.3/lib/ruby/1.9.1/rubygems/custom_require.rb:35:in `require'
+    from (irb):1
+    from /Users/santiago/.rbenv/versions/1.9.3/bin/irb:12:in `&lt;main&gt;'</code></pre>
+
+	<p>So after some research on the internet I found out that the author of ruby-debug had a fix for it which he considered unstable and didn&#8217;t push it to rubygems.org yet. Since I prefer an unstable ruby-debug than a non working one :P, I gave it a try &#8230;</p>
+
+
+	<p>First download linecache19-0.5.13.gem and ruby-debug-base19-0.11.26.gem from <a href="http://rubyforge.org/frs/?group_id=8883">http://rubyforge.org/frs/?group_id=8883</a>, then …</p>
+
+
+<pre><code>$ gem install linecache19-0.5.13.gem 
+Building native extensions.  This could take a while...
+Successfully installed linecache19-0.5.13
+1 gem installed
+$ gem install ruby-debug-base19-0.11.26.gem -- --with-ruby-include=/Users/santiago/.rbenv/source/ruby-1.9.3-p0  
+Building native extensions.  This could take a while...
+Successfully installed ruby-debug-base19-0.11.26
+1 gem installed
+$ irb
+irb(main):001:0&gt; require 'ruby-debug'
+=&gt; true</code></pre>
+
+	<p>and voilá.</p>
+
+
+	<p>So while we wait for an official release, you can enjoy a working ruby-debug.</p>
+  
+</div>
+  <ul class="meta">
+  
+  
+  <li>
+    Tags: <a href="/tags/1.9.3" rel="tag" title="1.9.3">1.9.3</a>&nbsp;<a href="/tags/ruby" rel="tag" title="ruby">ruby</a>&nbsp;<a href="/tags/ruby-debug" rel="tag" title="ruby-debug">ruby-debug</a>&nbsp;
+  </li>
+  
+  <li>
+    Meta: 
+    
+    <a href="/2011/11/1/ruby-1-9-3-and-ruby-debug#comments" title="42 comments">42 comments</a>, 
+    
+    <a href="/2011/11/1/ruby-1-9-3-and-ruby-debug" title="permalink">permalink</a>
+    
+  </li>
+</ul>
+  <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style right">
+<a class="addthis_button_twitter" addthis:url="http://blog.wyeworks.com/2011/11/1/ruby-1-9-3-and-ruby-debug" addthis:title="Ruby 1.9.3 and ruby-debug"></a>
+<a class="addthis_button_facebook" addthis:url="http://blog.wyeworks.com/2011/11/1/ruby-1-9-3-and-ruby-debug" addthis:title="Ruby 1.9.3 and ruby-debug"></a>
+<a class="addthis_button_digg" addthis:url="http://blog.wyeworks.com/2011/11/1/ruby-1-9-3-and-ruby-debug" addthis:title="Ruby 1.9.3 and ruby-debug"></a>
+<a class="addthis_button_delicious" addthis:url="http://blog.wyeworks.com/2011/11/1/ruby-1-9-3-and-ruby-debug" addthis:title="Ruby 1.9.3 and ruby-debug"></a>
+<a class="addthis_button_reddit" addthis:url="http://blog.wyeworks.com/2011/11/1/ruby-1-9-3-and-ruby-debug" addthis:title="Ruby 1.9.3 and ruby-debug"></a>
+<a class="addthis_button_technorati" addthis:url="http://blog.wyeworks.com/2011/11/1/ruby-1-9-3-and-ruby-debug" addthis:title="Ruby 1.9.3 and ruby-debug"></a>
+<a class="addthis_button_google" addthis:url="http://blog.wyeworks.com/2011/11/1/ruby-1-9-3-and-ruby-debug" addthis:title="Ruby 1.9.3 and ruby-debug"></a>
+<span class="addthis_separator">|</span>
+<a href="http://www.addthis.com/bookmark.php?v=250" class="addthis_button_expanded"></a>
+<span class="addthis_separator">|</span>
+<g:plusone size="small" count="false" href="http://blog.wyeworks.com/2011/11/1/ruby-1-9-3-and-ruby-debug"</g:plusone>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=wyeworks"></script>
+<!-- AddThis Button END -->
+
+  
+
+
+
+
+<div class="recommend"><p>If you have found this material to be useful, you might <br/>consider <a href="http://workingwithrails.com/recommendation/new/person/14698-santiago-pastorino">recommending me on Working With Rails.</a></p></div>
+<a href="http://workingwithrails.com/recommendation/new/person/14698-santiago-pastorino" class="rails"></a>
+
+  
+
+
+<a href="https://twitter.com/spastorino" class="twitter">
+
+
+<img alt="twitter-me" src="/images/twitter-me.jpg" /></a>
+<div class="clear"></div>
+</div>
+
+<h5><a name="comments">Comments</a></h5>
+<p><a href="#comment-form">Leave a response</a></p>
+<div id="comments_div">
+  <ol id="comments" class="comments">
+    
+    <li class="comment" id="comment-9898">
+      <div class="author">
+        <cite><span class="author"><img alt="Boris Barroso" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=d4402a8a978750279198f8d2a2da6461&amp;default=avatar" width="50" /> <a href="http://bonsaierp.com" rel="nofollow">Boris Barroso</a></span></cite> &#150; 
+        <abbr title="November 01, 2011 21:46"><span class="date">November 01, 2011 @ 09:46 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>To install ruby-debug on Ubuntu ruby-1.9.3 you also need to download from http://rubyforge.org/frs/?group_id=8883</p>
+
+
+	<p>linecache19-0.5.13.gem
+ruby_core_source-0.1.5.gem 
+ruby-debug19-0.11.6.gem
+ruby-debug-base19-0.11.26.gem</p>
+
+
+	<p>Then</p>
+
+
+	<p>gem install archive-tar-minitar
+gem install linecache19-0.5.13.gem&#8212;&#8212;with-ruby-include=/$rvm_src_path/ruby-1.9.3-p0
+gem install ruby-debug-base19-0.11.26.gem&#8212;&#8212;with-ruby-include=/$rvm_src_path/ruby-1.9.3-p0
+gem install ruby-debug19-0.11.6.gem&#8212;&#8212;with-ruby-include=/$rvm_src_path/ruby-1.9.3-p0</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-9899">
+      <div class="author">
+        <cite><span class="author"><img alt="Tom De Leu" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=d2e4fccafdc13139706f8d0f4db6b13a&amp;default=avatar" width="50" /> <a href="http://twitter.com/tom_dl" rel="nofollow">Tom De Leu</a></span></cite> &#150; 
+        <abbr title="November 01, 2011 23:11"><span class="date">November 01, 2011 @ 11:11 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Thanks for this blog post.
+I don&#8217;t have a ~/.rbenv/source/ruby-1.9.3-p0 dir however.
+So, after looking around within the rbenv 1.9.3-p0 dir, this command did the trick:</p>
+
+
+	<p>$ gem install ruby-debug-base19-0.11.26.gem&#8212;&#8212;with-ruby-include=/Users/tomdeleu/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/ruby-1.9.3-p0</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-9900">
+      <div class="author">
+        <cite><span class="author"><img alt="nfm" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=d41d8cd98f00b204e9800998ecf8427e&amp;default=avatar" width="50" /> <span>nfm</span></span></cite> &#150; 
+        <abbr title="November 02, 2011 00:51"><span class="date">November 02, 2011 @ 12:51 AM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Thanks so much spastorino, I&#8217;ve been trying to get this working for weeks!</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-9902">
+      <div class="author">
+        <cite><span class="author"><img alt="Thomas" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=6d89be962aea6ca120236b264edcf2ca&amp;default=avatar" width="50" /> <a href="http://magiclabs.de" rel="nofollow">Thomas</a></span></cite> &#150; 
+        <abbr title="November 02, 2011 11:32"><span class="date">November 02, 2011 @ 11:32 AM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Thank you so much.</p>
+
+
+	<p>I little advice for <span class="caps">RVM</span> users:</p>
+
+
+	<p>I had to provide another include path:</p>
+
+
+	<p>gem install ruby-debug-base19-0.11.26.gem&#8212;&#8212;with-ruby-include=/Users/tvd/.rvm/rubies/ruby-1.9.3-p0/include/ruby-1.9.1/ruby-1.9.3-p0/</p>
+
+
+	<p>That worked for me.</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-9903">
+      <div class="author">
+        <cite><span class="author"><img alt="Michel Pigassou" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=45dc1b66400d4dd7645c867a1a420cd8&amp;default=avatar" width="50" /> <span>Michel Pigassou</span></span></cite> &#150; 
+        <abbr title="November 02, 2011 13:09"><span class="date">November 02, 2011 @ 01:09 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Do you manage to run the debugger inside a Rails 3 app?</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-9910">
+      <div class="author">
+        <cite><span class="author"><img alt="Boris Barroso" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=d4402a8a978750279198f8d2a2da6461&amp;default=avatar" width="50" /> <a href="http://bonsaierp.com" rel="nofollow">Boris Barroso</a></span></cite> &#150; 
+        <abbr title="November 03, 2011 01:03"><span class="date">November 03, 2011 @ 01:03 AM</span></abbr>
+      </div>
+      <div class="content">
+        <p>I have created a gist for ubuntu, Ruby 1.9.3 and ruby-debug with rvm
+https://gist.github.com/1331533
+That should be clearer</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-9950">
+      <div class="author">
+        <cite><span class="author"><img alt="Karl" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=1a6c6f6af9928f1851b5fd63849b1d23&amp;default=avatar" width="50" /> <span>Karl</span></span></cite> &#150; 
+        <abbr title="November 07, 2011 16:05"><span class="date">November 07, 2011 @ 04:05 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Tried installing but i still end up with the following error:</p>
+
+
+	<p>https://gist.github.com/dac9599762dc1c68f8ce</p>
+
+
+	<p>Any ideas?</p>
+
+
+	<p>thx!</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-9961">
+      <div class="author">
+        <cite><span class="author"><img alt="Ivan Storck" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=3dd41cc916f9ad4c68b1b0fa81c7b273&amp;default=avatar" width="50" /> <a href="http://ivanstorck.com" rel="nofollow">Ivan Storck</a></span></cite> &#150; 
+        <abbr title="November 09, 2011 05:49"><span class="date">November 09, 2011 @ 05:49 AM</span></abbr>
+      </div>
+      <div class="content">
+        <p>This worked for me, but I also had to run
+```
+gem install ruby-debug19
+```
+after downloading and installing the other two gems.</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-9966">
+      <div class="author">
+        <cite><span class="author"><img alt="Sheldon" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=d41d8cd98f00b204e9800998ecf8427e&amp;default=avatar" width="50" /> <span>Sheldon</span></span></cite> &#150; 
+        <abbr title="November 09, 2011 22:33"><span class="date">November 09, 2011 @ 10:33 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>In order to get debugger working on a Rails 3.1 server with <span class="caps">RVM</span> Ruby 1.9.3p0 I followed Boris Barroso&#8217;s instructions here:
+https://gist.github.com/1331533</p>
+
+
+	<p>And then added the following to Gemfile:
+gem &#8216;ruby-debug19&#8217;, :require =&gt; &#8216;ruby-debug&#8217;</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-9980">
+      <div class="author">
+        <cite><span class="author"><img alt="pooscodormast" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=0bc8f646ccfac5a68cb59dc3f1b82496&amp;default=avatar" width="50" /> <a href="http://twitter.com" rel="nofollow">pooscodormast</a></span></cite> &#150; 
+        <abbr title="November 11, 2011 15:50"><span class="date">November 11, 2011 @ 03:50 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Hi! i&#8217;m repost you post:  to my @vokvfqjt twitter</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-10011">
+      <div class="author">
+        <cite><span class="author"><img alt="Gerrit Kaiser" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=3dd98364b1cc8fd73f76bbb453388eb2&amp;default=avatar" width="50" /> <span>Gerrit Kaiser</span></span></cite> &#150; 
+        <abbr title="November 14, 2011 19:45"><span class="date">November 14, 2011 @ 07:45 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>@Karl: having the same problem here</p>
+
+
+	<p>Ruby 1.9.3-p0 installed via rbenv</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-10046">
+      <div class="author">
+        <cite><span class="author"><img alt="stepchud" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=0f09814bd237850cb6404dadfce32380&amp;default=avatar" width="50" /> <span>stepchud</span></span></cite> &#150; 
+        <abbr title="November 18, 2011 03:57"><span class="date">November 18, 2011 @ 03:57 AM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Thomas&#8217;s <span class="caps">RVM</span> advice  helped me and I got it built. I&#8217;m running a MacBook Pro with Lion and just had to adjust the rvm path for /usr/local. By the way the auto-formatting kicked in on his comment. You have to pass a double-dash (two dash characters in a row) after the name of the gem (surrounded by spaces), then the config option name also starts with a double-dash.</p>
+
+
+	<p>Thanks guys! I don&#8217;t know what I&#8217;d do without ruby-debug. :D</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-10048">
+      <div class="author">
+        <cite><span class="author"><img alt="Pablo Rozanski" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=89fb718b3cf6cecee04d7a4b41db0910&amp;default=avatar" width="50" /> <span>Pablo Rozanski</span></span></cite> &#150; 
+        <abbr title="November 18, 2011 06:14"><span class="date">November 18, 2011 @ 06:14 AM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Thanks you for this post!!!</p>
+
+
+	<p>with rvm I did</p>
+
+
+	<p>gem install linecache19-0.5.13.gem</p>
+
+
+	<p>gem install ruby-debug-base19-0.11.26.gem&#8212;&#8212;with-ruby-include=/home/pabloroz/.rvm/rubies/ruby-1.9.3-p0/include/ruby-1.9.1/ruby-1.9.3-p0/</p>
+
+
+	<p>gem install ruby-debug19-0.11.6.gem&#8212;&#8212;with-ruby-include=/home/pabloroz/.rvm/rubies/ruby-1.9.3-p0/include/ruby-1.9.1/ruby-1.9.3-p0/</p>
+
+
+	<p>and it worked</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-10092">
+      <div class="author">
+        <cite><span class="author"><img alt="Aleksey Trofimenko" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=8afd5e78bb29d6a8f851f3b84466fdf4&amp;default=avatar" width="50" /> <span>Aleksey Trofimenko</span></span></cite> &#150; 
+        <abbr title="November 21, 2011 21:28"><span class="date">November 21, 2011 @ 09:28 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>any way to use bundler for it?
+prereleases or a git repo, maybe?</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-10683">
+      <div class="author">
+        <cite><span class="author"><img alt="Galen" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=360c646bcb53d72abcc15d0389abad87&amp;default=avatar" width="50" /> <a href="http://luciddesign.co.nz" rel="nofollow">Galen</a></span></cite> &#150; 
+        <abbr title="November 30, 2011 23:39"><span class="date">November 30, 2011 @ 11:39 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>For me, after literally hours of trial-and-error, this worked for me (using <span class="caps">RVM</span> on Mac running Lion with Xcode 4.2.1):</p>
+
+
+	<p>(Be sure to do &#8220;rvm 1.9.3&#8221; before running this also)</p>
+
+
+	<p>gem install ruby-debug-base19-0.11.26.gem&#8212;&#8212;with-ruby-include=/Users/YOURUSERNAME/.rvm/rubies/ruby-1.9.3-p0/include/ruby-1.9.1/ruby-1.9.3-p0/</p>
+
+
+	<p>(If the following are two long dashes, replace the two long dashes above with hyphen hyphen space hyphen hyphen: <del>- -</del>)</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-11360">
+      <div class="author">
+        <cite><span class="author"><img alt="Deryl R. Doucette" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=6dadaf9b9c5aab451a2f8de98752946c&amp;default=avatar" width="50" /> <span>Deryl R. Doucette</span></span></cite> &#150; 
+        <abbr title="December 06, 2011 22:43"><span class="date">December 06, 2011 @ 10:43 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>You can shorten the&#8212;with-ruby-include to&#8212;with-ruby-dir=$rvm_path/rubies/ruby-1.9.3-p0</p>
+
+
+	<p>It <strong>should</strong> pick that up. if it doesn&#8217;t please file a bug with us. The&#8212;with-ruby-dir= should just make it all work.</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-11628">
+      <div class="author">
+        <cite><span class="author"><img alt="Phillip" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=e3ba60e3dcb813f8abcd7732350e74cf&amp;default=avatar" width="50" /> <span>Phillip</span></span></cite> &#150; 
+        <abbr title="December 11, 2011 03:31"><span class="date">December 11, 2011 @ 03:31 AM</span></abbr>
+      </div>
+      <div class="content">
+        <p>I like to use</p>
+
+
+	<p>$rvm_path/src/`rvm tools strings`</p>
+
+
+	<p>for the with-ruby-dir / with-ruby-include switch. That way it works regardless which version of ruby I&#8217;m in or which gemset I&#8217;m in. As long as &#8216;rvm tools strings&#8217; doesn&#8217;t change, that is. So my whole gem install line looks like this:</p>
+
+
+	<p>gem install ruby-debug19&#8212;&#8212;with-ruby-include=&#8221;$rvm_path/src/`rvm tools strings`&#8221;</p>
+
+
+	<p>Oh, I&#8217;m currently using <span class="caps">RVM 1</span>.9.2. I don&#8217;t know when tools was introduced though.</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-11630">
+      <div class="author">
+        <cite><span class="author"><img alt="Phillip" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=e3ba60e3dcb813f8abcd7732350e74cf&amp;default=avatar" width="50" /> <span>Phillip</span></span></cite> &#150; 
+        <abbr title="December 11, 2011 04:31"><span class="date">December 11, 2011 @ 04:31 AM</span></abbr>
+      </div>
+      <div class="content">
+        <p>On Mac <span class="caps">OS X</span> Lion 10.7.2 with Xcode 4.2.1 and <span class="caps">RVM 1</span>.9.2, this worked for me:</p>
+
+
+	<p>https://gist.github.com/1457544</p>
+
+
+	<p>This is basically the same thing that santiago.pastorino and others have said, but I wanted to make it available in clear, complete steps.</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-12078">
+      <div class="author">
+        <cite><span class="author"><img alt="googya" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=3a2ac282196e3dd95b132cf6aa3464ce&amp;default=avatar" width="50" /> <a href="http://googya.github.com" rel="nofollow">googya</a></span></cite> &#150; 
+        <abbr title="January 07, 2012 05:01"><span class="date">January 07, 2012 @ 05:01 AM</span></abbr>
+      </div>
+      <div class="content">
+        <p>strangely I got a loadError in 1.9.3 version :</p>
+
+
+	<p>LoadError: cannot load such file&#8212;ruby_debug.so</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-12115">
+      <div class="author">
+        <cite><span class="author"><img alt="eMancu" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=5bf59f21aed9bacce47fdfc1dd3dd2bb&amp;default=avatar" width="50" /> <a href="http://www.elblogolico.com.ar" rel="nofollow">eMancu</a></span></cite> &#150; 
+        <abbr title="January 09, 2012 18:21"><span class="date">January 09, 2012 @ 06:21 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Thanks Philip! that worked for me and was very clean!</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-12335">
+      <div class="author">
+        <cite><span class="author"><img alt="mina" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=d94afa87e58699d3fac4ae93df186b2c&amp;default=avatar" width="50" /> <span>mina</span></span></cite> &#150; 
+        <abbr title="January 20, 2012 11:16"><span class="date">January 20, 2012 @ 11:16 AM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Hi,
+I am trying to install ruby-debug-base19-0.11.26.gem on <span class="caps">OSX</span> Lion. I get</p>
+
+
+	<p>checking for rb_method_entry_t.called_id in method.h&#8230; no
+checking for rb_control_frame_t.method_id in method.h&#8230; no</p>
+
+
+	<p>I also filed a gist for it, https://gist.github.com/1646085
+will appreciate any help.</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-12385">
+      <div class="author">
+        <cite><span class="author"><img alt="Swapnil" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=71f03f6d5066000896fc639d28a32b96&amp;default=avatar" width="50" /> <a href="http://swap1712.weebly.com" rel="nofollow">Swapnil</a></span></cite> &#150; 
+        <abbr title="January 24, 2012 22:39"><span class="date">January 24, 2012 @ 10:39 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Thanks a lot for the tip. I have been trying to install the debugger for almost a week now. I haven&#8217;t tested whether it works with the eclipse <span class="caps">DLTK</span> yet, but I&#8217;m at least happy that I was able to make a clean install at last :)
+Thanks again!!</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-12426">
+      <div class="author">
+        <cite><span class="author"><img alt="Rod McLaughlin" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=ed7e9cf3114e3a6b9982a4dbb7ff9c8e&amp;default=avatar" width="50" /> <a href="http://rubyjunction.com" rel="nofollow">Rod McLaughlin</a></span></cite> &#150; 
+        <abbr title="January 27, 2012 19:41"><span class="date">January 27, 2012 @ 07:41 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Thanks Santiago, and especially Boris. Worked like a charm. Ubuntu 10.10 64bit, Ruby 1.9.3-p0, Rails 3.1.3. <span class="caps">RVM</span>. </p>
+
+
+	<pre><code>export SRC_PATH=~/.rvm/rubies/ruby-1.9.3-p0/include/ruby-1.9.1/ruby-1.9.3-p0 
+       # or something like that - note there are several folders called ruby-1.9.3-p0 in RVM, and only one of them works - the one which has 1.9.1 in the middle, and 1.9.3 on each side of it!</code></pre>
+
+
+	<pre><code>gem install linecache19-0.5.13.gem -- --with-ruby-include=$SRC_PATH</code></pre>
+
+
+	<pre><code>gem install ruby-debug-base19-0.11.26.gem -- --with-ruby-include=$SRC_PATH</code></pre>
+
+
+	<pre><code>gem install ruby-debug19-0.11.6.gem -- --with-ruby-include=$SRC_PATH</code></pre>
+
+
+	<pre><code>gem install ruby_core_source-0.1.5.gem -- --with-ruby-include=$SRC_PATH</code></pre>
+
+
+	<p>See you at the world cup.</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-12467">
+      <div class="author">
+        <cite><span class="author"><img alt="Carilda A Thomas" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=75b83ed31a2c53622d274c85c701f18b&amp;default=avatar" width="50" /> <span>Carilda A Thomas</span></span></cite> &#150; 
+        <abbr title="January 30, 2012 22:09"><span class="date">January 30, 2012 @ 10:09 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Cannot build gem install ruby-debug-base19-0.11.26.gem &#8211; I seem to be missing &#8216;method.h&#8217; &#8211; from the mkmf.log:</p>
+
+
+	<p>conftest.c:3:20: fatal error: method.h: No such file or directory
+compilation terminated.
+checked program was:
+/* begin <strong>/
+1: #include &#8220;ruby.h&#8221; 
+2:
+3: #include 
+4:
+5: /</strong>top*/</p>
+
+
+	<p>What do I need to install to get this and do I then need to rebuild the ruby?
+Thanks.</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-12481">
+      <div class="author">
+        <cite><span class="author"><img alt="Fernando Briano" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=49c5bd577a2d7ef0628c8ceb90b8c7ae&amp;default=avatar" width="50" /> <a href="http://picandocodigo.net" rel="nofollow">Fernando Briano</a></span></cite> &#150; 
+        <abbr title="January 31, 2012 20:17"><span class="date">January 31, 2012 @ 08:17 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Got here via StackOverflow (http://stackoverflow.com/questions/8378277/cannot-use-ruby-debug19-with-1-9-3-p0) trying to install ruby-debug on an Ubuntu box and managed to get it working.</p>
+
+
+	<p>Great job, thanks Santiago!</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-12533">
+      <div class="author">
+        <cite><span class="author"><img alt="Lucas Chan" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=cb92b4f51a641ca6cc331d1eaf0e7695&amp;default=avatar" width="50" /> <a href="http://lucaschan.com/" rel="nofollow">Lucas Chan</a></span></cite> &#150; 
+        <abbr title="February 03, 2012 04:05"><span class="date">February 03, 2012 @ 04:05 AM</span></abbr>
+      </div>
+      <div class="content">
+        <p>For rbenv users trying to install this version of the ruby-debug-base19 gem, try this:</p>
+
+
+	<p>gem install ruby-debug-base19-0.11.26.gem&#8212;&#8212;with-ruby-include=/Users/lchan/.rbenv/versions/1.9.3-p0/include/ruby-1.9.1/ruby-1.9.3-p0</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-12613">
+      <div class="author">
+        <cite><span class="author"><img alt="Ed Ruder" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=b0e6b1dac36d79d385c708fdbe30318e&amp;default=avatar" width="50" /> <span>Ed Ruder</span></span></cite> &#150; 
+        <abbr title="February 05, 2012 10:02"><span class="date">February 05, 2012 @ 10:02 AM</span></abbr>
+      </div>
+      <div class="content">
+        <p>@googya: Did you ever figure out the `LoadError: cannot load such file&#8212;ruby_debug.so` problem? I&#8217;m getting that when using bundler to load all of the gems (after vendoring linecache19-0.5.13 and ruby-debug-base19-0.11.26), then running `bundle exec rib` and `require &#8216;ruby-debug&#8217;` in irb.</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-12761">
+      <div class="author">
+        <cite><span class="author"><img alt="Stephen Potenza" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=dfe2b0e0f4b137ff5f1e3f7c10a6cfea&amp;default=avatar" width="50" /> <a href="https://github.com/potenza" rel="nofollow">Stephen Potenza</a></span></cite> &#150; 
+        <abbr title="February 08, 2012 23:03"><span class="date">February 08, 2012 @ 11:03 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Worked great! Thanks for the tips.</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-12762">
+      <div class="author">
+        <cite><span class="author"><img alt="Stephen Potenza" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=dfe2b0e0f4b137ff5f1e3f7c10a6cfea&amp;default=avatar" width="50" /> <a href="https://github.com/potenza" rel="nofollow">Stephen Potenza</a></span></cite> &#150; 
+        <abbr title="February 08, 2012 23:03"><span class="date">February 08, 2012 @ 11:03 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Worked great! Thanks for the tips.</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-12763">
+      <div class="author">
+        <cite><span class="author"><img alt="Stephen Potenza" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=dfe2b0e0f4b137ff5f1e3f7c10a6cfea&amp;default=avatar" width="50" /> <a href="https://github.com/potenza" rel="nofollow">Stephen Potenza</a></span></cite> &#150; 
+        <abbr title="February 08, 2012 23:03"><span class="date">February 08, 2012 @ 11:03 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Worked great! Thanks for the tips.</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-12968">
+      <div class="author">
+        <cite><span class="author"><img alt="Freddy Snijder" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=756399c3384e9b726cb1afecd093c97e&amp;default=avatar" width="50" /> <a href="http://www.visionscapers.com/" rel="nofollow">Freddy Snijder</a></span></cite> &#150; 
+        <abbr title="February 13, 2012 15:18"><span class="date">February 13, 2012 @ 03:18 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Hi Santiago and commenters,</p>
+
+
+	<p>Thanks for the tips, to get my debug setup working in Mac <span class="caps">OS X</span> Lion 10.7.2, Aptana Studio 3, using rvm and ruby 1.9.3-p0 I had to take multiple steps which I summarized at Stackoverflow:</p>
+
+
+	<p><a href="http://stackoverflow.com/a/9260206/889617">Ruby-debug not working &#8211; Stack Overflow</a></p>
+
+
+	<p>I hope this helps other developers tearing their hair out to get their ruby debug environment setup correctly.</p>
+
+
+	<p>Cheers,</p>
+
+
+	<pre><code>-- Freddy</code></pre>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-13194">
+      <div class="author">
+        <cite><span class="author"><img alt="Flash The Net" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=b724cc314b88e18feb5c1942e8eb220e&amp;default=avatar" width="50" /> <a href="http://www.alaab-talbees.com/" rel="nofollow">Flash The Net</a></span></cite> &#150; 
+        <abbr title="February 21, 2012 02:13"><span class="date">February 21, 2012 @ 02:13 AM</span></abbr>
+      </div>
+      <div class="content">
+        <p>My brother recommended I would possibly like this website. He was once entirely right. This put up actually made my day. You can not believe simply how a lot time I had spent for this information! Thanks!</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-13224">
+      <div class="author">
+        <cite><span class="author"><img alt="Jacques" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=f3589127268e4bf2ba24273abfe70d43&amp;default=avatar" width="50" /> <span>Jacques</span></span></cite> &#150; 
+        <abbr title="February 22, 2012 00:58"><span class="date">February 22, 2012 @ 12:58 AM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Is there a way to package this up in the Gemfile? I was able to get it working once, but new developers who check out the project have to go through this same frustrating process.</p>
+
+
+	<p>What if we just created a new gem name (ruby-debug193) and pushed all these to rubygems? Not ideal, but infinitely better than the current situation</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-13874">
+      <div class="author">
+        <cite><span class="author"><img alt="AX" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=248084f29df9de7d005830a62ceb3ea1&amp;default=avatar" width="50" /> <span>AX</span></span></cite> &#150; 
+        <abbr title="March 08, 2012 03:43"><span class="date">March 08, 2012 @ 03:43 AM</span></abbr>
+      </div>
+      <div class="content">
+        <p>@Jacques&#8212;Good idea. Better idea would be for the core team to roll in ruby-debug (or at least make it a compile-time option). The hassle of enabling a debugger is ridiculous, and has been going on for years now.</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-14036">
+      <div class="author">
+        <cite><span class="author"><img alt="Ask" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=ab1f5840e792466ad5de6d19623c7d10&amp;default=avatar" width="50" /> <a href="http://saveideanow.com" rel="nofollow">Ask</a></span></cite> &#150; 
+        <abbr title="March 12, 2012 22:19"><span class="date">March 12, 2012 @ 10:19 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Thanks!
+But my last command was:</p>
+
+
+	<p>gem install ruby-debug-base19-0.11.26.gem&#8212;&#8212;with-ruby-include=/Users/ask/.rbenv/versions/1.9.3-p125/include/ruby-1.9.1/ruby-1.9.3-p125/</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-14184">
+      <div class="author">
+        <cite><span class="author"><img alt="AO" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=d41d8cd98f00b204e9800998ecf8427e&amp;default=avatar" width="50" /> <span>AO</span></span></cite> &#150; 
+        <abbr title="March 18, 2012 00:55"><span class="date">March 18, 2012 @ 12:55 AM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Just to note that the correct writing is &#8220;voilà&#8221;.</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-14476">
+      <div class="author">
+        <cite><span class="author"><img alt="stepchud" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=92765486a664c3572b8948e109a0b00b&amp;default=avatar" width="50" /> <span>stepchud</span></span></cite> &#150; 
+        <abbr title="March 29, 2012 21:04"><span class="date">March 29, 2012 @ 09:04 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>@googya and Ed Ruder: 
+For starters, here is my <span class="caps">ENV</span>:
+Mac <span class="caps">OSX</span> Lion, Ruby 1.9.3-p125 (installed via rvm 1.11.3), using gemsets</p>
+
+
+	<p>I had the LoadError for ruby_debug.so issue as well. For me, I was installing ruby-debug, linecache, etc into the &#8220;global&#8221; gemset, and trying to use them from a different gemset. Also, I had a previous version of ruby-debug-base19 installed (0.11.25). I&#8217;m not sure which was causing the issues, but I had to uninstall all the ruby-debug related gems and start over. I installed them into the gemset that I will actually be using, not global. Once I did that, I followed this gist: https://gist.github.com/2241056</p>
+
+
+	<p>Now, it&#8217;s Zen:
+$ irb
+1.9.3p125 :001 &gt; require &#8216;ruby-debug&#8217;
+ =&gt; true 
+1.9.3p125 :002 &gt;</p>
+
+
+	<p><span class="caps">HTH</span>,
+Stephen</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-14615">
+      <div class="author">
+        <cite><span class="author"><img alt="postmodern" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=66f5d5b64b951b3eeb8b6c34fcb69237&amp;default=avatar" width="50" /> <a href="http://postmodern.github.com/" rel="nofollow">postmodern</a></span></cite> &#150; 
+        <abbr title="April 06, 2012 01:31"><span class="date">April 06, 2012 @ 01:31 AM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Just use Ruby 1.9&#8217;s built-in debugger:</p>
+
+
+	<pre><code>require 'debug'</code></pre>
+
+
+	<p>Or via the command line:</p>
+
+
+	<pre><code>$ ruby -rdebug bug.rb</code></pre>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-14626">
+      <div class="author">
+        <cite><span class="author"><img alt="cldwalker" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=d41d8cd98f00b204e9800998ecf8427e&amp;default=avatar" width="50" /> <a href="http://tagaholic.me" rel="nofollow">cldwalker</a></span></cite> &#150; 
+        <abbr title="April 06, 2012 13:38"><span class="date">April 06, 2012 @ 01:38 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>I forked ruby-debug and got it working on 1.9. Thanks to Santiago for this post &#8211; `gem install debugger`</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-14754">
+      <div class="author">
+        <cite><span class="author"><img alt="Kevin Bedell" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=6d25739c69d5b346019c9168339ccd54&amp;default=avatar" width="50" /> <a href="http://www.kbedell.com" rel="nofollow">Kevin Bedell</a></span></cite> &#150; 
+        <abbr title="April 12, 2012 16:13"><span class="date">April 12, 2012 @ 04:13 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>I&#8217;m using @cldwalker&#8217;s fork of ruby-debug and it loads and works cleanly with ruby 1.9.3-p125.</p>
+
+
+	<p>https://github.com/cldwalker/debugger</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-15083">
+      <div class="author">
+        <cite><span class="author"><img alt="Muhammad Ishaq" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=4fb104f5194ccd7458452b51b27d1674&amp;default=avatar" width="50" /> <a href="http://ishaqmalik.posterous.com" rel="nofollow">Muhammad Ishaq</a></span></cite> &#150; 
+        <abbr title="May 16, 2012 11:36"><span class="date">May 16, 2012 @ 11:36 AM</span></abbr>
+      </div>
+      <div class="content">
+        <p>You are a live saver, I combined your suggestion with Thomas’ (to provide rvm include path) and I can sleep at peace tonight after about 2 weeks</p>
+      </div>
+    </li>
+    
+    <li class="comment" id="comment-15175">
+      <div class="author">
+        <cite><span class="author"><img alt="Muhammad Ishaq" class="gravatar" height="50" src="http://www.gravatar.com/avatar.php?size=50&amp;gravatar_id=4fb104f5194ccd7458452b51b27d1674&amp;default=avatar" width="50" /> <a href="http://ishaqmalik.posterous.com" rel="nofollow">Muhammad Ishaq</a></span></cite> &#150; 
+        <abbr title="May 24, 2012 12:34"><span class="date">May 24, 2012 @ 12:34 PM</span></abbr>
+      </div>
+      <div class="content">
+        <p>Kevin Bedell&#8217;s suggestion is better, ruby-debug19 seems to have had its day, @cldwalker&#8217;s fork is the way to go.</p>
+      </div>
+    </li>
+    
+  </ol>
+</div>
+
+<form id="comment-form" method="post" action="/2011/11/1/ruby-1-9-3-and-ruby-debug/comments#comment-form">
+<fieldset>
+  <legend>Comment</legend>
+  <p>
+    <label class="text" for="comment_author">Name:</label><br/>
+    <input type="text" id="comment_author" name="comment[author]" value="" />
+  </p>
+  <p>
+    <label class="text" for="comment_author_email">Email Address:</label><br />
+    <input type="text" id="comment_author_email" name="comment[author_email]" value="" />
+  </p>
+  <p>
+    <label class="text" for="comment_author_url">Website:</label><br />
+    <input type="text" id="comment_author_url" name="comment[author_url]" value="" />
+  </p>
+  <p>
+    <label class="text" for="comment_body">Comment:</label><br />
+    <textarea id="comment_body" name="comment[body]"></textarea>
+  </p>
+  <div class="formactions">
+    <input type="submit" value="Post comment" class="submit" />
+  </div>
+</fieldset>
+</form>
+
+
+
+    </div>
+
+    <div id="sidebar">
+
+      <div class="sidebar-node">
+        <div id="search" class="search">
+          <form action="/search" id="sform" method="get" name="sform">
+            <p><input type="text" id="q" name="q" value="" /></p>
+          </form>
+        </div>
+      </div>
+
+
+      <!-- Delete the comment blocks if you'd like to display links for the monthly archive -->
+      
+
+      <!-- Delete the comment blocks if you'd like to list out your sections -->
+      
+      <div class="sidebar-node">
+        <h3>Sections</h3>
+        <ul>
+        
+          <li><a class="selected" href="/" title="Home">Home</a> (15)</li>
+        
+          <li><a href="/ruby" title="Ruby">Ruby</a> (15)</li>
+        
+          <li><a href="/emacs" title="Emacs">Emacs</a> (2)</li>
+        
+          <li><a href="/marketing" title="Marketing">Marketing</a> (1)</li>
+        
+          <li><a href="/linux" title="Linux">Linux</a> (0)</li>
+        
+          <li><a href="/railsconf" title="RailsConf">RailsConf</a> (3)</li>
+        
+        </ul>
+      </div>
+      
+
+      <!-- Delete the comment blocks if you'd like to list out your tags -->
+      
+      <div class="sidebar-node">
+        <h3>Tags</h3>
+        <ul>
+        
+          <li><a href="/tags/1.9.3" rel="tag" title="1.9.3">1.9.3</a> (1)</li>
+        
+          <li><a href="/tags/active%20merchant" rel="tag" title="active merchant">active merchant</a> (0)</li>
+        
+          <li><a href="/tags/activerecord" rel="tag" title="activerecord">activerecord</a> (1)</li>
+        
+          <li><a href="/tags/ajax" rel="tag" title="ajax">ajax</a> (1)</li>
+        
+          <li><a href="/tags/akita" rel="tag" title="akita">akita</a> (1)</li>
+        
+          <li><a href="/tags/analytics" rel="tag" title="analytics">analytics</a> (1)</li>
+        
+          <li><a href="/tags/apache" rel="tag" title="apache">apache</a> (3)</li>
+        
+          <li><a href="/tags/api%20applications" rel="tag" title="api applications">api applications</a> (0)</li>
+        
+          <li><a href="/tags/arel" rel="tag" title="arel">arel</a> (1)</li>
+        
+          <li><a href="/tags/autotest" rel="tag" title="autotest">autotest</a> (1)</li>
+        
+          <li><a href="/tags/beanstream" rel="tag" title="beanstream">beanstream</a> (1)</li>
+        
+          <li><a href="/tags/billing" rel="tag" title="billing">billing</a> (1)</li>
+        
+          <li><a href="/tags/blog" rel="tag" title="blog">blog</a> (1)</li>
+        
+          <li><a href="/tags/brightcove" rel="tag" title="brightcove">brightcove</a> (1)</li>
+        
+          <li><a href="/tags/bugmash" rel="tag" title="bugmash">bugmash</a> (1)</li>
+        
+          <li><a href="/tags/bundler" rel="tag" title="bundler">bundler</a> (1)</li>
+        
+          <li><a href="/tags/caike" rel="tag" title="caike">caike</a> (1)</li>
+        
+          <li><a href="/tags/class_eval" rel="tag" title="class_eval">class_eval</a> (1)</li>
+        
+          <li><a href="/tags/clients" rel="tag" title="clients">clients</a> (1)</li>
+        
+          <li><a href="/tags/conference" rel="tag" title="conference">conference</a> (1)</li>
+        
+          <li><a href="/tags/cron" rel="tag" title="cron">cron</a> (1)</li>
+        
+          <li><a href="/tags/cvs" rel="tag" title="cvs">cvs</a> (1)</li>
+        
+          <li><a href="/tags/datamapper" rel="tag" title="datamapper">datamapper</a> (1)</li>
+        
+          <li><a href="/tags/define_method" rel="tag" title="define_method">define_method</a> (1)</li>
+        
+          <li><a href="/tags/delegate" rel="tag" title="delegate">delegate</a> (1)</li>
+        
+          <li><a href="/tags/delegation" rel="tag" title="delegation">delegation</a> (1)</li>
+        
+          <li><a href="/tags/drag" rel="tag" title="drag">drag</a> (1)</li>
+        
+          <li><a href="/tags/drop" rel="tag" title="drop">drop</a> (1)</li>
+        
+          <li><a href="/tags/emacs" rel="tag" title="emacs">emacs</a> (2)</li>
+        
+          <li><a href="/tags/fabio" rel="tag" title="fabio">fabio</a> (1)</li>
+        
+          <li><a href="/tags/file%20upload" rel="tag" title="file upload">file upload</a> (0)</li>
+        
+          <li><a href="/tags/full-text%20search" rel="tag" title="full-text search">full-text search</a> (0)</li>
+        
+          <li><a href="/tags/gems" rel="tag" title="gems">gems</a> (2)</li>
+        
+          <li><a href="/tags/generator" rel="tag" title="generator">generator</a> (1)</li>
+        
+          <li><a href="/tags/george" rel="tag" title="george">george</a> (1)</li>
+        
+          <li><a href="/tags/git" rel="tag" title="git">git</a> (1)</li>
+        
+          <li><a href="/tags/gnome" rel="tag" title="gnome">gnome</a> (1)</li>
+        
+          <li><a href="/tags/google" rel="tag" title="google">google</a> (1)</li>
+        
+          <li><a href="/tags/gravatar" rel="tag" title="gravatar">gravatar</a> (1)</li>
+        
+          <li><a href="/tags/guimaraes" rel="tag" title="guimaraes">guimaraes</a> (1)</li>
+        
+          <li><a href="/tags/homebrew" rel="tag" title="homebrew">homebrew</a> (1)</li>
+        
+          <li><a href="/tags/ide" rel="tag" title="ide">ide</a> (2)</li>
+        
+          <li><a href="/tags/innovation" rel="tag" title="innovation">innovation</a> (1)</li>
+        
+          <li><a href="/tags/interview" rel="tag" title="interview">interview</a> (3)</li>
+        
+          <li><a href="/tags/linux" rel="tag" title="linux">linux</a> (2)</li>
+        
+          <li><a href="/tags/list" rel="tag" title="list">list</a> (1)</li>
+        
+          <li><a href="/tags/lists" rel="tag" title="lists">lists</a> (1)</li>
+        
+          <li><a href="/tags/management" rel="tag" title="management">management</a> (1)</li>
+        
+          <li><a href="/tags/mephisto" rel="tag" title="mephisto">mephisto</a> (1)</li>
+        
+          <li><a href="/tags/metaprogramming" rel="tag" title="metaprogramming">metaprogramming</a> (1)</li>
+        
+          <li><a href="/tags/method_missing" rel="tag" title="method_missing">method_missing</a> (1)</li>
+        
+          <li><a href="/tags/mysql" rel="tag" title="mysql">mysql</a> (1)</li>
+        
+          <li><a href="/tags/opening" rel="tag" title="opening">opening</a> (1)</li>
+        
+          <li><a href="/tags/opml" rel="tag" title="opml">opml</a> (1)</li>
+        
+          <li><a href="/tags/osx" rel="tag" title="osx">osx</a> (1)</li>
+        
+          <li><a href="/tags/paperclip" rel="tag" title="paperclip">paperclip</a> (2)</li>
+        
+          <li><a href="/tags/passenger" rel="tag" title="passenger">passenger</a> (2)</li>
+        
+          <li><a href="/tags/patch" rel="tag" title="patch">patch</a> (1)</li>
+        
+          <li><a href="/tags/payment" rel="tag" title="payment">payment</a> (2)</li>
+        
+          <li><a href="/tags/plugins" rel="tag" title="plugins">plugins</a> (1)</li>
+        
+          <li><a href="/tags/prototype" rel="tag" title="prototype">prototype</a> (1)</li>
+        
+          <li><a href="/tags/queries" rel="tag" title="queries">queries</a> (1)</li>
+        
+          <li><a href="/tags/rails" rel="tag" title="rails">rails</a> (20)</li>
+        
+          <li><a href="/tags/rails%20rbenv" rel="tag" title="rails rbenv">rails rbenv</a> (20)</li>
+        
+          <li><a href="/tags/railsconf" rel="tag" title="railsconf">railsconf</a> (3)</li>
+        
+          <li><a href="/tags/recurring" rel="tag" title="recurring">recurring</a> (2)</li>
+        
+          <li><a href="/tags/refactor" rel="tag" title="refactor">refactor</a> (1)</li>
+        
+          <li><a href="/tags/ruby" rel="tag" title="ruby">ruby</a> (21)</li>
+        
+          <li><a href="/tags/ruby-debug" rel="tag" title="ruby-debug">ruby-debug</a> (1)</li>
+        
+          <li><a href="/tags/rvideo" rel="tag" title="rvideo">rvideo</a> (1)</li>
+        
+          <li><a href="/tags/scheduling" rel="tag" title="scheduling">scheduling</a> (1)</li>
+        
+          <li><a href="/tags/sinatra" rel="tag" title="sinatra">sinatra</a> (1)</li>
+        
+          <li><a href="/tags/sortable" rel="tag" title="sortable">sortable</a> (1)</li>
+        
+          <li><a href="/tags/sphinx" rel="tag" title="sphinx">sphinx</a> (1)</li>
+        
+          <li><a href="/tags/ssi" rel="tag" title="ssi">ssi</a> (1)</li>
+        
+          <li><a href="/tags/tasks" rel="tag" title="tasks">tasks</a> (1)</li>
+        
+          <li><a href="/tags/testing" rel="tag" title="testing">testing</a> (1)</li>
+        
+          <li><a href="/tags/thinking%20sphinx" rel="tag" title="thinking sphinx">thinking sphinx</a> (1)</li>
+        
+          <li><a href="/tags/timeline" rel="tag" title="timeline">timeline</a> (1)</li>
+        
+          <li><a href="/tags/twitter" rel="tag" title="twitter">twitter</a> (1)</li>
+        
+          <li><a href="/tags/ubuntu" rel="tag" title="ubuntu">ubuntu</a> (1)</li>
+        
+          <li><a href="/tags/web" rel="tag" title="web">web</a> (1)</li>
+        
+          <li><a href="/tags/whenever" rel="tag" title="whenever">whenever</a> (1)</li>
+        
+          <li><a href="/tags/wyeworks" rel="tag" title="wyeworks">wyeworks</a> (2)</li>
+        
+        </ul>
+      </div>
+      
+
+     <div class="sidebar-node">
+        <p><a href="http://blog.wyeworks.com/feed/atom.xml" class="powered"><img alt="feed-icon" src="/images/feed-icon.png" /></a></p>
+      </div>
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_pub="wyeworks";</script><a href="http://www.addthis.com/feed.php?pub=wyeworks&h1=http%3A%2F%2Fblog.wyeworks.com%2Fatom%2Ffeed.xml&t1=" onclick="return addthis_open(this, 'feed', 'http://blog.wyeworks.com/atom/feed.xml')" alt="Subscribe using any feed reader!" target="_blank"><img src="http://s7.addthis.com/static/btn/lg-feed-en.gif" width="125" height="16" alt="Subscribe" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/200/addthis_widget.js"></script>
+<!-- AddThis Button END -->
+     
+      <div class="sidebar-node">
+        <p><a href="http://twitter.com/wyeworks" class="powered"><img alt="twitter-wyeworks" src="/images/twitter-wyeworks.jpg" /></a></p>
+      </div>
+     
+     <div class="sidebar-node">
+        <p><a href="http://mephistoblog.com/" class="powered"><img alt="mephisto-badge-tiny" src="/images/mephisto-badge-tiny.png" /></a></p>
+      </div>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+</div>
+
+  <div id="footer">
+    <hr />
+    <p><a href="/">WyeWorks Blog</a></p>
+    <ul>
+      <li>powered by <a href="http://www.wyeworks.com">WyeWorks</a></li>
+    </ul>
+  </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7141880-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
