@@ -319,46 +319,95 @@ module TaskUtilities
      xml = File.read( xmlfile )
      doc = REXML::Document.new(xml)
 
-     # create a list of pages
-     doc.elements.each('//milestone') do |page|
+     # create a list of lg tags (this is the special case for SJE)
+     lgtags = [ ]
+     doc.elements.each('//lg') do | lgtag |
+        lgtags[ lgtags.size ] = lgtag
+     end
 
-        # extract the folio information from the page tag
-        folio = page.attributes["entity"]
-        pagecount += 1
+     # if we have any then this is SJE and we need to process differently
+     if lgtags.size != 0
 
-        # continue to move to the next sibling processing each line until another page tag is identified
-        nextnode = page.next_sibling_node( )
-        while nextnode != nil do
+        # process the list of lg tags
+        lgtags.each do |lgtag|
 
-           # text nodes should be ignored
-           if ( nextnode.kind_of? REXML::Text ) == false
+           if ( lgtag.kind_of? REXML::Text ) == false
+              childlg = lgtag.elements[ 1 ]
+              while childlg != nil do
+                 if ( childlg.kind_of? REXML::Text ) == false
+                    case childlg.name
+                       when "l"
+                         loc_line = childlg.attributes["xml:id"]
+                         hl_line = childlg.attributes["n"]
+                         content = processLine( childlg, hl_line )
 
-              case nextnode.name
+                         # if we have any content, clean it up
+                         if content.empty? == false
+                           content = content.gsub(/\n/, "" ).squeeze( ).gsub( /^ /, "" )
+                           result[ linecount ] = { :pageimg => folio, :loc_line => loc_line, :hl_line => hl_line, :content => content }
+                           linecount += 1
 
-                 # line nodes are the ones we want
-                 when "l"
+                         else
+                            puts "** EMPTY LINE: #{hl} **"
+                         end
 
-                     #puts nextnode.attributes
-                     loc_line = nextnode.attributes["xml:id"]
-                     hl_line = nextnode.attributes["n"]
-                     content = processLine( nextnode, hl_line )
+                       when "milestone"
+                         folio = childlg.attributes["entity"]
+                         pagecount += 1
 
-                     if content.empty? == false
-                        content = content.gsub(/\n/, "" ).squeeze( ).gsub( /^ /, "" )
-                        #puts "#{folio} : #{hl} #{content}"
-                        result[ linecount ] = { :pageimg => folio, :loc_line => loc_line, :hl_line => hl_line, :content => content }
-                        linecount += 1
-                     else
-                        puts "** EMPTY LINE: #{hl} **"
-                     end
-
-                 # we have reached the next page so drop out
-                 when "milestone"
-                    break
+                       when "lg"
+                          break
+                    end
+                 end
+                 childlg = childlg.next_sibling_node()
               end
            end
-           nextnode = nextnode.next_sibling_node()
         end
+
+     else
+
+       # normal processing based on page tags. Create a list of pages
+       doc.elements.each('//milestone') do |page|
+
+          # extract the folio information from the page tag
+          folio = page.attributes["entity"]
+          pagecount += 1
+
+          # continue to move to the next sibling processing each line until another page tag is identified
+          nextnode = page.next_sibling_node( )
+          while nextnode != nil do
+
+             # text nodes should be ignored
+             if ( nextnode.kind_of? REXML::Text ) == false
+
+                case nextnode.name
+
+                   # line nodes are the ones we want
+                   when "l"
+
+                       #puts nextnode.attributes
+                       loc_line = nextnode.attributes["xml:id"]
+                       hl_line = nextnode.attributes["n"]
+                       content = processLine( nextnode, hl_line )
+
+                       if content.empty? == false
+                          content = content.gsub(/\n/, "" ).squeeze( ).gsub( /^ /, "" )
+                          #puts "#{folio} : #{hl} #{content}"
+                          result[ linecount ] = { :pageimg => folio, :loc_line => loc_line, :hl_line => hl_line, :content => content }
+                          linecount += 1
+                       else
+                          puts "** EMPTY LINE: #{hl} **"
+                       end
+
+                   # we have reached the next page so drop out
+                   when "milestone"
+                      break
+                end
+             end
+             nextnode = nextnode.next_sibling_node()
+          end
+
+       end
 
      end
 
