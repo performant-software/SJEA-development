@@ -13,7 +13,7 @@ body {
   font-family: "Signika Negative", "Arial", sans-serif; }
 
 #page-header {
-  position: fixed;
+  position: absolute;
   width: 97%;
   margin: auto;
   height: 148px;
@@ -88,15 +88,15 @@ body {
       z-index: 102; }
 
 #sidebar {
-  position: fixed;
+  position: relative;
   float: left;
-  display: block;
   width: 16%;
   color: #695a42;
   background-color: #ddd5bd;
   z-index: 100;
+  top: 148px;
   bottom: 38px;
-  top: 148px; }
+  min-height: 970px; }
 
 #sidebar-items #item-heading {
   height: 25px;
@@ -160,7 +160,8 @@ body {
   font-family: "Signika Negative", "Arial", sans-serif;
   padding-top: 8px;
   clear: both;
-  bottom: 0; }
+  bottom: 0;
+  z-index: 101; }
   #main-footer #terms {
     color: #f0e7cf; }
 

@@ -19,7 +19,7 @@ body {
 
 #page-header {
 
-    position: fixed;
+    position: absolute;
     width: $page_width;
     margin: auto;
     height: $header_height;
@@ -129,15 +129,15 @@ body {
 
 #sidebar {
 
-   position: fixed;
+   position: relative;
    float: left;
-   display: block;
    width: $navbox_width;
    color: $navitem_text_color;
    background-color: $navbox_background_color;
    z-index: $fixed_element_z_index;
-   bottom: $footer_height + 8px;
    top: $header_height;
+   bottom: $footer_height + 8px;
+   min-height: $page_height - $footer_height;
 }
 
 #sidebar-items {
@@ -227,6 +227,7 @@ body {
    padding-top: 8px;
    clear: both;
    bottom: 0;
+   z-index: $fixed_element_z_index + 1;
 
    #terms {
       color: $footer_text_color;
