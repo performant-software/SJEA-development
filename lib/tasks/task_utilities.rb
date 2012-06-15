@@ -129,143 +129,66 @@ module TaskUtilities
     return "java -jar tools/saxonhe-9-3-0-5j/saxon9he.jar -s:#{xmlfile} -xsl:#{xslfile}"
   end
 
-=begin
-  def processLineNote( line )
-
-
-     # diagnostic only
-     hl_line = line.attributes["n"]
-
-     # create a hash of the line text tags and their corresponding location in the tree.
-     # We will use this to merge with the other tag content in order to construct the full line
-     textlist = Hash.new
-     textnodes = line.texts( )
-     textnodes.each do | tn |
-        text = tn.value().gsub(/^[ ]*/, "" ).gsub(/\n/, "" )
-        if text.empty?() == false
-           textlist[ tn.index_in_parent( ) ] = text
-        end
-     end
-
-     textixs = textlist.keys( ).sort( )
-     ixlimit = textixs.size
-     ix = 0
-     content = ""
-
-     # from this node, recurse through all its children and extract the data as necessary
-     line.each_recursive() do |child|
-
-        # if the next piece of content to insert is a text tag then do so
-        childix = child.index_in_parent()
-        if ix < ixlimit && childix > textixs[ ix ]
-           content << textlist[ textixs[ ix ] ] << " "
-           ix += 1
-        end
-
-        # look at each child node and process as appropriate
-      	case child.name
-
-            # these are the main content nodes provided they have an "ana" attribute
-            # we need to take care as this could have children whose ext should come first
-            when "seg"
-           	   if child.attributes["ana"] != nil
-       		        content << " " << child.text( ) unless child.has_text?( ) == false
-               else
-                  # otherwise, we look to see what type of seg node this is
-                  case child.attributes["type"]
-
-                    when "shadowHyphen", "punct"
-                       content << child.text( ) unless child.has_text?( ) == false
-                    when "averse", "bverse"
-                      # ignore these...
-                    else
-                       #puts "UNPROCESSED seg tag #{child.attributes} #{hl_line}"
-                  end
-           	   end
-
-            # these tags contain content thjat we want too
-            when "expan", "damage", "add", "hi", "orig", "supplied", "corr"
-                content << child.text( ) unless child.has_text?( ) == false
-
-            # these are not interesting
-            when "del", "note", "choice", "abbr", "reg", "g", "sic"
-            	# do nothing...
-
-            # so we can see the error case
-            else
-           	   puts "UNSUPPORTED TAG #{child.name} #{hl_line}"
-
-    	  end
-
-     end
-
-     # if we have not added all the text nodes yet then add them to the end of the line
-     while ix != ixlimit do
-        content << " " << textlist[ textixs[ ix ] ]
-        ix += 1
-     end
-
-     # if we do not have any content
-     if content.empty? == true
-        puts "** EMPTY LINE: #{hl} **"
-     end
-
-     return content
-
-  end
-=end
-
   def processParentNode( seg, hl )
 
-     content = ""
-     seg.each_child() do |segchild|
+   content = ""
 
-         # a text node... add its content, no spaces at this level
-         if ( segchild.kind_of? REXML::Text ) == true
-            content << segchild.value( )
-         else
+   seg.each_child() do |segchild|
 
-            if segchild.attributes["ana"] != nil
-               segchild.each_child() do |anachild|
-                  if ( anachild.kind_of? REXML::Text ) == true
-                     content << " " << anachild.value( )
-                  else
-                     content << processParentNode( anachild, hl )
-                  end
+       # a text node... add its content
+       if ( segchild.kind_of? REXML::Text ) == true
 
-               end
-            else
-               case segchild.name
-               # these nodes can have children...
-               when "hi", "expan", "add", "choice", "reg", "supplied", "corr"
-                     content << processParentNode( segchild, hl )
+          # a kind of hack...
+          #if seg.name != "hi"
+          #   content << " "
+          #end
+          content << segchild.value( )
+       else
 
-               when "note", "del", "orig", "abbr", "sic"
-                  # always ignore these...
+          if segchild.attributes["ana"] != nil
+             segchild.each_child() do |anachild|
+                if ( anachild.kind_of? REXML::Text ) == true
+                   content << " " << anachild.value( )
+                else
+                   content << processParentNode( anachild, hl )
+                end
 
-               else
-                  # otherwise, we look to see what type of node this is
-                  case segchild.attributes["type"]
+             end
+          else
+             case segchild.name
+             # these nodes can have children...
+             when "hi", "expan", "add", "choice", "reg", "supplied", "corr"
+                   content << processParentNode( segchild, hl )
 
-                  when "shadowHyphen", "punct"
-                     content << segchild.text( ) unless segchild.has_text?( ) == false
+             when "note", "del", "orig", "abbr", "sic"
+                # always ignore these...
 
-                  when "averse", "bverse"
-                     content << processParentNode( segchild, hl )
+             else
+                # otherwise, we look to see what type of node this is
+                case segchild.attributes["type"]
 
-                  else
-                     puts "UNPROCESSED seg child #{segchild.name} #{segchild.attributes} #{hl}"
-                  end
-               end
-            end
-         end
-     end
-     return content
+                when "shadowHyphen", "punct"
+                   content << segchild.text( ) unless segchild.has_text?( ) == false
+
+                when "averse", "bverse"
+                   content << processParentNode( segchild, hl )
+
+                else
+                   puts "UNPROCESSED seg child #{segchild.name} #{segchild.attributes} #{hl}"
+                end
+             end
+          end
+       end
+   end
+
+   return content
+
   end
 
-  def processLine( line, hl )
+  def processLineChildren( line )
 
       content = ""
+      hl = line.attributes["n"]
 
       line.each_child() do |child|
 
@@ -301,118 +224,233 @@ module TaskUtilities
 
               else
                  puts "UNPROCESSED LINE TAG #{child.name} #{hl}"
-            end
+
+          end
          end
       end
+
       return content
+
+  end
+
+  def processLineNode( node, folio, linelist )
+
+     loc_line = node.attributes["xml:id"]
+     hl_line = node.attributes["n"]
+     content = processLineChildren( node )
+
+     # if we have any content, clean it up and store it
+     if content.empty? == false
+        content = content.gsub(/\n/, "" ).squeeze( ).gsub( /^ /, "" )
+
+        #puts "#{folio} : #{hl} #{content}"
+        linelist[ linelist.size ] = { :pageimg => folio, :loc_line => loc_line, :hl_line => hl_line, :content => content }
+     else
+        puts "** EMPTY LINE: #{hl_line} **"
+     end
+
+  end
+
+  def processLgTagStructure( doc, linelist )
+
+     folio = "UNKNOWN"
+     pages = 0
+     lines = 0
+
+     # process the list of lg tags
+     doc.elements.each('//lg') do | lgtag |
+
+        childlg = lgtag.elements[ 1 ]
+        while childlg != nil do
+           if ( childlg.kind_of? REXML::Text ) == false
+              case childlg.name
+                 when "l"
+                    processLineNode( childlg, folio, linelist )
+                    lines += 1
+
+                 when "milestone"
+                    folio = childlg.attributes["entity"]
+                    pages += 1
+
+                  when "trailer"
+                     # ignore these for now...
+
+                 when "lg"
+                    break
+                 else
+                    puts "UNPROCESSED TAG in lg loop #{childlg.name}"
+              end
+           else
+                  # nothing else of interest here so this is not an error
+                  #puts "UNEXPECTED TEXT TAG in processLgTagStructure #{childlg.value}"
+           end
+           childlg = childlg.next_sibling_node()
+        end
+     end
+
+     puts "Processed #{pages} pages, #{lines} lines"
+  end
+
+  def processDiv2TagStructure( doc, linelist )
+
+     folio = "UNKNOWN"
+     pages = 0
+     lines = 0
+
+     # process the list of div2's
+     doc.elements.each('//div2') do | div2 |
+
+         # we may hit one in the inner loop so we need a way to drop out
+         newMilestone = false
+
+         nextnode = div2.elements[ 1 ]
+         while nextnode != nil do
+           if ( nextnode.kind_of? REXML::Text ) == false
+              case nextnode.name
+                  when "l"
+                     processLineNode( nextnode, folio, linelist )
+                     lines += 1
+
+                  when "milestone"
+                     folio = nextnode.attributes["entity"]
+                     pages += 1
+
+                  when "marginalia", "head", "trailer", "fw"
+                     # ignore these for now...
+
+                  when "div2"
+                     break
+
+                  else
+                     puts "UNPROCESSED TAG in processDiv2Structure #{nextnode.name}"
+              end
+           else
+              # nothing else of interest here so this is not an error
+              #puts "UNEXPECTED TEXT TAG in processDiv2Structure #{nextnode.value}"
+           end
+           nextnode = nextnode.next_sibling_node()
+        end
+     end
+     puts "Processed #{pages} pages, #{lines} lines"
+  end
+
+  def processSpecialDiv2TagStructure( doc, linelist )
+
+     folio = "UNKNOWN"
+     pages = 0
+     lines = 0
+
+     # cant seem to just get thew first one...
+     doc.root.elements.each( '//milestone' ) do | page |
+        folio = page.attributes["entity"]
+        pages = 1
+        break
+     end
+
+     # process the list of div2's
+     doc.elements.each('//div2') do | div2 |
+
+         # we may hit one in the inner loop so we need a way to drop out
+         newMilestone = false
+
+         nextnode = div2.elements[ 1 ]
+         while nextnode != nil do
+           if ( nextnode.kind_of? REXML::Text ) == false
+              case nextnode.name
+                  when "l"
+                     processLineNode( nextnode, folio, linelist )
+                     lines += 1
+
+                  when "milestone"
+                     folio = nextnode.attributes["entity"]
+                     pages += 1
+
+                  when "head"
+                     # ignore these for now...
+
+                  when "div2"
+                     break
+
+                  else
+                     puts "UNPROCESSED TAG in processSpecialDiv2TagStructure #{nextnode.name}"
+              end
+           else
+              # nothing else of interest here so this is not an error
+              #puts "UNEXPECTED TEXT TAG in processDiv2Structure #{nextnode.value}"
+           end
+           nextnode = nextnode.next_sibling_node()
+        end
+     end
+     puts "Processed #{pages} pages, #{lines} lines"
+
+  end
+
+  # the simple structure consists of a div1 tag followed by peer milestone and line tags
+  def processSimpleStructure( doc, linelist )
+
+     pages = 0
+     lines = 0
+
+     # process the list of pages
+     doc.elements.each('//milestone') do | page |
+
+        #puts page.attributes
+        folio = page.attributes["entity"]
+        pages += 1
+
+        nextnode = page.next_sibling_node( )
+        while nextnode != nil do
+           if ( nextnode.kind_of? REXML::Text ) == false
+              case nextnode.name
+                  when "l"
+                     processLineNode( nextnode, folio, linelist )
+                     lines += 1
+
+                  when "milestone"
+                     break
+
+                  else
+                     puts "UNPROCESSED TAG in processSimpleStructure #{nextnode.name}"
+              end
+           else
+              # nothing else of interest here so this is not an error
+              #puts "UNEXPECTED TEXT TAG in processSimpleStructure #{nextnode.value}"
+           end
+           nextnode = nextnode.next_sibling_node()
+        end
+     end
+     puts "Processed #{pages} pages, #{lines} lines"
   end
 
   def load_transcription_from_file( xmlfile )
 
-     linecount = 0
-     pagecount = 0
-     folio = ""
-     result = []
+     linelist = []
 
      puts "Processing #{xmlfile}..."
 
      xml = File.read( xmlfile )
-     doc = REXML::Document.new(xml)
+     doc = REXML::Document.new( xml )
 
-     # create a list of lg tags (this is the special case for SJE)
-     lgtags = [ ]
-     doc.elements.each('//lg') do | lgtag |
-        lgtags[ lgtags.size ] = lgtag
-     end
+     fileprefix = xmlfile.split( "/" )[ 2 ].gsub(/^(.*).xml$/, '\1')
 
-     # if we have any then this is SJE and we need to process differently
-     if lgtags.size != 0
+     case fileprefix
 
-        # process the list of lg tags
-        lgtags.each do |lgtag|
+     when "SJA", "SJC", "SJD", "SJL", "SJU"
+        processDiv2TagStructure( doc, linelist )
 
-           if ( lgtag.kind_of? REXML::Text ) == false
-              childlg = lgtag.elements[ 1 ]
-              while childlg != nil do
-                 if ( childlg.kind_of? REXML::Text ) == false
-                    case childlg.name
-                       when "l"
-                         loc_line = childlg.attributes["xml:id"]
-                         hl_line = childlg.attributes["n"]
-                         content = processLine( childlg, hl_line )
+     when "SJE"
+        processLgTagStructure( doc, linelist )
 
-                         # if we have any content, clean it up
-                         if content.empty? == false
-                           content = content.gsub(/\n/, "" ).squeeze( ).gsub( /^ /, "" )
-                           result[ linecount ] = { :pageimg => folio, :loc_line => loc_line, :hl_line => hl_line, :content => content }
-                           linecount += 1
+     when "SJEx"
+        processSimpleStructure( doc, linelist )
 
-                         else
-                            puts "** EMPTY LINE: #{hl} **"
-                         end
-
-                       when "milestone"
-                         folio = childlg.attributes["entity"]
-                         pagecount += 1
-
-                       when "lg"
-                          break
-                    end
-                 end
-                 childlg = childlg.next_sibling_node()
-              end
-           end
-        end
-
-     else
-
-       # normal processing based on page tags. Create a list of pages
-       doc.elements.each('//milestone') do |page|
-
-          # extract the folio information from the page tag
-          folio = page.attributes["entity"]
-          pagecount += 1
-
-          # continue to move to the next sibling processing each line until another page tag is identified
-          nextnode = page.next_sibling_node( )
-          while nextnode != nil do
-
-             # text nodes should be ignored
-             if ( nextnode.kind_of? REXML::Text ) == false
-
-                case nextnode.name
-
-                   # line nodes are the ones we want
-                   when "l"
-
-                       #puts nextnode.attributes
-                       loc_line = nextnode.attributes["xml:id"]
-                       hl_line = nextnode.attributes["n"]
-                       content = processLine( nextnode, hl_line )
-
-                       if content.empty? == false
-                          content = content.gsub(/\n/, "" ).squeeze( ).gsub( /^ /, "" )
-                          #puts "#{folio} : #{hl} #{content}"
-                          result[ linecount ] = { :pageimg => folio, :loc_line => loc_line, :hl_line => hl_line, :content => content }
-                          linecount += 1
-                       else
-                          puts "** EMPTY LINE: #{hl} **"
-                       end
-
-                   # we have reached the next page so drop out
-                   when "milestone"
-                      break
-                end
-             end
-             nextnode = nextnode.next_sibling_node()
-          end
-
-       end
+     when "SJP", "SJV"
+        processSpecialDiv2TagStructure( doc, linelist )
 
      end
 
-     puts "STATUS: #{xmlfile}: #{pagecount} pages, #{linecount} lines"
-     return result
+     return linelist
+
   end
 
   def load_comparison_from_file( xmlfile )
