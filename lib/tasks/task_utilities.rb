@@ -220,9 +220,9 @@ module TaskUtilities
      content = ""
      seg.each_child() do |segchild|
 
-         # a text node... add its content
+         # a text node... add its content, no spaces at this level
          if ( segchild.kind_of? REXML::Text ) == true
-            content << " " << segchild.value( )
+            content << segchild.value( )
          else
 
             if segchild.attributes["ana"] != nil
