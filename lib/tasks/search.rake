@@ -20,6 +20,7 @@ namespace :sjea do
 
     # do each of the transcription files individually
     transcription_file_list( ).each do |fname|
+    #["SJA"].each do |fname|
 
        xmlfile = "XSLT/xml/#{fname}.xml"
 

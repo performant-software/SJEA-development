@@ -129,8 +129,12 @@ module TaskUtilities
     return "java -jar tools/saxonhe-9-3-0-5j/saxon9he.jar -s:#{xmlfile} -xsl:#{xslfile}"
   end
 
-
+=begin
   def processLineNote( line )
+
+
+     # diagnostic only
+     hl_line = line.attributes["n"]
 
      # create a hash of the line text tags and their corresponding location in the tree.
      # We will use this to merge with the other tag content in order to construct the full line
@@ -158,15 +162,25 @@ module TaskUtilities
            ix += 1
         end
 
-        # look at each child node and process as apropriate
+        # look at each child node and process as appropriate
       	case child.name
 
             # these are the main content nodes provided they have an "ana" attribute
+            # we need to take care as this could have children whose ext should come first
             when "seg"
            	   if child.attributes["ana"] != nil
-       		      content << " " << child.text( ) unless child.has_text?( ) == false
-                   elsif child.attributes["type"] == "shadowHyphen"
-                      content << child.text( ) unless child.has_text?( ) == false
+       		        content << " " << child.text( ) unless child.has_text?( ) == false
+               else
+                  # otherwise, we look to see what type of seg node this is
+                  case child.attributes["type"]
+
+                    when "shadowHyphen", "punct"
+                       content << child.text( ) unless child.has_text?( ) == false
+                    when "averse", "bverse"
+                      # ignore these...
+                    else
+                       #puts "UNPROCESSED seg tag #{child.attributes} #{hl_line}"
+                  end
            	   end
 
             # these tags contain content thjat we want too
@@ -179,7 +193,7 @@ module TaskUtilities
 
             # so we can see the error case
             else
-           	   puts "UNSUPPORTED TAG #{child.name} #{hl}"
+           	   puts "UNSUPPORTED TAG #{child.name} #{hl_line}"
 
     	  end
 
@@ -198,6 +212,99 @@ module TaskUtilities
 
      return content
 
+  end
+=end
+
+  def processParentNode( seg, hl )
+
+     content = ""
+     seg.each_child() do |segchild|
+
+         # a text node... add its content
+         if ( segchild.kind_of? REXML::Text ) == true
+            content << " " << segchild.value( )
+         else
+
+            if segchild.attributes["ana"] != nil
+               segchild.each_child() do |anachild|
+                  if ( anachild.kind_of? REXML::Text ) == true
+                     content << " " << anachild.value( )
+                  else
+                     content << processParentNode( anachild, hl )
+                  end
+
+               end
+            else
+               case segchild.name
+               # these nodes can have children...
+               when "hi", "expan", "add", "choice", "reg", "supplied", "corr"
+                     content << processParentNode( segchild, hl )
+
+               when "note", "del", "orig", "abbr", "sic"
+                  # always ignore these...
+
+               else
+                  # otherwise, we look to see what type of node this is
+                  case segchild.attributes["type"]
+
+                  when "shadowHyphen", "punct"
+                     content << segchild.text( ) unless segchild.has_text?( ) == false
+
+                  when "averse", "bverse"
+                     content << processParentNode( segchild, hl )
+
+                  else
+                     puts "UNPROCESSED seg child #{segchild.name} #{segchild.attributes} #{hl}"
+                  end
+               end
+            end
+         end
+     end
+     return content
+  end
+
+  def processLine( line, hl )
+
+      content = ""
+
+      line.each_child() do |child|
+
+         # a text node... add its content
+         if ( child.kind_of? REXML::Text ) == true
+            content << " " << child.value( )
+         else
+
+            case child.name
+
+              when "seg"
+
+                     child.each_child() do |grandchild|
+                        # a text node... add its content
+                        if ( grandchild.kind_of? REXML::Text ) == true
+                           content << " " << grandchild.value( )
+                        else
+                           case grandchild.name
+                           when "note"
+                              # ignore these...
+                           else
+                              content << processParentNode( grandchild, hl )
+                           end
+                        end
+                     end
+
+              when "damage", "expan", "hi"
+                  # take the text from these...
+                  content << child.text( ) unless child.has_text?( ) == false
+
+              when "g"
+                # ignore these...
+
+              else
+                 puts "UNPROCESSED LINE TAG #{child.name} #{hl}"
+            end
+         end
+      end
+      return content
   end
 
   def load_transcription_from_file( xmlfile )
@@ -234,11 +341,16 @@ module TaskUtilities
                      #puts nextnode.attributes
                      loc_line = nextnode.attributes["xml:id"]
                      hl_line = nextnode.attributes["n"]
-                     content = processLineNote( nextnode )
+                     content = processLine( nextnode, hl_line )
 
-                     #puts "#{folio} : #{hl} #{content}"
-                     result[ linecount ] = { :pageimg => folio, :loc_line => loc_line, :hl_line => hl_line, :content => content }
-                     linecount += 1
+                     if content.empty? == false
+                        content = content.gsub(/\n/, "" ).squeeze( ).gsub( /^ /, "" )
+                        #puts "#{folio} : #{hl} #{content}"
+                        result[ linecount ] = { :pageimg => folio, :loc_line => loc_line, :hl_line => hl_line, :content => content }
+                        linecount += 1
+                     else
+                        puts "** EMPTY LINE: #{hl} **"
+                     end
 
                  # we have reached the next page so drop out
                  when "milestone"
@@ -253,158 +365,6 @@ module TaskUtilities
      puts "STATUS: #{xmlfile}: #{pagecount} pages, #{linecount} lines"
      return result
   end
-
-=begin
-  # count the number of times the word "what" occurs in "where"
-  def countTimes( what, where )
-
-    return 0 unless where != nil && what != nil
-
-    result = 0
-    # remove all copies of what in the where string
-    updatedwhere = where.gsub( what, "" )
-    difference = where.length - updatedwhere.length
-    if difference != 0
-      difference = difference / what.length
-    end
-
-    return difference
-
-  end
-
-  # if we have a note associated with this line of content, attempt to remove it
-  def removeNoteText( note, line_content )
-
-    if note.empty? == false
-       puts "*** Removing note *** [#{note}]"
-       puts "\nbefore [#{line_content}]"
-       line_content = line_content.gsub( note, "")
-       puts "\nafter [#{line_content}]"
-    end
-
-    return line_content
-  end
-
-  def load_transcription_from_file( xmlfile )
-
-     xmldoc = XML::Reader.file( xmlfile, :options => XML::Parser::Options::NOBLANKS | XML::Parser::Options::PEDANTIC )
-
-     linecount = 0
-     pagecount = 0
-     #pagelinecount = 0
-     seqtags = 0
-     pending_line_content = ""
-     hl_line = ""
-     loc_line = ""
-     page_image_file = ""
-     note = ""
-     result = []
-
-     while xmldoc.read
-        unless xmldoc.node_type == XML::Reader::TYPE_END_ELEMENT
-
-           case xmldoc.name
-
-             # the initial tag for the start of a new page
-             when "milestone"
-
-               # always flush any pending data...
-               if pending_line_content.empty? == false
-                   #abort( "hl_line empty!") unless hl_line.empty? == false
-                   #abort( "loc_line empty!") unless loc_line.empty? == false
-                   #abort( "page_image_file empty!") unless page_image_file.empty? == false
-
-                   # remove any pending note
-                   pending_line_content = removeNoteText( note, pending_line_content )
-                   note = ""
-
-                   result[ linecount ] = { :pageimg => page_image_file, :loc_line => loc_line, :hl_line => hl_line, :content => pending_line_content }
-                   pending_line_content = ""
-                   linecount += 1
-
-               end
-
-               page_image_file = xmldoc[ "entity" ]
-               pagecount += 1
-               #pagelinecount = 0
-               #puts "got #{page_image_file}"
-
-             when "l"
-
-               # always flush any pending data...
-               if pending_line_content.empty? == false
-                 #abort( "hl_line empty!") unless hl_line.empty? == false
-                 #abort( "loc_line empty!") unless loc_line.empty? == false
-                 #abort( "page_image_file empty!") unless page_image_file.empty? == false
-
-                 # remove any pending note
-                 pending_line_content = removeNoteText( note, pending_line_content )
-                 note = ""
-                 result[ linecount ] = { :pageimg => page_image_file, :loc_line => loc_line, :hl_line => hl_line, :content => pending_line_content }
-                 pending_line_content = ""
-                 linecount += 1
-
-                 #pagelinecount += 1
-                 #puts "line-flushed "
-               end
-
-               #contain_count = countTimes( "<note", xmldoc.node.to_s( ) )
-               #if contain_count != 0
-               #  puts "note occurs here [#{xmldoc.node.to_s( )}]\n\ncontent [#{xmldoc.node.content}]\n\nread string [#{xmldoc.read_string}]"
-               #end
-
-               # if this line node does not contain any child <seg> nodes or it contains 1 of a special type, then we need it's content. Otherwise
-               # we will get it in the <seg> nodes.
-               contain_count = countTimes( "<seg", xmldoc.node.to_s( :indent => false ) )
-               case contain_count
-                 when 0, 1
-                    #puts "** SPECIAL CASE ** \nnode: [#{xmldoc.node.to_s( :indent => false )}]\n\ncontent: [#{xmldoc.node.content}]\n#{xmldoc.read_string}\n#{xmldoc.read_string}** **"
-                    pending_line_content << xmldoc.node.content << " "
-               end
-
-               loc_line = xmldoc[ "xml:id" ]
-               hl_line = xmldoc[ "n" ]
-
-             # we are in a line and this is a bit of content
-             when "seg"
-
-                case xmldoc[ "type" ]
-                  when nil, "shadowHyphen", "punct"
-                     pending_line_content << xmldoc.read_string << " "
-                end
-
-             # We found a note; this should not be included so save it to remove later
-             when "note"
-                note = xmldoc.read_string
-
-           end
-        end
-     end
-
-     # gets any remaining content that has not already been processed
-     if pending_line_content.empty? == false
-       #abort( "hl_line empty!") unless hl_line.empty? == false
-       #abort( "loc_line empty!") unless loc_line.empty? == false
-       #abort( "page_image_file empty!") unless page_image_file.empty? == false
-
-       # remove any pending note
-       pending_line_content = removeNoteText( note, pending_line_content )
-
-       result[ linecount ] = { :pageimg => page_image_file, :loc_line => loc_line, :hl_line => hl_line, :content => pending_line_content }
-       linecount += 1
-
-       #pagelinecount += 1
-       #puts "     page #{page_image_file}; #{pagelinecount} lines"
-
-     end
-
-     xmldoc.close
-     puts "STATUS: #{xmlfile}: #{pagecount} pages, #{linecount} lines"
-
-     return result
-  end
-
-=end
 
   def load_comparison_from_file( xmlfile )
 
@@ -507,7 +467,7 @@ module TaskUtilities
 
                # always flush any pending data...
                if pending_page_content.empty? == false
-                   abour( "page_image_file empty!") unless page_image_file.empty? == false
+                   abort( "page_image_file empty!") unless page_image_file.empty? == false
 
                    result[ pagecount ] = { :pageimg => page_image_file, :content => pending_page_content }
                    #puts "page #{pagecount + 1}: img [#{page_image_file}], note [#{pending_page_content}]"
@@ -532,7 +492,7 @@ module TaskUtilities
 
      # gets any remaining content that has not already been processed
      if pending_page_content.empty? == false
-       abour( "page_image_file empty!") unless page_image_file.empty? == false
+       abort( "page_image_file empty!") unless page_image_file.empty? == false
         result[ pagecount ] = { :pageimg => page_image_file, :content => pending_page_content }
         #puts "page #{pagecount + 1}: img [#{page_image_file}], note [#{pending_page_content}]"
         pagecount += 1
