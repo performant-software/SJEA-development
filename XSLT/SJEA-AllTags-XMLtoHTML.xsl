@@ -747,7 +747,7 @@
                         <span class="orig"><xsl:value-of select="./descendant::tei:orig"/> / </span><span class="reg"><xsl:apply-templates select="./descendant::tei:reg"/></span>
                     </xsl:when>
                     <xsl:when test="./descendant::tei:sic">
-                        <span class="sic"><xsl:value-of select="./descendant::tei:corr"/> / </span><span class="corr"><xsl:value-of select="./descendant::tei:corr"/></span>
+                        <span class="sic"><xsl:value-of select="./descendant::tei:sic"/> / </span><span class="corr"><xsl:value-of select="./descendant::tei:corr"/></span>
                     </xsl:when>
                     <xsl:when test="./descendant::tei:expan">
                         <span class="expan" name="{./tei:abbr/text()}"><i><xsl:value-of select="./tei:expan/tei:seg"/></i></span>
