@@ -1484,8 +1484,7 @@ function getAvailableLines( ) {
         "1339",
         "1340",
         "1340.1",
-        "1340.2",
-        "2147"
+        "1340.2"
 	];
 
     return( availableLines );
