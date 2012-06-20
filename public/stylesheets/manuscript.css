@@ -246,7 +246,6 @@
 
 .listbibl { padding-left: 22px ; text-indent: -22px }
 
+.passus { text-indent: 240px }
+
 div.origdate, div.support, div.extent, div.format, div.foliation, div.collation, div.condition, div.layout, div.handnote, div.deconote, div.binding, div.contents, div.provenance, div.listbibl { padding-bottom: 12px }
-
-
-

@@ -303,7 +303,7 @@
                             <xsl:with-param name="num" select="number(@n)"/>
                         </xsl:call-template>
                     </xsl:variable>
-                    <h2 align='center'>Passus <xsl:value-of select="$numW"/></h2>
+                    <h2 class='passus'>Passus <xsl:value-of select="$numW"/></h2>
                     <xsl:apply-templates/>
                 </xsl:when>
                 
