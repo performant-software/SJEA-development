@@ -303,7 +303,7 @@
                             <xsl:with-param name="num" select="number(@n)"/>
                         </xsl:call-template>
                     </xsl:variable>
-                    <h2 class='passus'>Passus <xsl:value-of select="$numW"/></h2>
+                    <h2 class='passus-center'>Passus <xsl:value-of select="$numW"/></h2>
                     <xsl:apply-templates/>
                 </xsl:when>
                 
@@ -327,11 +327,11 @@
         <xsl:if test="$view!='critical'">
             <xsl:choose>
                 <xsl:when test="@rend">
-                    <h2><span class="{substring-after(substring-before(@rend, ')'), '(')}"><xsl:apply-templates/></span></h2>
+                    <h2><span class="passus-{substring-after(substring-before(@rend, ')'), '(')}"><xsl:apply-templates/></span></h2>
                 </xsl:when>
                 
                 <xsl:when test="@place">
-                    <h2><span class="{@place}"><xsl:apply-templates/></span></h2>
+                    <h2><span class="passus-{@place}"><xsl:apply-templates/></span></h2>
                 </xsl:when>
             </xsl:choose>
         </xsl:if>
