@@ -247,7 +247,7 @@
 .listbibl { padding-left: 22px ; text-indent: -22px }
 
 .passus-center { padding-left: 250px }
-.passus-marginLeft { padding-left: 35px }
-.passus-marginRight { padding-left: 575px }
+.passus-marginLeft { position: absolute; }
+.passus-marginRight { position: absolute; padding-left: 575px }
 
 div.origdate, div.support, div.extent, div.format, div.foliation, div.collation, div.condition, div.layout, div.handnote, div.deconote, div.binding, div.contents, div.provenance, div.listbibl { padding-bottom: 12px }
