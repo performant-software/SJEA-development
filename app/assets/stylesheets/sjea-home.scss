@@ -14,7 +14,7 @@
 
    #content-display {
 
-      padding: 40px 50px 0 50px;
+      padding: 135px  80px 0 80px;
 
       #home-image {
          background-image: url(/images/home_image.jpg);
@@ -22,7 +22,7 @@
 	     height: 260px;
 	     width: 183px;
 	     float: left;
-	     margin: 0 10px 0 0;
+	     margin: 0 12px 0 0;
       }
 
       #thanks {
@@ -34,69 +34,19 @@
       }
 
       #logo-div {
-	     height: 275px;
+         position: relative;
+	     min-height: 275px;
 	     width: 100%;
          clear: right;
          background-color: $logo_background_color;
       }
 
       .logo-top, .logo-bot {
+         position: relative;
 	     background-repeat: no-repeat;
 	     background-position: top left;
-	     display: block;
-	     height: 100px;
-	     width: 175px;
-	     margin: 30px 18px 0 18px;
-	     float: left;
-      }
-
-      .logo-bot {
-	     margin-left: 30px;
-	     margin-right: 30px;
-      }
-
-      #neh-logo {
-         background-image: url(/images/partnerlogo_top_neh.jpg);
-      }
-
-      #ncsu-logo {
-         background-image: url(/images/partnerlogo_top_chass.jpg);
-      }
-
-      #bibsoc-logo {
-         background-image: url(/images/partnerlogo_top_bsa.jpg);
-      }
-
-      #bodlib-logo{
-         background-image: url(/images/partnerlogo_top_bodleian.jpg);
-      }
-
-      #britlib-logo{
-         background-image: url(/images/partnerlogo_top_britishlib.jpg);
-	     width: 90px;
-      }
-
-      #culib-logo{
-         background-image: url(/images/partnerlogo_btm_uoc.jpg);
-      }
-
-      #dro-logo {
-         background-image: url(/images/partnerlogo_btm_devon.jpg);
-      }
-
-      #huntlib-logo{
-         background-image: url(/images/partnerlogo_btm_huntington.jpg);
-         width: 225px;
-      }
-
-      #lamlib-logo{
-         background-image: url(/images/partnerlogo_top_lamberth.jpg);
-	     width: 90px;
-      }
-
-      #pulib-logo{
-         background-image: url(/images/partnerlogo_btm_princeton.jpg);
-         width: 225px;
+	     display: inline;
+	     margin: 10px 5px 10px 0;
       }
 
       #terms-list {
