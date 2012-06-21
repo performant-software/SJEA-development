@@ -261,6 +261,12 @@ function makeDocReadyCallback( scrollto_id ) {
 
     var callback = function( ) {
 
+        // attach the click handler to open the image pop-up
+        $(".graphic" ).click(function() {
+            var popupdiv = "#" + $(this).attr( "src" ) + "-popup";
+            $( popupdiv ).dialog( "open" )
+        });
+
         // Enable the lightbox behavior
         $(".imglightbox").colorbox( { iframe:true, width: "70%", height: "95%" } );
 
