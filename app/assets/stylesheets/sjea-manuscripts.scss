@@ -118,4 +118,179 @@
     color: $content_background_color;
 }
 
+.popup-image {
+   background-repeat: no-repeat;
+   background-position: top right;
+   background-size: 100%;
+}
 
+$popup_size_multiplier: 2;
+
+// Specific sizing for the pop-up images; dont relally like this but can't see a better way
+#And {
+    background-image: url(/images/And.jpg);
+    width: 296px * $popup_size_multiplier;
+    height: 134px * $popup_size_multiplier;
+}
+
+//#C22flourisht {
+//    background-image: url(/images/C22flourisht.jpg);
+//    width: 248px * $popup_size_multiplier;
+//    height: 162px * $popup_size_multiplier;
+//}
+
+#C22flourish22 {
+    background-image: url(/images/C22flourisht.jpg);
+    width: 248px * $popup_size_multiplier;
+    height: 162px * $popup_size_multiplier;
+}
+
+#C3flourisht {
+    background-image: url(/images/C3flourisht.jpg);
+    width: 316px * $popup_size_multiplier;
+    height: 170px * $popup_size_multiplier;
+}
+
+#C440euen {
+    background-image: url(/images/C440euen.jpg);
+    width: 401px * $popup_size_multiplier;
+    height: 148px * $popup_size_multiplier;
+}
+
+#CapitalD {
+    background-image: url(/images/CapitalD.jpg);
+    width: 625px * $popup_size_multiplier;
+    height: 163px * $popup_size_multiplier;
+}
+
+#CapitalN {
+    background-image: url(/images/CapitalN.jpg);
+    width: 370px * $popup_size_multiplier;
+    height: 156px * $popup_size_multiplier;
+}
+
+#CapitalT {
+    background-image: url(/images/CapitalT.jpg);
+    width: 447px * $popup_size_multiplier;
+    height: 158px * $popup_size_multiplier;
+}
+
+#Cdownnbowndon {
+    background-image: url(/images/Cdownnbowndon.jpg);
+    width: 586px * $popup_size_multiplier;
+    height: 306px * $popup_size_multiplier;
+}
+
+#D1070paraph {
+    background-image: url(/images/D1070paraph.jpg);
+    width: 190px * $popup_size_multiplier;
+    height: 47px * $popup_size_multiplier;
+}
+
+#D182paraph {
+    background-image: url(/images/D182paraph.jpg);
+    width: 100px * $popup_size_multiplier;
+    height: 54px * $popup_size_multiplier;
+}
+
+#D429paraph {
+    background-image: url(/images/D429paraph.jpg);
+    width: 94px * $popup_size_multiplier;
+    height: 51px * $popup_size_multiplier;
+}
+
+#D861paraph {
+    background-image: url(/images/D861paraph.jpg);
+    width: 158px * $popup_size_multiplier;
+    height: 65px * $popup_size_multiplier;
+}
+
+#D916paraph {
+    background-image: url(/images/D916paraph.jpg);
+    width: 124px * $popup_size_multiplier;
+    height: 66px * $popup_size_multiplier;
+}
+
+#Lrcurl {
+    background-image: url(/images/Lrcurl.jpg);
+    width: 252px * $popup_size_multiplier;
+    height: 171px * $popup_size_multiplier;
+}
+
+#P122rcurl {
+    background-image: url(/images/P122rcurl.jpg);
+    width: 178px * $popup_size_multiplier;
+    height: 76px * $popup_size_multiplier;
+}
+
+#P12rann {
+    background-image: url(/images/P12rann.jpg);
+    width: 134px * $popup_size_multiplier;
+    height: 95px * $popup_size_multiplier;
+}
+
+#P139 {
+    background-image: url(/images/P139.jpg);
+    width: 370px * $popup_size_multiplier;
+    height: 94px * $popup_size_multiplier;
+}
+
+#P150rcurl {
+    background-image: url(/images/P150rcurl.jpg);
+    width: 129px * $popup_size_multiplier;
+    height: 77px * $popup_size_multiplier;
+}
+
+#P500-503 {
+    background-image: url(/images/P500-503.jpg);
+    width: 322px * $popup_size_multiplier;
+    height: 320px * $popup_size_multiplier;
+}
+
+#P666t {
+    background-image: url(/images/P666t.jpg);
+    width: 181px * $popup_size_multiplier;
+    height: 83px * $popup_size_multiplier;
+}
+
+#P766t {
+    background-image: url(/images/P766t.jpg);
+    width: 144px * $popup_size_multiplier;
+    height: 76px * $popup_size_multiplier;
+}
+
+#Therfore {
+    background-image: url(/images/Therfore.jpg);
+    width: 350px * $popup_size_multiplier;
+    height: 166px * $popup_size_multiplier;
+}
+
+#V19tilde {
+    background-image: url(/images/V19tilde.jpg);
+    width: 410px * $popup_size_multiplier;
+    height: 243px * $popup_size_multiplier;
+}
+
+#V43rcurl {
+    background-image: url(/images/V43rcurl.jpg);
+    width: 240px * $popup_size_multiplier;
+    height: 142px * $popup_size_multiplier;
+}
+
+#Woll {
+    background-image: url(/images/Woll.jpg);
+    width: 310px * $popup_size_multiplier;
+    height: 127px * $popup_size_multiplier;
+}
+
+#moche {
+    background-image: url(/images/moche.jpg);
+    width: 412px * $popup_size_multiplier;
+    height: 148px * $popup_size_multiplier;
+}
+
+#xxxti {
+    background-image: url(/images/xxxti.jpg);
+    width: 340px * $popup_size_multiplier;
+    height: 150px * $popup_size_multiplier;
+}
