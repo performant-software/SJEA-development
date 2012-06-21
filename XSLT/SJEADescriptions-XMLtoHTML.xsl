@@ -85,12 +85,15 @@
             <head>
                 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
                 <link href="{concat($csspath, 'manuscript.css')}" rel="stylesheet" type="text/css"/>
-                <link href="stylesheets/sjea-common.css" media="screen" rel="stylesheet" type="text/css" />
-                <link href="stylesheets/colorbox.css" media="screen" rel="stylesheet" type="text/css" />
-                <script src="javascripts/jquery-1.7.2.min.js" type="text/javascript"></script>
-                <script src="javascripts/jquery.tools.min.js" type="text/javascript"></script>
-                <script src="javascripts/jquery.blockUI.js" type="text/javascript"></script>
-                <script src="javascripts/jquery.colorbox-min.js" type="text/javascript"></script>
+                <link href="/stylesheets/sjea-common.css" media="screen" rel="stylesheet" type="text/css" />
+                <link href="/stylesheets/colorbox.css" media="screen" rel="stylesheet" type="text/css" />
+                <link href="/stylesheets/jquery-ui-1.8.20.custom.css" media="screen" rel="stylesheet" type="text/css" />
+                <script src="/javascripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+                <script src="/javascripts/jquery.tools.min.js" type="text/javascript"></script>
+                <script src="/javascripts/jquery-ui-1.8.20.custom.min.js" type="text/javascript"></script>
+                <script src="/javascripts/jquery.blockUI.js" type="text/javascript"></script>
+                <script src="/javascripts/jquery.colorbox-min.js" type="text/javascript"></script>
+                <script type="text/javascript"> $(document).ready(function() {$( ".popup-div" ).dialog({ width: "auto", autoOpen: false, show: "blind", hide: "blind" }); });</script>
                 <title>
                     <xsl:value-of select="//tei:titleStmt/tei:title"/>
                 </title>
@@ -453,9 +456,12 @@
     <!--     Performant will add code to create a popup of the icon here    -->
     <!--*************************-->
     <xsl:template match="tei:graphic">
-        <xsl:param name="view" tunnel="yes"/>
+
+        <xsl:variable name="imgroot">
+            <xsl:value-of select="substring-after( substring-before(@url, '.jpg'), $imgpath )"/>
+        </xsl:variable>
         
-        <span class="graphic">I</span>
+        <div id="{$imgroot}-popup" class="popup-div"><div id="{$imgroot}" class="popup-image"></div></div><span src="{$imgroot}" class="graphic">I</span>
     </xsl:template>
     
     
