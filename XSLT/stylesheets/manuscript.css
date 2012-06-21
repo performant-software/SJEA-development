@@ -124,6 +124,8 @@
 
 .supNote, .graphic { vertical-align:super ; font-size:.7em ; color: red ; font-family:Verdana, Geneva, sans-serif ; font-weight: bold}
 
+.graphic { cursor: pointer; }
+
 .foreign, .expan, .title, .it, .txExpan, .bastardExpan, .bastardtxExpan { font-style:italic }
 
 .titleOff, .foreignOff, .itOff, .bastardforeignittitletxExpan, .bastardforeignittitleExpan, .bastardforeignittxExpan, .bastardforeigntitletxExpan, .bastardittitletxExpan, .foreignittitletxExpan, .bastardforeignitExpan, .bastardforeigntitleExpan, .bastardforeigntxExpan, .bastardittitleExpan, .bastardittxExpan, .bastardtitletxExpan, .bastardforeignExpan, .bastarditExpan, .bastardtitleExpan, .foreignitExpan, .foreigntitleExpan, .foreigntxExpan, .ittitleExpan, .ittxExpan, .titletxExpan, .foreignExpan, .itExpan, .titleExpan { font-style:normal }
@@ -166,25 +168,25 @@
 
 .imageDiv { float: right; clear: right; padding-right: 150px; }
 
-.margin-topCenter { position: relative ; left: 50% ; right: 50% ; text-align: center }
-
 .add-supralinear, .margin-supralinear, .add-topCenter, .add-bottomCenter, .add-bottomLeft, .add-marginLeft, .add-marginRight { color: gray}
 
 .sup, .supralinear { vertical-align:super ; font-size:.7em }
 
-.margin-bottomCenter { position: relative ; left: 50% ; right: 50% ; text-align: center }
+.margin-topCenter { position: relative ; left: 250px;  }
+.margin-bottomCenter { position: relative ; left: 250px; }
 
-.margin-bottomLeft, .margin-marginLeft { position: absolute ; left: 70px }
+.margin-bottomLeft, .margin-marginLeft { position: absolute; left: -75px; }
 
-.margin-marginRight, .marginRight { position: absolute ; right: 70px }
+.marginRight { position: absolute; right: -150px; }
+.margin-marginRight { position: relative; right: -150px; }
 
-.topCenter, .center, .bottomCenter { position: relative ; left: 50% ; right: 50% ; text-align: center}
+.topCenter, .center, .bottomCenter { position: absolute; left: 250px;}
 
-.marginLeft { position: absolute ; left: -60 }
+.marginLeft { position: absolute ; left: -60px }
 
-.topLeft, .bottomLeft { position: relative ; left: 70 }
+.topLeft, .bottomLeft { position: relative ; left: 70px }
 
-.topRight, .bottomRight { position: absolute ; right: 100 }
+.topRight, .bottomRight { position: absolute ; right: 100px }
 
 .deldescription, .placedescription { display:none }
 
@@ -206,7 +208,7 @@
 
 .punctuselevatus, .yogh { font-family:Junicode }
 
-.cell, .celldata, .celllabel, .celllabel1, .celllabel2, .celllabel3, .celletym, .cellforms, .cellcollation, .cellfols\., .cellleafnumber { vertical-align:top ; padding-left:5 ; padding-right:5 }
+.cell, .celldata, .celllabel, .celllabel1, .celllabel2, .celllabel3, .celletym, .cellforms, .cellcollation, .cellfols\., .cellleafnumber { vertical-align:top ; padding-left:5px ; padding-right:5px}
 
 .list { list-style-type:none }
 
