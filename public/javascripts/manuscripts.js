@@ -144,7 +144,7 @@ function showManuscript( name, view, scrollto_id ) {
 
     // load the resource and report an error if unsuccessful
     var resource = name.replace( "SJ", "MS") + "-" + view + ".html";
-    loadRemoteResource( resource, "#content-display", makeDocReadyCallback( scrollto_id ) );
+    loadRemoteResource( resource, "#content-display", makeDocReadyCallback( false, scrollto_id ) );
 }
 
 function showDescription( name ) {
@@ -157,7 +157,7 @@ function showDescription( name ) {
 
     // load the resource and report an error if unsuccessful
     var resource = name + "-description.html";
-    loadRemoteResource( resource, "#content-display", makeDocReadyCallback( null ) );
+    loadRemoteResource( resource, "#content-display", makeDocReadyCallback( true, null ) );
 }
 
 function redirectToManuscript( name, view ) {
@@ -257,12 +257,14 @@ function setManuscriptViewState( name ) {
     $("#view-control" ).val( name );
 }
 
-function makeDocReadyCallback( scrollto_id ) {
+function makeDocReadyCallback( enable_popup, scrollto_id ) {
 
     var callback = function( ) {
 
-        // enable the image pop-up behavior
-        $( ".popup-div" ).dialog({ width: "auto", autoOpen: false, show: "blind", hide: "blind" });
+        if( enable_popup == true ) {
+           // enable the image pop-up behavior
+           $( ".popup-div" ).dialog({ width: "auto", autoOpen: false, show: "blind", hide: "blind" });
+        }
 
         // attach the click handler to open the image pop-up
         $(".graphic" ).click(function() {
