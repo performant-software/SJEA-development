@@ -2,46 +2,44 @@
   margin: 0;
   padding: 0; }
 
-#content {
-  overflow: hidden; }
-  #content #content-controls #view-control {
-    float: left;
-    width: 100px;
-    margin: 6px 0 0 6px; }
-  #content #content-controls span {
-    float: left;
-    margin: 6px 0 0 6px; }
-  #content #content-controls .color-key {
-    float: right;
-    width: 20px;
-    height: 20px;
-    margin: 5px 5px 5px 5px; }
-  #content #content-controls #key-text {
-    float: right;
-    margin: 8px 0 0 0; }
-  #content #content-controls #color-key-1 {
-    background-color: green; }
-  #content #content-controls #color-key-2 {
-    background-color: olive; }
-  #content #content-controls #color-key-3 {
-    background-color: violet; }
-  #content #content-controls #color-key-4 {
-    background-color: purple; }
-  #content #content-controls #color-key-5 {
-    background-color: aqua; }
-  #content #content-controls #color-key-6 {
-    background-color: fuchsia; }
-  #content #content-controls #color-key-7 {
-    background-color: darkgray; }
-  #content #content-controls #xml-button {
-    float: right;
-    width: 50px;
-    height: 18px;
-    margin: 4px 3px 0 0;
-    background: url("/images/xmlbutton.jpg") no-repeat bottom; }
-  #content #content-display {
-    text-align: justify;
-    min-width: 1024px; }
+#content #content-controls #view-control {
+  float: left;
+  width: 100px;
+  margin: 6px 0 0 6px; }
+#content #content-controls span {
+  float: left;
+  margin: 6px 0 0 6px; }
+#content #content-controls .color-key {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin: 5px 5px 5px 5px; }
+#content #content-controls #key-text {
+  float: right;
+  margin: 8px 0 0 0; }
+#content #content-controls #color-key-1 {
+  background-color: green; }
+#content #content-controls #color-key-2 {
+  background-color: olive; }
+#content #content-controls #color-key-3 {
+  background-color: violet; }
+#content #content-controls #color-key-4 {
+  background-color: purple; }
+#content #content-controls #color-key-5 {
+  background-color: aqua; }
+#content #content-controls #color-key-6 {
+  background-color: fuchsia; }
+#content #content-controls #color-key-7 {
+  background-color: darkgray; }
+#content #content-controls #xml-button {
+  float: right;
+  width: 50px;
+  height: 18px;
+  margin: 4px 3px 0 0;
+  background: url("/images/xmlbutton.jpg") no-repeat bottom; }
+#content #content-display {
+  text-align: justify;
+  min-width: 1024px; }
 
 #lb-zoom-image-div {
   width: 875px;
