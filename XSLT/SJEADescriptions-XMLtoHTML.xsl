@@ -460,7 +460,7 @@
             <xsl:value-of select="substring-after( substring-before(@url, '.jpg'), $imgpath )"/>
         </xsl:variable>
         
-        <div id="{$imgroot}-popup" class="popup-div"><div id="{$imgroot}" class="popup-image"></div></div><span src="{$imgroot}" class="graphic">I</span>
+        <span id="{$imgroot}-popup" class="popup-span"><div id="{$imgroot}" class="popup-image"></div></span><span src="{$imgroot}" class="graphic">I</span>
     </xsl:template>
     
     

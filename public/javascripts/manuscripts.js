@@ -263,7 +263,7 @@ function makeDocReadyCallback( enable_popup, scrollto_id ) {
 
         if( enable_popup == true ) {
            // enable the image pop-up behavior
-           $( ".popup-div" ).dialog({ width: "auto", autoOpen: false, show: "blind", hide: "blind" });
+           $( ".popup-span" ).dialog({ width: "auto", autoOpen: false, show: "blind", hide: "blind" });
         }
 
         // attach the click handler to open the image pop-up
