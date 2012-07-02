@@ -38,7 +38,8 @@
   margin: 4px 3px 0 0;
   background: url("/images/xmlbutton.jpg") no-repeat bottom; }
 #content #content-display {
-  text-align: justify; }
+  text-align: justify;
+  min-width: 1024px; }
 
 #lb-zoom-image-div {
   width: 875px;
