@@ -146,6 +146,7 @@
                 <script src="/javascripts/jquery.tools.min.js" type="text/javascript"></script>
                 <script src="/javascripts/jquery.blockUI.js" type="text/javascript"></script>
                 <script src="/javascripts/jquery.colorbox-min.js" type="text/javascript"></script>
+                <script src="/javascripts/jquery.qtip-1.0.0-rc3.min.js" type="text/javascript"></script>
                 <script src="/javascripts/tooltips.js" type="text/javascript"></script>
 
                 <title>
@@ -773,7 +774,7 @@
         
         <xsl:choose>
             <xsl:when test="$view = 'alltags' or $view = 'scribal'">
-                <a id="add-{@place}" class="standard-tooltip"><font color="gray"><xsl:apply-templates/></font></a><span class="tooltip"><xsl:value-of select="concat('Place: ', @place, ', Hand: ', @hand)"/></span>
+                <a id="add-{@place}" class="standard-tooltip" title="{concat('Place: ', @place, ', Hand: ', @hand)}"><font color="gray"><xsl:apply-templates/></font></a>
             </xsl:when>
             
             <xsl:otherwise>
@@ -825,7 +826,7 @@
             
             <xsl:otherwise>
                 <xsl:for-each select="$margin">
-                    <span class="margin-{@place}"><a id="margin-{@place}" class="standard-tooltip"><xsl:apply-templates/></a><span class="tooltip"><xsl:value-of select="concat('Place: ', @place, ', Hand: ', @hand)"/></span></span>
+                    <span class="margin-{@place}"><a id="margin-{@place}" class="standard-tooltip" title="{concat('Place: ', @place, ', Hand: ', @hand)}"><xsl:apply-templates/></a></span>
                 </xsl:for-each>
                 
                 <!--mjc: in some cases there can be multiple <marginalia> tags in a row  -->
@@ -865,7 +866,7 @@
             <xsl:when test="$view = 'diplomatic'"/>
                 
             <xsl:otherwise>
-                <a id="supNote" class="standard-tooltip"><span class="supNote">N</span></a><span class="tooltip"><xsl:apply-templates/></span>
+                <a id="supNote" class="standard-tooltip" title="{@note}"><span class="supNote">N</span></a>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
