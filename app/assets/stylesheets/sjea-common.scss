@@ -245,23 +245,6 @@ body {
 	color: #000;
 }
 
-.tooltip {
-    background-color: #000;
-    border: 1px solid #FFF;
-    padding: 10px 15px;
-    display: none;
-    color: #fff;
-    text-align: left;
-    font-size: 15px;
-    font-weight: normal;
-
-    /* outline radius for mozilla/firefox only */
-    -moz-box-shadow: 0 0 10px #000;
-    -webkit-box-shadow: 0 0 10px #000;
-
-    z-index: 9999;
-}
-
 .blockUI h1 {
    font-family: 'trebuchet ms', verdana, arial;
    font-size: 20px;
