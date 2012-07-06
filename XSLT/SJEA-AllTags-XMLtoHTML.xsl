@@ -861,12 +861,16 @@
     <!--*************************-->
     <xsl:template match="tei:note">
         <xsl:param name="view" tunnel="yes"/>
-        
+       
+        <xsl:variable name="noteBody">
+	    <xsl:apply-templates/>
+        </xsl:variable> 
+
         <xsl:choose>
             <xsl:when test="$view = 'diplomatic'"/>
                 
             <xsl:otherwise>
-                <a id="supNote" class="standard-tooltip" title="{@note}"><span class="supNote">N</span></a>
+                <a id="supNote" class="standard-tooltip" title="{$noteBody}"><span class="supNote">N</span></a>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
