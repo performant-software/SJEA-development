@@ -655,6 +655,8 @@
     <!--*************************-->
     <xsl:template match="//tei:note/tei:hi" xml:space="preserve">
         <xsl:param name="view" tunnel="yes"/>
+        <xsl:variable name="openHi">&lt;span class=&#x2018;<xsl:value-of select="@rend"/>&#x2018;&gt;</xsl:variable>
+        <xsl:variable name="closeHi">&lt;/span&gt;</xsl:variable>
         
         <xsl:choose>
             <xsl:when test="$view = 'critical'">
@@ -662,7 +664,7 @@
             </xsl:when>
             
             <xsl:otherwise>
-                <span class="{@rend}"><xsl:apply-templates/></span>
+                <xsl:value-of disable-output-escaping="yes" select="$openHi"/><xsl:apply-templates/><xsl:value-of disable-output-escaping="yes" select="$closeHi"/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -863,7 +865,7 @@
         <xsl:param name="view" tunnel="yes"/>
        
         <xsl:variable name="noteBody">
-	    <xsl:apply-templates/>
+	       <xsl:apply-templates/>
         </xsl:variable> 
 
         <xsl:choose>
