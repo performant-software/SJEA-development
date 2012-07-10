@@ -1687,7 +1687,9 @@
                             <seg ana="#in">in</seg>
                             <seg ana="#a">a</seg>
                             <seg ana="#place">place</seg>
-                        </seg> . <seg type="bverse">
+                        </seg>
+                        <seg type="punct">.</seg> 
+                        <seg type="bverse">
                             <seg ana="#proued">proued</seg>
                             <seg ana="#to-gedir">to<seg type="shadowHyphen">-</seg>gedir</seg>
                         </seg></l>

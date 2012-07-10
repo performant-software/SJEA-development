@@ -9872,7 +9872,7 @@
                                     <orig>alto burste</orig>
                                     <reg>
                                         <seg ana="#al">al</seg>
-                                        <seg ana="#toburste">toburste</seg>
+                                        <seg ana="#toburste">to<seg type="shadowHyphen">-</seg>burste</seg>
                                     </reg>
                                 </choice>
                             </seg>

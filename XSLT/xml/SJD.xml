@@ -11381,7 +11381,7 @@
                     <l xml:id="D.0711" n="HL.0738">
                         <seg type="averse">
                             <seg type="punct">
-                                <supplied source="C U E">¶<note>As described in the description for MS D, it is likely that a paraph marking indicating a passus division was present at this point and has been lost due to the drastically cropeed margin on the left side of 218v. This point corresponds to paraph markers in MSS C, U, and E, and thus a paraph marker has been supplied here.</note></supplied>
+                                <supplied source="C U E">¶<note>As described in the description for MS D, it is likely that a paraph marking indicating a passus division was present at this point and has been lost due to the drastically cropped margin on the left side of 218v. This point corresponds to paraph markers in MSS C, U, and E, and thus a paraph marker has been supplied here.</note></supplied>
                             </seg>
                             <seg ana="#vaspasian">vaspasian</seg>
                             <seg ana="#liggith">liggith</seg>
