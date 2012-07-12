@@ -6596,7 +6596,7 @@
                             <seg ana="#appon">appon</seg>
                             <seg ana="#ȝone">ȝone</seg>
                             <seg ana="#faytheles">faytheles</seg>
-                            <del rend="linedThrough" status="unremarkable">ferl<note place="unspecified">This word is difficult to make out due to it being lined through; the spelling may be <hi rend="it">forl</hi>.</note></del>
+                            <del rend="linedThrough" status="unremarkable">ferl</del>
                             <seg ana="#folke">folke</seg>
                         </seg>
                         <seg type="bverse">
@@ -6604,6 +6604,7 @@
                             <seg ana="#falsely">falsely</seg>
                             <seg ana="#hym">hym</seg>
                             <seg ana="#sloghe">sloghe</seg>
+                            <note place="unspecified">The deleted word following <hi rend="it">faytheles</hi>is difficult to make out because it is lined through; the spelling may be <hi rend="it">forl</hi>.</note>
                         </seg>
                     </l>
 
@@ -9629,7 +9630,7 @@
                             <seg ana="#cursede">cursede</seg>
                             <seg ana="#folke">folke</seg>
                             <seg ana="#for-to">for<seg type="shadowHyphen">-</seg>to</seg>
-                            <seg ana="#care">care<note place="unspecified">A mark shaped like the letter <hi rend="it">c</hi> appears above the <hi rend="it">c</hi> in <hi rend="it">care</hi>.  Cf. line 520, where there is a similar mark above the word <hi rend="it">sweyande</hi>.</note></seg>
+                            <seg ana="#care">care<note place="unspecified">A mark shaped like the letter <hi rend="it">c</hi> appears above the <hi rend="it">c</hi> in <hi rend="it">care</hi>. Cf. line 520, where there is a similar mark above the word <hi rend="it">sweyande</hi>.</note></seg>
                         </seg>
                         <seg type="bverse">
                             <seg ana="#þat">þat</seg>
@@ -9881,7 +9882,7 @@
                         </seg>
                         <seg type="bverse">
                             <seg ana="#tiłł">tiłł</seg>
-                            <del rend="linedThrough" status="unremarkable">ch<note place="unspecified">The <hi rend="it">h</hi> was not fully formed before the letters were lined through.</note></del>
+                            <del rend="linedThrough" status="unremarkable">ch</del>
                             <seg ana="#cayphas">cayphas</seg>
                             <seg ana="#thees">thees</seg>
                         </seg>
@@ -11664,12 +11665,13 @@
                         <seg type="averse">
                             <seg ana="#waspasyane">waspasyane</seg>
                             <seg ana="#was">was</seg>
-                            <del rend="subpunction" hand="hand1">wo<note place="unspecified">In addition to being subpuncted, it appears that perhaps <hi rend="it">wo</hi> is written over another character.</note></del>
+                            <del rend="subpunction" hand="hand1">wo</del>
                             <seg ana="#wondyde">wondyde</seg>
                         </seg>
                         <seg type="bverse">
                             <seg ana="#wondirly">wondirly</seg>
                             <seg ana="#sore">sore</seg>
+                            <note place="unspecified">In addition to being subpuncted, it appears that the <hi rend="it">wo</hi> following <hi rend="it">was</hi> is perhaps written over another character.</note>
                         </seg>
                     </l>
 
@@ -15418,9 +15420,10 @@
                             <seg ana="#ire">Ire</seg>
                         </seg>
                         <seg type="bverse">
-                            <del rend="linedThrough" hand="hand1">E<note place="unspecified">It looks as if Thornton first wrote an <hi rend="it">r</hi> and then wrote an <hi rend="it">E</hi> over it before giving up, striking the characters through, and starting the word over.</note></del>
+                            <del rend="linedThrough" hand="hand1">E</del>
                             <seg ana="#etterly">Etterly</seg>
                             <seg ana="#ryses">ryses</seg>
+                            <note place="unspecified">Preceding <hi rend="it">Etterly</hi>, it looks as if Thornton first wrote an <hi rend="it">r</hi> and then wrote an <hi rend="it">E</hi> over it before giving up, striking the characters through, and starting the word over.</note>
                         </seg>
                     </l>
 
@@ -17518,7 +17521,7 @@
                             <seg ana="#now">Now</seg>
                             <seg ana="#tuke">tuke</seg>
                             <seg ana="#to">
-                                <add place="supralinear" hand="hand1"><del rend="erasure" hand="hand1">to<note place="unspecified">Thornton first added <hi rend="it">to</hi> between <hi rend="it">tuke</hi> and <hi rend="it">Titus</hi>, then erased it and rewrote it after <hi rend="it">Titus</hi>.</note></del></add>
+                                <add place="supralinear" hand="hand1"><del rend="erasure" hand="hand1">to</del></add>
                             </seg>
                             <seg ana="#titus">Titus</seg>
                             <seg ana="#to">
@@ -17531,6 +17534,7 @@
                             <seg ana="#town">town</seg>
                             <seg ana="#to">to</seg>
                             <seg ana="#assayle">assayle</seg>
+                            <note place="unspecified">Thornton first added <hi rend="it">to</hi> between <hi rend="it">tuke</hi> and <hi rend="it">Titus</hi>, then erased it and rewrote it after <hi rend="it">Titus</hi>.</note>
                         </seg>
                     </l>
 
