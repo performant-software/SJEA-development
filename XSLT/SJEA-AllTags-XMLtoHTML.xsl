@@ -33,7 +33,7 @@
 
     <!--Define tags that need whitespace stripped or preserved-->
     <xsl:strip-space elements="" />
-    <xsl:preserve-space elements="tei:note tei:hi tei:seg" />
+    <xsl:preserve-space elements="" />
     
         
         
@@ -653,10 +653,23 @@
     <!--     'tr' - red highlight                                   -->
     <!--     'BinR'-red outline around text                         -->
     <!--*************************-->
-    <xsl:template match="//tei:note/tei:hi" xml:space="preserve">
+    <xsl:template match="//tei:note/tei:hi" >
         <xsl:param name="view" tunnel="yes"/>
-        <xsl:variable name="openHi">&lt;span class=&#x2018;<xsl:value-of select="@rend"/>&#x2018;&gt;</xsl:variable>
-        <xsl:variable name="closeHi">&lt;/span&gt;</xsl:variable>
+        
+        <!--mjc:                                                        -->
+        <!--====                                                        -->
+        <!--Performant's tooltip utility uses the @title attribute of   -->
+        <!--the <a> to generate a nicely formated roll-over box of info.-->
+        <!--However, it is not able to handle HTML formatted text within-->
+        <!--the @title, and I am having trouble getting the XSLT to     -->
+        <!--generate this code as well. As a temporary fix, I'm going to-->
+        <!--change the XSLT to surround italicized text inside <note>s  -->
+        <!--with single quotes instead.                                 -->
+        <!--For future release Performant will look at fixing this with -->
+        <!--their tooltip or another tool. Save this code for then.     -->
+        <!--============================================================-->
+        <!--<xsl:variable name="openHi">&lt;span class=&#x2018;<xsl:value-of select="@rend"/>&#x2018;&gt;</xsl:variable>
+        <xsl:variable name="closeHi">&lt;/span&gt;</xsl:variable>-->
         
         <xsl:choose>
             <xsl:when test="$view = 'critical'">
@@ -664,7 +677,16 @@
             </xsl:when>
             
             <xsl:otherwise>
-                <xsl:value-of disable-output-escaping="yes" select="$openHi"/><xsl:apply-templates/><xsl:value-of disable-output-escaping="yes" select="$closeHi"/>
+                <!--<xsl:value-of disable-output-escaping="yes" select="$openHi"/><xsl:apply-templates/><xsl:value-of disable-output-escaping="yes" select="$closeHi"/>-->
+                <xsl:text> '</xsl:text><xsl:apply-templates/>
+                <xsl:choose>
+                    <xsl:when test="starts-with(following-sibling::text()[1], ' ')">
+                        <xsl:text>' </xsl:text>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:text>'</xsl:text>
+                    </xsl:otherwise>
+                </xsl:choose>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
