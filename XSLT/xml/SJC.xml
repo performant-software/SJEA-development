@@ -99,7 +99,7 @@
                     <fw type="runningHead" place="topCenter">† The Sege of ier<expan>usa</expan>l<expan>e</expan>m †</fw>
                     <l xml:id="C.0001" n="HL.0001">
                         <seg type="averse">
-                            <seg ana="#In"><supplied reason="guideletter">I</supplied>n<note>A guideletter for an initial <hi rend="italic">I</hi> is in the left margin, and a space two lines in height was left for it, but the letter was never realized.</note></seg>
+                            <seg ana="#In"><supplied reason="guideletter">I</supplied>n<note>A guideletter for an initial <hi rend="it">I</hi> is in the left margin, and a space two lines in height was left for it, but the letter was never realized.</note></seg>
                             <seg ana="#tyberyus">Tyberyus</seg>
                             <seg ana="#tyme">tyme</seg>
                         </seg>

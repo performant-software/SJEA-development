@@ -670,23 +670,15 @@
         <!--============================================================-->
         <!--<xsl:variable name="openHi">&lt;span class=&#x2018;<xsl:value-of select="@rend"/>&#x2018;&gt;</xsl:variable>
         <xsl:variable name="closeHi">&lt;/span&gt;</xsl:variable>-->
-        
+
+        <!--<xsl:value-of disable-output-escaping="yes" select="$openHi"/><xsl:apply-templates/><xsl:value-of disable-output-escaping="yes" select="$closeHi"/>-->
+        <xsl:text> '</xsl:text><xsl:apply-templates/>
         <xsl:choose>
-            <xsl:when test="$view = 'critical'">
-                <xsl:apply-templates/>
+            <xsl:when test="starts-with(following-sibling::text()[1], ' ')">
+                <xsl:text>' </xsl:text>
             </xsl:when>
-            
             <xsl:otherwise>
-                <!--<xsl:value-of disable-output-escaping="yes" select="$openHi"/><xsl:apply-templates/><xsl:value-of disable-output-escaping="yes" select="$closeHi"/>-->
-                <xsl:text> '</xsl:text><xsl:apply-templates/>
-                <xsl:choose>
-                    <xsl:when test="starts-with(following-sibling::text()[1], ' ')">
-                        <xsl:text>' </xsl:text>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:text>'</xsl:text>
-                    </xsl:otherwise>
-                </xsl:choose>
+                <xsl:text>'</xsl:text>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
