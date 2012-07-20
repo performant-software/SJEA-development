@@ -49,5 +49,5 @@ mail_intercept:
 # If you don't want bother with solr, then set enable to false.
 solr:
   url: "http://localhost:8983/solr"
-  path: "/Users/dave/Sandboxes/SJEA_solr"
+  path: "/Users/daveg/Sandboxes/SJEA_solr"
   core: "sjea"
