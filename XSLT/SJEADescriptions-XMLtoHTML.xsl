@@ -93,6 +93,7 @@
                 <script src="/javascripts/jquery-ui-1.8.20.custom.min.js" type="text/javascript"></script>
                 <script src="/javascripts/jquery.blockUI.js" type="text/javascript"></script>
                 <script src="/javascripts/jquery.colorbox-min.js" type="text/javascript"></script>
+                <script src="/javascripts/jquery.qtip-1.0.0-rc3.min.js" type="text/javascript"></script>
                 <title>
                     <xsl:value-of select="//tei:titleStmt/tei:title"/>
                 </title>
