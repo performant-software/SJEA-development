@@ -11,8 +11,9 @@ body {
 }
 
 #page {
+    min-width: $min_page_width;
     width: $page_width;
-    min-height: $page_height;
+    min-height: $min_page_height;
     margin: auto;
     font-family: $site_font;
 }
@@ -21,6 +22,7 @@ body {
 
     position: absolute;
     width: $page_width;
+    min-width: $min_page_width;
     margin: auto;
     height: $header_height;
     background-image: url("/images/banner_bg_stretch.jpg");
@@ -137,7 +139,7 @@ body {
    z-index: $fixed_element_z_index;
    top: $header_height;
    bottom: $footer_height + 8px;
-   min-height: $page_height - $footer_height;
+   min-height: $min_page_height - $footer_height;
 }
 
 #sidebar-items {
@@ -192,7 +194,7 @@ body {
    width: $contentarea_width;
    top: $header_height;
    bottom: $footer_height + 8px;
-   min-height: $page_height - $footer_height;
+   min-height: $min_page_height - $footer_height;
 
    #content-controls {
       position: relative;
