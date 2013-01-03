@@ -38,8 +38,7 @@
   margin: 4px 3px 0 0;
   background: url("/images/xmlbutton.jpg") no-repeat bottom; }
 #content #content-display {
-  text-align: justify;
-  width: 1024px; }
+  text-align: justify; }
   #content #content-display.overview, #content #content-display.description {
     width: 85%; }
 
