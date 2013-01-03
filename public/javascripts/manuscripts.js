@@ -183,6 +183,9 @@ function setGUIForManuscript( name, view ) {
     // clear any existing content...
     $("#content-display").empty( );
 
+    // setup the correct classes for specific views
+    $("#content-display").removeClass("overview description");
+
     // configure the XML button so it does the right thing...
     setXMLButtonAttributes( name );
 
@@ -205,6 +208,10 @@ function setGUIForDescription( name ) {
 
     // clear any existing content...
     $("#content-display").empty();
+
+    // setup the correct classes for specific views
+    $("#content-display").removeClass("overview description");
+    $("#content-display").addClass("description");
 
     // configure the XML button so it does the right thing...
     setXMLButtonAttributes( name.replace( "SJ", "") + "Description" );

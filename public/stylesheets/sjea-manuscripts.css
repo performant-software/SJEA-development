@@ -39,7 +39,9 @@
   background: url("/images/xmlbutton.jpg") no-repeat bottom; }
 #content #content-display {
   text-align: justify;
-  min-width: 1024px; }
+  width: 1024px; }
+  #content #content-display.overview, #content #content-display.description {
+    width: 85%; }
 
 #lb-zoom-image-div {
   width: 875px;
@@ -47,7 +49,7 @@
   margin: auto;
   border: 3px;
   border-style: solid;
-  border-color: #696969;
+  border-color: dimgrey;
   background-color: #ece6d6; }
 
 #fs-zoom-image-div {
@@ -58,7 +60,7 @@
   margin: auto;
   border: 3px;
   border-style: solid;
-  border-color: #696969;
+  border-color: dimgrey;
   background-color: #ece6d6; }
 
 #open-new-zoom-window {

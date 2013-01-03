@@ -72,8 +72,14 @@
 
    #content-display {
       text-align: justify;
-      min-width: 1024px;
+      width: 1024px;
+
+     // make the overview and the descriptions a bit narrower
+     &.overview, &.description {
+       width: 85%;
+     }
    }
+
 }
 
 #lb-zoom-image-div {
