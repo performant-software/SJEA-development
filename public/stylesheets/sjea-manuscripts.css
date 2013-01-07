@@ -39,6 +39,8 @@
   background: url("/images/xmlbutton.jpg") no-repeat bottom; }
 #content #content-display {
   text-align: justify; }
+  #content #content-display.manuscript {
+    min-width: 900px; }
   #content #content-display.overview, #content #content-display.description {
     width: 85%; }
 

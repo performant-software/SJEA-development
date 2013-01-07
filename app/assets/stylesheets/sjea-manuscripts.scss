@@ -72,7 +72,11 @@
 
    #content-display {
       text-align: justify;
-      //width: 1024px;
+
+     // fix the min-width for the manuscript view so we dont squash the images onto the text
+     &.manuscript {
+       min-width: $min_transcript_page_width;
+     }
 
      // make the overview and the descriptions a bit narrower
      &.overview, &.description {
