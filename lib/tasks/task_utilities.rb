@@ -241,7 +241,8 @@ module TaskUtilities
 
      # if we have any content, clean it up and store it
      if content.empty? == false
-        content = content.gsub(/\n/, "" ).squeeze( ).gsub( /^ /, "" )
+        # remove duplicate whitespace
+        content = content.gsub(/\n/, "" ).squeeze(" ").gsub( /^ /, "" )
 
         #puts "#{folio} : #{hl} #{content}"
         linelist[ linelist.size ] = { :pageimg => folio, :loc_line => loc_line, :hl_line => hl_line, :content => content }
