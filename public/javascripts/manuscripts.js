@@ -119,15 +119,19 @@ $(document).ready(function() {
         // set the GUI widgets to the correct state
         setGUIForManuscript( params["manuscript"], params["view"] );
         showManuscript( params["manuscript"], params["view"], params["folio"] );
-
+        $("#page").removeClass();
+        $("#page").addClass("manuscript")
     } else if( params["description"] != null ) {
         // set the GUI widgets to the correct state
         setGUIForDescription( params["description"] );
         showDescription( params["description"] );
-
+        $("#page").removeClass();
+        $("#page").addClass("description")
     } else {
        // otherwise, set the default view...
-       $("#overview").addClass( "active");
+       $("#overview").addClass("active");
+        $("#page").removeClass();
+        $("#page").addClass("page")
     }
 });
 

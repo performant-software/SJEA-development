@@ -18,6 +18,18 @@ body {
     font-family: $site_font;
 }
 
+#page.manuscript {
+  min-width: $min_page_manuscript_width !important;
+}
+
+#page.description {
+  min-width: $min_page_description_width !important;
+}
+
+#page.page {
+  min-width: $min_page_overview_width !important;
+}
+
 #page-header {
 
     position: absolute;
