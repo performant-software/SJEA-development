@@ -121,17 +121,20 @@ $(document).ready(function() {
         showManuscript( params["manuscript"], params["view"], params["folio"] );
         $("#page").removeClass();
         $("#page").addClass("manuscript")
+        $("#page-header").removeClass("manuscript-page").addClass("manuscript-view");
     } else if( params["description"] != null ) {
         // set the GUI widgets to the correct state
         setGUIForDescription( params["description"] );
         showDescription( params["description"] );
         $("#page").removeClass();
-        $("#page").addClass("description")
+        $("#page").addClass("description");
+        $("#page-header").removeClass("manuscript-view").addClass("manuscript-page");
     } else {
        // otherwise, set the default view...
        $("#overview").addClass("active");
         $("#page").removeClass();
-        $("#page").addClass("page")
+        $("#page").addClass("page");
+        $("#page-header").removeClass("manuscript-view").addClass("manuscript-page");
     }
 });
 

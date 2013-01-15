@@ -30,11 +30,18 @@ body {
   min-width: $min_page_overview_width !important;
 }
 
+#page-header.manuscript-page {
+  min-width: 1090px !important;
+}
+#page-header.manuscript-view {
+  min-width: 1145px !important
+}
+
 #page-header {
 
     position: absolute;
     width: $page_width;
-    min-width: $min_page_width;
+    min-width: $min_header_width;
     margin: auto;
     height: $header_height;
     background-image: url("/images/banner_bg_stretch.jpg");

@@ -14,7 +14,7 @@ body {
   font-family: "Signika Negative", "Arial", sans-serif; }
 
 #page.manuscript{
-    min-width:1024px !important
+    min-width:1145px !important
 }
 #page.description{
     min-width:1090px !important
@@ -22,6 +22,11 @@ body {
 #page.page{
     min-width:1090px !important
 }
+
+#page-header.manuscript-page {
+    min-width: 1090px !important }
+#page-header.manuscript-view {
+    min-width: 1145px !important }
 
 #page-header {
   position: absolute;
