@@ -40,7 +40,7 @@
 #content #content-display {
   text-align: justify; }
   #content #content-display.manuscript {
-    min-width: 900px; }
+    min-width: 1024px; }
   #content #content-display.overview, #content #content-display.description {
     width: 85%; }
 
