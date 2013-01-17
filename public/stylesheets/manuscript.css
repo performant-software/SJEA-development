@@ -178,7 +178,7 @@
 .margin-marginLeft { position: absolute; left: -75px; }
 .margin-bottomLeft { position: relative; left: 95px; }
 
-.marginRight { position: absolute; right: 0px; }
+.marginRight { position: absolute; right: 100px; }
 .margin-marginRight { position: relative; right: -150px; }
 
 .topCenter, .center, .bottomCenter { position: absolute; left: 250px;}
